@@ -30,7 +30,6 @@ jobs:
     - name: Process chnroute_v6.txt
       run: |
         python -c "
-import os
 with open('chnroute_v6.txt', 'r') as file:
     lines = file.readlines()
 with open('chnroute_v6.list', 'w') as file:
@@ -41,7 +40,6 @@ with open('chnroute_v6.list', 'w') as file:
     - name: Process CN-ip-cidr.txt
       run: |
         python -c "
-import os
 with open('CN-ip-cidr.txt', 'r') as file:
     lines = file.readlines()
 with open('CN-ip-cidr.list', 'w') as file:
