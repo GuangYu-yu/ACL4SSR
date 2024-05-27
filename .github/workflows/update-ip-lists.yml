@@ -49,11 +49,21 @@ jobs:
 
     - name: Process chnroute_v6.txt
       run: |
-        python -c "with open('chnroute_v6.txt', 'r') as file: lines = file.readlines(); with open('chnroute_v6.list', 'w') as outfile: outfile.writelines([f'IP-CIDR6,{line.strip()},no-resolve\n' for line in lines])"
+        python -c "
+with open('chnroute_v6.txt', 'r') as file:
+    lines = file.readlines()
+with open('chnroute_v6.list', 'w') as outfile:
+    outfile.writelines([f'IP-CIDR6,{line.strip()},no-resolve\n' for line in lines])
+        "
 
     - name: Process CN-ip-cidr.txt
       run: |
-        python -c "with open('CN-ip-cidr.txt', 'r') as file: lines = file.readlines(); with open('CN-ip-cidr.list', 'w') as outfile: outfile.writelines([f'IP-CIDR,{line.strip()},no-resolve\n' for line in lines])"
+        python -c "
+with open('CN-ip-cidr.txt', 'r') as file:
+    lines = file.readlines()
+with open('CN-ip-cidr.list', 'w') as outfile:
+    outfile.writelines([f'IP-CIDR,{line.strip()},no-resolve\n' for line in lines])
+        "
 
     - name: Commit and push changes
       run: |
