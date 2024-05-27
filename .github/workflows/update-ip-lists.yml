@@ -24,28 +24,36 @@ jobs:
     - name: Download chnroute_v6.txt
       run: wget -O chnroute_v6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
 
+    - name: Check chnroute_v6.txt
+      run: |
+        if [ ! -f "chnroute_v6.txt" ]; then
+          echo "chnroute_v6.txt not found!"
+          exit 1
+        else
+          echo "chnroute_v6.txt downloaded successfully:"
+          cat chnroute_v6.txt
+        fi
+
     - name: Download CN-ip-cidr.txt
       run: wget -O CN-ip-cidr.txt https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt
 
+    - name: Check CN-ip-cidr.txt
+      run: |
+        if [ ! -f "CN-ip-cidr.txt" ]; then
+          echo "CN-ip-cidr.txt not found!"
+          exit 1
+        else
+          echo "CN-ip-cidr.txt downloaded successfully:"
+          cat CN-ip-cidr.txt
+        fi
+
     - name: Process chnroute_v6.txt
       run: |
-        python - <<EOF
-with open('chnroute_v6.txt', 'r') as infile:
-    lines = infile.readlines()
-with open('chnroute_v6.list', 'w') as outfile:
-    for line in lines:
-        outfile.write(f'IP-CIDR6,{line.strip()},no-resolve\n')
-EOF
+        python -c "with open('chnroute_v6.txt', 'r') as file: lines = file.readlines(); with open('chnroute_v6.list', 'w') as outfile: outfile.writelines([f'IP-CIDR6,{line.strip()},no-resolve\n' for line in lines])"
 
     - name: Process CN-ip-cidr.txt
       run: |
-        python - <<EOF
-with open('CN-ip-cidr.txt', 'r') as infile:
-    lines = infile.readlines()
-with open('CN-ip-cidr.list', 'w') as outfile:
-    for line in lines:
-        outfile.write(f'IP-CIDR,{line.strip()},no-resolve\n')
-EOF
+        python -c "with open('CN-ip-cidr.txt', 'r') as file: lines = file.readlines(); with open('CN-ip-cidr.list', 'w') as outfile: outfile.writelines([f'IP-CIDR,{line.strip()},no-resolve\n' for line in lines])"
 
     - name: Commit and push changes
       run: |
