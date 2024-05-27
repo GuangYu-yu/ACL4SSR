@@ -35,7 +35,7 @@ with open('chnroute_v6.txt', 'r') as file:
 with open('chnroute_v6.list', 'w') as file:
     for line in lines:
         file.write(f'IP-CIDR6,{line.strip()},no-resolve\n')
-        )"
+"
 
     - name: Process CN-ip-cidr.txt
       run: |
@@ -45,7 +45,7 @@ with open('CN-ip-cidr.txt', 'r') as file:
 with open('CN-ip-cidr.list', 'w') as file:
     for line in lines:
         file.write(f'IP-CIDR,{line.strip()},no-resolve\n')
-        )"
+"
 
     - name: Commit and push changes
       run: |
