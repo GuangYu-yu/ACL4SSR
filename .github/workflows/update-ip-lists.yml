@@ -29,23 +29,23 @@ jobs:
 
     - name: Process chnroute_v6.txt
       run: |
-        python -c "
+        python - <<EOF
 with open('chnroute_v6.txt', 'r') as infile:
     lines = infile.readlines()
 with open('chnroute_v6.list', 'w') as outfile:
     for line in lines:
         outfile.write(f'IP-CIDR6,{line.strip()},no-resolve\n')
-"
+EOF
 
     - name: Process CN-ip-cidr.txt
       run: |
-        python -c "
+        python - <<EOF
 with open('CN-ip-cidr.txt', 'r') as infile:
     lines = infile.readlines()
 with open('CN-ip-cidr.list', 'w') as outfile:
     for line in lines:
         outfile.write(f'IP-CIDR,{line.strip()},no-resolve\n')
-"
+EOF
 
     - name: Commit and push changes
       run: |
