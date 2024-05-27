@@ -30,27 +30,27 @@ jobs:
     - name: Process chnroute_v6.txt
       run: |
         python -c "
-with open('chnroute_v6.txt', 'r') as file:
-    lines = file.readlines()
-with open('chnroute_v6.list', 'w') as file:
+with open('chnroute_v6.txt', 'r') as infile:
+    lines = infile.readlines()
+with open('chnroute_v6.list', 'w') as outfile:
     for line in lines:
-        file.write(f'IP-CIDR6,{line.strip()},no-resolve\n')
+        outfile.write(f'IP-CIDR6,{line.strip()},no-resolve\n')
 "
 
     - name: Process CN-ip-cidr.txt
       run: |
         python -c "
-with open('CN-ip-cidr.txt', 'r') as file:
-    lines = file.readlines()
-with open('CN-ip-cidr.list', 'w') as file:
+with open('CN-ip-cidr.txt', 'r') as infile:
+    lines = infile.readlines()
+with open('CN-ip-cidr.list', 'w') as outfile:
     for line in lines:
-        file.write(f'IP-CIDR,{line.strip()},no-resolve\n')
+        outfile.write(f'IP-CIDR,{line.strip()},no-resolve\n')
 "
 
     - name: Commit and push changes
       run: |
-        git config --global user.name 'GuangYu-yu'
-        git config --global user.email '2411570085@qq.com'
+        git config --global user.name '${{ secrets.GIT_USER }}'
+        git config --global user.email '${{ secrets.GIT_EMAIL }}'
         git add chnroute_v6.list CN-ip-cidr.list
         git commit -m 'Update IP lists'
         git push
