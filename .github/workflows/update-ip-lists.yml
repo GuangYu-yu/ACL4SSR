@@ -1,0 +1,60 @@
+name: Update IP Lists
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # 每天定时运行
+  push:
+    branches:
+      - main # 在 main 分支上推送时运行
+  workflow_dispatch: # 手动触发
+
+jobs:
+  update-lists:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Download chnroute_v6.txt
+      run: wget -O chnroute_v6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
+
+    - name: Download CN-ip-cidr.txt
+      run: wget -O CN-ip-cidr.txt https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt
+
+    - name: Process chnroute_v6.txt
+      run: |
+        python -c "
+import os
+with open('chnroute_v6.txt', 'r') as file:
+    lines = file.readlines()
+with open('chnroute_v6.list', 'w') as file:
+    for line in lines:
+        file.write(f'IP-CIDR6,{line.strip()},no-resolve\n')
+        "
+
+    - name: Process CN-ip-cidr.txt
+      run: |
+        python -c "
+import os
+with open('CN-ip-cidr.txt', 'r') as file:
+    lines = file.readlines()
+with open('CN-ip-cidr.list', 'w') as file:
+    for line in lines:
+        file.write(f'IP-CIDR,{line.strip()},no-resolve\n')
+        "
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'GuangYu-yu'
+        git config --global user.email '2411570085@qq.com'
+        git add chnroute_v6.list CN-ip-cidr.list
+        git commit -m 'Update IP lists'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
