@@ -13,64 +13,54 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Download chnroute_v6.txt
-      run: wget -O chnroute_v6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
+      - name: Download chnroute_v6.txt
+        run: wget -O chnroute_v6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
 
-    - name: Check chnroute_v6.txt
-      run: |
-        if [ ! -f "chnroute_v6.txt" ]; then
-          echo "chnroute_v6.txt not found!"
-          exit 1
-        else
-          echo "chnroute_v6.txt downloaded successfully:"
-          cat chnroute_v6.txt
-        fi
+      - name: Check chnroute_v6.txt
+        run: |
+          if [ ! -f "chnroute_v6.txt" ]; then
+            echo "chnroute_v6.txt not found!"
+            exit 1
+          else
+            echo "chnroute_v6.txt downloaded successfully:"
+            cat chnroute_v6.txt
+          fi
 
-    - name: Download CN-ip-cidr.txt
-      run: wget -O CN-ip-cidr.txt https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt
+      - name: Download CN-ip-cidr.txt
+        run: wget -O CN-ip-cidr.txt https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt
 
-    - name: Check CN-ip-cidr.txt
-      run: |
-        if [ ! -f "CN-ip-cidr.txt" ]; then
-          echo "CN-ip-cidr.txt not found!"
-          exit 1
-        else
-          echo "CN-ip-cidr.txt downloaded successfully:"
-          cat CN-ip-cidr.txt
-        fi
+      - name: Check CN-ip-cidr.txt
+        run: |
+          if [ ! -f "CN-ip-cidr.txt" ]; then
+            echo "CN-ip-cidr.txt not found!"
+            exit 1
+          else
+            echo "CN-ip-cidr.txt downloaded successfully:"
+            cat CN-ip-cidr.txt
+          fi
 
-    - name: Process chnroute_v6.txt
-      run: |
-        python -c "
-with open('chnroute_v6.txt', 'r') as file:
-    lines = file.readlines()
-with open('chnroute_v6.list', 'w') as outfile:
-    outfile.writelines([f'IP-CIDR6,{line.strip()},no-resolve\n' for line in lines])
-        "
+      - name: Process chnroute_v6.txt
+        run: |
+          python -c "with open('chnroute_v6.txt', 'r') as file: lines = file.readlines(); with open('chnroute_v6.list', 'w') as outfile: outfile.writelines([f'IP-CIDR6,{line.strip()},no-resolve\n' for line in lines])"
 
-    - name: Process CN-ip-cidr.txt
-      run: |
-        python -c "
-with open('CN-ip-cidr.txt', 'r') as file:
-    lines = file.readlines()
-with open('CN-ip-cidr.list', 'w') as outfile:
-    outfile.writelines([f'IP-CIDR,{line.strip()},no-resolve\n' for line in lines])
-        "
+      - name: Process CN-ip-cidr.txt
+        run: |
+          python -c "with open('CN-ip-cidr.txt', 'r') as file: lines = file.readlines(); with open('CN-ip-cidr.list', 'w') as outfile: outfile.writelines([f'IP-CIDR,{line.strip()},no-resolve\n' for line in lines])"
 
-    - name: Commit and push changes
-      run: |
-        git config --global user.name '${{ secrets.GIT_USER }}'
-        git config --global user.email '${{ secrets.GIT_EMAIL }}'
-        git add chnroute_v6.list CN-ip-cidr.list
-        git commit -m 'Update IP lists'
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push changes
+        run: |
+          git config --global user.name '${{ secrets.GIT_USER }}'
+          git config --global user.email '${{ secrets.GIT_EMAIL }}'
+          git add chnroute_v6.list CN-ip-cidr.list
+          git commit -m 'Update IP lists'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
