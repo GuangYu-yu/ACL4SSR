@@ -92,14 +92,17 @@ regions = {
     'QA': 'Qatar'             # 卡塔尔
 }
 
-# 文件名映射，保存 CIDR 列表到指定文件
-region_files = {region: f"Global/{region}_cidr.txt" for region in regions.keys()}
+# 获取项目根目录的绝对路径
+project_root = os.path.dirname(os.path.abspath(__file__))
+
+# 文件名映射，保存 CIDR 列表到指定文件，路径在 Global 文件夹下
+region_files = {region: os.path.join(project_root, "Global", f"{region}_cidr.txt") for region in regions.keys()}
 
 # 初始化结果字典，用于保存各地区的 IPv4 和 IPv6 CIDR 列表
 result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
 
 # 确保 Global 目录存在
-os.makedirs("Global", exist_ok=True)
+os.makedirs(os.path.join(project_root, "Global"), exist_ok=True)
 
 # 遍历数据库中的所有 CIDR 数据
 for cidr, info in db_reader:
