@@ -25,12 +25,20 @@ jobs:
     - name: Download and Process Files
       run: python CloudflareCIDR-IPv4-and-IPv6-main.py  # 调用你的 Python 脚本
 
+    - name: 检查是否有更改
+      run: |
+        git add .
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+
     - name: Commit and Push Changes
+      if: success() # 仅在上一步成功时运行
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add .
         git commit -m "Downloaded and processed files on $(date "+%Y/%m/%d %H:%M:%S")"
         git pull --rebase  # 拉取远程仓库最新的更改并合并
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}.git
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         git push
