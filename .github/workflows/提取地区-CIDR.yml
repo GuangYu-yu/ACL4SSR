@@ -2,48 +2,48 @@ name: 提取地区-CIDR
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # 每 12 小时运行一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 */12 * * *'
+  workflow_dispatch: 
 
 jobs:
   extract_cidr:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
 
     steps:
-      # 检出仓库代码
       - name: 检出仓库代码
         uses: actions/checkout@v2
 
-      # 设置 Python 环境
       - name: 设置 Python 环境
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
 
-      # 安装依赖
       - name: 安装依赖
         run: |
           pip install maxminddb
 
-      # 下载 GeoLite2 数据库
       - name: 下载 GeoLite2-Country.mmdb
         run: |
           wget -O GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
 
-      # 运行 CIDR 提取脚本
       - name: 运行 CIDR 提取脚本
         run: |
-          mkdir -p Global  # 确保 Global 文件夹存在
-          python 提取地区-CIDR.py  # 执行 Python 脚本
+          python 提取地区-CIDR.py
 
-      # 列出生成的文件，供调试使用
-      - name: 列出生成的文件
+      - name: 打印当前工作目录
         run: |
-          ls -R Global/
+          pwd
 
-      # 提交并推送更改
+      - name: 检查文件更改
+        id: check_files
+        run: |
+          git diff --exit-code || echo "::set-output name=changed::true"
+
       - name: 提交并推送更改
+        if: steps.check_files.outputs.changed == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add Global/*.txt  # 添加 Global 文件夹下的所有
+          git add ./Global/*.txt
+          git commit -m "自动更新 IP CIDR 文件" || echo "没有需要提交的更改"
+          git push
