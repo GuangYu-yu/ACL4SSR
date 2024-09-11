@@ -17,7 +17,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y curl python3 python3-pip
-          pip3 install geoip2 netaddr
+          pip3 install geoip2 netaddr requests
 
       - name: Download GeoLite2-ASN.mmdb
         run: |
@@ -26,10 +26,6 @@ jobs:
       - name: Download GeoLite2-Country.mmdb
         run: |
           curl -L -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
-
-      - name: Download Cloudflare CIDR list
-        run: |
-          curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
       - name: Create output directory
         run: mkdir -p outputs
