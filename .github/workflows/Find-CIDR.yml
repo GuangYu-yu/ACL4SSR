@@ -1,56 +1,44 @@
-name: Find Cloudflare CIDR Overlaps
+name: Find Cloudflare CIDR by Country
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '0 */12 * * *' # 每12小时运行一次
+    - cron: "0 */12 * * *" # 每12小时运行一次
 
 jobs:
-  find-overlaps:
+  find-cloudflare-cidr:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python environment
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-      - name: Install required Python packages
-        run: |
-          python -m pip install --upgrade pip
-          pip install geoip2 netaddr
+    - name: Install dependencies
+      run: |
+        pip install geoip2 netaddr
 
-      - name: Download GeoLite2-ASN.mmdb
-        run: |
-          curl -L -o GeoLite2-ASN.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
+    - name: Download MaxMind GeoLite2 Databases
+      run: |
+        wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb -O GeoLite2-ASN.mmdb
+        wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb -O GeoLite2-Country.mmdb
 
-      - name: Download GeoLite2-Country.mmdb
-        run: |
-          curl -L -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+    - name: Run script to find Cloudflare CIDR
+      run: |
+        python3 find_overlaps.py
 
-      - name: Download Cloudflare CIDR list
-        run: |
-          curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
-
-      - name: Run overlap finder
-        run: |
-          python3 find_overlaps.py
-
-      - name: List contents of outputs directory
-        run: |
-          echo "Listing outputs directory:"
-          ls -l outputs
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add outputs/*
-          git commit -m "Update overlapped CIDR files"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit and push the results
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add outputs/*
+        git commit -m "Update Cloudflare CIDR files"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
