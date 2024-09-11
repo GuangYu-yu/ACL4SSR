@@ -26,7 +26,7 @@ jobs:
     - name: 下载并处理 CloudflareCIDR-v6.txt
       run: |
         curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR-v6.txt | \
-        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR-v6_processed.list
+        sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CloudflareCIDR-v6_processed.list
 
     - name: 下载并处理 CloudflareCIDR.txt
       run: |
