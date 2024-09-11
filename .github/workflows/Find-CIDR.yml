@@ -23,6 +23,10 @@ jobs:
         run: |
           curl -L -o GeoLite2-ASN.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
 
+      - name: Download GeoLite2-Country.mmdb
+        run: |
+          curl -L -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+
       - name: Download Cloudflare CIDR list
         run: |
           curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
