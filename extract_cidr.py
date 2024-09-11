@@ -1,4 +1,5 @@
 import maxminddb
+import ipaddress  # 用于检查 IP 地址版本
 
 # 打开 GeoLite2-Country.mmdb 文件
 db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
@@ -28,13 +29,22 @@ result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
 for cidr, info in db_reader:
     country = info.get('country', {}).get('names', {}).get('en', '')
 
+    # 将 CIDR 转换为字符串进行处理
+    cidr_str = str(cidr)
+
     # 检查CIDR是否属于目标地区
     for region_code, region_name in regions.items():
         if country == region_name:
-            if ':' in cidr:  # IPv6 地址
-                result[region_code]['ipv6'].append(cidr)
-            else:  # IPv4 地址
-                result[region_code]['ipv4'].append(cidr)
+            try:
+                # 将CIDR转换为ip_network对象来判断是IPv4还是IPv6
+                network = ipaddress.ip_network(cidr_str)
+                if network.version == 6:
+                    result[region_code]['ipv6'].append(cidr_str)
+                else:
+                    result[region_code]['ipv4'].append(cidr_str)
+            except ValueError:
+                # 如果 cidr 无法转换为网络对象，跳过
+                continue
 
 # 将结果保存到对应文件中
 for region_code, data in result.items():
