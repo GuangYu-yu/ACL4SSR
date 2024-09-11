@@ -1,8 +1,9 @@
 import maxminddb
 import ipaddress
+import os
 
-# 打开 GeoLite2-Country.mmdb 文件
-db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
+# 获取当前工作目录
+output_dir = os.getcwd()
 
 # 定义要查找的地区
 regions = {
@@ -15,15 +16,18 @@ regions = {
 
 # 文件名映射
 region_files = {
-    'HK': 'HK_cidr.txt',
-    'TW': 'TW_cidr.txt',
-    'SG': 'SG_cidr.txt',
-    'JP': 'JP_cidr.txt',
-    'KR': 'KR_cidr.txt'
+    'HK': os.path.join(output_dir, 'HK_cidr.txt'),
+    'TW': os.path.join(output_dir, 'TW_cidr.txt'),
+    'SG': os.path.join(output_dir, 'SG_cidr.txt'),
+    'JP': os.path.join(output_dir, 'JP_cidr.txt'),
+    'KR': os.path.join(output_dir, 'KR_cidr.txt')
 }
 
 # 用于保存结果的字典
 result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
+
+# 打开 GeoLite2-Country.mmdb 文件
+db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
 
 # 遍历数据库中的所有数据
 for cidr, info in db_reader:
