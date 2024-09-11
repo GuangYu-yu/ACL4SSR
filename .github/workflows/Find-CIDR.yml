@@ -1,4 +1,4 @@
-name: Find Common CIDR Blocks
+name: Find Cloudflare CIDR for Specific Countries
 
 on:
   schedule:
@@ -6,49 +6,50 @@ on:
   workflow_dispatch:
 
 jobs:
-  find-common-cidr:
+  find-cidr:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Install required tools
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y geoip-bin
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mmdb-bin curl grep
 
-    - name: Download GeoLite2-Country.mmdb
-      run: |
-        curl -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+      - name: Download GeoLite2-Country.mmdb
+        run: |
+          curl -L -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
 
-    - name: Download Cloudflare CIDR List
-      run: |
-        curl -o cloudflare_cidr.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
+      - name: Download Cloudflare CIDR list
+        run: |
+          curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
-    - name: Extract Hong Kong CIDR Blocks
-      run: |
-        grep -Ff <(geoiplookup -f GeoLite2-Country.mmdb HK | awk '{print $4}') cloudflare_cidr.txt > HK.txt
+      - name: Extract CIDR for Hong Kong (HK)
+        run: |
+          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'HK' > HK.txt
 
-    - name: Extract Singapore CIDR Blocks
-      run: |
-        grep -Ff <(geoiplookup -f GeoLite2-Country.mmdb SG | awk '{print $4}') cloudflare_cidr.txt > SG.txt
+      - name: Extract CIDR for Singapore (SG)
+        run: |
+          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'SG' > SG.txt
 
-    - name: Extract Japan CIDR Blocks
-      run: |
-        grep -Ff <(geoiplookup -f GeoLite2-Country.mmdb JP | awk '{print $4}') cloudflare_cidr.txt > JP.txt
+      - name: Extract CIDR for Japan (JP)
+        run: |
+          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'JP' > JP.txt
 
-    - name: Extract South Korea CIDR Blocks
-      run: |
-        grep -Ff <(geoiplookup -f GeoLite2-Country.mmdb KR | awk '{print $4}') cloudflare_cidr.txt > KR.txt
+      - name: Extract CIDR for South Korea (KR)
+        run: |
+          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'KR' > KR.txt
 
-    - name: Extract Taiwan CIDR Blocks
-      run: |
-        grep -Ff <(geoiplookup -f GeoLite2-Country.mmdb TW | awk '{print $4}') cloudflare_cidr.txt > TW.txt
+      - name: Extract CIDR for Taiwan (TW)
+        run: |
+          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'TW' > TW.txt
 
-    - name: Commit results
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add HK.txt SG.txt JP.txt KR.txt TW.txt
-        git commit -m "Update CIDR blocks"
-        git push
+      - name: Commit and push results
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add HK.txt SG.txt JP.txt KR.txt TW.txt
+          git commit -m "Update CIDR files"
+          git push
