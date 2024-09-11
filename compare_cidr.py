@@ -1,50 +1,65 @@
-import ipaddress
 import requests
+from netaddr import IPSet, IPNetwork
 
-# 定义地区的文件 URL 和输出文件名
-regions = {
+# 读取远程 CIDR 文件
+def read_cidr_file(url):
+    response = requests.get(url)
+    return response.text.strip().splitlines()
+
+# 找出 CIDR 列表的重叠部分
+def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
+    ipv4_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 4]
+    ipv6_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 6]
+    ipv4_cloudflare = [cidr for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 4]
+    ipv6_cloudflare = [cidr for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 6]
+    
+    # 使用 IPSet 找出重叠的 IP 部分
+    ipv4_region_set = IPSet(ipv4_region)
+    ipv4_cloudflare_set = IPSet(ipv4_cloudflare)
+    ipv6_region_set = IPSet(ipv6_region)
+    ipv6_cloudflare_set = IPSet(ipv6_cloudflare)
+    
+    ipv4_overlap_set = ipv4_region_set & ipv4_cloudflare_set
+    ipv6_overlap_set = ipv6_region_set & ipv6_cloudflare_set
+    
+    return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
+
+# 保存 CIDR 到文件
+def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
+    with open(filename, 'w') as f:
+        f.write("IPv4 CIDR:\n")
+        f.write('\n'.join(str(cidr) for cidr in ipv4_cidrs) + '\n\n')
+        f.write("IPv6 CIDR:\n")
+        f.write('\n'.join(str(cidr) for cidr in ipv6_cidrs))
+
+# 各地区 CIDR 文件 URL
+region_cidr_urls = {
     'HK': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',
-    'TW': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',
     'SG': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SG_cidr.txt',
     'JP': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',
-    'KR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt'
+    'KR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt',
+    'TW': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt'
 }
 
-output_files = {
-    'HK': 'Cloudflare-HK.txt',
-    'TW': 'Cloudflare-TW.txt',
-    'SG': 'Cloudflare-SG.txt',
-    'JP': 'Cloudflare-JP.txt',
-    'KR': 'Cloudflare-KR.txt'
-}
+# Cloudflare CIDR 文件 URL
+cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt'
 
-# 加载 Cloudflare CIDR 文件
-cloudflare_cidr_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt'
-cloudflare_cidr_list = requests.get(cloudflare_cidr_url).text.splitlines()
+# 获取 Cloudflare 的 CIDR 列表
+cloudflare_cidrs = read_cidr_file(cloudflare_url)
 
-# 对 Cloudflare CIDR 转换为 IP 网络对象
-cloudflare_cidr_networks = [ipaddress.ip_network(cidr.strip()) for cidr in cloudflare_cidr_list if cidr.strip()]
+# 对每个地区执行 CIDR 重叠计算
+for region_code, region_url in region_cidr_urls.items():
+    # 获取地区 CIDR 列表
+    region_cidrs = read_cidr_file(region_url)
+    
+    # 计算重叠部分
+    ipv4_common_cidrs, ipv6_common_cidrs = find_ip_overlaps(region_cidrs, cloudflare_cidrs)
+    
+    # 合并结果并排序
+    all_cidrs = sorted(set(ipv4_common_cidrs + ipv6_common_cidrs), key=lambda x: (x.version, x))
 
-# 遍历每个地区的 CIDR 文件，进行比较
-for region, region_url in regions.items():
-    # 通过 URL 获取地区的 CIDR 文件
-    region_cidr_list = requests.get(region_url).text.splitlines()
+    # 保存结果到文件
+    output_filename = f"Cloudflare-{region_code}.txt"
+    save_cidrs_to_file(output_filename, ipv4_common_cidrs, ipv6_common_cidrs)
 
-    # 对比地区和 Cloudflare 的 CIDR，保留重复部分
-    common_cidrs = []
-    for region_cidr in region_cidr_list:
-        region_cidr = region_cidr.strip()
-        if not region_cidr:
-            continue
-        region_network = ipaddress.ip_network(region_cidr)
-        for cloudflare_network in cloudflare_cidr_networks:
-            if region_network.overlaps(cloudflare_network):
-                common_cidrs.append(region_cidr)
-                break  # 找到重叠就跳出
-
-    # 去重、排序
-    common_cidrs = sorted(set(common_cidrs), key=lambda x: ipaddress.ip_network(x))
-
-    # 将结果写入文件
-    with open(output_files[region], 'w') as f:
-        f.write('\n'.join(common_cidrs) + '\n')
+print("重叠计算完成，CIDR 文件已生成。")
