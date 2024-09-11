@@ -1,0 +1,47 @@
+name: 提取地区 CIDR
+
+on:
+  schedule:
+    # 每 12 小时运行一次
+    - cron: '0 */12 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  extract_cidr:
+    runs-on: ubuntu-latest  # 在最新的 Ubuntu 环境上运行
+
+    steps:
+      # 检出仓库代码
+      - name: 检出仓库代码
+        uses: actions/checkout@v2
+
+      # 设置 Python 环境
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # 使用 Python 3.x 版本
+
+      # 安装依赖
+      - name: 安装依赖
+        run: |
+          pip install maxminddb  # 安装 maxminddb 库
+
+      # 下载 GeoLite2 数据库
+      - name: 下载 GeoLite2-Country.mmdb
+        run: |
+          wget -O GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+
+      # 运行 CIDR 提取脚本
+      - name: 运行 CIDR 提取脚本
+        run: |
+          python 提取地区 CIDR.py  # 执行 Python 脚本
+
+      # 提交并推送更改
+      - name: 提交并推送更改
+        if: success()  # 仅在上一步成功时运行
+        run: |
+          git config --global user.name 'github-actions[bot]'  # 配置 Git 用户名
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'  # 配置 Git 用户邮箱
+          git add ./Clash/*.txt  # 添加所有 .txt 文件
+          git commit -m "自动更新 IP CIDR 文件"  # 提交更改
+          git push  # 推送到远程仓库
