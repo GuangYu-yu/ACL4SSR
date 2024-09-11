@@ -27,10 +27,12 @@ jobs:
         run: |
           curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
+      - name: Create output directory
+        run: mkdir -p outputs
+
       - name: Extract overlapping CIDR ranges
         run: |
-          # 创建 Python 脚本以查找重叠的 CIDR 段并按国家分类
-          echo '
+          python3 << 'EOF'
 import geoip2.database
 from netaddr import IPNetwork, IPSet
 from collections import defaultdict
@@ -67,13 +69,7 @@ for country_code, cidrs in country_cidr_map.items():
         for cidr in cidrs.iter_cidrs():
             f.write(f"{cidr}\n")
 
-' > find_overlaps.py
-
-          # 创建输出目录
-          mkdir -p outputs
-
-          # 运行 Python 脚本
-          python3 find_overlaps.py
+EOF
 
       - name: Commit and push results
         run: |
