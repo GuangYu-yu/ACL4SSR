@@ -1,5 +1,4 @@
 name: 获取Cloudflare各地区CIDR
-
 on:
   workflow_dispatch:  # 手动触发
   schedule:
@@ -20,7 +19,7 @@ jobs:
       - name: 安装依赖
         run: pip install netaddr requests
 
-      - name: 运行 获取Cloudflare各地区CIDR脚本
+      - name: 运行 获取Cloudflare各地区CIDR
         run: python 获取Cloudflare各地区CIDR.py
 
       - name: 检查是否有更改  # 这个步骤是新增的，用来检查是否有文件更改
@@ -28,15 +27,16 @@ jobs:
         run: |
           git add Cloudflare-*.txt
           if git diff-index --quiet HEAD --; then
-            echo "没有检测到文件更改，跳过提交步骤。" >> $GITHUB_ENV
+            echo "没有文件更改，跳过提交步骤。" >> result.log
+            exit 0
           else
-            echo "有文件更改。" >> $GITHUB_ENV
+            echo "文件已更改，准备提交。" >> result.log
           fi
 
       - name: 提交并推送更改  # 如果有变更，则提交并推送
-        if: env.GITHUB_ENV == '有文件更改。'
+        if: steps.check_changes.outputs.result == '文件已更改，准备提交。'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git commit -m "自动更新 Cloudflare CIDR 文件"
+          git commit -m "自动更新 Cloudflare CIDR 文件" || echo "没有需要提交的更改"
           git push
