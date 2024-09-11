@@ -26,25 +26,32 @@ jobs:
         run: |
           curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
-      - name: Extract CIDR for Hong Kong (HK)
+      - name: Process Cloudflare CIDR for each country
         run: |
-          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'HK' > HK.txt
-
-      - name: Extract CIDR for Singapore (SG)
-        run: |
-          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'SG' > SG.txt
-
-      - name: Extract CIDR for Japan (JP)
-        run: |
-          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'JP' > JP.txt
-
-      - name: Extract CIDR for South Korea (KR)
-        run: |
-          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'KR' > KR.txt
-
-      - name: Extract CIDR for Taiwan (TW)
-        run: |
-          mmdblookup --file GeoLite2-Country.mmdb --ip <Cloudflare IP> | grep 'TW' > TW.txt
+          # 遍历CIDR.txt中的每个IP
+          while IFS= read -r cidr; do
+            # 使用mmdblookup检查每个IP所属的国家
+            country=$(mmdblookup --file GeoLite2-Country.mmdb --ip "${cidr}" | grep 'iso_code' | awk -F '"' '{print $4}')
+            
+            # 根据国家将IP地址段保存到对应的文件
+            case $country in
+              HK)
+                echo "$cidr" >> HK.txt
+                ;;
+              SG)
+                echo "$cidr" >> SG.txt
+                ;;
+              JP)
+                echo "$cidr" >> JP.txt
+                ;;
+              KR)
+                echo "$cidr" >> KR.txt
+                ;;
+              TW)
+                echo "$cidr" >> TW.txt
+                ;;
+            esac
+          done < CIDR.txt
 
       - name: Commit and push results
         run: |
