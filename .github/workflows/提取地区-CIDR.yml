@@ -1,4 +1,4 @@
-name: 提取地区 CIDR
+name: 提取地区-CIDR
 
 on:
   schedule:
@@ -32,9 +32,9 @@ jobs:
           wget -O GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
 
       # 运行 CIDR 提取脚本
-      - name: 运行 CIDR 提取脚本
+      - name: 运行 CIDR-提取脚本
         run: |
-          python 提取地区 CIDR.py  # 执行 Python 脚本
+          python 提取地区-CIDR.py  # 执行 Python 脚本
 
       # 提交并推送更改
       - name: 提交并推送更改
