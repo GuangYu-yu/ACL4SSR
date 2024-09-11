@@ -1,5 +1,6 @@
 import maxminddb
 import ipaddress
+import os
 
 # 打开 GeoLite2-Country.mmdb 文件
 db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
@@ -13,7 +14,10 @@ regions = {
     'KR': 'South Korea'
 }
 
-# 文件名映射
+# 创建 /Clash 目录，如果不存在
+os.makedirs('Clash', exist_ok=True)
+
+# 文件名映射，确保文件保存在 /Clash 目录下
 region_files = {
     'HK': 'Clash/HK_cidr.txt',
     'TW': 'Clash/TW_cidr.txt',
@@ -29,29 +33,26 @@ result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
 for cidr, info in db_reader:
     country = info.get('country', {}).get('names', {}).get('en', '')
 
-    # 仅处理匹配的地区
-    if country in regions.values():
-        print(f"Match found for {country}: CIDR = {cidr}")
+    # 将 CIDR 转换为字符串进行处理
+    cidr_str = str(cidr)
 
-        # 将 CIDR 转换为字符串
-        cidr_str = str(cidr)
-
-        # 检查CIDR是否属于目标地区
-        for region_code, region_name in regions.items():
-            if country == region_name:
-                try:
-                    # 将CIDR转换为ip_network对象来判断是IPv4还是IPv6
-                    network = ipaddress.ip_network(cidr_str)
-                    if network.version == 6:
-                        result[region_code]['ipv6'].append(cidr_str)
-                    else:
-                        result[region_code]['ipv4'].append(cidr_str)
-                except ValueError:
-                    continue
+    # 检查CIDR是否属于目标地区
+    for region_code, region_name in regions.items():
+        if country == region_name:
+            try:
+                # 将CIDR转换为ip_network对象来判断是IPv4还是IPv6
+                network = ipaddress.ip_network(cidr_str)
+                if network.version == 6:
+                    result[region_code]['ipv6'].append(cidr_str)
+                else:
+                    result[region_code]['ipv4'].append(cidr_str)
+            except ValueError:
+                # 如果 cidr 无法转换为网络对象，跳过
+                continue
 
 # 将结果保存到对应文件中
 for region_code, data in result.items():
-    if data['ipv4'] or data['ipv6']:
+    if data['ipv4'] or data['ipv6']:  # 只在有数据时写入文件
         with open(region_files[region_code], 'w') as f:
             f.write(f"IPv4 CIDR for {regions[region_code]}:\n")
             f.write('\n'.join(data['ipv4']) + '\n\n')
