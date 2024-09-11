@@ -40,7 +40,27 @@ region_cidr_urls = {
     'SG': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SG_cidr.txt',  # 新加坡
     'JP': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',  # 日本
     'KR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt',  # 韩国
-    'TW': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt'   # 台湾
+    'TW': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',  # 台湾
+    'US': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/US_cidr.txt',  # 美国
+    'GB': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GB_cidr.txt',  # 英国
+    'DE': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DE_cidr.txt',  # 德国
+    'FR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/FR_cidr.txt',  # 法国
+    'AU': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AU_cidr.txt',  # 澳大利亚
+    'CN': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CN_cidr.txt',  # 中国
+    'IN': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IN_cidr.txt',  # 印度
+    'BR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BR_cidr.txt',  # 巴西
+    'MX': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MX_cidr.txt',  # 墨西哥
+    'ZA': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ZA_cidr.txt',  # 南非
+    'RU': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/RU_cidr.txt',  # 俄罗斯
+    'IT': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IT_cidr.txt',  # 意大利
+    'ES': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ES_cidr.txt',  # 西班牙
+    'NL': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NL_cidr.txt',  # 荷兰
+    'SE': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SE_cidr.txt',  # 瑞典
+    'CH': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CH_cidr.txt',  # 瑞士
+    'BE': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BE_cidr.txt',  # 比利时
+    'AR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AR_cidr.txt',  # 阿根廷
+    'NG': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NG_cidr.txt',  # 尼日利亚
+    'PH': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PH_cidr.txt'   # 菲律宾
 }
 
 # Cloudflare CIDR 文件 URL
