@@ -32,16 +32,22 @@ jobs:
           wget -O GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
 
       # 运行 CIDR 提取脚本
-      - name: 运行 CIDR-提取脚本
+      - name: 运行 CIDR 提取脚本
         run: |
           python 提取地区-CIDR.py  # 执行 Python 脚本
 
+      # 检查文件更改
+      - name: 检查文件更改
+        id: check_files
+        run: |
+          git diff --exit-code || echo "::set-output name=changed::true"
+
       # 提交并推送更改
       - name: 提交并推送更改
-        if: success()  # 仅在上一步成功时运行
+        if: steps.check_files.outputs.changed == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'  # 配置 Git 用户名
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'  # 配置 Git 用户邮箱
           git add ./Clash/*.txt  # 添加所有 .txt 文件
-          git commit -m "自动更新 IP CIDR 文件"  # 提交更改
+          git commit -m "自动更新 IP CIDR 文件" || echo "没有需要提交的更改"
           git push  # 推送到远程仓库
