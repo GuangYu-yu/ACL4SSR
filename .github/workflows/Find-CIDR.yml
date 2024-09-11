@@ -1,4 +1,4 @@
-name: Find Overlapping CIDR Blocks for Specific Countries
+name: Find Cloudflare CIDR Overlaps by Country
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  find-cidr:
+  find-overlaps:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y mmdb-bin curl
+          sudo apt-get install -y curl python3 python3-pip
+          pip3 install geoip2 netaddr
 
       - name: Download GeoLite2-ASN.mmdb
         run: |
@@ -26,40 +27,58 @@ jobs:
         run: |
           curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
-      - name: Extract IP ranges and find overlaps
+      - name: Extract overlapping CIDR ranges
         run: |
-          # 定义需要提取的国家和 ASN
-          countries=("HK" "SG" "JP" "KR" "TW")
-          asns=("AS4808" "AS4134" "AS4766" "AS2914" "AS4515") # 替换为实际 ASN 列表
+          # 创建 Python 脚本以查找重叠的 CIDR 段并按国家分类
+          echo '
+import geoip2.database
+from netaddr import IPNetwork, IPSet
+from collections import defaultdict
+
+# 定义目标国家代码
+target_countries = ["HK", "SG", "JP", "KR", "TW"]
+
+# 读取 Cloudflare CIDR
+with open("CIDR.txt") as f:
+    cloudflare_cidrs = [IPNetwork(line.strip()) for line in f if line.strip()]
+
+# 打开 GeoLite2-ASN.mmdb 数据库
+reader = geoip2.database.Reader("GeoLite2-ASN.mmdb")
+
+# 准备存储结果的字典
+country_cidr_map = defaultdict(IPSet)
+
+# 遍历 Cloudflare CIDR
+for cidr in cloudflare_cidrs:
+    try:
+        # 获取 ASN 信息并判断所属国家
+        response = reader.asn(cidr.network)
+        country_code = response.country.iso_code
+
+        # 如果这个 CIDR 属于目标国家之一，保存到对应国家的集合中
+        if country_code in target_countries:
+            country_cidr_map[country_code].add(cidr)
+    except geoip2.errors.AddressNotFoundError:
+        pass
+
+# 为每个国家输出 CIDR 结果
+for country_code, cidrs in country_cidr_map.items():
+    with open(f"outputs/{country_code}.txt", "w") as f:
+        for cidr in cidrs.iter_cidrs():
+            f.write(f"{cidr}\n")
+
+' > find_overlaps.py
 
           # 创建输出目录
           mkdir -p outputs
 
-          # 提取 IP 段并查找重叠
-          for country in "${countries[@]}"; do
-            echo "Processing $country"
-
-            # 创建临时文件存储该国的 IP 地址段
-            tmpfile=$(mktemp)
-
-            # 提取对应国家的 IP 地址段
-            for asn in "${asns[@]}"; do
-              mmdblookup --file GeoLite2-ASN.mmdb --ip ${asn} >> "$tmpfile"
-            done
-
-            # 查找 CIDR 重叠
-            echo "Finding overlaps for $country"
-            # 假设提取出的 IP 地址段存储在 $tmpfile
-            iprange --overlap CIDR.txt "$tmpfile" > "outputs/${country}.txt"
-
-            # 清理临时文件
-            rm "$tmpfile"
-          done
+          # 运行 Python 脚本
+          python3 find_overlaps.py
 
       - name: Commit and push results
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add outputs/*
-          git commit -m "Update CIDR files for HK, SG, JP, KR, TW"
+          git commit -m "Updated Cloudflare CIDR overlaps by country"
           git push
