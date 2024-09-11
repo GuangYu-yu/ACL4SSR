@@ -1,0 +1,32 @@
+name: Extract CIDR for Specific Regions
+
+on:
+  schedule:
+    # 每12小时运行一次
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  extract_cidr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
+      run: |
+        pip install maxminddb
+
+    - name: Download GeoLite2-Country.mmdb
+      run: |
+        wget -O GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+
+    - name: Run CIDR Extraction Script
+      run: |
+        python extract_cidr.py
