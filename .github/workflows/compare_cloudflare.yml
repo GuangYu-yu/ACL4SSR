@@ -3,6 +3,7 @@ name: Compare Cloudflare CIDR
 on:
   schedule:
     - cron: '0 */12 * * *' # 每12小时运行一次
+  workflow_dispatch: # 添加这个以手动触发
 
 jobs:
   compare-cidr:
