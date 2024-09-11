@@ -1,4 +1,4 @@
-name: Find Cloudflare CIDR for Specific Countries
+name: Find Overlapping CIDR Blocks for Specific Countries
 
 on:
   schedule:
@@ -16,47 +16,50 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y mmdb-bin curl grep
+          sudo apt-get install -y mmdb-bin curl
 
-      - name: Download GeoLite2-Country.mmdb
+      - name: Download GeoLite2-ASN.mmdb
         run: |
-          curl -L -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+          curl -L -o GeoLite2-ASN.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
 
       - name: Download Cloudflare CIDR list
         run: |
           curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
-      - name: Process Cloudflare CIDR for each country
+      - name: Extract IP ranges and find overlaps
         run: |
-          # 遍历CIDR.txt中的每个IP
-          while IFS= read -r cidr; do
-            # 使用mmdblookup检查每个IP所属的国家
-            country=$(mmdblookup --file GeoLite2-Country.mmdb --ip "${cidr}" | grep 'iso_code' | awk -F '"' '{print $4}')
-            
-            # 根据国家将IP地址段保存到对应的文件
-            case $country in
-              HK)
-                echo "$cidr" >> HK.txt
-                ;;
-              SG)
-                echo "$cidr" >> SG.txt
-                ;;
-              JP)
-                echo "$cidr" >> JP.txt
-                ;;
-              KR)
-                echo "$cidr" >> KR.txt
-                ;;
-              TW)
-                echo "$cidr" >> TW.txt
-                ;;
-            esac
-          done < CIDR.txt
+          # 定义需要提取的国家和 ASN
+          countries=("HK" "SG" "JP" "KR" "TW")
+          asns=("AS4808" "AS4134" "AS4766" "AS2914" "AS4515") # 替换为实际 ASN 列表
+
+          # 创建输出目录
+          mkdir -p outputs
+
+          # 提取 IP 段并查找重叠
+          for country in "${countries[@]}"; do
+            echo "Processing $country"
+
+            # 创建临时文件存储该国的 IP 地址段
+            tmpfile=$(mktemp)
+
+            # 提取对应国家的 IP 地址段
+            for asn in "${asns[@]}"; do
+              mmdblookup --file GeoLite2-ASN.mmdb --ip ${asn} >> "$tmpfile"
+            done
+
+            # 查找 CIDR 重叠
+            echo "Finding overlaps for $country"
+            # 假设提取出的 IP 地址段存储在 $tmpfile
+            iprange --overlap CIDR.txt "$tmpfile" > "outputs/${country}.txt"
+
+            # 清理临时文件
+            rm "$tmpfile"
+          done
 
       - name: Commit and push results
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add HK.txt SG.txt JP.txt KR.txt TW.txt
-          git commit -m "Update CIDR files"
+          git add outputs/*
+          git commit -m "Update CIDR files for HK, SG, JP, KR, TW"
           git push
