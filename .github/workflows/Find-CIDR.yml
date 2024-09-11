@@ -1,23 +1,28 @@
-name: Find Cloudflare CIDR Overlaps by Country
+name: Find Cloudflare CIDR Overlaps
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 */12 * * *'  # 每12小时运行一次
-  workflow_dispatch:
+    - cron: '0 */12 * * *' # 每12小时运行一次
 
 jobs:
   find-overlaps:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install required Python packages
         run: |
-          sudo apt-get update
-          sudo apt-get install -y curl python3 python3-pip
-          pip3 install geoip2 netaddr requests
+          python -m pip install --upgrade pip
+          pip install geoip2 netaddr
 
       - name: Download GeoLite2-ASN.mmdb
         run: |
@@ -27,19 +32,25 @@ jobs:
         run: |
           curl -L -o GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
 
-      - name: Create output directory
-        run: mkdir -p outputs
+      - name: Download Cloudflare CIDR list
+        run: |
+          curl -L -o CIDR.txt https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CIDR.txt
 
-      - name: Run Python script to find overlaps
-        run: python3 find_overlaps.py
+      - name: Run overlap finder
+        run: |
+          python3 find_overlaps.py
 
-      - name: List output directory contents
-        run: ls -l outputs
+      - name: List contents of outputs directory
+        run: |
+          echo "Listing outputs directory:"
+          ls -l outputs
 
-      - name: Commit and push results
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.email "actions@github.com"
           git add outputs/*
-          git commit -m "Updated Cloudflare CIDR overlaps by country"
+          git commit -m "Update overlapped CIDR files"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
