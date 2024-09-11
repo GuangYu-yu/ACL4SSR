@@ -18,10 +18,20 @@ jobs:
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
         sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr_processed.list
 
-    - name: 下载并处理 CN-ip-cidr.txt
+    - name: 下载并处理 chnroute.txt
       run: |
-        curl -s https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt | \
+        curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr_processed.list
+
+    - name: 下载并处理 CloudflareCIDR-v6.txt
+      run: |
+        curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR-v6.txt | \
+        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR-v6_processed.list
+
+    - name: 下载并处理 CloudflareCIDR.txt
+      run: |
+        curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR.txt | \
+        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR.list
 
     - name: 检查是否有更改
       run: |
