@@ -15,39 +15,43 @@ regions = {
 }
 
 # 创建 /Clash 目录，如果不存在
-os.makedirs('Clash', exist_ok=True)
+output_dir = 'Clash'
+os.makedirs(output_dir, exist_ok=True)
 
 # 文件名映射，确保文件保存在 /Clash 目录下
 region_files = {
-    'HK': 'Clash/HK_cidr.txt',
-    'TW': 'Clash/TW_cidr.txt',
-    'SG': 'Clash/SG_cidr.txt',
-    'JP': 'Clash/JP_cidr.txt',
-    'KR': 'Clash/KR_cidr.txt'
+    'HK': os.path.join(output_dir, 'HK_cidr.txt'),
+    'TW': os.path.join(output_dir, 'TW_cidr.txt'),
+    'SG': os.path.join(output_dir, 'SG_cidr.txt'),
+    'JP': os.path.join(output_dir, 'JP_cidr.txt'),
+    'KR': os.path.join(output_dir, 'KR_cidr.txt')
 }
 
 # 用于保存结果的字典
 result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
 
 # 遍历数据库中的所有数据
+print("开始遍历数据库...")
 for cidr, info in db_reader:
     country = info.get('country', {}).get('names', {}).get('en', '')
-
+    
     # 将 CIDR 转换为字符串进行处理
     cidr_str = str(cidr)
-
+    
     # 检查CIDR是否属于目标地区
     for region_code, region_name in regions.items():
         if country == region_name:
+            print(f"匹配到 {country}: CIDR = {cidr_str}")
             try:
                 # 将CIDR转换为ip_network对象来判断是IPv4还是IPv6
-                network = ipaddress.ip_network(cidr_str)
+                network = ipaddress.ip_network(cidr_str, strict=False)
                 if network.version == 6:
                     result[region_code]['ipv6'].append(cidr_str)
                 else:
                     result[region_code]['ipv4'].append(cidr_str)
             except ValueError:
                 # 如果 cidr 无法转换为网络对象，跳过
+                print(f"无效的 CIDR: {cidr_str}")
                 continue
 
 # 将结果保存到对应文件中
@@ -58,6 +62,8 @@ for region_code, data in result.items():
             f.write('\n'.join(data['ipv4']) + '\n\n')
             f.write(f"IPv6 CIDR for {regions[region_code]}:\n")
             f.write('\n'.join(data['ipv6']) + '\n')
+        print(f"已生成 {region_files[region_code]} 文件")
 
 # 关闭数据库
 db_reader.close()
+print("脚本执行完毕！")
