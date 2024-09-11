@@ -20,7 +20,7 @@ jobs:
 
     - name: 下载并处理 CN-ip-cidr.txt
       run: |
-        curl -s https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt | \
+        curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > cn-ip-cidr_processed.list
 
     - name: 提交并推送更改
