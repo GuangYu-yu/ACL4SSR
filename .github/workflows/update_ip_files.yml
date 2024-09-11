@@ -16,12 +16,12 @@ jobs:
     - name: 下载并处理 chnroute_v6.txt
       run: |
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
-        sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > chnroute_v6_processed.list
+        sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr_processed.list
 
     - name: 下载并处理 CN-ip-cidr.txt
       run: |
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
-        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > cn-ip-cidr_processed.list
+        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr_processed.list
 
     - name: 提交并推送更改
       run: |
