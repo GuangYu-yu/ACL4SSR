@@ -34,11 +34,11 @@ jobs:
         fi
 
     - name: Commit and Push Changes
-      if: success() # 仅在上一步成功时运行
+      if: success()  # 仅在上一步成功时运行
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "Downloaded and processed files on $(date "+%Y/%m/%d %H:%M:%S")"
+        git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "No changes to commit, skipping commit."
         git pull --rebase  # 拉取远程仓库最新的更改并合并
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-        git push
+        git push || echo "No changes to push, skipping push."
