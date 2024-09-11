@@ -1,34 +1,37 @@
 import geoip2.database
 from netaddr import IPNetwork, IPSet
+import requests
 from collections import defaultdict
+
+# Cloudflare 的 ASN 列表
+cloudflare_asns = {'209242', '13335', '149648', '132892', '139242', '202623', '203898', '394536', '395747'}
 
 # 打开 GeoLite2 数据库
 asn_reader = geoip2.database.Reader("GeoLite2-ASN.mmdb")
 country_reader = geoip2.database.Reader("GeoLite2-Country.mmdb")
 
-# 读取 Cloudflare CIDR 列表
-with open("CIDR.txt") as f:
-    cloudflare_cidrs = [IPNetwork(line.strip()) for line in f if line.strip()]
-
 # 存储结果的字典：以国家代码为键，存储对应 CIDR
 country_cidr_map = defaultdict(IPSet)
 
-# 遍历每个 Cloudflare 的 CIDR，获取对应的 ASN 和国家代码
-for cidr in cloudflare_cidrs:
+# 遍历所有 ASN，找出 Cloudflare 的 ASN
+for asn in cloudflare_asns:
     try:
-        # 从 ASN 数据库获取 ASN 信息
-        asn_response = asn_reader.asn(cidr.network)
-        asn = asn_response.autonomous_system_number
+        # 查找 ASN 对应的 IP 段
+        for ip_range in asn_reader.asn(asn).prefixes:
+            cidr = IPNetwork(ip_range)
+            
+            # 获取该 IP 段对应的国家代码
+            try:
+                country_response = country_reader.asn(cidr.network)
+                country_code = country_response.country.iso_code
 
-        # 从国家数据库获取国家代码
-        country_response = country_reader.asn(cidr.network)
-        country_code = country_response.country.iso_code
-
-        # 存储 IP CIDR 段到对应的国家代码列表中
-        country_cidr_map[country_code].add(cidr)
+                # 存储 IP CIDR 段到对应的国家代码列表中
+                country_cidr_map[country_code].add(cidr)
+            except geoip2.errors.AddressNotFoundError:
+                pass
 
     except geoip2.errors.AddressNotFoundError:
-        # 处理无法找到地址的错误
+        # 处理无法找到 ASN 的错误
         pass
 
 # 为每个国家代码生成 CIDR 输出文件
