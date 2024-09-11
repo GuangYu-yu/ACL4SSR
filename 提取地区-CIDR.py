@@ -6,11 +6,31 @@ db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
 
 # 定义要查找的地区及其名称
 regions = {
-    'HK': 'Hong Kong',  # 香港
-    'TW': 'Taiwan',     # 台湾
-    'SG': 'Singapore',  # 新加坡
-    'JP': 'Japan',      # 日本
-    'KR': 'South Korea' # 韩国
+    'HK': 'Hong Kong',       # 香港
+    'TW': 'Taiwan',          # 台湾
+    'SG': 'Singapore',       # 新加坡
+    'JP': 'Japan',           # 日本
+    'KR': 'South Korea',     # 韩国
+    'US': 'United States',   # 美国
+    'GB': 'United Kingdom',  # 英国
+    'DE': 'Germany',         # 德国
+    'FR': 'France',          # 法国
+    'AU': 'Australia',       # 澳大利亚
+    'CN': 'China',           # 中国
+    'IN': 'India',           # 印度
+    'BR': 'Brazil',          # 巴西
+    'MX': 'Mexico',          # 墨西哥
+    'ZA': 'South Africa',    # 南非
+    'RU': 'Russia',          # 俄罗斯
+    'IT': 'Italy',           # 意大利
+    'ES': 'Spain',           # 西班牙
+    'NL': 'Netherlands',     # 荷兰
+    'SE': 'Sweden',          # 瑞典
+    'CH': 'Switzerland',     # 瑞士
+    'BE': 'Belgium',         # 比利时
+    'AR': 'Argentina',       # 阿根廷
+    'NG': 'Nigeria',         # 尼日利亚
+    'PH': 'Philippines'      # 菲律宾
 }
 
 # 文件名映射，保存 CIDR 列表到指定文件
@@ -19,7 +39,27 @@ region_files = {
     'TW': 'Clash/TW_cidr.txt',
     'SG': 'Clash/SG_cidr.txt',
     'JP': 'Clash/JP_cidr.txt',
-    'KR': 'Clash/KR_cidr.txt'
+    'KR': 'Clash/KR_cidr.txt',
+    'US': 'Clash/US_cidr.txt',
+    'GB': 'Clash/GB_cidr.txt',
+    'DE': 'Clash/DE_cidr.txt',
+    'FR': 'Clash/FR_cidr.txt',
+    'AU': 'Clash/AU_cidr.txt',
+    'CN': 'Clash/CN_cidr.txt',
+    'IN': 'Clash/IN_cidr.txt',
+    'BR': 'Clash/BR_cidr.txt',
+    'MX': 'Clash/MX_cidr.txt',
+    'ZA': 'Clash/ZA_cidr.txt',
+    'RU': 'Clash/RU_cidr.txt',
+    'IT': 'Clash/IT_cidr.txt',
+    'ES': 'Clash/ES_cidr.txt',
+    'NL': 'Clash/NL_cidr.txt',
+    'SE': 'Clash/SE_cidr.txt',
+    'CH': 'Clash/CH_cidr.txt',
+    'BE': 'Clash/BE_cidr.txt',
+    'AR': 'Clash/AR_cidr.txt',
+    'NG': 'Clash/NG_cidr.txt',
+    'PH': 'Clash/PH_cidr.txt'
 }
 
 # 初始化结果字典，用于保存各地区的 IPv4 和 IPv6 CIDR 列表
