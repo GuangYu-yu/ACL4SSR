@@ -125,6 +125,10 @@ for cidr, info in db_reader:
                 # 如果 CIDR 无法转换为网络对象，则跳过
                 continue
 
+# 打印调试信息
+for region_code, data in result.items():
+    print(f"Region: {region_code}, IPv4 count: {len(data['ipv4'])}, IPv6 count: {len(data['ipv6'])}")
+
 # 将结果保存到对应文件中
 for region_code, data in result.items():
     if data['ipv4'] or data['ipv6']:  # 仅当有数据时才写入文件
