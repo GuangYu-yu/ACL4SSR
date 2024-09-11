@@ -20,13 +20,21 @@ jobs:
 
     - name: 下载并处理 CN-ip-cidr.txt
       run: |
-        curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
+        curl -s https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr_processed.list
 
+    - name: 检查是否有更改
+      run: |
+        git add .
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+
     - name: 提交并推送更改
+      if: success() # 仅在上一步成功时运行
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add .
         git commit -m "Auto-update IP CIDR files"
         git push
