@@ -2,6 +2,7 @@ import geoip2.database
 from netaddr import IPNetwork, IPSet
 import requests
 from collections import defaultdict
+import os
 
 # Cloudflare 的 ASN 列表
 cloudflare_asns = {'209242', '13335', '149648', '132892', '139242', '202623', '203898', '394536', '395747'}
@@ -31,11 +32,16 @@ for asn in cloudflare_asns:
                 pass
 
     except geoip2.errors.AddressNotFoundError:
-        # 处理无法找到 ASN 的错误
         pass
 
 # 为每个国家代码生成 CIDR 输出文件
+if not os.path.exists('outputs'):
+    os.makedirs('outputs')
+
 for country_code, cidrs in country_cidr_map.items():
-    with open(f"outputs/{country_code}.txt", "w") as f:
+    file_path = f"outputs/{country_code}.txt"
+    with open(file_path, "w") as f:
         for cidr in cidrs.iter_cidrs():
             f.write(f"{cidr}\n")
+
+print("Files have been created in the 'outputs' directory.")
