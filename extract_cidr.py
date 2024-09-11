@@ -1,67 +1,31 @@
 import maxminddb
-import ipaddress
-import os
 
-# 获取当前工作目录
-output_dir = os.getcwd()
-
-# 定义要查找的地区
-regions = {
+# 定义目标地区的ISO代码
+target_countries = {
     'HK': 'Hong Kong',
-    'TW': 'Taiwan',
-    'SG': 'Singapore',
     'JP': 'Japan',
-    'KR': 'South Korea'
+    'KR': 'South Korea',
+    'SG': 'Singapore',
+    'TW': 'Taiwan'
 }
 
-# 文件名映射
-region_files = {
-    'HK': os.path.join(output_dir, 'HK_cidr.txt'),
-    'TW': os.path.join(output_dir, 'TW_cidr.txt'),
-    'SG': os.path.join(output_dir, 'SG_cidr.txt'),
-    'JP': os.path.join(output_dir, 'JP_cidr.txt'),
-    'KR': os.path.join(output_dir, 'KR_cidr.txt')
-}
+# 初始化一个字典来存储每个国家的 CIDR
+country_cidrs = {country_code: [] for country_code in target_countries}
 
-# 用于保存结果的字典
-result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
+# 读取 GeoLite2 数据库
+with maxminddb.open_database('GeoLite2-Country.mmdb') as reader:
+    for ip in reader:
+        country_data = reader.get(ip)
+        if country_data and 'country' in country_data:
+            country_name = country_data['country']['names']['en']
+            for code, name in target_countries.items():
+                if country_name == name:
+                    cidr = ip  # 获取对应的 CIDR
+                    if ':' in cidr:  # 区分 IPv6
+                        country_cidrs[code].append(cidr)
 
-# 打开 GeoLite2-Country.mmdb 文件
-db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
-
-# 遍历数据库中的所有数据
-for cidr, info in db_reader:
-    country = info.get('country', {}).get('names', {}).get('en', '')
-
-    # 仅打印匹配的地区
-    if country in regions.values():
-        print(f"Match found for {country}: CIDR = {cidr}")
-
-    # 将 CIDR 转换为字符串进行处理
-    cidr_str = str(cidr)
-
-    # 检查CIDR是否属于目标地区
-    for region_code, region_name in regions.items():
-        if country == region_name:
-            try:
-                # 将CIDR转换为ip_network对象来判断是IPv4还是IPv6
-                network = ipaddress.ip_network(cidr_str)
-                if network.version == 6:
-                    result[region_code]['ipv6'].append(cidr_str)
-                else:
-                    result[region_code]['ipv4'].append(cidr_str)
-            except ValueError:
-                # 如果 cidr 无法转换为网络对象，跳过
-                continue
-
-# 将结果保存到对应文件中
-for region_code, data in result.items():
-    if data['ipv4'] or data['ipv6']:  # 只在有数据时写入文件
-        with open(region_files[region_code], 'w') as f:
-            f.write(f"IPv4 CIDR for {regions[region_code]}:\n")
-            f.write('\n'.join(data['ipv4']) + '\n\n')
-            f.write(f"IPv6 CIDR for {regions[region_code]}:\n")
-            f.write('\n'.join(data['ipv6']) + '\n')
-
-# 关闭数据库
-db_reader.close()
+# 确保将结果写入到 /Clash 目录中
+for code, cidrs in country_cidrs.items():
+    if cidrs:
+        with open(f'Clash/{code}_cidr.txt', 'w') as file:
+            file.write('\n'.join(cidrs))
