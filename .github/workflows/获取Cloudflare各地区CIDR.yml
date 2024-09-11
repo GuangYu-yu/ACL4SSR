@@ -1,34 +1,40 @@
 name: 获取Cloudflare各地区CIDR
 
-# 触发器：手动或定时
 on:
   workflow_dispatch:  # 手动触发
   schedule:
     - cron: "0 */12 * * *"  # 每 12 小时运行一次
 
 jobs:
-  compare-cidrs:  # 任务名称
-    runs-on: ubuntu-latest  # 在最新的 Ubuntu 环境上运行
+  compare-cidrs:
+    runs-on: ubuntu-latest
     steps:
-      - name: 检出代码  # 拉取 GitHub 仓库中的代码
-        uses: actions/checkout@v3  # 使用 checkout v3 版本
+      - name: 检出代码
+        uses: actions/checkout@v3
 
-      - name: 设置 Python 环境  # 配置 Python 运行环境
+      - name: 设置 Python 环境
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'  # 使用 Python 3.x 版本
+          python-version: '3.x'
 
-      - name: 安装依赖  # 安装必要的 Python 包
-        run: pip install netaddr requests  # 安装 netaddr 和 requests 库
+      - name: 安装依赖
+        run: pip install netaddr requests
 
-      - name: 运行 CIDR 比较脚本  # 执行 Python 脚本
-        run: python compare_cidr.py
+      - name: 运行 CIDR 比较脚本
+        run: python 获取Cloudflare各地区CIDR.py
 
-      - name: 提交并推送更改  # 将修改后的文件提交并推送到仓库
-        if: success()  # 如果上一步成功，则执行此步骤
+      - name: 检查是否有更改  # 这个步骤是新增的，用来检查是否有文件更改
         run: |
-          git config --global user.name 'github-actions[bot]'  # 配置 Git 用户名
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'  # 配置 Git 用户邮箱
-          git add Cloudflare-*.txt  # 添加所有以 Cloudflare 开头的文件
-          git commit -m "自动更新 Cloudflare CIDR 文件"  # 提交修改
-          git push  # 推送到远程仓库
+          git add Cloudflare-*.txt
+          if git diff-index --quiet HEAD --; then
+            echo "没有检测到文件更改，跳过提交步骤。"
+            exit 0
+          fi
+
+      - name: 提交并推送更改  # 如果有变更，则提交并推送
+        if: success()
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -m "自动更新 Cloudflare CIDR 文件"
+          git push
