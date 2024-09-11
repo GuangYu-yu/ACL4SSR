@@ -20,19 +20,21 @@ jobs:
       - name: 安装依赖
         run: pip install netaddr requests
 
-      - name: 运行 CIDR 比较脚本
+      - name: 运行 获取Cloudflare各地区CIDR脚本
         run: python 获取Cloudflare各地区CIDR.py
 
       - name: 检查是否有更改  # 这个步骤是新增的，用来检查是否有文件更改
+        id: check_changes
         run: |
           git add Cloudflare-*.txt
           if git diff-index --quiet HEAD --; then
-            echo "没有检测到文件更改，跳过提交步骤。"
-            exit 0
+            echo "没有检测到文件更改，跳过提交步骤。" >> $GITHUB_ENV
+          else
+            echo "有文件更改。" >> $GITHUB_ENV
           fi
 
       - name: 提交并推送更改  # 如果有变更，则提交并推送
-        if: success()
+        if: env.GITHUB_ENV == '有文件更改。'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
