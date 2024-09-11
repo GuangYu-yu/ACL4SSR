@@ -13,29 +13,29 @@ jobs:
     - name: 检查出当前仓库
       uses: actions/checkout@v3
 
-    - name: 处理 CN-IPv6-cidr.list
+    - name: 下载并处理 chnroute_v6.txt
       run: |
-        [ -f CN-IPv6-cidr.list ] && rm CN-IPv6-cidr.list
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
         sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr.list
+        git add CN-IPv6-cidr.list
 
-    - name: 处理 CN-IPv4-cidr.list
+    - name: 下载并处理 chnroute.txt
       run: |
-        [ -f CN-IPv4-cidr.list ] && rm CN-IPv4-cidr.list
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr.list
+        git add CN-IPv4-cidr.list
 
-    - name: 处理 CloudflareCIDR-v6.list
+    - name: 下载并处理 CloudflareCIDR-v6.txt
       run: |
-        [ -f CloudflareCIDR-v6.list ] && rm CloudflareCIDR-v6.list
         curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR-v6.txt | \
         sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CloudflareCIDR-v6.list
+        git add CloudflareCIDR-v6.list
 
-    - name: 处理 CloudflareCIDR.list
+    - name: 下载并处理 CloudflareCIDR.txt
       run: |
-        [ -f CloudflareCIDR.list ] && rm CloudflareCIDR.list
         curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR.list
+        git add CloudflareCIDR.list
 
     - name: 检查是否有更改
       id: check_changes
@@ -53,6 +53,5 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]' # 配置 Git 用户名
         git config --global user.email 'github-actions[bot]@users.noreply.github.com' # 配置 Git 邮箱
-        git add CN-IPv6-cidr.list CN-IPv4-cidr.list CloudflareCIDR-v6.list CloudflareCIDR.list # 添加所有更改
         git commit -m "Auto-update IP CIDR files" # 提交更改
         git push # 推送更改
