@@ -30,3 +30,17 @@ jobs:
     - name: Run CIDR Extraction Script
       run: |
         python extract_cidr.py
+
+    - name: List output files
+      run: ls -alh
+
+    - name: Upload CIDR output files
+      uses: actions/upload-artifact@v3
+      with:
+        name: cidr-files
+        path: |
+          HK_cidr.txt
+          TW_cidr.txt
+          SG_cidr.txt
+          JP_cidr.txt
+          KR_cidr.txt
