@@ -98,6 +98,9 @@ region_files = {region: f"Global/{region}_cidr.txt" for region in regions.keys()
 # 初始化结果字典，用于保存各地区的 IPv4 和 IPv6 CIDR 列表
 result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
 
+# 确保 Global 目录存在
+os.makedirs("Global", exist_ok=True)
+
 # 遍历数据库中的所有 CIDR 数据
 for cidr, info in db_reader:
     country = info.get('country', {}).get('names', {}).get('en', '')
