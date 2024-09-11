@@ -1,35 +1,33 @@
-name: Extract CIDR for Specific Regions
+name: Process CIDR Files
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 */12 * * *'
-  workflow_dispatch:
+    - cron: '0 */12 * * *'  # 每 12 小时运行一次
 
 jobs:
-  extract_cidr:
+  cidr-job:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: '3.x'
 
-    - name: Install Dependencies
+    - name: Install dependencies
       run: |
-        pip install maxminddb
+        pip install maxminddb ipaddress
 
-    - name: Create Clash directory
-      run: |
-        mkdir -p Clash
-
-    - name: Download GeoLite2-Country.mmdb
-      run: |
-        wget -O GeoLite2-Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
-
-    - name: Run CIDR Extraction Script
+    - name: Run CIDR extraction script
       run: |
         python extract_cidr.py
+
+    # 不需要上传文件到 Artifacts，如果只需要文件保留在项目根目录中
+    - name: List files in Clash directory
+      run: ls -alh Clash/
