@@ -2,7 +2,7 @@ name: 获取CIDR-list
 
 on:
   schedule:
-    - cron: '0 */12 * * *' # 每 12 小时运行一次
+    - cron: '0 */12 * * *' # 每12小时运行一次
   workflow_dispatch: # 允许手动触发
 
 jobs:
@@ -10,51 +10,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 检出当前仓库的代码
     - name: 检查出当前仓库
       uses: actions/checkout@v3
 
-    # 下载并处理 chnroute_v6.txt
     - name: 下载并处理 chnroute_v6.txt
       run: |
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
         sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr.list
         git add CN-IPv6-cidr.list
 
-    # 下载并处理 chnroute.txt
     - name: 下载并处理 chnroute.txt
       run: |
         curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr.list
         git add CN-IPv4-cidr.list
 
-    # 下载并处理 CloudflareCIDR-v6.txt
     - name: 下载并处理 CloudflareCIDR-v6.txt
       run: |
         curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR-v6.txt | \
         sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CloudflareCIDR-v6.list
         git add CloudflareCIDR-v6.list
 
-    # 下载并处理 CloudflareCIDR.txt
     - name: 下载并处理 CloudflareCIDR.txt
       run: |
         curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR.txt | \
         sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR.list
         git add CloudflareCIDR.list
 
-    # 检查是否有更改
     - name: 检查是否有更改
+      id: check_changes
       run: |
-        git status
-        git diff --stat
         if git diff --cached --quiet; then
           echo "没有检测到文件更改，跳过提交步骤。"
-          exit 0
+          echo "changes=false" >> $GITHUB_ENV
+        else
+          echo "有文件更改，准备提交。"
+          echo "changes=true" >> $GITHUB_ENV
         fi
 
-    # 提交并推送更改
     - name: 提交并推送更改
-      if: success() # 仅在上一步成功时运行
+      if: env.changes == 'true' # 仅在有更改时运行
       run: |
         git config --global user.name 'github-actions[bot]' # 配置 Git 用户名
         git config --global user.email 'github-actions[bot]@users.noreply.github.com' # 配置 Git 邮箱
