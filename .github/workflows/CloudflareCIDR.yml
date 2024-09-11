@@ -1,0 +1,35 @@
+name: 更新 Clash/CloudflareCIDR.list
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # 每12小时运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  download-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # 使用最新的 Python 3 版本
+
+    - name: Install required libraries
+      run: |
+        pip install requests  # 安装requests库
+
+    - name: Download and Process Files
+      run: python CloudflareCIDR-IPv4-and-IPv6-main.py  # 调用你的 Python 脚本
+
+    - name: Commit and Push Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Downloaded and processed files on $(date "+%Y/%m/%d %H:%M:%S")"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}.git
+        git push
