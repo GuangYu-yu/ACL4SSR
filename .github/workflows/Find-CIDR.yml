@@ -33,6 +33,9 @@ jobs:
       - name: Run Python script to find overlaps
         run: python3 find_overlaps.py
 
+      - name: List output directory contents
+        run: ls -l outputs
+
       - name: Commit and push results
         run: |
           git config --global user.name "github-actions"
