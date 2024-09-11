@@ -1,5 +1,5 @@
 import maxminddb
-import ipaddress  # 用于检查 IP 地址版本
+import ipaddress
 
 # 打开 GeoLite2-Country.mmdb 文件
 db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
@@ -29,6 +29,10 @@ result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
 for cidr, info in db_reader:
     country = info.get('country', {}).get('names', {}).get('en', '')
 
+    # 仅打印匹配的地区
+    if country in regions.values():
+        print(f"Match found for {country}: CIDR = {cidr}")
+
     # 将 CIDR 转换为字符串进行处理
     cidr_str = str(cidr)
 
@@ -48,11 +52,12 @@ for cidr, info in db_reader:
 
 # 将结果保存到对应文件中
 for region_code, data in result.items():
-    with open(region_files[region_code], 'w') as f:
-        f.write(f"IPv4 CIDR for {regions[region_code]}:\n")
-        f.write('\n'.join(data['ipv4']) + '\n\n')
-        f.write(f"IPv6 CIDR for {regions[region_code]}:\n")
-        f.write('\n'.join(data['ipv6']) + '\n')
+    if data['ipv4'] or data['ipv6']:  # 只在有数据时写入文件
+        with open(region_files[region_code], 'w') as f:
+            f.write(f"IPv4 CIDR for {regions[region_code]}:\n")
+            f.write('\n'.join(data['ipv4']) + '\n\n')
+            f.write(f"IPv6 CIDR for {regions[region_code]}:\n")
+            f.write('\n'.join(data['ipv6']) + '\n')
 
 # 关闭数据库
 db_reader.close()
