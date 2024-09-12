@@ -36,31 +36,73 @@ def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
 
 # 各地区 CIDR 文件 URL
 region_cidr_urls = {
-    'HK': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',  # 香港
-    'SG': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SG_cidr.txt',  # 新加坡
-    'JP': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',  # 日本
-    'KR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt',  # 韩国
-    'TW': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',  # 台湾
-    'US': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/US_cidr.txt',  # 美国
-    'GB': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GB_cidr.txt',  # 英国
-    'DE': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DE_cidr.txt',  # 德国
-    'FR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/FR_cidr.txt',  # 法国
-    'AU': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AU_cidr.txt',  # 澳大利亚
-    'CN': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CN_cidr.txt',  # 中国
-    'IN': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IN_cidr.txt',  # 印度
-    'BR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BR_cidr.txt',  # 巴西
-    'MX': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MX_cidr.txt',  # 墨西哥
-    'ZA': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ZA_cidr.txt',  # 南非
-    'RU': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/RU_cidr.txt',  # 俄罗斯
-    'IT': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IT_cidr.txt',  # 意大利
-    'ES': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ES_cidr.txt',  # 西班牙
-    'NL': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NL_cidr.txt',  # 荷兰
-    'SE': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SE_cidr.txt',  # 瑞典
-    'CH': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CH_cidr.txt',  # 瑞士
-    'BE': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BE_cidr.txt',  # 比利时
-    'AR': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AR_cidr.txt',  # 阿根廷
-    'NG': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NG_cidr.txt',  # 尼日利亚
-    'PH': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PH_cidr.txt'   # 菲律宾
+    'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',
+    'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',
+    'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',
+    'South Korea': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt',
+    'India': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IN_cidr.txt',
+    'Singapore': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SG_cidr.txt',
+    'Thailand': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TH_cidr.txt',
+    'Vietnam': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/VN_cidr.txt',
+    'Philippines': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PH_cidr.txt',
+    'Malaysia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MY_cidr.txt',
+    'France': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/FR_cidr.txt',
+    'Germany': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DE_cidr.txt',
+    'United Kingdom': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GB_cidr.txt',
+    'Italy': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IT_cidr.txt',
+    'Spain': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ES_cidr.txt',
+    'Russia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/RU_cidr.txt',
+    'Sweden': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SE_cidr.txt',
+    'Switzerland': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CH_cidr.txt',
+    'Poland': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PL_cidr.txt',
+    'United States': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/US_cidr.txt',
+    'Canada': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CA_cidr.txt',
+    'Mexico': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MX_cidr.txt',
+    'Cuba': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CU_cidr.txt',
+    'Guatemala': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GT_cidr.txt',
+    'Dominican Republic': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DO_cidr.txt',
+    'Costa Rica': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CR_cidr.txt',
+    'Panama': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PA_cidr.txt',
+    'Honduras': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HN_cidr.txt',
+    'Jamaica': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JM_cidr.txt',
+    'Brazil': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BR_cidr.txt',
+    'Argentina': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AR_cidr.txt',
+    'Chile': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CL_cidr.txt',
+    'Colombia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CO_cidr.txt',
+    'Peru': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PE_cidr.txt',
+    'Venezuela': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/VE_cidr.txt',
+    'Uruguay': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/UY_cidr.txt',
+    'Paraguay': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PY_cidr.txt',
+    'Bolivia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BO_cidr.txt',
+    'Ecuador': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/EC_cidr.txt',
+    'South Africa': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ZA_cidr.txt',
+    'Nigeria': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NG_cidr.txt',
+    'Egypt': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/EG_cidr.txt',
+    'Kenya': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KE_cidr.txt',
+    'Algeria': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DZ_cidr.txt',
+    'Morocco': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MA_cidr.txt',
+    'Ghana': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GH_cidr.txt',
+    'Ethiopia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ET_cidr.txt',
+    'Tanzania': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TZ_cidr.txt',
+    'Senegal': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SN_cidr.txt',
+    'Australia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AU_cidr.txt',
+    'New Zealand': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NZ_cidr.txt',
+    'Fiji': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/FJ_cidr.txt',
+    'Papua New Guinea': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PG_cidr.txt',
+    'Solomon Islands': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SB_cidr.txt',
+    'Vanuatu': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/VU_cidr.txt',
+    'Tonga': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TO_cidr.txt',
+    'Wallis and Futuna': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/WF_cidr.txt',
+    'Nauru': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NR_cidr.txt',
+    'Tuvalu': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TV_cidr.txt',
+    'Saudi Arabia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SA_cidr.txt',
+    'United Arab Emirates': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AE_cidr.txt',
+    'Iran': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IR_cidr.txt',
+    'Iraq': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IQ_cidr.txt',
+    'Israel': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IL_cidr.txt',
+    'Jordan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JO_cidr.txt',
+    'Kuwait': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KW_cidr.txt',
+    'Qatar': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/QA_cidr.txt'
 }
 
 # Cloudflare CIDR 文件 URL
@@ -70,7 +112,7 @@ cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/
 cloudflare_cidrs = read_cidr_file(cloudflare_url)
 
 # 对每个地区执行 CIDR 重叠计算
-for region_code, region_url in region_cidr_urls.items():
+for region_name, region_url in region_cidr_urls.items():
     # 获取地区 CIDR 列表
     region_cidrs = read_cidr_file(region_url)
     
@@ -81,7 +123,7 @@ for region_code, region_url in region_cidr_urls.items():
     all_cidrs = sorted(set(ipv4_common_cidrs + ipv6_common_cidrs), key=lambda x: (x.version, x))
 
     # 保存结果到对应文件
-    output_filename = f"Cloudflare-{region_code}.txt"
+    output_filename = f"Cloudflare-{region_name}.txt"
     save_cidrs_to_file(output_filename, ipv4_common_cidrs, ipv6_common_cidrs)
 
 print("重叠计算完成，CIDR 文件已生成。")
