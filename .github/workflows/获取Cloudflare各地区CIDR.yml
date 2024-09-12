@@ -22,21 +22,22 @@ jobs:
       - name: 运行 获取Cloudflare各地区CIDR
         run: python 获取Cloudflare各地区CIDR.py
 
-      - name: 检查是否有更改  # 这个步骤是新增的，用来检查是否有文件更改
-        id: check_changes
+      # 检查是否有更改
+      - name: 检查是否有更改
         run: |
-          git add Cloudflare-*.txt
-          if git diff-index --quiet HEAD --; then
-            echo "没有文件更改，跳过提交步骤。" >> result.log
+          git add .  # 将所有更改添加到暂存区
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
             exit 0
-          else
-            echo "文件已更改，准备提交。" >> result.log
           fi
 
-      - name: 提交并推送更改  # 如果有变更，则提交并推送
-        if: steps.check_changes.outputs.result == '文件已更改，准备提交。'
+      # 提交并推送更改
+      - name: 提交并推送更改
+        if: success()  # 仅在上一步成功时运行
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git commit -m "自动更新 Cloudflare CIDR 文件" || echo "没有需要提交的更改"
-          git push
+          git config --local user.email "action@github.com"  # 配置 Git 用户邮箱
+          git config --local user.name "GitHub Action"  # 配置 Git 用户名
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"  # 提交更改
+          git pull --rebase  # 拉取远程仓库最新的更改并合并
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git  # 设置远程仓库 URL
+          git push || echo "没有需要推送的更改，跳过推送。"  # 推送更改到远程仓库
