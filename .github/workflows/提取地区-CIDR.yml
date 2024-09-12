@@ -19,12 +19,12 @@ jobs:
       - name: 设置 Python 环境
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # 使用 Python 3.x 版本
+          python-version: '3.x'  # 使用最新的 Python 3 版本
 
-      # 安装依赖
+      # 安装所需依赖
       - name: 安装依赖
         run: |
-          pip install maxminddb  # 安装 maxminddb 库
+          pip install maxminddb requests  # 安装必要的依赖
 
       # 下载 GeoLite2 数据库
       - name: 下载 GeoLite2-Country.mmdb
@@ -33,21 +33,24 @@ jobs:
 
       # 运行 CIDR 提取脚本
       - name: 运行 CIDR 提取脚本
-        run: |
-          python 提取地区-CIDR.py  # 执行 Python 脚本
+        run: python 提取地区-CIDR.py  # 执行 Python 脚本
 
-      # 检查文件更改
-      - name: 检查文件更改
-        id: check_files
+      # 检查是否有更改
+      - name: 检查是否有更改
         run: |
-          git diff --exit-code || echo "::set-output name=changed::true"
+          git add .  # 将所有更改添加到暂存区
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
 
       # 提交并推送更改
       - name: 提交并推送更改
-        if: steps.check_files.outputs.changed == 'true'
+        if: success()  # 仅在上一步成功时运行
         run: |
-          git config --global user.name 'github-actions[bot]'  # 配置 Git 用户名
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'  # 配置 Git 用户邮箱
-          git add ./Clash/*.txt  # 添加所有 .txt 文件
-          git commit -m "自动更新 IP CIDR 文件" || echo "没有需要提交的更改"
-          git push  # 推送到远程仓库
+          git config --local user.email "action@github.com"  # 配置 Git 用户邮箱
+          git config --local user.name "GitHub Action"  # 配置 Git 用户名
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"  # 提交更改
+          git pull --rebase  # 拉取远程仓库最新的更改并合并
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git  # 设置远程仓库 URL
+          git push || echo "没有需要推送的更改，跳过推送。"  # 推送更改到远程仓库
