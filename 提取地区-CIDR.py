@@ -6,61 +6,92 @@ db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
 
 # 定义要查找的地区及其名称
 regions = {
-    'HK': 'Hong Kong',       # 香港
-    'TW': 'Taiwan',          # 台湾
-    'SG': 'Singapore',       # 新加坡
-    'JP': 'Japan',           # 日本
-    'KR': 'South Korea',     # 韩国
-    'US': 'United States',   # 美国
-    'GB': 'United Kingdom',  # 英国
-    'DE': 'Germany',         # 德国
-    'FR': 'France',          # 法国
-    'AU': 'Australia',       # 澳大利亚
-    'CN': 'China',           # 中国
-    'IN': 'India',           # 印度
-    'BR': 'Brazil',          # 巴西
-    'MX': 'Mexico',          # 墨西哥
-    'ZA': 'South Africa',    # 南非
-    'RU': 'Russia',          # 俄罗斯
-    'IT': 'Italy',           # 意大利
-    'ES': 'Spain',           # 西班牙
-    'NL': 'Netherlands',     # 荷兰
-    'SE': 'Sweden',          # 瑞典
-    'CH': 'Switzerland',     # 瑞士
-    'BE': 'Belgium',         # 比利时
-    'AR': 'Argentina',       # 阿根廷
-    'NG': 'Nigeria',         # 尼日利亚
-    'PH': 'Philippines'      # 菲律宾
+    # 亚洲
+    'HK': 'Hong Kong',        # 香港特别行政区
+    'TW': 'Taiwan',           # 台湾省
+    'JP': 'Japan',            # 日本
+    'KR': 'South Korea',      # 韩国
+    'IN': 'India',            # 印度
+    'SG': 'Singapore',        # 新加坡
+    'TH': 'Thailand',         # 泰国
+    'VN': 'Vietnam',          # 越南
+    'PH': 'Philippines',      # 菲律宾
+    'MY': 'Malaysia',         # 马来西亚
+
+    # 欧洲
+    'FR': 'France',           # 法国
+    'DE': 'Germany',          # 德国
+    'GB': 'United Kingdom',   # 英国
+    'IT': 'Italy',            # 意大利
+    'ES': 'Spain',            # 西班牙
+    'RU': 'Russia',           # 俄罗斯
+    'UA': 'Ukraine',          # 乌克兰
+    'SE': 'Sweden',           # 瑞典
+    'CH': 'Switzerland',      # 瑞士
+    'PL': 'Poland',           # 波兰
+
+    # 北美洲
+    'US': 'United States',    # 美国
+    'CA': 'Canada',           # 加拿大
+    'MX': 'Mexico',           # 墨西哥
+    'CU': 'Cuba',             # 古巴
+    'GT': 'Guatemala',        # 危地马拉
+    'DO': 'Dominican Republic', # 多米尼加共和国
+    'CR': 'Costa Rica',       # 哥斯达黎加
+    'PA': 'Panama',           # 巴拿马
+    'HN': 'Honduras',         # 洪都拉斯
+    'JM': 'Jamaica',          # 牙买加
+
+    # 南美洲
+    'BR': 'Brazil',           # 巴西
+    'AR': 'Argentina',        # 阿根廷
+    'CL': 'Chile',            # 智利
+    'CO': 'Colombia',         # 哥伦比亚
+    'PE': 'Peru',             # 秘鲁
+    'VE': 'Venezuela',        # 委内瑞拉
+    'UY': 'Uruguay',          # 乌拉圭
+    'PY': 'Paraguay',         # 巴拉圭
+    'BO': 'Bolivia',          # 玻利维亚
+    'EC': 'Ecuador',          # 厄瓜多尔
+
+    # 非洲
+    'ZA': 'South Africa',     # 南非
+    'NG': 'Nigeria',          # 尼日利亚
+    'EG': 'Egypt',            # 埃及
+    'KE': 'Kenya',            # 肯尼亚
+    'DZ': 'Algeria',          # 阿尔及利亚
+    'MA': 'Morocco',          # 摩洛哥
+    'GH': 'Ghana',            # 加纳
+    'ET': 'Ethiopia',         # 埃塞俄比亚
+    'TZ': 'Tanzania',         # 坦桑尼亚
+    'SN': 'Senegal',          # 塞内加尔
+
+    # 大洋洲
+    'AU': 'Australia',        # 澳大利亚
+    'NZ': 'New Zealand',      # 新西兰
+    'FJ': 'Fiji',             # 斐济
+    'PG': 'Papua New Guinea', # 巴布亚新几内亚
+    'SB': 'Solomon Islands',  # 所罗门群岛
+    'VU': 'Vanuatu',          # 瓦努阿图
+    'TO': 'Tonga',            # 汤加
+    'WF': 'Wallis and Futuna', # 瓦利斯和富图纳
+    'NR': 'Nauru',            # 瑙鲁
+    'TV': 'Tuvalu',           # 图瓦卢
+
+    # 中东
+    'SA': 'Saudi Arabia',     # 沙特阿拉伯
+    'AE': 'United Arab Emirates', # 阿联酋
+    'IR': 'Iran',             # 伊朗
+    'IQ': 'Iraq',             # 伊拉克
+    'IL': 'Israel',           # 以色列
+    'SY': 'Syria',            # 叙利亚
+    'JO': 'Jordan',           # 约旦
+    'KW': 'Kuwait',           # 科威特
+    'QA': 'Qatar'             # 卡塔尔
 }
 
 # 文件名映射，保存 CIDR 列表到指定文件
-region_files = {
-    'HK': 'Clash/HK_cidr.txt',
-    'TW': 'Clash/TW_cidr.txt',
-    'SG': 'Clash/SG_cidr.txt',
-    'JP': 'Clash/JP_cidr.txt',
-    'KR': 'Clash/KR_cidr.txt',
-    'US': 'Clash/US_cidr.txt',
-    'GB': 'Clash/GB_cidr.txt',
-    'DE': 'Clash/DE_cidr.txt',
-    'FR': 'Clash/FR_cidr.txt',
-    'AU': 'Clash/AU_cidr.txt',
-    'CN': 'Clash/CN_cidr.txt',
-    'IN': 'Clash/IN_cidr.txt',
-    'BR': 'Clash/BR_cidr.txt',
-    'MX': 'Clash/MX_cidr.txt',
-    'ZA': 'Clash/ZA_cidr.txt',
-    'RU': 'Clash/RU_cidr.txt',
-    'IT': 'Clash/IT_cidr.txt',
-    'ES': 'Clash/ES_cidr.txt',
-    'NL': 'Clash/NL_cidr.txt',
-    'SE': 'Clash/SE_cidr.txt',
-    'CH': 'Clash/CH_cidr.txt',
-    'BE': 'Clash/BE_cidr.txt',
-    'AR': 'Clash/AR_cidr.txt',
-    'NG': 'Clash/NG_cidr.txt',
-    'PH': 'Clash/PH_cidr.txt'
-}
+region_files = {region: f'Clash/{region}_cidr.txt' for region in regions.keys()}
 
 # 初始化结果字典，用于保存各地区的 IPv4 和 IPv6 CIDR 列表
 result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
