@@ -2,8 +2,7 @@ name: 提取地区-CIDR
 
 on:
   schedule:
-    # 每 12 小时运行一次
-    - cron: '0 */12 * * *'
+      - cron: "0 4,16 * * *"  # 每天4点和16点运行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
