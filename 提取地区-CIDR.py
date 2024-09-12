@@ -1,12 +1,15 @@
+import os
 import maxminddb
 import ipaddress
+
+# 创建保存结果的目录
+os.makedirs('Clash', exist_ok=True)
 
 # 打开 GeoLite2-Country.mmdb 数据库文件
 db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
 
 # 定义要查找的地区及其名称
 regions = {
-    # 亚洲
     'HK': 'Hong Kong',        # 香港特别行政区
     'TW': 'Taiwan',           # 台湾省
     'JP': 'Japan',            # 日本
@@ -25,7 +28,6 @@ regions = {
     'IT': 'Italy',            # 意大利
     'ES': 'Spain',            # 西班牙
     'RU': 'Russia',           # 俄罗斯
-    'UA': 'Ukraine',          # 乌克兰
     'SE': 'Sweden',           # 瑞典
     'CH': 'Switzerland',      # 瑞士
     'PL': 'Poland',           # 波兰
@@ -84,7 +86,6 @@ regions = {
     'IR': 'Iran',             # 伊朗
     'IQ': 'Iraq',             # 伊拉克
     'IL': 'Israel',           # 以色列
-    'SY': 'Syria',            # 叙利亚
     'JO': 'Jordan',           # 约旦
     'KW': 'Kuwait',           # 科威特
     'QA': 'Qatar'             # 卡塔尔
@@ -121,8 +122,10 @@ for cidr, info in db_reader:
 for region_code, data in result.items():
     if data['ipv4'] or data['ipv6']:  # 仅当有数据时才写入文件
         with open(region_files[region_code], 'w') as f:
-            f.write('\n'.join(data['ipv4']) + '\n')  # 写入 IPv4 CIDR 列表
-            f.write('\n'.join(data['ipv6']) + '\n')  # 写入 IPv6 CIDR 列表
+            if data['ipv4']:
+                f.write('\n'.join(data['ipv4']) + '\n')  # 写入 IPv4 CIDR 列表
+            if data['ipv6']:
+                f.write('\n'.join(data['ipv6']) + '\n')  # 写入 IPv6 CIDR 列表
 
 # 关闭数据库
 db_reader.close()
