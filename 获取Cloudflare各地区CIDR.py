@@ -77,6 +77,8 @@ def get_thread_count():
 
 # 主函数，进行并发处理
 def main():
+    # 各地区 CIDR 文件 URL
+    region_cidr_urls = {
     'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',
     'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',
     'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',
