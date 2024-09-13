@@ -72,13 +72,14 @@ def merge_adjacent_cidr(cidr_list):
             current_end = max(current_end, net_end)
         else:
             # 如果不相邻，将当前合并好的 CIDR 加入列表
-            merged.append(ipaddress.ip_network((current_start, current_end)))
+            merged.append(ipaddress.ip_network(f"{current_start}/{current.prefixlen}"))
             # 更新为新的 CIDR 范围
-            current_start = net_start
-            current_end = net_end
+            current = net
+            current_start = net.network_address
+            current_end = net.broadcast_address
 
     # 将最后一个合并的 CIDR 加入列表
-    merged.append(ipaddress.ip_network((current_start, current_end)))
+    merged.append(ipaddress.ip_network(f"{current_start}/{current.prefixlen}"))
 
     return merged
 
