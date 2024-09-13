@@ -1,7 +1,3 @@
-
-
-hz
-您说：
 import requests
 from netaddr import IPSet, IPNetwork
 # 读取远程 CIDR 文件
