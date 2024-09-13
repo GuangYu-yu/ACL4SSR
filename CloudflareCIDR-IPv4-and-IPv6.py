@@ -3,6 +3,8 @@ import shutil
 import zipfile
 import requests
 import ipaddress
+from sortedcontainers import SortedList
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 下载 zip 文件
 url = "https://github.com/ipverse/asn-ip/archive/refs/heads/master.zip"
@@ -46,18 +48,18 @@ ipv4_networks = [ipaddress.IPv4Network(ip, strict=False) for ip in ipv4_addresse
 ipv6_networks = [ipaddress.IPv6Network(ip, strict=False) for ip in ipv6_addresses]
 
 def merge_networks(networks):
-    """合并范围"""
+    """合并所有网络范围"""
     if not networks:
         return []
 
     # 将网络的开始和结束地址转换为整数，并按开始地址排序
-    ranges = [(int(net.network_address), int(net.broadcast_address)) for net in networks]
-    ranges.sort()
+    ranges = SortedList((int(net.network_address), int(net.broadcast_address)) for net in networks)
     
     merged_ranges = []
-    current_start, current_end = ranges[0]
+    current_start, current_end = ranges.pop(0)
 
-    for start, end in ranges[1:]:
+    while ranges:
+        start, end = ranges.pop(0)
         if start <= current_end + 1:  # 检查是否相邻或重叠
             current_end = max(current_end, end)
         else:
@@ -75,9 +77,27 @@ def merge_networks(networks):
 
     return merged_networks
 
-# 合并并排序 IPv4 和 IPv6
-ipv4_merged_sorted = merge_networks(ipv4_networks)
-ipv6_merged_sorted = merge_networks(ipv6_networks)
+def process_networks(networks, thread_count):
+    """处理网络数据，使用多线程"""
+    def chunkify(lst, n):
+        """将列表分成 n 份"""
+        return [lst[i::n] for i in range(n)]
+
+    with ThreadPoolExecutor(max_workers=thread_count) as executor:
+        futures = []
+        chunks = chunkify(networks, thread_count)
+        for chunk in chunks:
+            futures.append(executor.submit(merge_networks, chunk))
+
+        results = []
+        for future in as_completed(futures):
+            results.extend(future.result())
+
+    return merge_networks(results)
+
+# 多线程处理 IPv4 和 IPv6
+ipv4_merged_sorted = process_networks(ipv4_networks, thread_count=8)  # 8 是线程数
+ipv6_merged_sorted = process_networks(ipv6_networks, thread_count=8)  # 8 是线程数
 
 # 将合并并排序后的 IPv4 结果写入文件
 with open('Clash/CloudflareCIDR.txt', 'w') as file:
