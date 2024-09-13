@@ -1,16 +1,15 @@
+
+
+hz
+您说：
 import requests
 from netaddr import IPSet, IPNetwork
-
 # 读取远程 CIDR 文件
 def read_cidr_file(url):
-    print(f"正在读取 CIDR 文件: {url}")  # 打印读取文件的URL信息
     response = requests.get(url)
     return response.text.strip().splitlines()
-
 # 找出 CIDR 列表的重叠部分
 def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
-    print("正在计算重叠部分...")
-    
     # 分离 IPv4 和 IPv6 的 CIDR 列表
     ipv4_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 4]
     ipv6_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 6]
@@ -29,10 +28,8 @@ def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
     
     # 返回排序后的重叠 CIDR 列表
     return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
-
 # 保存 CIDR 到文件
 def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
-    print(f"正在保存 CIDR 到文件: {filename}")
     with open(filename, 'w') as f:
         # 仅写入 CIDR，不包含额外文本
         f.write('\n'.join(str(cidr) for cidr in ipv4_cidrs) + '\n')
@@ -108,18 +105,14 @@ region_cidr_urls = {
     'Kuwait': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KW_cidr.txt',
     'Qatar': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/QA_cidr.txt'
 }
-    
-# Cloudflare CIDR 文件 URL
-cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CloudflareCIDR合并地址.txt #Cloudflare'
 
+# Cloudflare CIDR 文件 URL
+cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CloudflareCIDR合并地址.txt'
 # 获取 Cloudflare 的 CIDR 列表
-print(f"正在获取 Cloudflare 的 CIDR 列表: {cloudflare_url}")
 cloudflare_cidrs = read_cidr_file(cloudflare_url)
 
 # 对每个地区执行 CIDR 重叠计算
 for region_name, region_url in region_cidr_urls.items():
-    print(f"正在处理地区: {region_name} ({region_url})")
-    
     # 获取地区 CIDR 列表
     region_cidrs = read_cidr_file(region_url)
 
