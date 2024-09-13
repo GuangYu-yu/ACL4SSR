@@ -19,15 +19,16 @@ def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
 def merge_adjacent_cidrs(cidrs):
     if not cidrs:
         return []
-    
+
     cidrs = sorted(cidrs, key=lambda net: (net.network, net.prefixlen))
     merged = []
     current = cidrs[0]
 
     for net in cidrs[1:]:
-        # 使用 last 和 first 来检查是否相邻
-        if current.last + 1 == net.first:
-            current = IPNetwork((current.network, current.size + net.size))
+        # 将 IPNetwork 转换为整数以进行比较
+        if int(current.network) + current.size == int(net.network):  # 比较是否相邻
+            # 如果相邻，扩展 current 的 CIDR 范围
+            current = IPNetwork((current.network, current.prefixlen - 1))  # 合并网络
         else:
             merged.append(current)
             current = net
