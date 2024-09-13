@@ -48,20 +48,23 @@ ipv6_networks = [ipaddress.IPv6Network(ip) for ip in ipv6_addresses]
 def merge_adjacent_cidr(cidr_list):
     """
     合并相邻或重叠的 CIDR 范围
-    :param cidr_list: 已排序的 IPv4Network 对象列表
+    :param cidr_list: 已排序的 IPv4Network 或 IPv6Network 对象列表
     :return: 合并后的 CIDR 列表
     """
     merged = []  # 存储合并后的 CIDR 范围
     
-    # 初始化当前正在处理的 CIDR 范围的起始和结束地址
-    current = cidr_list[0]  # 第一个 CIDR 范围
-    current_start = current.network_address  # 起始地址
-    current_end = current.broadcast_address  # 结束地址
+    # 按照网络地址对 CIDR 范围进行排序
+    cidr_list = sorted(cidr_list, key=lambda net: net.network_address)
+    
+    # 初始化当前正在处理的 CIDR 范围
+    current = cidr_list[0]
+    current_start = current.network_address
+    current_end = current.broadcast_address
 
     # 遍历剩余的 CIDR 范围
     for net in cidr_list[1:]:
-        net_start = net.network_address  # 下一个 CIDR 的起始地址
-        net_end = net.broadcast_address  # 下一个 CIDR 的结束地址
+        net_start = net.network_address
+        net_end = net.broadcast_address
         
         # 判断当前 CIDR 和下一个 CIDR 是否相邻或重叠
         if net_start <= current_end + 1:
@@ -69,19 +72,19 @@ def merge_adjacent_cidr(cidr_list):
             current_end = max(current_end, net_end)
         else:
             # 如果不相邻，将当前合并好的 CIDR 加入列表
-            merged.extend(ipaddress.summarize_address_range(current_start, current_end))
+            merged.append(ipaddress.ip_network((current_start, current_end)))
             # 更新为新的 CIDR 范围
             current_start = net_start
             current_end = net_end
 
     # 将最后一个合并的 CIDR 加入列表
-    merged.extend(ipaddress.summarize_address_range(current_start, current_end))
+    merged.append(ipaddress.ip_network((current_start, current_end)))
 
     return merged
 
 # 合并相邻的 IPv4 和 IPv6 CIDR 范围
-ipv4_merged = merge_adjacent_cidr(sorted(ipv4_networks, key=lambda net: net.network_address))
-ipv6_merged = merge_adjacent_cidr(sorted(ipv6_networks, key=lambda net: net.network_address))
+ipv4_merged = merge_adjacent_cidr(ipv4_networks)
+ipv6_merged = merge_adjacent_cidr(ipv6_networks)
 
 # 将合并并排序后的 IPv4 结果写入文件
 with open('Clash/CloudflareCIDR.txt', 'w') as file:
