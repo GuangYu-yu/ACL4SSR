@@ -3,7 +3,7 @@ import shutil
 import zipfile
 import requests
 import ipaddress
-from sortedcontainers import SortedList
+import bisect
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 下载 zip 文件
@@ -53,13 +53,13 @@ def merge_networks(networks):
         return []
 
     # 将网络的开始和结束地址转换为整数，并按开始地址排序
-    ranges = SortedList((int(net.network_address), int(net.broadcast_address)) for net in networks)
-    
-    merged_ranges = []
-    current_start, current_end = ranges.pop(0)
+    ranges = [(int(net.network_address), int(net.broadcast_address)) for net in networks]
+    ranges.sort()
 
-    while ranges:
-        start, end = ranges.pop(0)
+    merged_ranges = []
+    current_start, current_end = ranges[0]
+
+    for start, end in ranges[1:]:
         if start <= current_end + 1:  # 检查是否相邻或重叠
             current_end = max(current_end, end)
         else:
