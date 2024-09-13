@@ -55,13 +55,13 @@ def merge_adjacent_cidr(cidr_list):
     
     # 初始化当前正在处理的 CIDR 范围的起始和结束地址
     current = cidr_list[0]  # 第一个 CIDR 范围
-    current_start = int(current.network_address)  # 起始地址转为整数
-    current_end = int(current.broadcast_address)  # 结束地址转为整数
+    current_start = current.network_address  # 起始地址
+    current_end = current.broadcast_address  # 结束地址
 
     # 遍历剩余的 CIDR 范围
     for net in cidr_list[1:]:
-        net_start = int(net.network_address)  # 下一个 CIDR 的起始地址
-        net_end = int(net.broadcast_address)  # 下一个 CIDR 的结束地址
+        net_start = net.network_address  # 下一个 CIDR 的起始地址
+        net_end = net.broadcast_address  # 下一个 CIDR 的结束地址
         
         # 判断当前 CIDR 和下一个 CIDR 是否相邻或重叠
         if net_start <= current_end + 1:
@@ -69,13 +69,13 @@ def merge_adjacent_cidr(cidr_list):
             current_end = max(current_end, net_end)
         else:
             # 如果不相邻，将当前合并好的 CIDR 加入列表
-            merged.append(ipaddress.IPv4Network((current_start, current_end - current_start + 1), strict=False))
+            merged.extend(ipaddress.summarize_address_range(current_start, current_end))
             # 更新为新的 CIDR 范围
             current_start = net_start
             current_end = net_end
 
     # 将最后一个合并的 CIDR 加入列表
-    merged.append(ipaddress.IPv4Network((current_start, current_end - current_start + 1), strict=False))
+    merged.extend(ipaddress.summarize_address_range(current_start, current_end))
 
     return merged
 
