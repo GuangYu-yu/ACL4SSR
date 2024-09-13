@@ -1,84 +1,38 @@
 import requests
-from netaddr import IPSet, IPNetwork, IPAddress
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import os
-import multiprocessing
-
+from netaddr import IPSet, IPNetwork
 # 读取远程 CIDR 文件
 def read_cidr_file(url):
     response = requests.get(url)
     return response.text.strip().splitlines()
-
 # 找出 CIDR 列表的重叠部分
 def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
-    ipv4_region = [IPNetwork(cidr) for cidr in region_cidrs if IPNetwork(cidr).version == 4]
-    ipv6_region = [IPNetwork(cidr) for cidr in region_cidrs if IPNetwork(cidr).version == 6]
-    ipv4_cloudflare = [IPNetwork(cidr) for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 4]
-    ipv6_cloudflare = [IPNetwork(cidr) for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 6]
-
-    ipv4_overlap_set = IPSet(ipv4_region) & IPSet(ipv4_cloudflare)
-    ipv6_overlap_set = IPSet(ipv6_region) & IPSet(ipv6_cloudflare)
-
-    return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
-
-# 合并相邻的 CIDR 范围
-def merge_adjacent_cidrs(cidrs):
-    if not cidrs:
-        return []
+    # 分离 IPv4 和 IPv6 的 CIDR 列表
+    ipv4_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 4]
+    ipv6_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 6]
+    ipv4_cloudflare = [cidr for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 4]
+    ipv6_cloudflare = [cidr for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 6]
     
-    # 排序 CIDR 列表，确保网络和掩码都被考虑
-    cidrs = sorted(cidrs, key=lambda net: (int(net.network), net.prefixlen))
-    merged = []
-    current = cidrs[0]
-
-    for net in cidrs[1:]:
-        # 检查两个网络是否相邻
-        if current.last + 1 == net.first:
-            # 合并相邻的 CIDR
-            current = IPNetwork(f'{current.network}/{current.prefixlen - 1}')
-        else:
-            merged.append(current)
-            current = net
-    merged.append(current)
-    return merged
-
+    # 使用 IPSet 找出重叠的 IP 部分
+    ipv4_region_set = IPSet(ipv4_region)
+    ipv4_cloudflare_set = IPSet(ipv4_cloudflare)
+    ipv6_region_set = IPSet(ipv6_region)
+    ipv6_cloudflare_set = IPSet(ipv6_cloudflare)
+    
+    # 计算重叠的 IPv4 和 IPv6 CIDR
+    ipv4_overlap_set = ipv4_region_set & ipv4_cloudflare_set
+    ipv6_overlap_set = ipv6_region_set & ipv6_cloudflare_set
+    
+    # 返回排序后的重叠 CIDR 列表
+    return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
 # 保存 CIDR 到文件
 def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
     with open(filename, 'w') as f:
-        if ipv4_cidrs:
-            f.write('\n'.join(str(cidr) for cidr in ipv4_cidrs) + '\n')
-        if ipv6_cidrs:
-            f.write('\n'.join(str(cidr) for cidr in ipv6_cidrs) + '\n')
+        # 仅写入 CIDR，不包含额外文本
+        f.write('\n'.join(str(cidr) for cidr in ipv4_cidrs) + '\n')
+        f.write('\n'.join(str(cidr) for cidr in ipv6_cidrs) + '\n')
 
-# 多线程处理每个地区的 CIDR 数据
-def process_region(region_name, region_url, cloudflare_cidrs):
-    try:
-        print(f"正在处理 {region_name} 的 CIDR 数据...")
-        region_cidrs = read_cidr_file(region_url)
-
-        # 计算重叠部分
-        ipv4_common_cidrs, ipv6_common_cidrs = find_ip_overlaps(region_cidrs, cloudflare_cidrs)
-
-        # 合并相邻 CIDR
-        ipv4_common_cidrs_merged = merge_adjacent_cidrs(ipv4_common_cidrs)
-        ipv6_common_cidrs_merged = merge_adjacent_cidrs(ipv6_common_cidrs)
-
-        # 保存合并后的 CIDR
-        output_filename = f"Cloudflare-{region_name}.txt"
-        save_cidrs_to_file(output_filename, ipv4_common_cidrs_merged, ipv6_common_cidrs_merged)
-        print(f"{region_name} 的 CIDR 数据处理完成，结果已保存。")
-    
-    except Exception as e:
-        print(f"{region_name} 处理时出现错误: {e}")
-
-# 获取处理器核心数量以确定线程池大小
-def get_thread_count():
-    return os.cpu_count() or multiprocessing.cpu_count()
-
-# 主函数，进行并发处理
-def main():
-    # 各地区 CIDR 文件 URL
-    region_cidr_urls = {
+# 各地区 CIDR 文件 URL
+region_cidr_urls = {
     'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',
     'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',
     'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',
@@ -146,28 +100,26 @@ def main():
     'Jordan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JO_cidr.txt',
     'Kuwait': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KW_cidr.txt',
     'Qatar': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/QA_cidr.txt'
-    }
+}
 
-    # Cloudflare CIDR 文件 URL
-    cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CloudflareCIDR合并地址.txt'
+# Cloudflare CIDR 文件 URL
+cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CloudflareCIDR合并地址.txt'
+# 获取 Cloudflare 的 CIDR 列表
+cloudflare_cidrs = read_cidr_file(cloudflare_url)
 
-    # 获取 Cloudflare CIDR 列表
-    cloudflare_cidrs = read_cidr_file(cloudflare_url)
+# 对每个地区执行 CIDR 重叠计算
+for region_name, region_url in region_cidr_urls.items():
+    # 获取地区 CIDR 列表
+    region_cidrs = read_cidr_file(region_url)
 
-    # 自动确定线程池大小
-    thread_count = get_thread_count()
-    print(f"使用 {thread_count} 个线程来并发处理 CIDR 数据...")
+    # 计算与 Cloudflare 的重叠部分
+    ipv4_common_cidrs, ipv6_common_cidrs = find_ip_overlaps(region_cidrs, cloudflare_cidrs)
+    
+    # 合并并排序 IPv4 和 IPv6 的 CIDR 结果
+    all_cidrs = sorted(set(ipv4_common_cidrs + ipv6_common_cidrs), key=lambda x: (x.version, x))
 
-    # 使用线程池并发处理
-    with ThreadPoolExecutor(max_workers=thread_count) as executor:
-        futures = [executor.submit(process_region, region_name, region_url, cloudflare_cidrs) 
-                   for region_name, region_url in region_cidr_urls.items()]
+    # 保存结果到对应文件
+    output_filename = f"Cloudflare-{region_name}.txt"
+    save_cidrs_to_file(output_filename, ipv4_common_cidrs, ipv6_common_cidrs)
 
-        for future in as_completed(futures):
-            # 这里可以处理完成的任务
-            pass
-
-    print("所有地区的 CIDR 数据处理完成。")
-
-if __name__ == "__main__":
-    main()
+print("重叠计算完成，CIDR 文件已生成。")
