@@ -45,12 +45,15 @@ for root, dirs, files in os.walk("asn-ip-master/as"):
 ipv4_networks = [ipaddress.IPv4Network(ip, strict=False) for ip in ipv4_addresses]
 ipv6_networks = [ipaddress.IPv6Network(ip, strict=False) for ip in ipv6_addresses]
 
-def calculate_and_merge_networks(networks):
-    """计算并合并网络范围"""
+def merge_networks(networks):
+    """合并相邻或重叠的网络范围"""
+    if not networks:
+        return []
+    
     # 将网络的开始和结束地址转换为整数，并按开始地址排序
     ranges = [(int(net.network_address), int(net.broadcast_address)) for net in networks]
     ranges.sort()
-
+    
     merged_ranges = []
     current_start, current_end = ranges[0]
 
@@ -62,19 +65,18 @@ def calculate_and_merge_networks(networks):
             current_start, current_end = start, end
     merged_ranges.append((current_start, current_end))
 
-    # 使用 summarize_address_range 来生成合并后的 CIDR
+    # 根据合并后的范围计算最小的 CIDR 覆盖
     merged_networks = []
     for start, end in merged_ranges:
         start_ip = ipaddress.ip_address(start)
         end_ip = ipaddress.ip_address(end)
-        # 根据地址范围计算最小的 CIDR 覆盖
         merged_networks.extend(ipaddress.summarize_address_range(start_ip, end_ip))
 
     return merged_networks
 
 # 合并并排序 IPv4 和 IPv6
-ipv4_merged_sorted = calculate_and_merge_networks(ipv4_networks)
-ipv6_merged_sorted = calculate_and_merge_networks(ipv6_networks)
+ipv4_merged_sorted = merge_networks(ipv4_networks)
+ipv6_merged_sorted = merge_networks(ipv6_networks)
 
 # 将合并并排序后的 IPv4 结果写入文件
 with open('Clash/CloudflareCIDR.txt', 'w') as file:
