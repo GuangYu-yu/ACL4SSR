@@ -96,8 +96,8 @@ def process_networks(networks, thread_count):
     return merge_networks(results)
 
 # 多线程处理 IPv4 和 IPv6
-ipv4_merged_sorted = process_networks(ipv4_networks, thread_count=8)  # 8 是线程数
-ipv6_merged_sorted = process_networks(ipv6_networks, thread_count=8)  # 8 是线程数
+ipv4_merged_sorted = process_networks(ipv4_networks, thread_count=64)  # 64 是线程数
+ipv6_merged_sorted = process_networks(ipv6_networks, thread_count=64)  # 64 是线程数
 
 # 将合并并排序后的 IPv4 结果写入文件
 with open('Clash/CloudflareCIDR.txt', 'w') as file:
