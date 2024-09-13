@@ -41,11 +41,24 @@ for root, dirs, files in os.walk("asn-ip-master/as"):
                     if not ip.startswith('#'):
                         ipv6_addresses.append(ip)
 
-# 直接合并 CIDR 范围并排序
-ipv4_merged_sorted = sorted(ipaddress.collapse_addresses([ipaddress.IPv4Network(ip) for ip in ipv4_addresses]), 
-                            key=lambda net: (net.network_address, net.prefixlen))
-ipv6_merged_sorted = sorted(ipaddress.collapse_addresses([ipaddress.IPv6Network(ip) for ip in ipv6_addresses]), 
-                            key=lambda net: (net.network_address, net.prefixlen))
+# 将 CIDR 转换为 IP 地址并去重
+def cidr_to_ips(cidr_list):
+    ip_set = set()
+    for cidr in cidr_list:
+        network = ipaddress.IPv4Network(cidr, strict=False) if ':' not in cidr else ipaddress.IPv6Network(cidr, strict=False)
+        ip_set.update(network)
+    return ip_set
+
+ipv4_ips = cidr_to_ips(ipv4_addresses)
+ipv6_ips = cidr_to_ips(ipv6_addresses)
+
+# 将 IP 地址转换回 CIDR 并排序
+def ips_to_cidrs(ip_set):
+    sorted_ips = sorted(ip_set)
+    return sorted(ipaddress.collapse_addresses(sorted_ips))
+
+ipv4_merged_sorted = ips_to_cidrs(ipv4_ips)
+ipv6_merged_sorted = ips_to_cidrs(ipv6_ips)
 
 # 将合并并排序后的 IPv4 结果写入文件
 with open('Clash/CloudflareCIDR.txt', 'w') as file:
