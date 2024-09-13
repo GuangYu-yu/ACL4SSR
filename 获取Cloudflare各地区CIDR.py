@@ -1,5 +1,5 @@
 import requests
-from netaddr import IPSet, IPNetwork
+from netaddr import IPSet, IPNetwork, IPAddress
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import multiprocessing
@@ -26,16 +26,16 @@ def merge_adjacent_cidrs(cidrs):
     if not cidrs:
         return []
     
-    # 排序 CIDR 列表
+    # 排序 CIDR 列表，确保网络和掩码都被考虑
     cidrs = sorted(cidrs, key=lambda net: (int(net.network), net.prefixlen))
     merged = []
     current = cidrs[0]
 
     for net in cidrs[1:]:
-        # 将 IPNetwork 转换为整数进行相邻检测
-        if int(current.network) + current.size == int(net.network):
+        # 检查两个网络是否相邻
+        if current.last + 1 == net.first:
             # 合并相邻的 CIDR
-            current = IPNetwork((current.network, current.prefixlen - 1))
+            current = IPNetwork(f'{current.network}/{current.prefixlen - 1}')
         else:
             merged.append(current)
             current = net
@@ -77,8 +77,6 @@ def get_thread_count():
 
 # 主函数，进行并发处理
 def main():
-    # 各地区 CIDR 文件 URL
-    region_cidr_urls = {
     'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',
     'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',
     'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',
