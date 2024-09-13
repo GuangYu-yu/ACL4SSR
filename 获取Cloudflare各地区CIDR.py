@@ -33,8 +33,8 @@ def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
 
 # 各地区 CIDR 文件 URL
 region_cidr_urls = {
-    'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',  # 香港
-    'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',  # 台湾
+    'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',  # 香港特别行政区
+    'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',  # 台湾省
     'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',  # 日本
     'South Korea': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt',  # 韩国
     'India': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IN_cidr.txt',  # 印度
