@@ -27,6 +27,25 @@ def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
     # 返回排序后的重叠 CIDR 列表
     return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
 
+# 合并相邻的 CIDR 范围
+def merge_adjacent_cidrs(cidrs):
+    # 排序网络地址
+    cidrs = sorted(cidrs, key=lambda net: (net.network, net.prefixlen))
+    merged = []
+    current = cidrs[0]
+
+    for net in cidrs[1:]:
+        # 检查当前网段和下一个网段是否相邻
+        if current.broadcast + 1 == net.network:
+            # 合并相邻网段
+            current = IPNetwork((current.network, current.size + net.size))
+        else:
+            # 如果不能合并，则保存当前网段并更新为下一个网段
+            merged.append(current)
+            current = net
+    merged.append(current)  # 添加最后一个网段
+    return merged
+
 # 保存 CIDR 到文件
 def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
     with open(filename, 'w') as f:
@@ -119,11 +138,15 @@ for region_name, region_url in region_cidr_urls.items():
     # 计算与 Cloudflare 的重叠部分
     ipv4_common_cidrs, ipv6_common_cidrs = find_ip_overlaps(region_cidrs, cloudflare_cidrs)
     
+    # 合并相邻的 CIDR 范围
+    ipv4_common_cidrs_merged = merge_adjacent_cidrs(ipv4_common_cidrs)
+    ipv6_common_cidrs_merged = merge_adjacent_cidrs(ipv6_common_cidrs)
+    
     # 合并并排序 IPv4 和 IPv6 的 CIDR 结果
-    all_cidrs = sorted(set(ipv4_common_cidrs + ipv6_common_cidrs), key=lambda x: (x.version, x))
-
+    all_cidrs = sorted(set(ipv4_common_cidrs_merged + ipv6_common_cidrs_merged), key=lambda x: (x.version, x))
+    
     # 保存结果到对应文件
     output_filename = f"Cloudflare-{region_name}.txt"
-    save_cidrs_to_file(output_filename, ipv4_common_cidrs, ipv6_common_cidrs)
+    save_cidrs_to_file(output_filename, ipv4_common_cidrs_merged, ipv6_common_cidrs_merged)
 
 print("重叠计算完成，CIDR 文件已生成。")
