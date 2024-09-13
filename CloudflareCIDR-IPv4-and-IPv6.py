@@ -46,10 +46,10 @@ ipv4_networks = [ipaddress.IPv4Network(ip, strict=False) for ip in ipv4_addresse
 ipv6_networks = [ipaddress.IPv6Network(ip, strict=False) for ip in ipv6_addresses]
 
 def merge_networks(networks):
-    """合并相邻或重叠的网络范围"""
+    """合并范围"""
     if not networks:
         return []
-    
+
     # 将网络的开始和结束地址转换为整数，并按开始地址排序
     ranges = [(int(net.network_address), int(net.broadcast_address)) for net in networks]
     ranges.sort()
@@ -70,6 +70,7 @@ def merge_networks(networks):
     for start, end in merged_ranges:
         start_ip = ipaddress.ip_address(start)
         end_ip = ipaddress.ip_address(end)
+        # 使用 summarize_address_range 计算最小的 CIDR 覆盖
         merged_networks.extend(ipaddress.summarize_address_range(start_ip, end_ip))
 
     return merged_networks
