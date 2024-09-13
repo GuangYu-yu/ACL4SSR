@@ -49,8 +49,8 @@ def calculate_and_merge_networks(networks):
     # 计算网络的开始和结束地址，并排序
     ranges = []
     for net in networks:
-        start_ip = net.network_address
-        end_ip = net.broadcast_address
+        start_ip = int(net.network_address)
+        end_ip = int(net.broadcast_address)
         ranges.append((start_ip, end_ip))
 
     # 排序
@@ -69,14 +69,16 @@ def calculate_and_merge_networks(networks):
 
     merged_ranges.append((current_start, current_end))
 
-    # 转换为网络对象（支持 IPv4 和 IPv6）
+    # 转换为网络对象
     merged_networks = []
     for start, end in merged_ranges:
-        # 根据 IP 版本选择适当的网络类型
-        if isinstance(start, ipaddress.IPv4Address):
-            merged_networks.append(ipaddress.ip_network(f"{start}/{ipaddress.IPv4Address(end).max_prefixlen}", strict=False))
-        elif isinstance(start, ipaddress.IPv6Address):
-            merged_networks.append(ipaddress.ip_network(f"{start}/{ipaddress.IPv6Address(end).max_prefixlen}", strict=False))
+        # 将开始和结束地址转换回 IP 地址
+        start_ip = ipaddress.IPv4Address(start) if isinstance(networks[0], ipaddress.IPv4Network) else ipaddress.IPv6Address(start)
+        end_ip = ipaddress.IPv4Address(end) if isinstance(networks[0], ipaddress.IPv4Network) else ipaddress.IPv6Address(end)
+        
+        # 使用最小覆盖的 CIDR 范围
+        cidr = ipaddress.summarize_address_range(start_ip, end_ip)
+        merged_networks.extend(cidr)
 
     return merged_networks
 
