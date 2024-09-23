@@ -19,7 +19,7 @@ with zipfile.ZipFile("master.zip", 'r') as zip_ref:
 # 将 IPv4 和 IPv6 地址结果存储在两个列表中
 ipv4_addresses = []
 ipv6_addresses = []
-included_asns = ['209242', '13335', '149648', '132892', '139242', '202623', '203898', '394536', '395747']
+included_asns = ['13335', '14789', '132892', '133877', '139242', '202623', '203898', '209242', '394536', '395747']
 
 # 遍历 as 文件夹
 for root, dirs, files in os.walk("asn-ip-master/as"):
