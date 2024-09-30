@@ -1,0 +1,57 @@
+name: 获取CIDR-list
+
+on:
+  schedule:
+      - cron: "0 5,17 * * *"  # 每天5点和17点运行一次
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 检查出当前仓库
+      uses: actions/checkout@v3
+
+    - name: 下载并处理 chnroute_v6.txt
+      run: |
+        curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
+        sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr.list
+        git add CN-IPv6-cidr.list
+
+    - name: 下载并处理 chnroute.txt
+      run: |
+        curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
+        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr.list
+        git add CN-IPv4-cidr.list
+
+    - name: 下载并处理 CloudflareCIDR-v6.txt
+      run: |
+        curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR-v6.txt | \
+        sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CloudflareCIDR-v6.list
+        git add CloudflareCIDR-v6.list
+
+    - name: 下载并处理 CloudflareCIDR.txt
+      run: |
+        curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR.txt | \
+        sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR.list
+        git add CloudflareCIDR.list
+
+    - name: 检查是否有更改
+      id: check_changes
+      run: |
+        if git diff --cached --quiet; then
+          echo "没有检测到文件更改，跳过提交步骤。"
+          echo "changes=false" >> $GITHUB_ENV
+        else
+          echo "有文件更改，准备提交。"
+          echo "changes=true" >> $GITHUB_ENV
+        fi
+
+    - name: 提交并推送更改
+      if: env.changes == 'true' # 仅在有更改时运行
+      run: |
+        git config --global user.name 'github-actions[bot]' # 配置 Git 用户名
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com' # 配置 Git 邮箱
+        git commit -m "Auto-update IP CIDR files" # 提交更改
+        git push # 推送更改
