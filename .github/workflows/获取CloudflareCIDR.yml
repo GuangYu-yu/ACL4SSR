@@ -27,12 +27,14 @@ jobs:
 
       # 下载并处理文件
       - name: 下载并处理文件
-        run: python CloudflareCIDR-IPv4-and-IPv6.py  # 调用你的 Python 脚本
+        run: |
+          python CloudflareCIDR-IPv4-and-IPv6.py  # 调用你的 Python 脚本
+          ls -l Clash  # 列出生成的文件，确保存在
 
       # 检查是否有更改
       - name: 检查是否有更改
         run: |
-          git add .  # 将所有更改添加到暂存区
+          git add Clash/CloudflareCIDR.txt Clash/CloudflareCIDR-v6.txt  # 只添加生成的文件
           if git diff --cached --quiet; then
             echo "没有需要提交的更改"
             exit 0
