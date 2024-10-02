@@ -72,11 +72,19 @@ def get_cidr(asn, geoip_reader):
                         except Exception as e:
                             print(f"无法获取地区信息: {e}")
                     
-                    cidrs.append({
-                        'cidr': str(ip_network),
-                        'region': region,
-                        'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
-                    })
+                    # 如果地区仍然未知，记录CIDR到未知文件
+                    if region == '未知':
+                        cidrs.append({
+                            'cidr': str(ip_network),
+                            'region': None,  # 将地区设置为 None
+                            'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
+                        })
+                    else:
+                        cidrs.append({
+                            'cidr': str(ip_network),
+                            'region': region,
+                            'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
+                        })
                     print(f"找到 CIDR: {cidr}, 地区: {region}")
                 except ValueError:
                     print(f"警告：跳过无效的CIDR: {cidr}")
@@ -91,7 +99,7 @@ def process_cidrs(all_cidrs):
 
     for cidr_info in all_cidrs:
         cidr = cidr_info['cidr']
-        region = cidr_info['region']
+        region = cidr_info['region'] or '未知'  # 确保地区不为 None
         version = cidr_info['version']
 
         if region == '未知':
