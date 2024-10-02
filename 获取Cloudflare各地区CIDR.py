@@ -4,18 +4,6 @@ import ipaddress
 import os
 import yaml
 
-region_cidr = [
-    "Hong Kong", "Taiwan", "Japan", "South Korea", "India", "Singapore", "Thailand", "Vietnam", 
-    "Philippines", "Malaysia", "France", "Germany", "United Kingdom", "Italy", "Spain", "Russia", 
-    "Sweden", "Switzerland", "Poland", "United States", "Canada", "Mexico", "Cuba", "Guatemala", 
-    "Dominican Republic", "Costa Rica", "Panama", "Honduras", "Jamaica", "Brazil", "Argentina", 
-    "Chile", "Colombia", "Peru", "Venezuela", "Uruguay", "Paraguay", "Bolivia", "Ecuador", 
-    "South Africa", "Nigeria", "Egypt", "Kenya", "Algeria", "Morocco", "Ghana", "Ethiopia", 
-    "Tanzania", "Senegal", "Australia", "New Zealand", "Fiji", "Papua New Guinea", "Solomon Islands", 
-    "Vanuatu", "Tonga", "Wallis and Futuna", "Nauru", "Tuvalu", "Saudi Arabia", "United Arab Emirates", 
-    "Iran", "Iraq", "Israel", "Jordan", "Kuwait", "Qatar"
-]
-
 isps_to_search = {
     "Cloudflare": ["cloudflare"],
 }
@@ -63,8 +51,12 @@ def get_cidr(asn):
                 cidr = cidr_link.text.strip()
                 try:
                     ip_network = ipaddress.ip_network(cidr)  # 验证CIDR
-                    region_img = row.find('div', class_='flag').find('img')
-                    region = region_img['title'] if region_img else '未知'
+                    region = '未知'
+                    region_div = row.find('div', class_='flag')
+                    if region_div:
+                        region_img = region_div.find('img')
+                        if region_img:
+                            region = region_img['title']  # 使用标注的国家
                     cidrs.append({
                         'cidr': str(ip_network),
                         'region': region,
@@ -75,9 +67,9 @@ def get_cidr(asn):
                     print(f"警告：跳过无效的CIDR: {cidr}")
     
     return cidrs
-    
+
 def process_cidrs(all_cidrs):
-    config = {region: {'IPv4': [], 'IPv6': []} for region in region_cidr}
+    config = {}
     all_v4 = set()
     all_v6 = set()
 
@@ -85,6 +77,9 @@ def process_cidrs(all_cidrs):
         cidr = cidr_info['cidr']
         region = cidr_info['region']
         version = cidr_info['version']
+
+        if region not in config:
+            config[region] = {'IPv4': [], 'IPv6': []}
 
         config[region][version].append(cidr)
         if version == 'IPv4':
