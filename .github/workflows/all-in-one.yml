@@ -1,0 +1,77 @@
+name: 合并的 Cloudflare CIDR 工作流
+
+on:
+  workflow_dispatch:  # 手动触发
+  schedule:
+    - cron: "0 6,18 * * *"  # 每天6点和18点运行一次
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+      
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: 安装依赖
+        run: pip install maxminddb requests
+      
+      - name: 运行 job1 脚本
+        run: python 提取地区-CIDR.py
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+      
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: 安装依赖
+        run: pip install requests beautifulsoup4
+      
+      - name: 运行 job2 脚本
+        run: python CloudflareCIDR-IPv4-and-IPv6.py  # 请替换为实际的脚本名称
+
+  compare-cidrs:
+    needs: [job1, job2]  # 等待 job1 和 job2 完成
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖
+        run: pip install netaddr requests beautifulsoup4
+
+      - name: 运行 获取Cloudflare各地区CIDR
+        run: python 获取Cloudflare各地区CIDR.py
+
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
