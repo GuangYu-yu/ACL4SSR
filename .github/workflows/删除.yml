@@ -10,6 +10,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: List files before deletion
+        run: ls -l
+
       - name: Delete TXT files
         run: |
-          find . -maxdepth 1 -name "*.txt" -type f -delete
+          find . -maxdepth 1 -name "*.txt" -type f -exec rm {} +
+
+      - name: List files after deletion
+        run: ls -l
