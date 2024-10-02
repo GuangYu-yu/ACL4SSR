@@ -79,11 +79,19 @@ def main(isps, cache_dir, output_ipv4_file, output_ipv6_file):
     
     clear_cache(cache_dir)
 
+    # 合并CIDR到一个文件
+    with open(output_combined_file, mode='w', encoding='utf-8') as combined_file:
+        with open(output_ipv4_file, mode='r', encoding='utf-8') as ipv4_file:
+            combined_file.writelines(ipv4_file.readlines())
+        with open(output_ipv6_file, mode='r', encoding='utf-8') as ipv6_file:
+            combined_file.writelines(ipv6_file.readlines())
+
 # 输入ISP列表、缓存目录和输出文件路径
 isps_to_search = ["cloudflare"]  # 需要搜索的ISP
 cache_dir = "cache"  # 缓存目录
 output_ipv4_file = "Clash/CloudflareCIDR.txt"  # 输出IPv4 CIDR的txt文件
 output_ipv6_file = "Clash/CloudflareCIDR-v6.txt"  # 输出IPv6 CIDR的txt文件
+output_combined_file = "Clash/Cloudflare.txt"  # 合并后的文件
 
 if __name__ == "__main__":
-    main(isps_to_search, cache_dir, output_ipv4_file, output_ipv6_file)
+    main(isps_to_search, cache_dir, output_ipv4_file, output_ipv6_file, output_combined_file)
