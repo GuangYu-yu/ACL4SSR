@@ -28,6 +28,24 @@ jobs:
       - name: 运行 job1 脚本
         run: python 提取地区-CIDR.py
 
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
+
   job2:
     runs-on: ubuntu-latest
     steps:
@@ -68,6 +86,24 @@ jobs:
           curl -s https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CloudflareCIDR.txt | \
           sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CloudflareCIDR.list
           git add CloudflareCIDR.list
+
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
 
   compare-cidrs:
     needs: [job1, job2]  # 等待 job1 和 job2 完成
