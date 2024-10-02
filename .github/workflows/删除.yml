@@ -10,12 +10,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List files before deletion
-        run: ls -l
-
       - name: Delete TXT files
         run: |
-          find . -maxdepth 1 -name "*.txt" -type f -exec rm {} +
+          echo "Deleting TXT files..."
+          rm -f *.txt
 
-      - name: List files after deletion
-        run: ls -l
+      - name: Configure Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push changes
+        run: |
+          git commit -am "Deleted TXT files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
