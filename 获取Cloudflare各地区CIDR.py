@@ -55,14 +55,17 @@ def get_cidr(asn):
         response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
         table = soup.find('table', id='table_prefixes')
+        
         if table:
             for row in table.find_all('tr')[1:]:  # 跳过表头
+                print("正在解析行:", row)  # 调试信息
                 cidr_link = row.find('a', href=lambda href: href and '/net/' in href)
                 if cidr_link:
                     cidr = cidr_link.text.strip()
                     flag_img = row.find('div', class_='flag').find('img')
-                    if flag_img and flag_img.get('title') in region_cidr:
+                    if flag_img:
                         region = flag_img['title']
+                        print(f"找到 CIDR: {cidr}, 地区: {region}")  # 调试信息
                         try:
                             ip_network = ipaddress.ip_network(cidr)
                             cidrs.append({
@@ -70,7 +73,6 @@ def get_cidr(asn):
                                 'region': region,
                                 'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
                             })
-                            print(f"找到 CIDR: {cidr}, 地区: {region}")
                         except ValueError:
                             print(f"警告：跳过无效的CIDR: {cidr}")
     return cidrs
