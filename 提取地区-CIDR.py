@@ -3,7 +3,7 @@ import maxminddb
 import ipaddress
 
 # 创建保存结果的目录
-os.makedirs('Clash', exist_ok=True)
+os.makedirs('Country', exist_ok=True)
 
 # 打开 GeoLite2-Country.mmdb 数据库文件
 db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
@@ -92,7 +92,7 @@ regions = {
 }
 
 # 文件名映射，保存 CIDR 列表到指定文件
-region_files = {region: f'Clash/{region}_cidr.txt' for region in regions.keys()}
+region_files = {region: f'Country/{region}_cidr.txt' for region in regions.keys()}
 
 # 初始化结果字典，用于保存各地区的 IPv4 和 IPv6 CIDR 列表
 result = {region: {'ipv4': [], 'ipv6': []} for region in regions.keys()}
