@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import ipaddress
 import os
 
-# 添加region_cidr列表
 region_cidr = [
     "Hong Kong", "Taiwan", "Japan", "South Korea", "India", "Singapore", "Thailand", "Vietnam", 
     "Philippines", "Malaysia", "France", "Germany", "United Kingdom", "Italy", "Spain", "Russia", 
@@ -21,13 +20,11 @@ isps_to_search = {
 }
 
 def prepare_directories():
-    directories = ["CF-Country", "CF"]
+    directories = ["CF-Country", "CF", "cache"]
     for directory in directories:
         if not os.path.exists(directory):
             os.makedirs(directory)
-            print(f"{directory}文件夹已创建")
-        else:
-            print(f"{directory}文件夹已存在")
+        print(f"{directory}文件夹已准备就绪")
 
 def cache_asn_page(isp_keyword):
     search_url = f"https://bgp.he.net/search?search%5Bsearch%5D={isp_keyword}&commit=Search"
@@ -50,8 +47,12 @@ def get_unique_asns(isp_keywords):
     return asns
 
 def get_cidr(asn):
-    cidrs = {region: [] for region in region_cidr}
-    
+    cache_file = f"cache/{asn}_cidrs.json"
+    if os.path.exists(cache_file):
+        with open(cache_file, 'r') as f:
+            return json.load(f)
+
+    cidrs = []
     for suffix in ["#_prefixes", "#_prefixes6"]:
         asn_page = requests.get(f"https://bgp.he.net/{asn}{suffix}").content
         soup = BeautifulSoup(asn_page, 'html.parser')
@@ -65,79 +66,75 @@ def get_cidr(asn):
                     region = flag_img['title']
                     try:
                         ip_network = ipaddress.ip_network(cidr)
-                        cidrs[region].append(str(ip_network))
+                        cidrs.append({
+                            'cidr': str(ip_network),
+                            'region': region,
+                            'version': ip_network.version
+                        })
                     except ValueError:
                         print(f"警告：跳过无效的CIDR: {cidr}")
-    
-    for region, ips in cidrs.items():
-        if ips:
-            print(f"ASN {asn} 在 {region} 发现 {len(ips)} 个CIDR")
-    
+
+    with open(cache_file, 'w') as f:
+        json.dump(cidrs, f)
+
     return cidrs
 
-def merge_and_sort_cidrs(cidrs):
-    cidr_set = set()
-    for cidr in cidrs:
-        try:
-            cidr_set.add(ipaddress.ip_network(cidr))
-        except ValueError:
-            print(f"警告：跳过无效的CIDR: {cidr}")
-    print(f"开始合并 {len(cidr_set)} CIDR，原始数量: {len(cidrs)}")
-    merged = list(ipaddress.collapse_addresses(cidr_set))
-    print(f"CIDR合并完成，合并后数量: {len(merged)}")
-    return sorted(str(cidr) for cidr in merged)
+def process_cidrs(all_cidrs):
+    region_files = {region: {'v4': set(), 'v6': set()} for region in region_cidr}
+    all_v4 = set()
+    all_v6 = set()
+
+    for cidr_info in all_cidrs:
+        cidr = cidr_info['cidr']
+        region = cidr_info['region']
+        version = 'v4' if cidr_info['version'] == 4 else 'v6'
+
+        region_files[region][version].add(cidr)
+        if version == 'v4':
+            all_v4.add(cidr)
+        else:
+            all_v6.add(cidr)
+
+    # 写入地区文件
+    for region, cidrs in region_files.items():
+        if cidrs['v4'] or cidrs['v6']:
+            with open(f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt", 'w') as f:
+                for cidr in sorted(cidrs['v4']) + sorted(cidrs['v6']):
+                    f.write(f"{cidr}\n")
+
+    # 写入全部CIDR文件
+    with open("CF/Cloudflare-All.txt", 'w') as f:
+        for cidr in sorted(all_v4) + sorted(all_v6):
+            f.write(f"{cidr}\n")
+
+    # 写入IPv4文件
+    with open("CF/Cloudflare-IPv4.txt", 'w') as f:
+        for cidr in sorted(all_v4):
+            f.write(f"{cidr}\n")
+
+    # 写入IPv6文件
+    with open("CF/Cloudflare-IPv6.txt", 'w') as f:
+        for cidr in sorted(all_v6):
+            f.write(f"{cidr}\n")
 
 def main():
     prepare_directories()
 
-    all_cloudflare_cidrs = []
+    all_cidrs = []
 
     for isp, keywords in isps_to_search.items():
         print(f"\n正在搜索ISP: {isp}")
         unique_asns = get_unique_asns(keywords)
         
-        all_cidrs = {region: [] for region in region_cidr}
-        
         for asn, name in unique_asns.items():
-            asn_cidrs = get_cidr(asn)
-            for region in region_cidr:
-                all_cidrs[region].extend(asn_cidrs[region])
-                all_cloudflare_cidrs.extend(asn_cidrs[region])
-        
-        for region, cidrs in all_cidrs.items():
-            if cidrs:
-                merged_cidrs = merge_and_sort_cidrs(cidrs)
-                output_filename = f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt"
-                with open(output_filename, 'w') as f:
-                    for cidr in merged_cidrs:
-                        f.write(cidr + '\n')
-                print(f"已保存 {region} 的CIDR到文件: {output_filename}")
+            all_cidrs.extend(get_cidr(asn))
 
-    # 处理所有Cloudflare CIDR
-    all_cloudflare_cidrs = merge_and_sort_cidrs(all_cloudflare_cidrs)
-    all_cloudflare_ipv4 = []
-    all_cloudflare_ipv6 = []
-
-    with open("CF/Cloudflare-All.txt", 'w') as f:
-        for cidr in all_cloudflare_cidrs:
-            f.write(cidr + '\n')
-            if ':' in cidr:
-                all_cloudflare_ipv6.append(cidr)
-            else:
-                all_cloudflare_ipv4.append(cidr)
-
-    # 保存IPv4和IPv6
-    with open("CF/Cloudflare-IPv4.txt", 'w') as f:
-        for cidr in all_cloudflare_ipv4:
-            f.write(cidr + '\n')
-    
-    with open("CF/Cloudflare-IPv6.txt", 'w') as f:
-        for cidr in all_cloudflare_ipv6:
-            f.write(cidr + '\n')
+    process_cidrs(all_cidrs)
 
     print("所有Cloudflare CIDR已保存到CF/Cloudflare-All.txt")
     print("Cloudflare IPv4 CIDR已保存到CF/Cloudflare-IPv4.txt")
     print("Cloudflare IPv6 CIDR已保存到CF/Cloudflare-IPv6.txt")
+    print("各地区CIDR已保存到CF-Country/目录下的相应文件中")
 
 if __name__ == "__main__":
     main()
