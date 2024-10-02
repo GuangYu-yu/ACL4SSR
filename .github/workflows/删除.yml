@@ -13,7 +13,7 @@ jobs:
       - name: Delete TXT files
         run: |
           echo "Deleting TXT files..."
-          rm -f *.txt
+          rm CF-Country/*.txt
 
       - name: Configure Git
         run: |
