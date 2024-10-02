@@ -12,4 +12,4 @@ jobs:
 
       - name: Delete TXT files
         run: |
-          find . -name "*.txt" -type f -delete
+          find . -maxdepth 1 -name "*.txt" -type f -delete
