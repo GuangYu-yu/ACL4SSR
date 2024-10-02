@@ -1,6 +1,9 @@
 import requests
 import os
 from netaddr import IPSet, IPNetwork
+
+os.makedirs('CF-Country', exist_ok=True)  # 创建文件夹
+
 # 读取远程 CIDR 文件
 def read_cidr_file(url):
     response = requests.get(url)
@@ -120,7 +123,6 @@ for region_name, region_url in region_cidr_urls.items():
     all_cidrs = sorted(set(ipv4_common_cidrs + ipv6_common_cidrs), key=lambda x: (x.version, x))
 
     # 保存结果到对应文件
-    os.makedirs('CF-Country', exist_ok=True)  # 创建文件夹
     output_filename = f"CF-Country/Cloudflare-{region_name}.txt"
     save_cidrs_to_file(output_filename, ipv4_common_cidrs, ipv6_common_cidrs)
 
