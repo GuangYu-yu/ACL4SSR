@@ -54,7 +54,7 @@ def clear_cache(cache_dir):
     os.makedirs(cache_dir)
 
 # 函数：主流程，遍历ISP，获取ASN和CIDR并保存到两个txt文件
-def main(isps, cache_dir, output_ipv4_file, output_ipv6_file):
+def main(isps, cache_dir, output_ipv4_file, output_ipv6_file, output_combined_file):
     if not os.path.exists(cache_dir):
         os.makedirs(cache_dir)
 
