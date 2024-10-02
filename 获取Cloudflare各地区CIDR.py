@@ -3,10 +3,21 @@ from bs4 import BeautifulSoup
 import ipaddress
 import os
 import yaml
+import geoip2.database
 
 isps_to_search = {
     "Cloudflare": ["cloudflare"],
 }
+
+# 下载并加载GeoLite2-Country.mmdb
+def load_geoip_database():
+    db_path = "GeoLite2-Country.mmdb"
+    if not os.path.exists(db_path):
+        print("正在下载 GeoLite2-Country.mmdb...")
+        response = requests.get("https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb")
+        with open(db_path, 'wb') as f:
+            f.write(response.content)
+    return geoip2.database.Reader(db_path)
 
 def prepare_directories():
     directories = ["CF-Country", "CF", "cache"]
@@ -35,7 +46,7 @@ def get_unique_asns(isp_keywords):
                 print(f"发现 {asn}，名称 {name}")
     return asns
 
-def get_cidr(asn):
+def get_cidr(asn, geoip_reader):
     cidrs = []
     
     for suffix in ["#_prefixes", "#_prefixes6"]:
@@ -51,12 +62,16 @@ def get_cidr(asn):
                 cidr = cidr_link.text.strip()
                 try:
                     ip_network = ipaddress.ip_network(cidr)  # 验证CIDR
+                    # 使用GeoIP数据库获取地区
                     region = '未知'
-                    region_div = row.find('div', class_='flag')
-                    if region_div:
-                        region_img = region_div.find('img')
-                        if region_img:
-                            region = region_img['title']  # 使用标注的国家
+                    for ip in ip_network:
+                        try:
+                            response = geoip_reader.country(str(ip))
+                            region = response.country.name
+                            break  # 只需找到一个有效的地区即可
+                        except Exception as e:
+                            print(f"无法获取地区信息: {e}")
+                    
                     cidrs.append({
                         'cidr': str(ip_network),
                         'region': region,
@@ -117,6 +132,7 @@ def process_cidrs(all_cidrs):
 
 def main():
     prepare_directories()
+    geoip_reader = load_geoip_database()
 
     all_cidrs = []
 
@@ -125,10 +141,11 @@ def main():
         unique_asns = get_unique_asns(keywords)
         
         for asn, name in unique_asns.items():
-            all_cidrs.extend(get_cidr(asn))
+            all_cidrs.extend(get_cidr(asn, geoip_reader))
 
     process_cidrs(all_cidrs)
 
+    geoip_reader.close()
     print("配置文件已保存到CF/Cloudflare-Config.yaml")
     print("所有Cloudflare CIDR已保存到CF/Cloudflare-All.txt")
     print("Cloudflare IPv4 CIDR已保存到CF/Cloudflare-IPv4.txt")
