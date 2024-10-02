@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import ipaddress
 import os
 
+# 添加region_cidr列表
 region_cidr = [
     "Hong Kong", "Taiwan", "Japan", "South Korea", "India", "Singapore", "Thailand", "Vietnam", 
     "Philippines", "Malaysia", "France", "Germany", "United Kingdom", "Italy", "Spain", "Russia", 
@@ -47,11 +48,6 @@ def get_unique_asns(isp_keywords):
     return asns
 
 def get_cidr(asn):
-    cache_file = f"cache/{asn}_cidrs.json"
-    if os.path.exists(cache_file):
-        with open(cache_file, 'r') as f:
-            return json.load(f)
-
     cidrs = []
     for suffix in ["#_prefixes", "#_prefixes6"]:
         asn_page = requests.get(f"https://bgp.he.net/{asn}{suffix}").content
@@ -73,10 +69,6 @@ def get_cidr(asn):
                         })
                     except ValueError:
                         print(f"警告：跳过无效的CIDR: {cidr}")
-
-    with open(cache_file, 'w') as f:
-        json.dump(cidrs, f)
-
     return cidrs
 
 def process_cidrs(all_cidrs):
