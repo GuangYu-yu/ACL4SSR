@@ -2,8 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import ipaddress
 import os
+import yaml
 
-# 添加region_cidr列表
 region_cidr = [
     "Hong Kong", "Taiwan", "Japan", "South Korea", "India", "Singapore", "Thailand", "Vietnam", 
     "Philippines", "Malaysia", "France", "Germany", "United Kingdom", "Italy", "Spain", "Russia", 
@@ -50,9 +50,10 @@ def get_unique_asns(isp_keywords):
 def get_cidr(asn):
     cidrs = []
     for suffix in ["#_prefixes", "#_prefixes6"]:
-        asn_page = requests.get(f"https://bgp.he.net/{asn}{suffix}").content
-        soup = BeautifulSoup(asn_page, 'html.parser')
-        print(f"获取ASN {asn} 的CIDR信息...")
+        url = f"https://bgp.he.net/{asn}{suffix}"
+        print(f"获取ASN {asn} 的CIDR信息: {url}")
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, 'html.parser')
         for row in soup.find_all('tr'):
             cidr_link = row.find('a')
             if cidr_link and 'net' in cidr_link['href']:
@@ -65,34 +66,40 @@ def get_cidr(asn):
                         cidrs.append({
                             'cidr': str(ip_network),
                             'region': region,
-                            'version': ip_network.version
+                            'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
                         })
                     except ValueError:
                         print(f"警告：跳过无效的CIDR: {cidr}")
     return cidrs
 
 def process_cidrs(all_cidrs):
-    region_files = {region: {'v4': set(), 'v6': set()} for region in region_cidr}
+    config = {region: {'IPv4': [], 'IPv6': []} for region in region_cidr}
     all_v4 = set()
     all_v6 = set()
 
     for cidr_info in all_cidrs:
         cidr = cidr_info['cidr']
         region = cidr_info['region']
-        version = 'v4' if cidr_info['version'] == 4 else 'v6'
+        version = cidr_info['version']
 
-        region_files[region][version].add(cidr)
-        if version == 'v4':
+        config[region][version].append(cidr)
+        if version == 'IPv4':
             all_v4.add(cidr)
         else:
             all_v6.add(cidr)
 
+    # 写入配置文件
+    with open("CF/Cloudflare-Config.yaml", 'w') as f:
+        yaml.dump(config, f, default_flow_style=False)
+
     # 写入地区文件
-    for region, cidrs in region_files.items():
-        if cidrs['v4'] or cidrs['v6']:
+    for region, cidrs in config.items():
+        if cidrs['IPv4'] or cidrs['IPv6']:
             with open(f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt", 'w') as f:
-                for cidr in sorted(cidrs['v4']) + sorted(cidrs['v6']):
-                    f.write(f"{cidr}\n")
+                for version in ['IPv4', 'IPv6']:
+                    f.write(f"-{version}\n")
+                    for cidr in sorted(cidrs[version]):
+                        f.write(f"{cidr}\n")
 
     # 写入全部CIDR文件
     with open("CF/Cloudflare-All.txt", 'w') as f:
@@ -123,6 +130,7 @@ def main():
 
     process_cidrs(all_cidrs)
 
+    print("配置文件已保存到CF/Cloudflare-Config.yaml")
     print("所有Cloudflare CIDR已保存到CF/Cloudflare-All.txt")
     print("Cloudflare IPv4 CIDR已保存到CF/Cloudflare-IPv4.txt")
     print("Cloudflare IPv6 CIDR已保存到CF/Cloudflare-IPv6.txt")
