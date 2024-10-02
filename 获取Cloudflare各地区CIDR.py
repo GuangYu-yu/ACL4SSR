@@ -1,125 +1,160 @@
 import requests
-from netaddr import IPSet, IPNetwork
-# 读取远程 CIDR 文件
-def read_cidr_file(url):
-    response = requests.get(url)
-    return response.text.strip().splitlines()
-# 找出 CIDR 列表的重叠部分
-def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
-    # 分离 IPv4 和 IPv6 的 CIDR 列表
-    ipv4_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 4]
-    ipv6_region = [cidr for cidr in region_cidrs if IPNetwork(cidr).version == 6]
-    ipv4_cloudflare = [cidr for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 4]
-    ipv6_cloudflare = [cidr for cidr in cloudflare_cidrs if IPNetwork(cidr).version == 6]
-    
-    # 使用 IPSet 找出重叠的 IP 部分
-    ipv4_region_set = IPSet(ipv4_region)
-    ipv4_cloudflare_set = IPSet(ipv4_cloudflare)
-    ipv6_region_set = IPSet(ipv6_region)
-    ipv6_cloudflare_set = IPSet(ipv6_cloudflare)
-    
-    # 计算重叠的 IPv4 和 IPv6 CIDR
-    ipv4_overlap_set = ipv4_region_set & ipv4_cloudflare_set
-    ipv6_overlap_set = ipv6_region_set & ipv6_cloudflare_set
-    
-    # 返回排序后的重叠 CIDR 列表
-    return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
-# 保存 CIDR 到文件
-def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
-    with open(filename, 'w') as f:
-        # 仅写入 CIDR，不包含额外文本
-        f.write('\n'.join(str(cidr) for cidr in ipv4_cidrs) + '\n')
-        f.write('\n'.join(str(cidr) for cidr in ipv6_cidrs) + '\n')
+from bs4 import BeautifulSoup
+import ipaddress
+import os
 
-# 各地区 CIDR 文件 URL
-region_cidr_urls = {
-    'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HK_cidr.txt',  # 香港特别行政区
-    'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TW_cidr.txt',  # 台湾省
-    'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JP_cidr.txt',  # 日本
-    'South Korea': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KR_cidr.txt',  # 韩国
-    'India': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IN_cidr.txt',  # 印度
-    'Singapore': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SG_cidr.txt',  # 新加坡
-    'Thailand': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TH_cidr.txt',  # 泰国
-    'Vietnam': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/VN_cidr.txt',  # 越南
-    'Philippines': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PH_cidr.txt',  # 菲律宾
-    'Malaysia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MY_cidr.txt',  # 马来西亚
-    'France': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/FR_cidr.txt',  # 法国
-    'Germany': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DE_cidr.txt',  # 德国
-    'United Kingdom': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GB_cidr.txt',  # 英国
-    'Italy': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IT_cidr.txt',  # 意大利
-    'Spain': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ES_cidr.txt',  # 西班牙
-    'Russia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/RU_cidr.txt',  # 俄罗斯
-    'Sweden': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SE_cidr.txt',  # 瑞典
-    'Switzerland': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CH_cidr.txt',  # 瑞士
-    'Poland': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PL_cidr.txt',  # 波兰
-    'United States': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/US_cidr.txt',  # 美国
-    'Canada': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CA_cidr.txt',  # 加拿大
-    'Mexico': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MX_cidr.txt',  # 墨西哥
-    'Cuba': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CU_cidr.txt',  # 古巴
-    'Guatemala': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GT_cidr.txt',  # 危地马拉
-    'Dominican Republic': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DO_cidr.txt',  # 多米尼加
-    'Costa Rica': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CR_cidr.txt',  # 哥斯达黎加
-    'Panama': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PA_cidr.txt',  # 巴拿马
-    'Honduras': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/HN_cidr.txt',  # 洪都拉斯
-    'Jamaica': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JM_cidr.txt',  # 牙买加
-    'Brazil': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BR_cidr.txt',  # 巴西
-    'Argentina': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AR_cidr.txt',  # 阿根廷
-    'Chile': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CL_cidr.txt',  # 智利
-    'Colombia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/CO_cidr.txt',  # 哥伦比亚
-    'Peru': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PE_cidr.txt',  # 秘鲁
-    'Venezuela': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/VE_cidr.txt',  # 委内瑞拉
-    'Uruguay': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/UY_cidr.txt',  # 乌拉圭
-    'Paraguay': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PY_cidr.txt',  # 巴拉圭
-    'Bolivia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/BO_cidr.txt',  # 玻利维亚
-    'Ecuador': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/EC_cidr.txt',  # 厄瓜多尔
-    'South Africa': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ZA_cidr.txt',  # 南非
-    'Nigeria': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NG_cidr.txt',  # 尼日利亚
-    'Egypt': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/EG_cidr.txt',  # 埃及
-    'Kenya': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KE_cidr.txt',  # 肯尼亚
-    'Algeria': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/DZ_cidr.txt',  # 阿尔及利亚
-    'Morocco': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/MA_cidr.txt',  # 摩洛哥
-    'Ghana': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/GH_cidr.txt',  # 加纳
-    'Ethiopia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/ET_cidr.txt',  # 埃塞俄比亚
-    'Tanzania': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TZ_cidr.txt',  # 坦桑尼亚
-    'Senegal': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SN_cidr.txt',  # 塞内加尔
-    'Australia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AU_cidr.txt',  # 澳大利亚
-    'New Zealand': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NZ_cidr.txt',  # 新西兰
-    'Fiji': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/FJ_cidr.txt',  # 斐济
-    'Papua New Guinea': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/PG_cidr.txt',  # 巴布亚新几内亚
-    'Solomon Islands': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SB_cidr.txt',  # 所罗门群岛
-    'Vanuatu': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/VU_cidr.txt',  # 瓦努阿图
-    'Tonga': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TO_cidr.txt',  # 汤加
-    'Wallis and Futuna': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/WF_cidr.txt',  # 瓦利斯和富图纳
-    'Nauru': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/NR_cidr.txt',  # 瑙鲁
-    'Tuvalu': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/TV_cidr.txt',  # 图瓦卢
-    'Saudi Arabia': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/SA_cidr.txt',  # 沙特阿拉伯
-    'United Arab Emirates': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/AE_cidr.txt',  # 阿联酋
-    'Iran': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IR_cidr.txt',  # 伊朗
-    'Iraq': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IQ_cidr.txt',  # 伊拉克
-    'Israel': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/IL_cidr.txt',  # 以色列
-    'Jordan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/JO_cidr.txt',  # 约旦
-    'Kuwait': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/KW_cidr.txt',  # 科威特
-    'Qatar': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Clash/QA_cidr.txt'  # 卡塔尔
+# 添加region_cidr列表
+region_cidr = [
+    "Hong Kong", "Taiwan", "Japan", "South Korea", "India", "Singapore", "Thailand", "Vietnam", 
+    "Philippines", "Malaysia", "France", "Germany", "United Kingdom", "Italy", "Spain", "Russia", 
+    "Sweden", "Switzerland", "Poland", "United States", "Canada", "Mexico", "Cuba", "Guatemala", 
+    "Dominican Republic", "Costa Rica", "Panama", "Honduras", "Jamaica", "Brazil", "Argentina", 
+    "Chile", "Colombia", "Peru", "Venezuela", "Uruguay", "Paraguay", "Bolivia", "Ecuador", 
+    "South Africa", "Nigeria", "Egypt", "Kenya", "Algeria", "Morocco", "Ghana", "Ethiopia", 
+    "Tanzania", "Senegal", "Australia", "New Zealand", "Fiji", "Papua New Guinea", "Solomon Islands", 
+    "Vanuatu", "Tonga", "Wallis and Futuna", "Nauru", "Tuvalu", "Saudi Arabia", "United Arab Emirates", 
+    "Iran", "Iraq", "Israel", "Jordan", "Kuwait", "Qatar"
+]
+
+isps_to_search = {
+    "Cloudflare": ["cloudflare"],
 }
 
-# Cloudflare CIDR 文件 URL
-cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CloudflareCIDR合并地址.txt'
-# 获取 Cloudflare 的 CIDR 列表
-cloudflare_cidrs = read_cidr_file(cloudflare_url)
+def clear_cache():
+    if not os.path.exists("CF-Country"):
+        os.makedirs("CF-Country")
+    else:
+        for file in os.listdir("CF-Country"):
+            os.remove(os.path.join("CF-Country", file))
+    print("CF-Country文件夹已准备就绪")
 
-# 对每个地区执行 CIDR 重叠计算
-for region_name, region_url in region_cidr_urls.items():
-    # 获取地区 CIDR 列表
-    region_cidrs = read_cidr_file(region_url)
+def cache_asn_page(isp_keyword):
+    search_url = f"https://bgp.he.net/search?search%5Bsearch%5D={isp_keyword}&commit=Search"
+    print(f"缓存ASN页面: {search_url}")
+    response = requests.get(search_url)
+    return response.content
 
-    # 计算与 Cloudflare 的重叠部分
-    ipv4_common_cidrs, ipv6_common_cidrs = find_ip_overlaps(region_cidrs, cloudflare_cidrs)
+def get_unique_asns(isp_keywords):
+    asns = {}
+    for keyword in isp_keywords:
+        page_content = cache_asn_page(keyword)
+        soup = BeautifulSoup(page_content, 'html.parser')
+        print(f"从关键词 '{keyword}' 获取ASN...")
+        for row in soup.find_all('tr'):
+            if 'ASN' in row.text:
+                asn = row.find('a').text.strip()
+                name = row.find_all('td')[2].text.strip()
+                asns[asn] = name
+                print(f"发现 {asn}，名称 {name}")
+    return asns
+
+def get_cidr(asn):
+    cidrs = {region: [] for region in region_cidr}
+    all_cidrs = []
     
-    # 合并并排序 IPv4 和 IPv6 的 CIDR 结果
-    all_cidrs = sorted(set(ipv4_common_cidrs + ipv6_common_cidrs), key=lambda x: (x.version, x))
+    for suffix in ["#_prefixes", "#_prefixes6"]:
+        asn_page = requests.get(f"https://bgp.he.net/{asn}{suffix}").content
+        soup = BeautifulSoup(asn_page, 'html.parser')
+        print(f"获取ASN {asn} 的CIDR信息...")
+        for row in soup.find_all('tr'):
+            cidr_link = row.find('a')
+            if cidr_link and 'net' in cidr_link['href']:
+                cidr = cidr_link.text.strip()
+                flag_img = row.find('img', alt=True, title=True)
+                if flag_img and flag_img['title'] in region_cidr:
+                    region = flag_img['title']
+                    try:
+                        ip_network = ipaddress.ip_network(cidr)
+                        cidrs[region].append(str(ip_network))
+                        all_cidrs.append(str(ip_network))
+                    except ValueError:
+                        print(f"警告：跳过无效的CIDR: {cidr}")
+    
+    for region, ips in cidrs.items():
+        print(f"ASN {asn} 在 {region} 发现 {len(ips)} 个CIDR")
+    
+    return cidrs, all_cidrs
 
-    # 保存结果到对应文件
-    output_filename = f"Cloudflare-{region_name}.txt"
-    save_cidrs_to_file(output_filename, ipv4_common_cidrs, ipv6_common_cidrs)
+def merge_and_sort_cidrs(cidrs):
+    cidr_set = set()
+    for cidr in cidrs:
+        try:
+            cidr_set.add(ipaddress.ip_network(cidr))
+        except ValueError:
+            print(f"警告：跳过无效的CIDR: {cidr}")
+    print(f"开始合并 {len(cidr_set)} CIDR，原始数量: {len(cidrs)}")
+    merged = list(ipaddress.collapse_addresses(cidr_set))
+    print(f"CIDR合并完成，合并后数量: {len(merged)}")
+    return sorted(str(cidr) for cidr in merged)
 
-print("重叠计算完成，CIDR 文件已生成。")
+def prepare_directories():
+    directories = ["CF-Country", "CF"]
+    for directory in directories:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+            print(f"{directory}文件夹已创建")
+        else:
+            # 清理现有文件
+            for file in os.listdir(directory):
+                file_path = os.path.join(directory, file)
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+            print(f"{directory}文件夹已清理")
+
+def main():
+    prepare_directories()
+
+    # 确保CF文件夹存在
+    if not os.path.exists("CF"):
+        os.makedirs("CF")
+    print("CF文件夹已准备就绪")
+
+    all_cloudflare_cidrs = []
+    all_cloudflare_ipv4 = []
+    all_cloudflare_ipv6 = []
+
+    for isp, keywords in isps_to_search.items():
+        print(f"\n正在搜索ISP: {isp}")
+        unique_asns = get_unique_asns(keywords)
+        
+        all_cidrs = {region: [] for region in region_cidr}
+        
+        for asn, name in unique_asns.items():
+            asn_cidrs, all_asn_cidrs = get_cidr(asn)
+            for region in region_cidr:
+                all_cidrs[region].extend(asn_cidrs[region])
+            all_cloudflare_cidrs.extend(all_asn_cidrs)
+        
+        for region, cidrs in all_cidrs.items():
+            merged_cidrs = merge_and_sort_cidrs(cidrs)
+            output_filename = f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt"
+            with open(output_filename, 'w') as f:
+                for cidr in merged_cidrs:
+                    f.write(cidr + '\n')
+            print(f"已保存 {region} 的CIDR到文件: {output_filename}")
+
+    # 处理所有Cloudflare CIDR
+    all_cloudflare_cidrs = merge_and_sort_cidrs(all_cloudflare_cidrs)
+    with open("CF/Cloudflare-All.txt", 'w') as f:
+        for cidr in all_cloudflare_cidrs:
+            f.write(cidr + '\n')
+            if ':' in cidr:
+                all_cloudflare_ipv6.append(cidr)
+            else:
+                all_cloudflare_ipv4.append(cidr)
+
+    # 保存IPv4和IPv6
+    with open("CF/Cloudflare-IPv4.txt", 'w') as f:
+        for cidr in all_cloudflare_ipv4:
+            f.write(cidr + '\n')
+    
+    with open("CF/Cloudflare-IPv6.txt", 'w') as f:
+        for cidr in all_cloudflare_ipv6:
+            f.write(cidr + '\n')
+
+    print("所有Cloudflare CIDR已保存到CF/Cloudflare-All.txt")
+    print("Cloudflare IPv4 CIDR已保存到CF/Cloudflare-IPv4.txt")
+    print("Cloudflare IPv6 CIDR已保存到CF/Cloudflare-IPv6.txt")
+
+if __name__ == "__main__":
+    main()
