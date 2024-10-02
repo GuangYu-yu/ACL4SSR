@@ -27,7 +27,7 @@ def find_ip_overlaps(region_cidrs, cloudflare_cidrs):
     return sorted(ipv4_overlap_set.iter_cidrs()), sorted(ipv6_overlap_set.iter_cidrs())
     
     # 保存 CIDR 到文件
-def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs)
+def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
 
 # 各地区 CIDR 文件 URL
 region_cidr_urls = {
