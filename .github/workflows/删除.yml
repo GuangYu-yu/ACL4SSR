@@ -13,7 +13,7 @@ jobs:
       - name: Delete TXT files
         run: |
           echo "Deleting TXT files..."
-          rm CF-Country/*.txt
+          find Clash -name '*.txt' -type f -delete || echo "没有找到需要删除的 TXT 文件"
 
       - name: Configure Git
         run: |
