@@ -54,22 +54,25 @@ def get_cidr(asn):
         print(f"获取ASN {asn} 的CIDR信息: {url}")
         response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
-        for row in soup.find_all('tr'):
-            cidr_link = row.find('a')
-            if cidr_link and 'net' in cidr_link['href']:
-                cidr = cidr_link.text.strip()
-                flag_img = row.find('img', alt=True, title=True)
-                if flag_img and flag_img['title'] in region_cidr:
-                    region = flag_img['title']
-                    try:
-                        ip_network = ipaddress.ip_network(cidr)
-                        cidrs.append({
-                            'cidr': str(ip_network),
-                            'region': region,
-                            'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
-                        })
-                    except ValueError:
-                        print(f"警告：跳过无效的CIDR: {cidr}")
+        table = soup.find('table', id='table_prefixes')
+        if table:
+            for row in table.find_all('tr'):
+                cidr_link = row.find('a', href=lambda href: href and '/net/' in href)
+                if cidr_link:
+                    cidr = cidr_link.text.strip()
+                    flag_img = row.find('img', class_='flag')
+                    if flag_img and flag_img.get('title') in region_cidr:
+                        region = flag_img['title']
+                        try:
+                            ip_network = ipaddress.ip_network(cidr)
+                            cidrs.append({
+                                'cidr': str(ip_network),
+                                'region': region,
+                                'version': 'IPv4' if ip_network.version == 4 else 'IPv6'
+                            })
+                            print(f"找到 CIDR: {cidr}, 地区: {region}")
+                        except ValueError:
+                            print(f"警告：跳过无效的CIDR: {cidr}")
     return cidrs
 
 def process_cidrs(all_cidrs):
