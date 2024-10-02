@@ -85,7 +85,7 @@ def get_cidr(asn, geoip_reader):
 
 def process_cidrs(all_cidrs):
     config = {}
-    unknown_ips = []
+    unknown_ips = set()  # 使用集合以避免重复CIDR
     all_v4 = set()
     all_v6 = set()
 
@@ -95,13 +95,13 @@ def process_cidrs(all_cidrs):
         version = cidr_info['version']
 
         if region == '未知':
-            unknown_ips.append(cidr)
+            unknown_ips.add(cidr)
             continue
 
         if region not in config:
-            config[region] = {'IPv4': [], 'IPv6': []}
+            config[region] = {'IPv4': set(), 'IPv6': set()}
 
-        config[region][version].append(cidr)
+        config[region][version].add(cidr)
         if version == 'IPv4':
             all_v4.add(cidr)
         else:
@@ -121,7 +121,7 @@ def process_cidrs(all_cidrs):
 
     # 写入未知CIDR文件
     with open("CF/Cloudflare-未知.txt", 'w') as f:
-        for ip in unknown_ips:
+        for ip in sorted(unknown_ips):
             f.write(f"{ip}\n")
 
     # 写入全部CIDR文件
