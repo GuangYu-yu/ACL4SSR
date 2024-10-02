@@ -20,13 +20,14 @@ isps_to_search = {
     "Cloudflare": ["cloudflare"],
 }
 
-def clear_cache():
-    if not os.path.exists("CF-Country"):
-        os.makedirs("CF-Country")
-    else:
-        for file in os.listdir("CF-Country"):
-            os.remove(os.path.join("CF-Country", file))
-    print("CF-Country文件夹已准备就绪")
+def prepare_directories():
+    directories = ["CF-Country", "CF"]
+    for directory in directories:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+            print(f"{directory}文件夹已创建")
+        else:
+            print(f"{directory}文件夹已存在")
 
 def cache_asn_page(isp_keyword):
     search_url = f"https://bgp.he.net/search?search%5Bsearch%5D={isp_keyword}&commit=Search"
@@ -50,7 +51,6 @@ def get_unique_asns(isp_keywords):
 
 def get_cidr(asn):
     cidrs = {region: [] for region in region_cidr}
-    all_cidrs = []
     
     for suffix in ["#_prefixes", "#_prefixes6"]:
         asn_page = requests.get(f"https://bgp.he.net/{asn}{suffix}").content
@@ -66,14 +66,14 @@ def get_cidr(asn):
                     try:
                         ip_network = ipaddress.ip_network(cidr)
                         cidrs[region].append(str(ip_network))
-                        all_cidrs.append(str(ip_network))
                     except ValueError:
                         print(f"警告：跳过无效的CIDR: {cidr}")
     
     for region, ips in cidrs.items():
-        print(f"ASN {asn} 在 {region} 发现 {len(ips)} 个CIDR")
+        if ips:
+            print(f"ASN {asn} 在 {region} 发现 {len(ips)} 个CIDR")
     
-    return cidrs, all_cidrs
+    return cidrs
 
 def merge_and_sort_cidrs(cidrs):
     cidr_set = set()
@@ -87,31 +87,10 @@ def merge_and_sort_cidrs(cidrs):
     print(f"CIDR合并完成，合并后数量: {len(merged)}")
     return sorted(str(cidr) for cidr in merged)
 
-def prepare_directories():
-    directories = ["CF-Country", "CF"]
-    for directory in directories:
-        if not os.path.exists(directory):
-            os.makedirs(directory)
-            print(f"{directory}文件夹已创建")
-        else:
-            # 清理现有文件
-            for file in os.listdir(directory):
-                file_path = os.path.join(directory, file)
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-            print(f"{directory}文件夹已清理")
-
 def main():
     prepare_directories()
 
-    # 确保CF文件夹存在
-    if not os.path.exists("CF"):
-        os.makedirs("CF")
-    print("CF文件夹已准备就绪")
-
     all_cloudflare_cidrs = []
-    all_cloudflare_ipv4 = []
-    all_cloudflare_ipv6 = []
 
     for isp, keywords in isps_to_search.items():
         print(f"\n正在搜索ISP: {isp}")
@@ -120,21 +99,25 @@ def main():
         all_cidrs = {region: [] for region in region_cidr}
         
         for asn, name in unique_asns.items():
-            asn_cidrs, all_asn_cidrs = get_cidr(asn)
+            asn_cidrs = get_cidr(asn)
             for region in region_cidr:
                 all_cidrs[region].extend(asn_cidrs[region])
-            all_cloudflare_cidrs.extend(all_asn_cidrs)
+                all_cloudflare_cidrs.extend(asn_cidrs[region])
         
         for region, cidrs in all_cidrs.items():
-            merged_cidrs = merge_and_sort_cidrs(cidrs)
-            output_filename = f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt"
-            with open(output_filename, 'w') as f:
-                for cidr in merged_cidrs:
-                    f.write(cidr + '\n')
-            print(f"已保存 {region} 的CIDR到文件: {output_filename}")
+            if cidrs:
+                merged_cidrs = merge_and_sort_cidrs(cidrs)
+                output_filename = f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt"
+                with open(output_filename, 'w') as f:
+                    for cidr in merged_cidrs:
+                        f.write(cidr + '\n')
+                print(f"已保存 {region} 的CIDR到文件: {output_filename}")
 
     # 处理所有Cloudflare CIDR
     all_cloudflare_cidrs = merge_and_sort_cidrs(all_cloudflare_cidrs)
+    all_cloudflare_ipv4 = []
+    all_cloudflare_ipv6 = []
+
     with open("CF/Cloudflare-All.txt", 'w') as f:
         for cidr in all_cloudflare_cidrs:
             f.write(cidr + '\n')
