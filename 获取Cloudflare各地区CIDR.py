@@ -85,13 +85,18 @@ def get_cidr(asn, geoip_reader):
 
 def process_cidrs(all_cidrs):
     config = {}
+    unknown_ips = []
     all_v4 = set()
     all_v6 = set()
 
     for cidr_info in all_cidrs:
         cidr = cidr_info['cidr']
-        region = cidr_info['region'] if cidr_info['region'] is not None else 'None'
+        region = cidr_info['region']
         version = cidr_info['version']
+
+        if region == '未知':
+            unknown_ips.append(cidr)
+            continue
 
         if region not in config:
             config[region] = {'IPv4': [], 'IPv6': []}
@@ -111,9 +116,13 @@ def process_cidrs(all_cidrs):
         if cidrs['IPv4'] or cidrs['IPv6']:
             with open(f"CF-Country/Cloudflare-{region.replace(' ', '_')}.txt", 'w') as f:
                 for version in ['IPv4', 'IPv6']:
-                    f.write(f"-{version}\n")
                     for cidr in sorted(cidrs[version]):
                         f.write(f"{cidr}\n")
+
+    # 写入未知CIDR文件
+    with open("CF/Cloudflare-未知.txt", 'w') as f:
+        for ip in unknown_ips:
+            f.write(f"{ip}\n")
 
     # 写入全部CIDR文件
     with open("CF/Cloudflare-All.txt", 'w') as f:
