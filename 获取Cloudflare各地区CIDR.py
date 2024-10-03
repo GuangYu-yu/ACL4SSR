@@ -107,7 +107,7 @@ region_cidr_urls = {
 }
 
 # Cloudflare CIDR 文件 URL
-cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/main/output_folder/CloudflareCIDR合并地址.txt'
+cloudflare_url = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
 # 获取 Cloudflare 的 CIDR 列表
 cloudflare_cidrs = read_cidr_file(cloudflare_url)
 
