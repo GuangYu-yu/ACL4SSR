@@ -6,7 +6,7 @@ import ipaddress
 os.makedirs('Country', exist_ok=True)
 
 # 打开 GeoLite2-Country.mmdb 数据库文件
-db_reader = maxminddb.open_database('GeoLite2-Country.mmdb')
+db_reader = maxminddb.open_database('Country.mmdb')
 
 # 定义要查找的地区及其名称
 regions = {
