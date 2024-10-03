@@ -20,10 +20,10 @@ jobs:
       - name: 安装依赖
         run: pip install maxminddb requests
 
-        # 下载 GeoLite2 数据库
-      - name: 下载 GeoLite2-Country.mmdb
+        # 下载 mmdb
+      - name: 下载 Country.mmdb
         run: |
-          wget -O GeoLite2-Country.mmdb https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb
+          wget -O Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
       
       - name: 运行 job1 脚本
         run: python 提取地区-CIDR.py
