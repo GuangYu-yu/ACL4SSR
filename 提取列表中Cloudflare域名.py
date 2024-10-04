@@ -2,6 +2,7 @@ import requests
 import ipaddress
 import random
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 下载域名列表和CIDR列表
 def download_lists():
@@ -85,6 +86,25 @@ def get_ip_from_domain(domain):
     
     return ipv4_addresses, ipv6_addresses
 
+# 并发处理每个域名
+def process_domain(domain_line, cidr_ranges):
+    domain = domain_line.split(',')[1]
+    
+    # 查询IPv4和IPv6
+    ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
+    
+    # 检查IPv4地址是否在CIDR范围内
+    for ip in ipv4_addresses:
+        if ip_in_cidr(ip, cidr_ranges):
+            return domain_line  # 返回原始行，保留DOMAIN-SUFFIX
+    
+    # 检查IPv6地址是否在CIDR范围内
+    for ip in ipv6_addresses:
+        if ip_in_cidr(ip, cidr_ranges):
+            return domain_line  # 返回原始行，保留DOMAIN-SUFFIX
+    
+    return None
+
 # 主函数
 def main():
     # 下载域名和CIDR列表
@@ -94,25 +114,15 @@ def main():
     domains = extract_domains(domain_list)
     cidr_ranges = extract_cidrs(cidr_list)
     
-    # 匹配域名和CIDR
     matching_domains = []
-    for domain_line in domains:
-        domain = domain_line.split(',')[1]
-        
-        # 查询IPv4和IPv6
-        ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
-        
-        # 检查IPv4地址是否在CIDR范围内
-        for ip in ipv4_addresses:
-            if ip_in_cidr(ip, cidr_ranges):
-                matching_domains.append(domain_line)  # 保存原始行，保留DOMAIN-SUFFIX
-                break  # 已匹配，跳过其他IP
 
-        # 检查IPv6地址是否在CIDR范围内
-        for ip in ipv6_addresses:
-            if ip_in_cidr(ip, cidr_ranges):
-                matching_domains.append(domain_line)  # 保存原始行，保留DOMAIN-SUFFIX
-                break  # 已匹配，跳过其他IP
+    # 使用线程池并发查询
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                matching_domains.append(result)
     
     # 保存结果到文件
     with open('matching_domains.list', 'w') as f:
