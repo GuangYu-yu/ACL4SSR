@@ -117,7 +117,7 @@ def main():
     matching_domains = []
 
     # 使用线程池并发查询
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=20) as executor:
         futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
         for future in as_completed(futures):
             result = future.result()
