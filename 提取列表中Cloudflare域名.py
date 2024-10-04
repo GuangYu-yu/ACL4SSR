@@ -1,6 +1,6 @@
 import requests
 import ipaddress
-import subprocess
+import random
 import re
 
 # 下载域名列表和CIDR列表
@@ -31,16 +31,59 @@ def ip_in_cidr(ip, cidr_list):
             continue
     return False
 
-# Ping 域名获取IP地址
-def get_ip_from_domain(domain, is_ipv6=False):
+# Google DNS API 查询
+def query_google_dns(domain, record_type):
     try:
-        ping_command = ['ping6', '-c', '1', domain] if is_ipv6 else ['ping', '-c', '1', domain]
-        output = subprocess.check_output(ping_command, universal_newlines=True)
-        ip_regex = r'\(([\d.]+)\)' if not is_ipv6 else r'\(([\da-fA-F:]+)\)'
-        ip = re.search(ip_regex, output).group(1)
-        return ip
-    except subprocess.CalledProcessError:
-        return None
+        response = requests.get(f'https://dns.google/resolve?name={domain}&type={record_type}')
+        data = response.json()
+        return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
+    except Exception as e:
+        print(f"Google DNS API 查询失败: {e}")
+        return []
+
+# Cloudflare DNS Resolver API 查询
+def query_cloudflare_dns(domain, record_type):
+    try:
+        headers = {
+            'Accept': 'application/dns-json',
+        }
+        response = requests.get(f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}', headers=headers)
+        data = response.json()
+        return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
+    except Exception as e:
+        print(f"Cloudflare DNS API 查询失败: {e}")
+        return []
+
+# IPinfo API 查询
+def query_ipinfo(domain):
+    try:
+        response = requests.get(f'https://ipinfo.io/{domain}/json')
+        data = response.json()
+        if 'bogon' not in data:  # 排除内部网络
+            return [data['ip']] if 'ip' in data else []
+        return []
+    except Exception as e:
+        print(f"IPinfo API 查询失败: {e}")
+        return []
+
+# 随机选择API查询IP
+def get_ip_from_domain(domain):
+    record_types = ["A", "AAAA"]
+    api_functions = [
+        lambda d, t: query_google_dns(d, t),  # Google DNS API
+        lambda d, t: query_cloudflare_dns(d, t),  # Cloudflare DNS API
+        lambda d, _: query_ipinfo(d)  # IPinfo API 不区分A或AAAA记录
+    ]
+    
+    ipv4_addresses, ipv6_addresses = [], []
+    for record_type in record_types:
+        api_function = random.choice(api_functions)  # 随机选择API
+        if record_type == "A":
+            ipv4_addresses = api_function(domain, record_type)
+        elif record_type == "AAAA":
+            ipv6_addresses = api_function(domain, record_type)
+    
+    return ipv4_addresses, ipv6_addresses
 
 # 主函数
 def main():
@@ -55,22 +98,28 @@ def main():
     matching_domains = []
     for domain_line in domains:
         domain = domain_line.split(',')[1]
-        # 尝试Ping IPv4
-        ip = get_ip_from_domain(domain)
-        if ip and ip_in_cidr(ip, cidr_ranges):
-            matching_domains.append(domain_line)  # 保存原始行，保留DOMAIN-SUFFIX
-        else:
-            # 尝试Ping IPv6
-            ip = get_ip_from_domain(domain, is_ipv6=True)
-            if ip and ip_in_cidr(ip, cidr_ranges):
+        
+        # 查询IPv4和IPv6
+        ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
+        
+        # 检查IPv4地址是否在CIDR范围内
+        for ip in ipv4_addresses:
+            if ip_in_cidr(ip, cidr_ranges):
                 matching_domains.append(domain_line)  # 保存原始行，保留DOMAIN-SUFFIX
+                break  # 已匹配，跳过其他IP
+
+        # 检查IPv6地址是否在CIDR范围内
+        for ip in ipv6_addresses:
+            if ip_in_cidr(ip, cidr_ranges):
+                matching_domains.append(domain_line)  # 保存原始行，保留DOMAIN-SUFFIX
+                break  # 已匹配，跳过其他IP
     
     # 保存结果到文件
     with open('matching_domains.list', 'w') as f:
         for domain_line in matching_domains:
             f.write(domain_line + '\n')
     
-    print(f"匹配的域名已保存到 matching_domains.txt 文件中，共 {len(matching_domains)} 个。")
+    print(f"匹配的域名已保存到 matching_domains.list 文件中，共 {len(matching_domains)} 个。")
 
 # 脚本执行入口
 if __name__ == "__main__":
