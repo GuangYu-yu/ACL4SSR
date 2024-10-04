@@ -66,7 +66,7 @@ def main():
                 matching_domains.append(domain_line)  # 保存原始行，保留DOMAIN-SUFFIX
     
     # 保存结果到文件
-    with open('matching_domains.txt', 'w') as f:
+    with open('matching_domains.list', 'w') as f:
         for domain_line in matching_domains:
             f.write(domain_line + '\n')
     
