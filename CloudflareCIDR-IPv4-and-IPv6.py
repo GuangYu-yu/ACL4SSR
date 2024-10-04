@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import os
 import shutil
 import re
+import ipaddress
 
 # 函数：从指定的ASN页面获取CIDR（支持缓存）
 def get_cidrs(asn, cache_dir):
@@ -46,6 +47,18 @@ def get_asns(isp_name):
     
     return asns
 
+# 函数：合并CIDR
+def merge_cidrs(cidrs):
+    ip_networks = [ipaddress.ip_network(cidr) for cidr in cidrs]
+    merged = ipaddress.collapse_addresses(ip_networks)
+    return [str(net) for net in merged]
+
+# 函数：排序CIDR
+def sort_cidrs(cidrs):
+    ipv4_cidrs = sorted([cidr for cidr in cidrs if ':' not in cidr], key=lambda x: (ipaddress.ip_network(x).network_address, ipaddress.ip_network(x).prefixlen))
+    ipv6_cidrs = sorted([cidr for cidr in cidrs if ':' in cidr], key=lambda x: (ipaddress.ip_network(x).network_address, ipaddress.ip_network(x).prefixlen))
+    return ipv4_cidrs, ipv6_cidrs
+
 # 清空缓存目录
 def clear_cache(cache_dir):
     if os.path.exists(cache_dir):
@@ -58,33 +71,38 @@ def main(isps, cache_dir, output_ipv4_file, output_ipv6_file, output_combined_fi
     if not os.path.exists(cache_dir):
         os.makedirs(cache_dir)
 
-    with open(output_ipv4_file, mode='w', encoding='utf-8') as ipv4_file, \
-         open(output_ipv6_file, mode='w', encoding='utf-8') as ipv6_file:
-        
-        for isp in isps:
-            print(f"正在搜索ISP: {isp}")
-            asns = get_asns(isp)
-            for asn in asns:
-                print(f"ASN: {asn}")
-                cidrs = get_cidrs(asn, cache_dir)
-                
-                for cidr in cidrs:
-                    if ':' in cidr:
-                        ipv6_file.write(f"{cidr}\n")
-                    else:
-                        ipv4_file.write(f"{cidr}\n")
-                    
-                print(f"{len(cidrs)} 个CIDR已保存至文件。")
-            print("-" * 40)
-    
-    clear_cache(cache_dir)
+    all_ipv4_cidrs = []
+    all_ipv6_cidrs = []
 
+    for isp in isps:
+        print(f"正在搜索ISP: {isp}")
+        asns = get_asns(isp)
+        for asn in asns:
+            print(f"ASN: {asn}")
+            cidrs = get_cidrs(asn, cache_dir)
+            ipv4_cidrs, ipv6_cidrs = sort_cidrs(cidrs)
+            all_ipv4_cidrs.extend(ipv4_cidrs)
+            all_ipv6_cidrs.extend(ipv6_cidrs)
+
+            print(f"{len(cidrs)} 个CIDR已保存至列表。")
+        print("-" * 40)
+    
+    # 合并和排序CIDR
+    all_ipv4_cidrs = merge_cidrs(all_ipv4_cidrs)
+    all_ipv6_cidrs = merge_cidrs(all_ipv6_cidrs)
+
+    # 保存结果到文件
+    with open(output_ipv4_file, mode='w', encoding='utf-8') as ipv4_file:
+        ipv4_file.write("\n".join(all_ipv4_cidrs) + "\n")
+    with open(output_ipv6_file, mode='w', encoding='utf-8') as ipv6_file:
+        ipv6_file.write("\n".join(all_ipv6_cidrs) + "\n")
+    
     # 合并CIDR到一个文件
     with open(output_combined_file, mode='w', encoding='utf-8') as combined_file:
-        with open(output_ipv4_file, mode='r', encoding='utf-8') as ipv4_file:
-            combined_file.writelines(ipv4_file.readlines())
-        with open(output_ipv6_file, mode='r', encoding='utf-8') as ipv6_file:
-            combined_file.writelines(ipv6_file.readlines())
+        combined_file.write("\n".join(all_ipv4_cidrs) + "\n")
+        combined_file.write("\n".join(all_ipv6_cidrs) + "\n")
+
+    clear_cache(cache_dir)
 
 # 输入ISP列表、缓存目录和输出文件路径
 isps_to_search = ["cloudflare"]  # 需要搜索的ISP
