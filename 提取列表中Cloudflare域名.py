@@ -1,6 +1,5 @@
 import requests
 import ipaddress
-import random
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -32,16 +31,6 @@ def ip_in_cidr(ip, cidr_list):
             continue
     return False
 
-# Google DNS API 查询
-def query_google_dns(domain, record_type):
-    try:
-        response = requests.get(f'https://dns.google/resolve?name={domain}&type={record_type}')
-        data = response.json()
-        return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
-    except Exception as e:
-        print(f"Google DNS API 查询失败: {e}")
-        return []
-
 # Cloudflare DNS Resolver API 查询
 def query_cloudflare_dns(domain, record_type):
     try:
@@ -55,35 +44,10 @@ def query_cloudflare_dns(domain, record_type):
         print(f"Cloudflare DNS API 查询失败: {e}")
         return []
 
-# IPinfo API 查询
-def query_ipinfo(domain):
-    try:
-        response = requests.get(f'https://ipinfo.io/{domain}/json')
-        data = response.json()
-        if 'bogon' not in data:  # 排除内部网络
-            return [data['ip']] if 'ip' in data else []
-        return []
-    except Exception as e:
-        print(f"IPinfo API 查询失败: {e}")
-        return []
-
-# 随机选择API查询IP
+# 查询域名的IP地址
 def get_ip_from_domain(domain):
-    record_types = ["A", "AAAA"]
-    api_functions = [
-        lambda d, t: query_google_dns(d, t),  # Google DNS API
-        lambda d, t: query_cloudflare_dns(d, t),  # Cloudflare DNS API
-        lambda d, _: query_ipinfo(d)  # IPinfo API 不区分A或AAAA记录
-    ]
-    
-    ipv4_addresses, ipv6_addresses = [], []
-    for record_type in record_types:
-        api_function = random.choice(api_functions)  # 随机选择API
-        if record_type == "A":
-            ipv4_addresses = api_function(domain, record_type)
-        elif record_type == "AAAA":
-            ipv6_addresses = api_function(domain, record_type)
-    
+    ipv4_addresses = query_cloudflare_dns(domain, "A")
+    ipv6_addresses = query_cloudflare_dns(domain, "AAAA")
     return ipv4_addresses, ipv6_addresses
 
 # 并发处理每个域名
@@ -96,14 +60,14 @@ def process_domain(domain_line, cidr_ranges):
     # 检查IPv4地址是否在CIDR范围内
     for ip in ipv4_addresses:
         if ip_in_cidr(ip, cidr_ranges):
-            return domain_line  # 返回原始行，保留DOMAIN-SUFFIX
+            return domain_line, domain  # 返回原始行和提取出来的纯域名
     
     # 检查IPv6地址是否在CIDR范围内
     for ip in ipv6_addresses:
         if ip_in_cidr(ip, cidr_ranges):
-            return domain_line  # 返回原始行，保留DOMAIN-SUFFIX
+            return domain_line, domain  # 返回原始行和提取出来的纯域名
     
-    return None
+    return None, None
 
 # 主函数
 def main():
@@ -115,21 +79,30 @@ def main():
     cidr_ranges = extract_cidrs(cidr_list)
     
     matching_domains = []
+    preferred_domains = []
 
     # 使用线程池并发查询
     with ThreadPoolExecutor(max_workers=35) as executor:
         futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
         for future in as_completed(futures):
-            result = future.result()
-            if result:
-                matching_domains.append(result)
+            domain_line, pure_domain = future.result()
+            if domain_line:
+                matching_domains.append(domain_line)
+            if pure_domain:
+                preferred_domains.append(pure_domain)
     
-    # 保存结果到文件
+    # 保存匹配结果到 matching_domains.list
     with open('matching_domains.list', 'w') as f:
         for domain_line in matching_domains:
             f.write(domain_line + '\n')
     
+    # 保存提取的纯域名到 优选域名.txt
+    with open('优选域名.txt', 'w') as f:
+        for domain in preferred_domains:
+            f.write(domain + '\n')
+    
     print(f"匹配的域名已保存到 matching_domains.list 文件中，共 {len(matching_domains)} 个。")
+    print(f"提取的纯域名已保存到 优选域名.txt 文件中，共 {len(preferred_domains)} 个。")
 
 # 脚本执行入口
 if __name__ == "__main__":
