@@ -27,6 +27,9 @@ jobs:
       
       - name: 运行 job1 脚本
         run: python 提取地区-CIDR.py
+        
+      - name: 提取列表中Cloudflare域名
+        run: python 提取列表中Cloudflare域名.py
 
       - name: 运行列表过滤脚本
         run: python 规则剔除Cloudflare.py
