@@ -3,17 +3,33 @@ from datetime import datetime
 import yaml
 import os
 
+def modify_proxy_names(data, source):
+    if 'proxies' in data and isinstance(data['proxies'], list):
+        for proxy in data['proxies']:
+            if 'name' in proxy:
+                proxy['name'] = f"{proxy['name']}_{source}"
+    return data
+
 def download_and_save(url, filename):
     response = requests.get(url)
     if response.status_code == 200:
         # 确保 yaml 文件夹存在
         os.makedirs("yaml", exist_ok=True)
         
-        # 在 yaml 文件夹中保存文件
-        file_path = os.path.join("yaml", f"{filename}.yaml")
-        with open(file_path, "wb") as file:
-            file.write(response.content)
-        print(f"成功下载并保存: {file_path}")
+        try:
+            # 解析YAML内容
+            data = yaml.safe_load(response.text)
+            # 修改代理名称
+            modified_data = modify_proxy_names(data, filename)
+            
+            # 在 yaml 文件夹中保存修改后的文件
+            file_path = os.path.join("yaml", f"{filename}.yaml")
+            with open(file_path, "w", encoding="utf-8") as file:
+                yaml.dump(modified_data, file, allow_unicode=True)
+            print(f"成功下载、修改并保存: {file_path}")
+        except yaml.YAMLError as e:
+            print(f"解析YAML失败: {url}")
+            print(f"错误信息: {str(e)}")
     else:
         print(f"下载失败: {url}")
 
