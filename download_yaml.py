@@ -4,10 +4,25 @@ import yaml
 import os
 
 def modify_proxy_names(data, source):
+    if not isinstance(data, dict):
+        return data
+
+    # 修改主proxies列表
     if 'proxies' in data and isinstance(data['proxies'], list):
+        proxy_map = {}
         for proxy in data['proxies']:
             if 'name' in proxy:
-                proxy['name'] = f"{proxy['name']}_{source}"
+                old_name = proxy['name']
+                new_name = f"{old_name}_{source}"
+                proxy['name'] = new_name
+                proxy_map[old_name] = new_name
+
+    # 修改proxy-groups中的proxies列表
+    if 'proxy-groups' in data and isinstance(data['proxy-groups'], list):
+        for group in data['proxy-groups']:
+            if 'proxies' in group and isinstance(group['proxies'], list):
+                group['proxies'] = [proxy_map.get(p, p) for p in group['proxies']]
+
     return data
 
 def download_and_save(url, filename):
