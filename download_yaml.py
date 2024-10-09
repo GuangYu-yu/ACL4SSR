@@ -38,32 +38,44 @@ def get_clash_url(article_url):
     os.unlink(temp_file.name)
     return None
 
+def modify_proxy_names(data, source):
+    if not isinstance(data, dict):
+        return data
+
+    # 修改主proxies列表
+    if 'proxies' in data and isinstance(data['proxies'], list):
+        proxy_map = {}
+        for proxy in data['proxies']:
+            if 'name' in proxy:
+                old_name = proxy['name']
+                new_name = f"{old_name}_{source}"
+                proxy['name'] = new_name
+                proxy_map[old_name] = new_name
+
+    # 修改proxy-groups中的proxies列表
+    if 'proxy-groups' in data and isinstance(data['proxy-groups'], list):
+        for group in data['proxy-groups']:
+            if 'proxies' in group and isinstance(group['proxies'], list):
+                group['proxies'] = [proxy_map.get(p, p) for p in group['proxies']]
+
+    return data
+
 def download_and_save(url, filename):
     response = requests.get(url)
     if response.status_code == 200:
         os.makedirs("yaml", exist_ok=True)
         file_path = os.path.join("yaml", f"{filename}.yaml")
-        with open(file_path, "w", encoding="utf-8") as file:
-            file.write(response.text)
-        print(f"成功下载并保存: {file_path}")
+        try:
+            data = yaml.safe_load(response.text)
+            modified_data = modify_proxy_names(data, filename)
+            with open(file_path, "w", encoding="utf-8") as file:
+                yaml.dump(modified_data, file, allow_unicode=True)
+            print(f"成功下载、修改并保存: {file_path}")
+        except yaml.YAMLError as e:
+            print(f"解析YAML失败: {url}")
+            print(f"错误信息: {str(e)}")
     else:
         print(f"下载失败: {url}")
-
-def modify_proxy_names(data, source):
-    if not isinstance(data, dict):
-        return data
-
-    if 'proxies' in data and isinstance(data['proxies'], list):
-        for proxy in data['proxies']:
-            if 'name' in proxy:
-                proxy['name'] = f"{proxy['name']}_{source}"
-
-    if 'proxy-groups' in data and isinstance(data['proxy-groups'], list):
-        for group in data['proxy-groups']:
-            if 'proxies' in group and isinstance(group['proxies'], list):
-                group['proxies'] = [f"{proxy}_{source}" if not proxy.startswith(source) else proxy for proxy in group['proxies']]
-
-    return data
 
 def main():
     today = datetime.now()
@@ -90,17 +102,7 @@ def main():
         print("未找到今天的米贝文章")
 
     for url, filename in zip(urls, filenames):
-        response = requests.get(url)
-        if response.status_code == 200:
-            try:
-                data = yaml.safe_load(response.text)
-                modified_data = modify_proxy_names(data, filename)
-                download_and_save(url, filename)
-            except yaml.YAMLError as e:
-                print(f"解析YAML失败: {url}")
-                print(f"错误信息: {str(e)}")
-        else:
-            print(f"下载失败: {url}")
+        download_and_save(url, filename)
 
 if __name__ == "__main__":
     main()
