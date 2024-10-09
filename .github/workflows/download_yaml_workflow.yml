@@ -41,6 +41,8 @@ jobs:
     steps:
       - name: 检查出代码库
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取所有历史记录，以便进行合并
 
       - name: 下载 all.yaml
         run: |
@@ -54,6 +56,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add yaml/all.yaml
           git commit -m "Downloaded all.yaml on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
-          git push || echo "没有需要推送的更改，跳过推送。"
+          git pull --rebase origin main  # 拉取并变基
+          git push || (git push --force && echo "强制推送成功")
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
