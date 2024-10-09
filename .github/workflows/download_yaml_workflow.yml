@@ -25,12 +25,22 @@ jobs:
       - name: 运行下载脚本
         run: python download_yaml.py
 
-      - name: 提交并推送个别YAML文件的更改
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add yaml/*.yaml
-          git commit -m "Downloaded individual YAML files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push || echo "没有需要推送的更改，跳过推送。"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,13 +60,22 @@ jobs:
           mkdir -p yaml
           curl -o yaml/all.yaml "$ALL_YAML_URL"
 
-      - name: 提交并推送 all.yaml 文件的更改
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add yaml/all.yaml
-          git commit -m "Downloaded all.yaml on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
-          git pull --rebase origin main  # 拉取并变基
-          git push || (git push --force && echo "强制推送成功")
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
