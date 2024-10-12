@@ -6,143 +6,110 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: "[SS] 高性价比机场:https://kfyun.uk_clashgithub", server: 127.0.0.1, port: 443, type: ss, cipher: aes-128-gcm, password: 6601fb90e9b3, udp: true}
-  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org_clashgithub", server: 69.50.95.53, port: 5498, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV, udp: true}
-  - {name: "[SS] 🇮🇹 意大利+v2rayfree.eu.org_clashgithub", server: service.ouluyun9803.com, port: 20003, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2, udp: true}
-  - {name: "[SS] 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub", server: 169.197.141.84, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: "[SS] 🇵🇱 波兰+v2rayfree.eu.org_clashgithub", server: 193.243.147.128, port: 40368, type: ss, cipher: aes-256-gcm, password: 7BcLdsO1WweoGD0X, udp: true}
-  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub", server: 38.143.66.87, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇮🇹 意大利+v2rayfree.eu.org 2_clashgithub", server: service.ouluyun9803.com, port: 26667, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2, udp: true}
-  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub", server: 38.143.66.87, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
-  - {name: "[SS] 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub", server: 142.202.49.122, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub", server: cfip.1323123.xyz, port: 80, type: vmess, uuid: ebace182-ad9a-4044-92fd-ad48adf52779, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: kr.freegpt.filegear-sg.me}}, udp: true}
-  - {name: "[VMess] 🇮🇳 印度 v2rayfree.eu.org_clashgithub", server: 202.78.162.5, port: 443, type: vmess, uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: pendar.onthewifi.com}}, udp: true}
-  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub", server: 69.50.95.53, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国 CloudFlare节点 2_clashgithub", server: 172.67.146.69, port: 443, type: trojan, password: bpb-trojan, sni: 403b3611-99bC-43B7-88D7-26eD5D0825A9-3.pAgeS.dEv, skip-cert-verify: true, network: ws, ws-opts: {path: "/trUCa3SPfNEeCjidWR?ed=2560", headers: {Host: 403b3611-99bC-43B7-88D7-26eD5D0825A9-3.pAgeS.dEv}}, udp: true}
-  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei", server: 34.22.142.117, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei", server: 34.175.202.195, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei", server: 144.24.83.39, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei", server: 34.91.136.173, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 38.110.1.12, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 169.197.141.84, port: 5499, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 69.50.95.53, port: 5498, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 38.68.134.9, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 38.110.1.105, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: 38.114.114.69, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 38.75.137.42, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _DE_德国->🇺🇸_US_美国_oneclash", server: 45.87.175.192, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 142.202.49.122, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_oneclash", server: 142.202.49.84, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_10_oneclash", server: 69.50.92.72, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_11_oneclash", server: 38.110.1.12, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰->🇦🇫_AF_阿富汗_oneclash", server: 45.158.171.2, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_12_oneclash", server: 38.110.1.12, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_13_oneclash", server: 38.75.137.42, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_14_oneclash", server: 38.68.134.9, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_15_oneclash", server: 38.110.1.46, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_16_oneclash", server: 139.64.165.230, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_17_oneclash", server: 169.197.142.216, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_18_oneclash", server: 23.150.152.41, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_19_oneclash", server: 38.114.114.69, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_20_oneclash", server: 142.202.49.84, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_21_oneclash", server: 38.110.1.105, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_22_oneclash", server: 38.114.114.69, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_23_oneclash", server: 169.197.142.216, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_24_oneclash", server: 38.68.134.9, port: 5001, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇩🇪 _DE_德国_oneclash", server: 45.87.175.154, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_25_oneclash", server: 38.75.137.42, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_26_oneclash", server: 169.197.142.216, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_27_oneclash", server: 38.114.114.69, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_28_oneclash", server: 38.110.1.105, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_29_oneclash", server: 38.68.134.9, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_30_oneclash", server: 38.114.114.69, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_31_oneclash", server: 69.50.95.53, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_32_oneclash", server: 38.110.1.46, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_33_oneclash", server: 38.110.1.46, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_34_oneclash", server: 38.110.1.105, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰_oneclash", server: 45.158.171.14, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_35_oneclash", server: 38.114.114.69, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_36_oneclash", server: 38.68.134.9, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_37_oneclash", server: 142.202.49.84, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_38_oneclash", server: 23.150.152.41, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_39_oneclash", server: 38.114.114.69, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 🇺🇸 _GB_英国->🇺🇸_US_美国_oneclash", server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_40_oneclash", server: 169.197.142.216, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _NL_荷兰->🇺🇸_US_美国_oneclash", server: 45.158.171.19, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_41_oneclash", server: 142.202.49.122, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_42_oneclash", server: 38.75.137.42, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_43_oneclash", server: 38.68.134.9, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇭🇰 香港_openrunner", server: soonhk.soon.guru, port: 40000, type: ss, cipher: chacha20-ietf-poly1305, password: 7f5d080e-8dde-4b47-abf7-0b4402510fc7, udp: true}
-  - {name: "[VMess] 🇭🇰 香港2_openrunner", server: ambxxic01hk.dorabbb.top, port: 44803, type: vmess, uuid: b03ec976-3100-48ea-b1b1-767f8d425907, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇭🇰 香港3_openrunner", server: 45.125.35.57, port: 55305, type: vmess, uuid: db87b0f5-01bb-448c-bb5f-9668fe09300e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯 v2rayfree.eu.org_clashgithub", server: present-blowfish.sunbeam921.monster, port: 443, type: trojan, password: 3672449442956713984, sni: present-blowfish.sunbeam921.monster, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub", server: www.visa.com, port: 2095, type: vmess, uuid: a63e9c8c-2c04-4b8e-af6a-4a02494a1f0b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip2.8084726.xyz}}, udp: true}
+  - {name: "[Trojan] 🇫🇷 法国 巴黎Amazon数据中心_clashgithub", server: 35.181.18.202, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub", server: 38.121.43.97, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 2_clashgithub", server: 104.16.67.38, port: 443, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: us3e-mmnnfr9dop0.v2freevpn.com, network: ws, ws-opts: {path: /v118-fccxmxm35, headers: {Host: us3e-mmnnfr9dop0.v2freevpn.com}}, udp: true}
+  - {name: "[SS] 欧盟+v2rayfree.eu.org_clashgithub", server: 45.87.175.154, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org_clashgithub", server: 69.50.93.113, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub", server: 38.110.1.105, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "[Trojan] 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub", server: 185.238.228.6, port: 443, type: trojan, password: bpb-trojan, sni: 403b3611-99bc-43b7-88D7-26Ed5D0825a9-3.PAgeS.dEv, skip-cert-verify: true, network: ws, ws-opts: {path: "/trLb1imnrxPEhfzfwk?ed=2560", headers: {Host: 403b3611-99bc-43b7-88D7-26Ed5D0825a9-3.PAgeS.dEv}}, udp: true}
+  - {name: "[Trojan] 🇩🇪 德国 黑森州法兰克福Amazon数据中心_clashgithub", server: 35.156.130.123, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub", server: 38.68.134.9, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: "[SS] 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub", server: 142.202.49.122, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub", server: 69.50.92.72, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub", server: 38.121.43.97, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub", server: 69.50.95.103, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: "[VMess] 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub", server: 188.166.96.150, port: 1010, type: vmess, uuid: 09e3fef1-3136-41a9-9531-6ea36482dea1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 3_clashgithub", server: 162.159.140.19, port: 2095, type: vmess, uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip2.6016725.xyz}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub", server: 38.110.1.105, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: "[VMess] 🇨🇳 广东省 移动_clashgithub", server: z3.fragranceninja.com, port: 12960, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇮🇳 印度 v2rayfree.eu.org_clashgithub", server: 202.78.162.5, port: 443, type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 4_clashgithub", server: server31.beheshtbaneh.com, port: 8880, type: vmess, uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: server31.beheshtbaneh.com}}, udp: true}
+  - {name: "[VMess] 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub", server: 202.78.162.5, port: 443, type: vmess, uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sahand.serveminecraft.net}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 5_clashgithub", server: 172.64.198.249, port: 2082, type: vmess, uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip3.6929198.xyz}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub", server: 38.68.134.9, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: "[Trojan] 🇸🇬 立陶宛 NGS新闻_clashgithub", server: 185.176.24.2, port: 443, type: trojan, password: bpb-trojan, sni: 403B3611-99bc-43B7-88d7-26ed5d0825a9-3.PaGes.deV, skip-cert-verify: true, network: ws, ws-opts: {path: "/tr9vfP2lflALkJrNsQ?ed=2560", headers: {Host: 403B3611-99bc-43B7-88d7-26ed5d0825a9-3.PaGes.deV}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub", server: 69.50.92.72, port: 8881, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub", server: 139.64.165.230, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub", server: 142.202.49.84, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub", server: 38.68.134.9, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[SS] 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub", server: 23.150.152.41, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub", server: 69.50.95.53, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub", server: 38.114.114.69, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 6_clashgithub", server: 104.19.45.50, port: 2095, type: vmess, uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip2.6016725.xyz}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub", server: 38.110.1.46, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: "[SS] 🇺🇸 美国+加利福尼亚州旧金山市Awknet通信公司_clashgithub", server: 67.220.85.74, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub", server: 38.110.1.105, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "[Trojan] 🇺🇸 美国 v2rayfree.eu.org_clashgithub", server: 45.142.120.4, port: 2096, type: trojan, password: bpb-trojan, sni: 403B3611-99bC-43b7-88D7-26ed5d0825A9-3.PageS.DEV, skip-cert-verify: true, network: ws, ws-opts: {path: "/troUbg9Q3QgD0TJRfy?ed=2560", headers: {Host: 403B3611-99bC-43b7-88D7-26ed5d0825A9-3.PageS.DEV}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub", server: 38.121.43.97, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub", server: 142.202.49.122, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: "[SS] 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub", server: 45.158.171.19, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub", server: 38.114.114.69, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub", server: 38.114.114.69, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei", server: 34.175.202.195, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei", server: 152.70.71.23, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei", server: 34.147.231.33, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei", server: 144.24.83.39, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 169.197.142.216, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 69.50.95.103, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 142.202.49.84, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[SS] 🇳🇱 _NL_荷兰_1_oneclash", server: 45.158.171.36, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 69.50.92.72, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[SS] 🇮🇪 _IE_爱尔兰->🇷🇺_RU_俄罗斯_oneclash", server: 13.74.65.144, port: 32935, type: ss, cipher: chacha20-ietf-poly1305, password: FX77Cp2CHKq8JKTHux2xUi, udp: true}
+  - {name: "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_1_oneclash", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 142.202.49.84, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: 142.202.49.84, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 69.50.95.218, port: 9090, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 38.114.114.143, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_oneclash", server: 194.87.45.189, port: 40076, type: ss, cipher: chacha20-ietf-poly1305, password: ECjp87TIkUiJ5AhRZglZ9E, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_9_oneclash", server: 38.114.114.143, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 🇳🇱 _NL_荷兰_2_oneclash", server: 45.158.171.9, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
+  - {name: "[SS] 🇸🇪 _CN_中国->🇸🇪_SE_瑞典_oneclash", server: deepf.hjkdsak2.com, port: 20003, type: ss, cipher: chacha20-ietf-poly1305, password: 99301d55-a41f-4919-986b-1435996533aa, udp: true}
+  - {name: "[SS] 🇩🇪 _DE_德国_oneclash", server: 45.87.175.178, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
+  - {name: "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_2_oneclash", server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_10_oneclash", server: 169.197.142.216, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_11_oneclash", server: 38.110.1.46, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: "[VMess] 🇭🇰 香港_openrunner", server: cfcdn2.sanfencdn9.com, port: 2086, type: vmess, uuid: 7ad8da0c-fda5-416b-9e72-47cc68313ffe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ifBUEjhG, headers: {Host: gbdzxvumhk1.xqyhvpee.xyz}}, udp: true}
+  - {name: "[VMess] 🇭🇰 香港2_openrunner", server: 149.104.20.212, port: 18210, type: vmess, uuid: d57c4ac9-f43b-4856-ac46-4987a08e1f6f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 香港3_openrunner", server: 110.40.59.61, port: 32447, type: vmess, uuid: 74eb53ef-46dd-418d-f09a-98f31e7eea3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[VMess] 🇭🇰 香港4_openrunner", server: 120.232.153.40, port: 35601, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[VMess] 🇭🇰 香港6_openrunner", server: z3.fragranceninja.com, port: 12960, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇨🇳 台湾_openrunner", server: jp.gensh.top, port: 17544, type: vmess, uuid: 5db5337e-99ba-4662-86f4-07b926239136, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: g5.gensh.top, network: ws, ws-opts: {path: /ccwinfcjccjjdccccckc, headers: {Host: ys.mihoyo.com}}, udp: true}
-  - {name: "[SS] 🇨🇳 台湾2_openrunner", server: soontw.soon.guru, port: 40020, type: ss, cipher: chacha20-ietf-poly1305, password: 7f5d080e-8dde-4b47-abf7-0b4402510fc7, udp: true}
-  - {name: "[VMess] 🇯🇵 日本_openrunner", server: kz3bw.c6tu5uwk9.buzz, port: 80, type: vmess, uuid: 219eb7ea-8f9a-4af8-857b-4b4b564224ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp01.1761d77fead15f193490a0f11b83f3a4.buzz}}, udp: true}
-  - {name: "[SS] 🇯🇵 日本2_openrunner", server: soonjp.soon.guru, port: 40003, type: ss, cipher: chacha20-ietf-poly1305, password: 7f5d080e-8dde-4b47-abf7-0b4402510fc7, udp: true}
-  - {name: "[VMess] 🇯🇵 日本3_openrunner", server: 172.234.94.163, port: 443, type: vmess, uuid: 7ad8da0c-fda5-416b-9e72-47cc68313ffe, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 172.234.94.163, network: ws, ws-opts: {path: /fkPaQhPT, headers: {Host: 172.234.94.163}}, udp: true}
-  - {name: "[Trojan] 🇰🇷 韩国_openrunner", server: jkrf1.969799.xyz, port: 443, type: trojan, password: 1dfba761-c1e0-422e-98b6-062da56afb53, sni: jkrf1.969799.xyz, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇰🇷 韩国2_openrunner", server: pj.shakalaka.xyz, port: 11789, type: ss, cipher: aes-128-gcm, password: a3c29dd3-d366-4fc2-9efa-ec0c81519b75, udp: true}
-  - {name: "[VMess] 🇰🇷 韩国3_openrunner", server: cU9jf.c6tu5uwk9.buzz, port: 80, type: vmess, uuid: 219eb7ea-8f9a-4af8-857b-4b4b564224ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: kr01.1761d77fead15f193490a0f11b83f3a4.buzz}}, udp: true}
-  - {name: "[SS] 🇰🇷 韩国4_openrunner", server: soonkr.soon.guru, port: 40032, type: ss, cipher: chacha20-ietf-poly1305, password: 7f5d080e-8dde-4b47-abf7-0b4402510fc7, udp: true}
-  - {name: "[SS] 🇸🇬 新加坡_openrunner", server: soonsgp.soon.guru, port: 40005, type: ss, cipher: chacha20-ietf-poly1305, password: 7f5d080e-8dde-4b47-abf7-0b4402510fc7, udp: true}
+  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 43.207.71.110, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[Trojan] 🇨🇳 台湾_openrunner", server: naiu-other.05vr9nyqg5.download, port: 13035, type: trojan, password: 8d4a8689-e8fd-4405-9834-3f812c528db0, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 日本_openrunner", server: 54.248.54.190, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: 1234, udp: true}
+  - {name: "[Trojan] 🇯🇵 日本2_openrunner", server: jp005.421421.xyz, port: 20230, type: trojan, password: 5c7dbef8-0fb5-4e88-bb84-24cafeb73f8d, sni: 421421.xyz, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 日本3_openrunner", server: 45.159.51.138, port: 36328, type: vmess, uuid: 15c2d96f-e859-4375-9780-0e1975a050a7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SSR] 🇯🇵 日本R_openrunner", server: 14.152.94.40, port: 8191, type: ssr, cipher: dummy, password: 123456, protocol: auth_chain_a, obfs: plain, protocol-param: 59869:ES8PT7, obfs-param: 59869:ES8PT7, udp: true}
+  - {name: "[VMess] 🇰🇷 韩国_openrunner", server: strw4.c6tu5uwk9.buzz, port: 80, type: vmess, uuid: 219eb7ea-8f9a-4af8-857b-4b4b564224ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: kr03.1761d77fead15f193490a0f11b83f3a4.buzz}}, udp: true}
+  - {name: "[VMess] 🇸🇬 新加坡2_openrunner", server: bfdo3.c6tu5uwk9.buzz, port: 80, type: vmess, uuid: 219eb7ea-8f9a-4af8-857b-4b4b564224ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg02.1761d77fead15f193490a0f11b83f3a4.buzz}}, udp: true}
+  - {name: "[VMess] 🇸🇬 新加坡3_openrunner", server: 192.53.172.191, port: 443, type: vmess, uuid: 7ad8da0c-fda5-416b-9e72-47cc68313ffe, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 192.53.172.191, network: ws, ws-opts: {path: /wrPUMAzPF, headers: {Host: 192.53.172.191}}, udp: true}
   - {name: "[Trojan] 🇸🇬 新加坡4_openrunner", server: present-blowfish.sunbeam921.monster, port: 443, type: trojan, password: 3672449442956713984, sni: present-blowfish.sunbeam921.monster, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_openrunner", server: strw4.c6tu5uwk9.buzz, port: 80, type: vmess, uuid: 219eb7ea-8f9a-4af8-857b-4b4b564224ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us04.1761d77fead15f193490a0f11b83f3a4.buzz}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_openrunner", server: 45.33.54.48, port: 443, type: vmess, uuid: 7ad8da0c-fda5-416b-9e72-47cc68313ffe, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 45.33.54.48, network: ws, ws-opts: {path: /uzbXtnJH, headers: {Host: 45.33.54.48}}, udp: true}
   - {name: "[VMess] 🇺🇸 美国2_openrunner", server: 120.232.153.40, port: 43526, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 美国3_openrunner", server: 173.230.153.192, port: 443, type: vmess, uuid: 7ad8da0c-fda5-416b-9e72-47cc68313ffe, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 173.230.153.192, network: ws, ws-opts: {path: /JyKvcGEV, headers: {Host: 173.230.153.192}}, udp: true}
-  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 13.212.100.34, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 52.12.74.84, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 3.36.69.3, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 3.0.93.45, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 43.201.82.24, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[VMess] 🇩🇪 德国_openrunner", server: 120.232.153.71, port: 43526, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 38.110.1.12, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 169.197.141.84, port: 5499, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 69.50.95.53, port: 5498, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 38.68.134.9, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 38.110.1.105, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: 38.114.114.69, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 38.75.137.42, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _DE_德国->🇺🇸_US_美国_wenode", server: 45.87.175.192, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 142.202.49.122, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_wenode", server: 142.202.49.84, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_10_wenode", server: 69.50.92.72, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_11_wenode", server: 38.110.1.12, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰->🇦🇫_AF_阿富汗_wenode", server: 45.158.171.2, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_12_wenode", server: 38.110.1.12, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_13_wenode", server: 38.75.137.42, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_14_wenode", server: 38.68.134.9, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_15_wenode", server: 38.110.1.46, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_16_wenode", server: 139.64.165.230, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_17_wenode", server: 169.197.142.216, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_18_wenode", server: 23.150.152.41, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_19_wenode", server: 38.114.114.69, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_20_wenode", server: 142.202.49.84, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_21_wenode", server: 38.110.1.105, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_22_wenode", server: 38.114.114.69, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_23_wenode", server: 169.197.142.216, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_24_wenode", server: 38.68.134.9, port: 5001, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇩🇪 _DE_德国_wenode", server: 45.87.175.154, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_25_wenode", server: 38.75.137.42, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_26_wenode", server: 169.197.142.216, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_27_wenode", server: 38.114.114.69, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_28_wenode", server: 38.110.1.105, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_29_wenode", server: 38.68.134.9, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_30_wenode", server: 38.114.114.69, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_31_wenode", server: 69.50.95.53, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_32_wenode", server: 38.110.1.46, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_33_wenode", server: 38.110.1.46, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_34_wenode", server: 38.110.1.105, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰_wenode", server: 45.158.171.14, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_35_wenode", server: 38.114.114.69, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_36_wenode", server: 38.68.134.9, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_37_wenode", server: 142.202.49.84, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_38_wenode", server: 23.150.152.41, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_39_wenode", server: 38.114.114.69, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 🇺🇸 _GB_英国->🇺🇸_US_美国_wenode", server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_40_wenode", server: 169.197.142.216, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _NL_荷兰->🇺🇸_US_美国_wenode", server: 45.158.171.19, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_41_wenode", server: 142.202.49.122, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_42_wenode", server: 38.75.137.42, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_43_wenode", server: 38.68.134.9, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 169.197.142.216, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 69.50.95.103, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 142.202.49.84, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[SS] 🇳🇱 _NL_荷兰_1_wenode", server: 45.158.171.36, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 69.50.92.72, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[SS] 🇮🇪 _IE_爱尔兰->🇷🇺_RU_俄罗斯_wenode", server: 13.74.65.144, port: 32935, type: ss, cipher: chacha20-ietf-poly1305, password: FX77Cp2CHKq8JKTHux2xUi, udp: true}
+  - {name: "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_1_wenode", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 142.202.49.84, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: 142.202.49.84, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 69.50.95.218, port: 9090, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 38.114.114.143, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_wenode", server: 194.87.45.189, port: 40076, type: ss, cipher: chacha20-ietf-poly1305, password: ECjp87TIkUiJ5AhRZglZ9E, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_9_wenode", server: 38.114.114.143, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 🇳🇱 _NL_荷兰_2_wenode", server: 45.158.171.9, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
+  - {name: "[SS] 🇸🇪 _CN_中国->🇸🇪_SE_瑞典_wenode", server: deepf.hjkdsak2.com, port: 20003, type: ss, cipher: chacha20-ietf-poly1305, password: 99301d55-a41f-4919-986b-1435996533aa, udp: true}
+  - {name: "[SS] 🇩🇪 _DE_德国_wenode", server: 45.87.175.178, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: gDFRe52uiIvVaxqPlqw439, udp: true}
+  - {name: "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_2_wenode", server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_10_wenode", server: 169.197.142.216, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_11_wenode", server: 38.110.1.46, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -161,18 +128,48 @@ proxy-groups:
     type: select
     proxies:
       - "[SS] 高性价比机场:https://kfyun.uk_clashgithub"
-      - "[SS] 🇺🇸 美国+v2rayfree.eu.org_clashgithub"
-      - "[SS] 🇮🇹 意大利+v2rayfree.eu.org_clashgithub"
-      - "[SS] 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub"
-      - "[SS] 🇵🇱 波兰+v2rayfree.eu.org_clashgithub"
-      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub"
-      - "[SS] 🇮🇹 意大利+v2rayfree.eu.org 2_clashgithub"
-      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub"
-      - "[SS] 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub"
+      - "[Trojan] 🇷🇺 俄罗斯 v2rayfree.eu.org_clashgithub"
       - "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub"
-      - "[VMess] 🇮🇳 印度 v2rayfree.eu.org_clashgithub"
+      - "[Trojan] 🇫🇷 法国 巴黎Amazon数据中心_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2_clashgithub"
+      - "[SS] 欧盟+v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub"
+      - "[Trojan] 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub"
+      - "[Trojan] 🇩🇪 德国 黑森州法兰克福Amazon数据中心_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub"
+      - "[SS] 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub"
       - "[SS] 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub"
-      - "[Trojan] 🇺🇸 美国 CloudFlare节点 2_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub"
+      - "[VMess] 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub"
+      - "[VMess] 🇨🇳 广东省 移动_clashgithub"
+      - "[VMess] 🇮🇳 印度 v2rayfree.eu.org_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4_clashgithub"
+      - "[VMess] 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub"
+      - "[Trojan] 🇸🇬 立陶宛 NGS新闻_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub"
+      - "[SS] 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub"
+      - "[SS] 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub"
+      - "[SS] 🇺🇸 美国+加利福尼亚州旧金山市Awknet通信公司_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub"
+      - "[Trojan] 🇺🇸 美国 v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub"
+      - "[SS] 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
@@ -180,124 +177,61 @@ proxy-groups:
       - "[SS] 🇺🇸 _US_美国_1_oneclash"
       - "[SS] 🇺🇸 _US_美国_2_oneclash"
       - "[SS] 🇺🇸 _US_美国_3_oneclash"
+      - "[SS] 🇳🇱 _NL_荷兰_1_oneclash"
       - "[SS] 🇺🇸 _US_美国_4_oneclash"
+      - "[SS] 🇮🇪 _IE_爱尔兰->🇷🇺_RU_俄罗斯_oneclash"
+      - "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_1_oneclash"
       - "[SS] 🇺🇸 _US_美国_5_oneclash"
       - "[SS] 🇺🇸 _US_美国_6_oneclash"
       - "[SS] 🇺🇸 _US_美国_7_oneclash"
-      - "[SS] 🇺🇸 _DE_德国->🇺🇸_US_美国_oneclash"
       - "[SS] 🇺🇸 _US_美国_8_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_oneclash"
       - "[SS] 🇺🇸 _US_美国_9_oneclash"
+      - "[SS] 🇳🇱 _NL_荷兰_2_oneclash"
+      - "[SS] 🇸🇪 _CN_中国->🇸🇪_SE_瑞典_oneclash"
+      - "[SS] 🇩🇪 _DE_德国_oneclash"
+      - "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_2_oneclash"
       - "[SS] 🇺🇸 _US_美国_10_oneclash"
       - "[SS] 🇺🇸 _US_美国_11_oneclash"
-      - "[SS] 🇳🇱 _NL_荷兰->🇦🇫_AF_阿富汗_oneclash"
-      - "[SS] 🇺🇸 _US_美国_12_oneclash"
-      - "[SS] 🇺🇸 _US_美国_13_oneclash"
-      - "[SS] 🇺🇸 _US_美国_14_oneclash"
-      - "[SS] 🇺🇸 _US_美国_15_oneclash"
-      - "[SS] 🇺🇸 _US_美国_16_oneclash"
-      - "[SS] 🇺🇸 _US_美国_17_oneclash"
-      - "[SS] 🇺🇸 _US_美国_18_oneclash"
-      - "[SS] 🇺🇸 _US_美国_19_oneclash"
-      - "[SS] 🇺🇸 _US_美国_20_oneclash"
-      - "[SS] 🇺🇸 _US_美国_21_oneclash"
-      - "[SS] 🇺🇸 _US_美国_22_oneclash"
-      - "[SS] 🇺🇸 _US_美国_23_oneclash"
-      - "[SS] 🇺🇸 _US_美国_24_oneclash"
-      - "[SS] 🇩🇪 _DE_德国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_25_oneclash"
-      - "[SS] 🇺🇸 _US_美国_26_oneclash"
-      - "[SS] 🇺🇸 _US_美国_27_oneclash"
-      - "[SS] 🇺🇸 _US_美国_28_oneclash"
-      - "[SS] 🇺🇸 _US_美国_29_oneclash"
-      - "[SS] 🇺🇸 _US_美国_30_oneclash"
-      - "[SS] 🇺🇸 _US_美国_31_oneclash"
-      - "[SS] 🇺🇸 _US_美国_32_oneclash"
-      - "[SS] 🇺🇸 _US_美国_33_oneclash"
-      - "[SS] 🇺🇸 _US_美国_34_oneclash"
-      - "[SS] 🇳🇱 _NL_荷兰_oneclash"
-      - "[SS] 🇺🇸 _US_美国_35_oneclash"
-      - "[SS] 🇺🇸 _US_美国_36_oneclash"
-      - "[SS] 🇺🇸 _US_美国_37_oneclash"
-      - "[SS] 🇺🇸 _US_美国_38_oneclash"
-      - "[SS] 🇺🇸 _US_美国_39_oneclash"
-      - "[SS] 🇺🇸 _GB_英国->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_40_oneclash"
-      - "[SS] 🇺🇸 _NL_荷兰->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_41_oneclash"
-      - "[SS] 🇺🇸 _US_美国_42_oneclash"
-      - "[SS] 🇺🇸 _US_美国_43_oneclash"
-      - "[SS] 🇭🇰 香港_openrunner"
+      - "[VMess] 🇭🇰 香港_openrunner"
       - "[VMess] 🇭🇰 香港2_openrunner"
       - "[VMess] 🇭🇰 香港3_openrunner"
       - "[VMess] 🇭🇰 香港4_openrunner"
       - "[VMess] 🇭🇰 香港6_openrunner"
-      - "[VMess] 🇨🇳 台湾_openrunner"
-      - "[SS] 🇨🇳 台湾2_openrunner"
-      - "[VMess] 🇯🇵 日本_openrunner"
-      - "[SS] 🇯🇵 日本2_openrunner"
+      - "[SS] 🇰🇷 韩国特殊_openrunner"
+      - "[Trojan] 🇨🇳 台湾_openrunner"
+      - "[SS] 🇯🇵 日本_openrunner"
+      - "[Trojan] 🇯🇵 日本2_openrunner"
       - "[VMess] 🇯🇵 日本3_openrunner"
-      - "[Trojan] 🇰🇷 韩国_openrunner"
-      - "[SS] 🇰🇷 韩国2_openrunner"
-      - "[VMess] 🇰🇷 韩国3_openrunner"
-      - "[SS] 🇰🇷 韩国4_openrunner"
-      - "[SS] 🇸🇬 新加坡_openrunner"
+      - "[SSR] 🇯🇵 日本R_openrunner"
+      - "[VMess] 🇰🇷 韩国_openrunner"
+      - "[VMess] 🇸🇬 新加坡2_openrunner"
+      - "[VMess] 🇸🇬 新加坡3_openrunner"
       - "[Trojan] 🇸🇬 新加坡4_openrunner"
       - "[VMess] 🇺🇸 美国_openrunner"
       - "[VMess] 🇺🇸 美国2_openrunner"
-      - "[VMess] 🇺🇸 美国3_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
-      - "[SS] 🇰🇷 韩国特殊_openrunner"
       - "[VMess] 🇩🇪 德国_openrunner"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
       - "[SS] 🇺🇸 _US_美国_2_wenode"
       - "[SS] 🇺🇸 _US_美国_3_wenode"
+      - "[SS] 🇳🇱 _NL_荷兰_1_wenode"
       - "[SS] 🇺🇸 _US_美国_4_wenode"
+      - "[SS] 🇮🇪 _IE_爱尔兰->🇷🇺_RU_俄罗斯_wenode"
+      - "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_1_wenode"
       - "[SS] 🇺🇸 _US_美国_5_wenode"
       - "[SS] 🇺🇸 _US_美国_6_wenode"
       - "[SS] 🇺🇸 _US_美国_7_wenode"
-      - "[SS] 🇺🇸 _DE_德国->🇺🇸_US_美国_wenode"
       - "[SS] 🇺🇸 _US_美国_8_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_wenode"
       - "[SS] 🇺🇸 _US_美国_9_wenode"
+      - "[SS] 🇳🇱 _NL_荷兰_2_wenode"
+      - "[SS] 🇸🇪 _CN_中国->🇸🇪_SE_瑞典_wenode"
+      - "[SS] 🇩🇪 _DE_德国_wenode"
+      - "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_2_wenode"
       - "[SS] 🇺🇸 _US_美国_10_wenode"
       - "[SS] 🇺🇸 _US_美国_11_wenode"
-      - "[SS] 🇳🇱 _NL_荷兰->🇦🇫_AF_阿富汗_wenode"
-      - "[SS] 🇺🇸 _US_美国_12_wenode"
-      - "[SS] 🇺🇸 _US_美国_13_wenode"
-      - "[SS] 🇺🇸 _US_美国_14_wenode"
-      - "[SS] 🇺🇸 _US_美国_15_wenode"
-      - "[SS] 🇺🇸 _US_美国_16_wenode"
-      - "[SS] 🇺🇸 _US_美国_17_wenode"
-      - "[SS] 🇺🇸 _US_美国_18_wenode"
-      - "[SS] 🇺🇸 _US_美国_19_wenode"
-      - "[SS] 🇺🇸 _US_美国_20_wenode"
-      - "[SS] 🇺🇸 _US_美国_21_wenode"
-      - "[SS] 🇺🇸 _US_美国_22_wenode"
-      - "[SS] 🇺🇸 _US_美国_23_wenode"
-      - "[SS] 🇺🇸 _US_美国_24_wenode"
-      - "[SS] 🇩🇪 _DE_德国_wenode"
-      - "[SS] 🇺🇸 _US_美国_25_wenode"
-      - "[SS] 🇺🇸 _US_美国_26_wenode"
-      - "[SS] 🇺🇸 _US_美国_27_wenode"
-      - "[SS] 🇺🇸 _US_美国_28_wenode"
-      - "[SS] 🇺🇸 _US_美国_29_wenode"
-      - "[SS] 🇺🇸 _US_美国_30_wenode"
-      - "[SS] 🇺🇸 _US_美国_31_wenode"
-      - "[SS] 🇺🇸 _US_美国_32_wenode"
-      - "[SS] 🇺🇸 _US_美国_33_wenode"
-      - "[SS] 🇺🇸 _US_美国_34_wenode"
-      - "[SS] 🇳🇱 _NL_荷兰_wenode"
-      - "[SS] 🇺🇸 _US_美国_35_wenode"
-      - "[SS] 🇺🇸 _US_美国_36_wenode"
-      - "[SS] 🇺🇸 _US_美国_37_wenode"
-      - "[SS] 🇺🇸 _US_美国_38_wenode"
-      - "[SS] 🇺🇸 _US_美国_39_wenode"
-      - "[SS] 🇺🇸 _GB_英国->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_40_wenode"
-      - "[SS] 🇺🇸 _NL_荷兰->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_41_wenode"
-      - "[SS] 🇺🇸 _US_美国_42_wenode"
-      - "[SS] 🇺🇸 _US_美国_43_wenode"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -315,7 +249,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
+      - "[VMess] 🇨🇳 广东省 移动_clashgithub"
   - name: 📲 电报消息
     type: select
     proxies:
@@ -536,7 +470,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "[SS] 🇭🇰 香港_openrunner"
+      - "[VMess] 🇭🇰 香港_openrunner"
       - "[VMess] 🇭🇰 香港2_openrunner"
       - "[VMess] 🇭🇰 香港3_openrunner"
       - "[VMess] 🇭🇰 香港4_openrunner"
@@ -547,9 +481,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "[VMess] 🇯🇵 日本_openrunner"
-      - "[SS] 🇯🇵 日本2_openrunner"
+      - "[SS] 🇯🇵 日本_openrunner"
+      - "[Trojan] 🇯🇵 日本2_openrunner"
       - "[VMess] 🇯🇵 日本3_openrunner"
+      - "[SSR] 🇯🇵 日本R_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
   - name: 🇺🇲 美国节点
     type: url-test
@@ -557,13 +492,35 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - "[SS] 🇺🇸 美国+v2rayfree.eu.org_clashgithub"
-      - "[SS] 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub"
-      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub"
-      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub"
       - "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub"
       - "[SS] 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub"
-      - "[Trojan] 🇺🇸 美国 CloudFlare节点 2_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub"
+      - "[SS] 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub"
+      - "[SS] 🇺🇸 美国+加利福尼亚州旧金山市Awknet通信公司_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub"
+      - "[Trojan] 🇺🇸 美国 v2rayfree.eu.org_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub"
+      - "[SS] 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub"
+      - "[SS] 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
@@ -575,48 +532,12 @@ proxy-groups:
       - "[SS] 🇺🇸 _US_美国_5_oneclash"
       - "[SS] 🇺🇸 _US_美国_6_oneclash"
       - "[SS] 🇺🇸 _US_美国_7_oneclash"
-      - "[SS] 🇺🇸 _DE_德国->🇺🇸_US_美国_oneclash"
       - "[SS] 🇺🇸 _US_美国_8_oneclash"
       - "[SS] 🇺🇸 _US_美国_9_oneclash"
       - "[SS] 🇺🇸 _US_美国_10_oneclash"
       - "[SS] 🇺🇸 _US_美国_11_oneclash"
-      - "[SS] 🇺🇸 _US_美国_12_oneclash"
-      - "[SS] 🇺🇸 _US_美国_13_oneclash"
-      - "[SS] 🇺🇸 _US_美国_14_oneclash"
-      - "[SS] 🇺🇸 _US_美国_15_oneclash"
-      - "[SS] 🇺🇸 _US_美国_16_oneclash"
-      - "[SS] 🇺🇸 _US_美国_17_oneclash"
-      - "[SS] 🇺🇸 _US_美国_18_oneclash"
-      - "[SS] 🇺🇸 _US_美国_19_oneclash"
-      - "[SS] 🇺🇸 _US_美国_20_oneclash"
-      - "[SS] 🇺🇸 _US_美国_21_oneclash"
-      - "[SS] 🇺🇸 _US_美国_22_oneclash"
-      - "[SS] 🇺🇸 _US_美国_23_oneclash"
-      - "[SS] 🇺🇸 _US_美国_24_oneclash"
-      - "[SS] 🇺🇸 _US_美国_25_oneclash"
-      - "[SS] 🇺🇸 _US_美国_26_oneclash"
-      - "[SS] 🇺🇸 _US_美国_27_oneclash"
-      - "[SS] 🇺🇸 _US_美国_28_oneclash"
-      - "[SS] 🇺🇸 _US_美国_29_oneclash"
-      - "[SS] 🇺🇸 _US_美国_30_oneclash"
-      - "[SS] 🇺🇸 _US_美国_31_oneclash"
-      - "[SS] 🇺🇸 _US_美国_32_oneclash"
-      - "[SS] 🇺🇸 _US_美国_33_oneclash"
-      - "[SS] 🇺🇸 _US_美国_34_oneclash"
-      - "[SS] 🇺🇸 _US_美国_35_oneclash"
-      - "[SS] 🇺🇸 _US_美国_36_oneclash"
-      - "[SS] 🇺🇸 _US_美国_37_oneclash"
-      - "[SS] 🇺🇸 _US_美国_38_oneclash"
-      - "[SS] 🇺🇸 _US_美国_39_oneclash"
-      - "[SS] 🇺🇸 _GB_英国->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_40_oneclash"
-      - "[SS] 🇺🇸 _NL_荷兰->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_41_oneclash"
-      - "[SS] 🇺🇸 _US_美国_42_oneclash"
-      - "[SS] 🇺🇸 _US_美国_43_oneclash"
       - "[VMess] 🇺🇸 美国_openrunner"
       - "[VMess] 🇺🇸 美国2_openrunner"
-      - "[VMess] 🇺🇸 美国3_openrunner"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
       - "[SS] 🇺🇸 _US_美国_2_wenode"
       - "[SS] 🇺🇸 _US_美国_3_wenode"
@@ -624,60 +545,25 @@ proxy-groups:
       - "[SS] 🇺🇸 _US_美国_5_wenode"
       - "[SS] 🇺🇸 _US_美国_6_wenode"
       - "[SS] 🇺🇸 _US_美国_7_wenode"
-      - "[SS] 🇺🇸 _DE_德国->🇺🇸_US_美国_wenode"
       - "[SS] 🇺🇸 _US_美国_8_wenode"
       - "[SS] 🇺🇸 _US_美国_9_wenode"
       - "[SS] 🇺🇸 _US_美国_10_wenode"
       - "[SS] 🇺🇸 _US_美国_11_wenode"
-      - "[SS] 🇺🇸 _US_美国_12_wenode"
-      - "[SS] 🇺🇸 _US_美国_13_wenode"
-      - "[SS] 🇺🇸 _US_美国_14_wenode"
-      - "[SS] 🇺🇸 _US_美国_15_wenode"
-      - "[SS] 🇺🇸 _US_美国_16_wenode"
-      - "[SS] 🇺🇸 _US_美国_17_wenode"
-      - "[SS] 🇺🇸 _US_美国_18_wenode"
-      - "[SS] 🇺🇸 _US_美国_19_wenode"
-      - "[SS] 🇺🇸 _US_美国_20_wenode"
-      - "[SS] 🇺🇸 _US_美国_21_wenode"
-      - "[SS] 🇺🇸 _US_美国_22_wenode"
-      - "[SS] 🇺🇸 _US_美国_23_wenode"
-      - "[SS] 🇺🇸 _US_美国_24_wenode"
-      - "[SS] 🇺🇸 _US_美国_25_wenode"
-      - "[SS] 🇺🇸 _US_美国_26_wenode"
-      - "[SS] 🇺🇸 _US_美国_27_wenode"
-      - "[SS] 🇺🇸 _US_美国_28_wenode"
-      - "[SS] 🇺🇸 _US_美国_29_wenode"
-      - "[SS] 🇺🇸 _US_美国_30_wenode"
-      - "[SS] 🇺🇸 _US_美国_31_wenode"
-      - "[SS] 🇺🇸 _US_美国_32_wenode"
-      - "[SS] 🇺🇸 _US_美国_33_wenode"
-      - "[SS] 🇺🇸 _US_美国_34_wenode"
-      - "[SS] 🇺🇸 _US_美国_35_wenode"
-      - "[SS] 🇺🇸 _US_美国_36_wenode"
-      - "[SS] 🇺🇸 _US_美国_37_wenode"
-      - "[SS] 🇺🇸 _US_美国_38_wenode"
-      - "[SS] 🇺🇸 _US_美国_39_wenode"
-      - "[SS] 🇺🇸 _GB_英国->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_40_wenode"
-      - "[SS] 🇺🇸 _NL_荷兰->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_41_wenode"
-      - "[SS] 🇺🇸 _US_美国_42_wenode"
-      - "[SS] 🇺🇸 _US_美国_43_wenode"
   - name: 🇹🇼 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "[VMess] 🇨🇳 台湾_openrunner"
-      - "[SS] 🇨🇳 台湾2_openrunner"
+      - "[Trojan] 🇨🇳 台湾_openrunner"
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "[SS] 🇸🇬 新加坡_openrunner"
+      - "[VMess] 🇸🇬 新加坡2_openrunner"
+      - "[VMess] 🇸🇬 新加坡3_openrunner"
       - "[Trojan] 🇸🇬 新加坡4_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
   - name: 🇰🇷 韩国节点
@@ -686,11 +572,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "[Trojan] 🇰🇷 韩国_openrunner"
-      - "[SS] 🇰🇷 韩国2_openrunner"
-      - "[VMess] 🇰🇷 韩国3_openrunner"
-      - "[SS] 🇰🇷 韩国4_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
+      - "[VMess] 🇰🇷 韩国_openrunner"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -2614,6 +2497,514 @@ rules:
   - DOMAIN-SUFFIX,aistudio.google.com,🤖 OpenAi
   - DOMAIN-SUFFIX,ciciai.com,🤖 OpenAi
   - DOMAIN-KEYWORD,chatgpt,🤖 OpenAi
+  - IP-CIDR,185.122.0.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,1.0.0.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,1.1.1.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.6.144.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.6.146.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.9.231.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.10.148.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.14.201.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.14.202.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.14.204.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.17.205.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.17.206.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.18.50.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.18.113.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.18.194.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.18.196.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.19.8.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.20.100.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.20.103.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.20.122.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.20.124.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.20.126.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.20.253.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.21.8.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.21.10.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.21.13.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.21.110.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.21.239.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.23.139.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.23.240.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.24.87.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.24.243.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.24.244.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.25.96.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.25.249.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.26.182.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.27.64.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.27.66.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.27.68.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.27.79.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.28.20.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.28.82.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.28.126.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.28.213.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.29.105.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.29.109.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.29.228.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.29.230.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.30.234.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.31.2.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.31.160.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.34.69.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.34.71.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.34.200.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.34.202.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.35.57.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.35.58.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.35.149.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.35.211.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.36.216.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.36.220.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.37.41.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.37.43.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.38.147.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.38.148.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.6.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.18.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.125.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.126.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.201.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.202.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.204.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.206.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.39.212.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.40.26.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.40.28.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.40.107.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.40.111.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.40.140.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.41.5.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.41.6.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.41.36.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.51.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.52.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.54.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.161.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.164.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.172.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.42.245.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.43.121.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.43.122.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.43.224.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.43.226.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.44.0.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.44.6.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.44.58.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.44.60.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.41.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.43.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.44.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.97.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.100.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.102.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.108.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.111.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.145.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.45.146.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.46.113.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.46.114.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.46.117.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.46.118.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.47.9.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.47.12.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.47.69.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.47.71.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.48.130.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.48.132.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,8.48.134.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,23.227.37.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,23.227.38.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,23.227.60.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,65.110.63.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,66.235.200.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,68.67.65.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,103.21.244.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,103.22.200.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,103.31.4.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,103.81.228.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,104.16.0.0/12,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.192.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.210.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.212.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.216.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.218.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.220.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.226.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.235.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.236.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.240.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.248.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,108.162.250.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,131.0.72.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.65.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.66.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.68.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.72.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.76.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.82.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.84.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.90.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.93.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.94.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.96.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.100.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.104.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.108.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.110.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.112.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,150.48.128.0/18,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,159.242.242.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.0.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.8.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.12.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.15.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.16.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.32.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.40.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.44.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.49.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.51.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.52.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.56.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.59.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.60.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.72.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.80.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.89.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.90.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.93.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.94.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.96.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.104.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.109.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.110.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.112.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.128.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.144.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.152.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.157.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.158.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.160.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.176.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.185.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.186.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.188.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.192.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.200.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.204.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.206.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.208.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.212.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.214.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.216.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.220.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.224.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.229.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.230.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.232.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.240.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.244.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.247.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.248.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.159.0.0/18,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.159.64.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.159.80.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.159.128.0/17,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.251.82.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.64.0.0/15,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.0.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.40.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.128.0/19,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.160.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.176.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.192.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.208.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.216.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.67.0.0/16,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.0.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.4.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.6.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.8.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.13.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.14.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.16.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.32.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.40.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.45.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.46.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.48.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.57.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.58.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.60.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.64.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.72.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.76.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.78.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.82.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.84.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.88.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.96.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.112.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.114.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.117.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.118.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.121.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.123.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.124.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.128.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.138.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.140.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.144.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.152.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.156.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.159.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.160.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.162.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.165.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.166.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.168.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.170.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.172.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.176.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.179.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.180.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.184.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.192.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.200.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.203.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.204.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.208.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.210.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.212.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.216.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.224.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.232.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.236.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.238.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.240.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.248.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.251.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.252.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.255.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.0.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.8.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.10.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.12.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.16.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.18.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.20.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.32.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.40.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.45.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.46.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.48.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.50.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.52.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.56.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.60.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.62.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.64.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.69.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.70.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.72.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.75.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.76.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.80.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.83.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.84.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.88.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.96.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.112.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.114.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.116.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.120.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.128.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.136.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.140.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.142.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.144.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.149.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.150.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.152.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.154.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.156.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.159.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.160.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.177.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.178.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.180.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.184.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.192.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.208.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.210.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.212.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.216.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.224.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.228.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.231.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.232.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.240.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.248.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.250.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.252.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.33.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.34.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.37.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.38.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.41.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.42.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.45.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.46.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.48.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.56.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.61.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.62.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.80.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.84.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.86.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.88.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.92.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.100.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.103.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.104.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.107.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.109.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.110.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.112.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.116.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.120.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.128.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.133.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.134.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.136.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.138.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.140.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.144.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.148.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.150.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.152.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.160.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.173.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.174.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.176.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.192.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.195.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.196.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.200.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.205.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.206.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.209.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.210.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.213.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.214.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.217.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.218.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.220.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.224.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.232.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.236.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.239.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.241.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.242.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.245.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.246.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.249.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.250.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.252.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.0.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.5.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.6.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.9.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.10.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.12.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.14.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.17.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.21.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.22.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.24.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.81.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.82.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.84.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.86.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.88.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.90.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.92.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.96.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.109.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.110.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.112.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.129.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.130.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.132.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.137.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.138.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.140.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.144.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.160.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.180.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.184.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.189.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.190.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.193.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.194.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.197.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.198.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.201.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.202.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.204.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.208.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.216.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.221.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.222.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.224.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.233.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.234.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.237.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.238.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.245.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.246.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.249.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.250.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.252.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,173.245.49.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,173.245.54.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,173.245.58.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,173.245.63.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,185.146.172.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,188.114.96.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,188.114.100.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,188.114.102.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,188.114.106.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,188.114.108.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,188.114.111.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,190.93.240.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,195.242.122.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,197.234.240.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.192.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.208.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.211.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.212.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.214.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.216.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.224.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.226.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.228.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.232.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.236.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.238.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.240.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.242.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.217.251.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,199.27.128.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,204.195.192.0/18,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.64.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,141.101.91.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.32.0/19,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.64.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.148.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.10.244.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.182.34.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.182.84.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2855,7 +3246,6 @@ rules:
   - IP-CIDR,194.40.240.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.53.53.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.59.5.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,194.87.58.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.113.223.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.152.44.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.169.194.0/24,☁️ CloudFlareCDN,no-resolve
@@ -2920,513 +3310,6 @@ rules:
   - IP-CIDR,216.198.54.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,216.205.52.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,223.27.176.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,103.184.44.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.64.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.91.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.32.0/19,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.64.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.148.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,185.122.0.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,1.0.0.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,1.1.1.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.6.144.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.6.146.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.9.231.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.10.148.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.14.201.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.14.202.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.14.204.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.17.205.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.17.206.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.18.50.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.18.113.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.18.194.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.18.196.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.19.8.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.20.100.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.20.103.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.20.122.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.20.124.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.20.126.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.20.253.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.21.8.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.21.10.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.21.13.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.21.110.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.21.239.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.23.139.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.23.240.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.24.87.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.24.243.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.24.244.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.25.96.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.25.249.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.26.182.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.27.64.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.27.66.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.27.68.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.27.79.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.28.20.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.28.82.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.28.126.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.28.213.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.29.105.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.29.109.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.29.228.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.29.230.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.30.234.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.31.2.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.31.160.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.34.69.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.34.71.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.34.200.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.34.202.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.35.57.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.35.58.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.35.149.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.35.211.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.36.216.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.36.220.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.37.41.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.37.43.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.38.147.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.38.148.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.6.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.18.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.125.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.126.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.201.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.202.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.204.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.206.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.39.212.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.40.26.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.40.28.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.40.107.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.40.111.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.40.140.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.41.5.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.41.6.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.41.36.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.51.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.52.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.54.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.161.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.164.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.172.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.42.245.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.43.121.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.43.122.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.43.224.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.43.226.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.44.0.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.44.6.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.44.58.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.44.60.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.41.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.43.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.44.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.97.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.100.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.102.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.108.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.111.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.145.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.45.146.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.46.113.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.46.114.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.46.117.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.46.118.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.47.9.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.47.12.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.47.69.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.47.71.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.48.130.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.48.132.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,8.48.134.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,23.227.37.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,23.227.38.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,23.227.60.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,65.110.63.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,66.235.200.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,68.67.65.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,103.21.244.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,103.22.200.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,103.81.228.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,104.16.0.0/12,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.192.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.210.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.212.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.216.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.218.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.220.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.226.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.235.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.236.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.240.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.248.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,108.162.250.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,131.0.72.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.65.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.66.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.68.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.72.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.76.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.82.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.84.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.90.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.93.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.94.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.96.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.100.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.104.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.108.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.110.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,141.101.112.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,150.48.128.0/18,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,159.242.242.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.0.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.8.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.12.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.15.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.16.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.32.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.40.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.44.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.49.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.51.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.52.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.56.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.59.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.60.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.72.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.80.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.89.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.90.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.93.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.94.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.96.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.104.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.109.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.110.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.112.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.128.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.144.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.152.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.157.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.158.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.160.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.176.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.185.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.186.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.188.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.192.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.200.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.204.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.206.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.208.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.212.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.214.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.218.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.220.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.224.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.229.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.230.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.232.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.240.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.244.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.247.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.248.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.159.0.0/18,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.159.64.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.159.80.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.159.128.0/17,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.251.82.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.64.0.0/15,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.0.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.40.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.128.0/19,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.160.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.176.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.192.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.208.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.66.216.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.67.0.0/16,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.0.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.4.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.6.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.8.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.13.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.14.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.16.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.32.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.40.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.45.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.46.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.48.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.57.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.58.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.60.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.64.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.72.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.76.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.78.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.82.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.84.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.88.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.96.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.112.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.114.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.117.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.118.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.121.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.123.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.124.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.128.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.138.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.140.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.144.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.152.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.156.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.159.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.160.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.162.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.165.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.166.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.168.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.170.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.172.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.176.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.179.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.180.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.184.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.192.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.200.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.203.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.204.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.208.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.210.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.212.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.216.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.224.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.232.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.236.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.238.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.240.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.248.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.251.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.252.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.255.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.0.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.8.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.10.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.12.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.16.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.18.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.20.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.32.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.40.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.45.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.46.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.48.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.50.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.52.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.56.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.60.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.62.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.64.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.69.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.70.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.72.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.75.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.76.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.80.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.83.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.84.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.88.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.96.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.112.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.114.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.116.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.120.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.128.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.136.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.140.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.142.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.144.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.149.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.150.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.152.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.154.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.156.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.160.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.177.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.178.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.180.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.184.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.192.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.208.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.210.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.212.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.216.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.224.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.228.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.231.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.232.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.240.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.248.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.250.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.252.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.33.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.34.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.37.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.38.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.41.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.42.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.45.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.46.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.48.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.56.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.61.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.62.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.80.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.84.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.86.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.88.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.92.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.100.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.103.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.104.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.107.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.109.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.110.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.112.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.116.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.120.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.128.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.133.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.134.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.136.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.139.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.140.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.144.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.148.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.150.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.152.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.160.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.173.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.174.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.176.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.192.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.195.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.196.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.200.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.205.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.206.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.209.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.210.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.213.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.214.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.217.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.218.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.220.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.224.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.232.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.236.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.239.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.241.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.242.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.245.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.246.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.249.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.250.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.252.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.0.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.5.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.6.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.9.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.10.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.12.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.14.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.17.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.21.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.22.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.24.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.81.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.82.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.84.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.86.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.88.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.90.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.92.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.96.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.109.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.110.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.112.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.129.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.130.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.132.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.137.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.138.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.140.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.144.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.160.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.180.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.184.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.189.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.190.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.193.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.194.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.197.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.198.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.201.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.202.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.204.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.208.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.216.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.221.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.222.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.224.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.233.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.234.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.237.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.238.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.245.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.246.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.249.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.250.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.252.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,173.245.49.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,173.245.54.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,173.245.58.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,173.245.63.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,185.146.172.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,188.114.96.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,188.114.100.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,188.114.102.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,188.114.106.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,188.114.108.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,188.114.111.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,190.93.240.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,195.242.122.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,197.234.240.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.192.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.208.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.211.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.212.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.214.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.216.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.224.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.226.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.228.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.232.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.236.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.238.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.240.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.242.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.217.251.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,199.27.128.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,204.195.192.0/18,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.21.246.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.88.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.64.0/21,☁️ CloudFlareCDN,no-resolve
@@ -3440,6 +3323,7 @@ rules:
   - IP-CIDR,198.41.246.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.248.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.254.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,103.184.44.0/23,☁️ CloudFlareCDN,no-resolve
   - DOMAIN-SUFFIX,163yun.com,🎶 网易音乐
   - DOMAIN-SUFFIX,api.iplay.163.com,🎶 网易音乐
   - DOMAIN-SUFFIX,hz.netease.com,🎶 网易音乐
