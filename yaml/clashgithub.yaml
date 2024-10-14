@@ -22,65 +22,128 @@ proxies:
   server: 127.0.0.1
   tfo: false
   type: ss
-- cipher: aes-256-gcm
+- cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
-  password: g5MeD6Ft3CWlJId
-  port: 5004
-  server: 38.110.1.105
+  name: 🇰🇷 韩国+KT电信_clashgithub
+  password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2
+  port: 20005
+  server: service.ouluyun9803.com
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
+  name: 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 142.202.49.84
+  tfo: false
+  type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  network: ws
+  port: 443
+  server: 202.78.162.5
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vmess
+  uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677
+  ws-opts:
+    headers:
+      Host: pendar.onthewifi.com
+    path: /
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  password: g5MeD6Ft3CWlJId
+  port: 5003
+  server: 38.75.137.42
+  tfo: false
+  type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇺🇸 美国 CloudFlare节点_clashgithub
+  network: ws
+  port: 2082
+  server: 162.159.140.93
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip3.6929198.xyz
+    path: github.com/Alvin9999
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
   name: 🇺🇸 美国+v2rayfree.eu.org_clashgithub
-  password: lGqs95QkFHo2NV
-  port: 5498
+  password: Y6R9pAtvxxzmGC
+  port: 3389
   server: 69.50.95.53
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
-  password: RexnBgU7EV5ADxG
-  port: 7002
-  server: 38.114.114.69
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 38.121.43.65
   tfo: false
   type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  password: e4FCWrgpkji3QY
+  port: 9101
+  server: 142.202.49.122
+  tfo: false
+  type: ss
+- client-fingerprint: randomized
+  name: 🇸🇬 立陶宛 NGS新闻_clashgithub
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: 185.176.24.2
+  skip-cert-verify: false
+  sni: 403B3611-99bc-43B7-88d7-26ed5d0825a9-3.PaGes.deV
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 403B3611-99bc-43B7-88d7-26ed5d0825a9-3.PaGes.deV
+    path: /tr9vfP2lflALkJrNsQ?ed=2560
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  password: kDWvXYZoTBcGkC4
-  port: 8881
-  server: 69.50.92.72
-  tfo: false
-  type: ss
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  port: 1010
-  server: 188.166.96.150
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: 09e3fef1-3136-41a9-9531-6ea36482dea1
-- client-fingerprint: chrome
-  name: 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 35.181.18.202
-  skip-cert-verify: false
-  sni: trojan.burgerip.co.uk
-  type: trojan
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
-  password: zDNVedRFPQexG9v
-  port: 6379
+  password: pKEW8JPByTVTLtM
+  port: 443
   server: 69.50.95.53
   tfo: false
   type: ss
+- cipher: chacha20-ietf-poly1305
+  client-fingerprint: chrome
+  name: 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  password: FX77Cp2CHKq8JKTHux2xUi
+  port: 32935
+  server: 13.74.65.144
+  tfo: false
+  type: ss
+- client-fingerprint: chrome
+  name: 🇺🇸 美国 v2rayfree.eu.org_clashgithub
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: 108.165.216.31
+  skip-cert-verify: false
+  sni: 403B3611-99bc-43b7-88d7-26eD5d0825a9-3.paGes.dEV
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 403B3611-99bc-43b7-88d7-26eD5d0825a9-3.paGes.dEV
+    path: /tr0WG9WFiuFLs8Uip5?ed=2560
 - alterId: 64
   cipher: auto
   client-fingerprint: chrome
@@ -94,108 +157,122 @@ proxies:
   uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
 - cipher: aes-256-gcm
   client-fingerprint: chrome
-  name: 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  password: FoOiGlkAA9yPEGP
-  port: 7306
-  server: 142.202.49.122
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
-  password: PCnnH6SQSnfoS27
-  port: 8091
-  server: 69.50.95.53
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  password: cdBIDV42DCwnfIN
-  port: 8118
-  server: 38.110.1.105
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 38.68.134.9
   tfo: false
   type: ss
-- cipher: aes-256-gcm
+- alterId: 0
+  cipher: auto
   client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  password: Y6R9pAtvxxzmGC
-  port: 3389
-  server: 69.50.95.53
-  tfo: false
-  type: ss
-- client-fingerprint: randomized
-  name: 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  network: ws
-  password: bpb-trojan
-  port: 443
-  server: 23.227.60.8
+  name: 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  port: 1010
+  server: 188.166.96.150
   skip-cert-verify: false
-  sni: 403b3611-99bc-43b7-88D7-26Ed5D0825A9-3.paGeS.dev
-  type: trojan
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 09e3fef1-3136-41a9-9531-6ea36482dea1
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  network: ws
+  port: 2082
+  server: 104.19.45.17
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
   ws-opts:
     headers:
-      Host: 403b3611-99bc-43b7-88D7-26Ed5D0825A9-3.paGeS.dev
-    path: /trZkJgi4MLAtl7SrU9?ed=2560
+      Host: ip3.6929198.xyz
+    path: github.com/Alvin9999
 - cipher: aes-256-gcm
   client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  password: cdBIDV42DCwnfIN
-  port: 8119
+  name: 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  password: FoOiGlkAA9yPEGP
+  port: 7306
   server: 69.50.95.53
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  password: kDWvXYZoTBcGkC4
-  port: 8881
-  server: 69.50.95.53
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
-  password: Y6R9pAtvxxzmGC
-  port: 8888
-  server: 69.50.93.113
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  password: e4FCWrgpkji3QY
-  port: 9101
-  server: 38.75.137.42
+  password: XKFKl2rULjIp74
+  port: 8009
+  server: 38.68.134.9
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 69.50.92.72
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 69.50.95.53
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
-  password: pKEW8JPByTVTLtM
-  port: 443
+  name: 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
+  password: lGqs95QkFHo2NV
+  port: 5498
   server: 69.50.95.53
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 38.110.1.105
+  tfo: false
+  type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇺🇸 美国 CloudFlare节点 3_clashgithub
+  network: ws
+  port: 2095
+  server: 104.19.45.50
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+  ws-opts:
+    headers:
+      Host: ip2.6016725.xyz
+    path: github.com/Alvin9999
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 169.197.142.216
+  tfo: false
+  type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 38.121.43.97
+  tfo: false
+  type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
+  password: zDNVedRFPQexG9v
+  port: 6379
+  server: 38.143.66.87
+  tfo: false
+  type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 38.68.134.9
+  tfo: false
+  type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
   password: Y6R9pAtvxxzmGC
   port: 3389
   server: 38.114.114.69
@@ -204,7 +281,7 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
-  name: 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  name: 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
   network: ws
   port: 443
   server: 202.78.162.5
@@ -219,30 +296,46 @@ proxies:
     path: /
 - cipher: aes-256-gcm
   client-fingerprint: chrome
-  name: 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
+  name: 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
   password: pKEW8JPByTVTLtM
   port: 443
-  server: 23.150.152.41
+  server: 169.197.141.84
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 38.110.1.46
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  password: KixLvKzwjekG00rm
-  port: 5500
+  name: 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  password: e4FCWrgpkji3QY
+  port: 9102
   server: 142.202.49.122
   tfo: false
   type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  network: ws
+  port: 8880
+  server: 104.21.82.183
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
+  ws-opts:
+    headers:
+      Host: server26.beheshtbaneh.com
+    path: /
+- client-fingerprint: chrome
+  name: 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  password: telegram-id-directvpn
+  port: 22222
+  server: 54.247.163.77
+  skip-cert-verify: false
+  sni: trojan.burgerip.co.uk
+  type: trojan
 - client-fingerprint: randomized
-  name: 🇺🇸 美国 CloudFlare节点_clashgithub
+  name: 🇺🇸 美国 CloudFlare节点 5_clashgithub
   network: ws
   password: bpb-trojan
   port: 443
@@ -254,245 +347,191 @@ proxies:
     headers:
       Host: 403b3611-99bc-43B7-88D7-26Ed5d0825A9-3.pageS.dev
     path: /tr1ZwekOpUrc0os2rS?ed=2560
-- cipher: aes-256-gcm
+- cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  password: KixLvKzwjekG00rm
-  port: 5500
-  server: 38.68.134.9
+  name: 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  password: 36ZCHeabUSfKjfQEvJ4HDV
+  port: 54170
+  server: 185.242.86.156
   tfo: false
   type: ss
-- cipher: aes-256-gcm
+- cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
-  name: 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  password: kDWvXYZoTBcGkC4
-  port: 8881
-  server: 23.150.152.41
-  tfo: false
-  type: ss
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇺🇸 美国 CloudFlare节点 2_clashgithub
-  network: ws
-  port: 2095
-  server: 162.159.140.19
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
-  ws-opts:
-    headers:
-      Host: ip2.6016725.xyz
-    path: github.com/Alvin9999
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
-  password: RexnBgU7EV5ADxG
-  port: 7002
-  server: 38.75.137.42
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 38.110.1.105
+  name: 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
+  password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
+  port: 52952
+  server: 185.24.151.214
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
-  password: Y6R9pAtvxxzmGC
-  port: 5600
-  server: 38.68.134.9
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 38.110.1.46
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   password: Y6R9pAtvxxzmGC
-  port: 5601
+  port: 5001
   server: 38.114.114.69
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  password: RexnBgU7EV5ADxG
-  port: 7002
-  server: 38.121.43.97
-  tfo: false
-  type: ss
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  network: ws
-  port: 80
-  server: 172.66.168.173
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: 83452b53-dabc-4d13-b2e6-b904ffee8f5b
-  ws-opts:
-    headers:
-      Host: 50907082685942059876387799824779.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou
-    path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  password: faBAoD54k87UJG7
-  port: 2376
-  server: 139.64.165.230
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
-  password: lGqs95QkFHo2NV
-  port: 5499
-  server: 169.197.141.84
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 38.110.1.12
   tfo: false
   type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
-  password: KixLvKzwjekG00rm
-  port: 8080
-  server: 38.110.1.46
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 38.75.137.42
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 38.121.43.65
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 69.50.92.72
-  tfo: false
-  type: ss
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
-  password: FoOiGlkAA9yPEGP
-  port: 7306
+  password: PCnnH6SQSnfoS27
+  port: 8091
   server: 38.121.43.97
   tfo: false
   type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  password: iUB0923RBA
+  port: 30067
+  server: 154.3.8.151
+  tfo: false
+  type: ss
+- client-fingerprint: randomized
+  name: 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: 185.238.228.6
+  skip-cert-verify: false
+  sni: 403b3611-99bc-43b7-88D7-26Ed5D0825a9-3.PAgeS.dEv
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 403b3611-99bc-43b7-88D7-26Ed5D0825a9-3.PAgeS.dEv
+    path: /trLb1imnrxPEhfzfwk?ed=2560
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 38.110.1.46
+  tfo: false
+  type: ss
+- client-fingerprint: chrome
+  name: 🇺🇸 美国 CloudFlare节点 6_clashgithub
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: 104.18.23.235
+  skip-cert-verify: false
+  sni: 403b3611-99bc-43B7-88D7-26Ed5d0825A9-3.pageS.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 403b3611-99bc-43B7-88D7-26Ed5d0825A9-3.pageS.dev
+    path: /tr1ZwekOpUrc0os2rS?ed=2560
 proxy-groups:
 - name: 🔰 节点选择
   proxies:
   - ♻️ 自动选择
   - 🎯 全球直连
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🌍 国外媒体
@@ -501,48 +540,48 @@ proxy-groups:
   - ♻️ 自动选择
   - 🎯 全球直连
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -554,96 +593,96 @@ proxy-groups:
   - 🎯 全球直连
   - 🔰 节点选择
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: select
 - name: 📲 电报信息
   proxies:
   - 🔰 节点选择
   - 🎯 全球直连
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -651,48 +690,48 @@ proxy-groups:
   - 🎯 全球直连
   - ♻️ 自动选择
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -709,48 +748,48 @@ proxy-groups:
   - 🎯 全球直连
   - ♻️ 自动选择
   - 🇬🇧 高性价比机场:https://kfyun.uk_clashgithub
+  - 🇰🇷 韩国+KT电信_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司_clashgithub
+  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
+  - 🇸🇬 立陶宛 NGS新闻_clashgithub
   - 🇺🇸 美国+v2rayfree.eu.org 2_clashgithub
-  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
-  - 🇫🇷 法国 巴黎Amazon数据中心_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
+  - 🇮🇪 爱尔兰+v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 v2rayfree.eu.org_clashgithub
   - 🇨🇳 广东省广州市 移动_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 5_clashgithub
-  - 🇨🇦 加拿大 v2rayfree.eu.org_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 6_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 7_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 8_clashgithub
+  - 🇳🇱 荷兰 北荷兰省阿姆斯特丹DigitalOcean数据中心_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 4_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 9_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 10_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 11_clashgithub
+  - 🇺🇸 美国+v2rayfree.eu.org 4_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 5_clashgithub
-  - 🇮🇳 印度 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
   - 🇺🇸 北美地区+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 6_clashgithub
-  - 🇨🇦 加拿大+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 7_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 2_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 8_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 9_clashgithub
+  - 🇮🇳 印度 v2rayfree.eu.org 2_clashgithub
+  - 🇺🇸 北美地区+v2rayfree.eu.org 2_clashgithub
+  - 🇨🇦 加拿大+v2rayfree.eu.org 3_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 4_clashgithub
+  - 🇮🇪 爱尔兰 v2rayfree.eu.org_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 5_clashgithub
+  - 🇷🇺 俄罗斯+v2rayfree.eu.org_clashgithub
+  - 🇮🇷 伊朗+v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 10_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 11_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 12_clashgithub
-  - 🇺🇸 美国 CloudFlare节点 3_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 12_clashgithub
-  - 🇺🇸 北美地区+v2rayfree.eu.org 3_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 13_clashgithub
+  - 🇺🇸 美国+加利福尼亚州洛杉矶Cogent通信_clashgithub
+  - 🇪🇸 西班牙 v2rayfree.eu.org_clashgithub
   - 🇺🇸 美国+华盛顿Cogent通信公司 14_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 15_clashgithub
-  - 🇺🇸 美国+v2rayfree.eu.org 13_clashgithub
-  - 🇺🇸 美国+华盛顿Cogent通信公司 16_clashgithub
+  - 🇺🇸 美国 CloudFlare节点 6_clashgithub
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
