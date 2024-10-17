@@ -7,7 +7,7 @@ proxies:
 - name: US美国(mibei77.com 米贝节点分享)_miebei
   password: NISHIKUITAN222
   port: 443
-  server: 34.147.231.33
+  server: 144.24.200.164
   skip-cert-verify: true
   type: trojan
   udp: true
@@ -28,7 +28,21 @@ proxies:
 - name: US美国(mibei77.com 米贝节点分享) 4_miebei
   password: NISHIKUITAN222
   port: 443
-  server: 34.22.142.117
+  server: 34.175.202.195
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: US美国(mibei77.com 米贝节点分享) 5_miebei
+  password: NISHIKUITAN222
+  port: 443
+  server: 152.70.249.67
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: US美国(mibei77.com 米贝节点分享) 6_miebei
+  password: NISHIKUITAN222
+  port: 443
+  server: 34.91.136.173
   skip-cert-verify: true
   type: trojan
   udp: true
@@ -41,6 +55,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -49,6 +65,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
@@ -60,6 +78,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 - name: ⛔️ 广告拦截
   proxies:
@@ -82,6 +102,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -96,6 +118,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 - name: 📲 电报信息
   proxies:
@@ -105,6 +129,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -115,6 +141,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -134,6 +162,8 @@ proxy-groups:
   - US美国(mibei77.com 米贝节点分享) 2_miebei
   - US美国(mibei77.com 米贝节点分享) 3_miebei
   - US美国(mibei77.com 米贝节点分享) 4_miebei
+  - US美国(mibei77.com 米贝节点分享) 5_miebei
+  - US美国(mibei77.com 米贝节点分享) 6_miebei
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
