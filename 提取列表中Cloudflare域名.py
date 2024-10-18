@@ -41,11 +41,17 @@ def query_dns(domain, record_type, dns_server='cloudflare'):
             dns_url = f'https://resolver1.opendns.com/dns-query?name={domain}&type={record_type}'
         else:
             dns_url = f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}'
+        
         response = requests.get(dns_url, headers=headers)
-        data = response.json()
-        return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
+        
+        if response.status_code == 200:
+            data = response.json()
+            return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
+        else:
+            print(f"DNS 查询失败: 状态码 {response.status_code}，域名: {domain}")
+            return []
     except Exception as e:
-        print(f"DNS 查询失败: {e}")
+        print(f"DNS 查询失败: {e}，域名: {domain}")
         return []
 
 # 查询域名的IP地址
@@ -83,7 +89,7 @@ def main():
     unmatched_domains = []
 
     # 使用线程池并发查询
-    with ThreadPoolExecutor(max_workers=35) as executor:
+    with ThreadPoolExecutor(max_workers=20) as executor:
         futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
         for future in as_completed(futures):
             domain_line, pure_domain, matched = future.result()
@@ -109,11 +115,7 @@ def main():
                     matched = True
                     break
         
-        # 打印 Google DNS 匹配的数量
-        if matched:
-            print(f"Google DNS 匹配到域名: {domain}")
-
-    google_count = sum(1 for domain_line in matching_domains if domain_line in unmatched_domains)
+    google_count = len([domain_line for domain_line in matching_domains if domain_line in unmatched_domains])
 
     # 如果 Google DNS 没有匹配，再进行 OpenDNS 查询
     for domain_line in unmatched_domains:
@@ -128,11 +130,7 @@ def main():
                 matched = True
                 break
 
-        # 打印 OpenDNS 匹配的数量
-        if matched:
-            print(f"OpenDNS 匹配到域名: {domain}")
-
-    opendns_count = sum(1 for domain_line in matching_domains if domain_line in unmatched_domains)
+    opendns_count = len([domain_line for domain_line in matching_domains if domain_line in unmatched_domains])
 
     # 排序结果并保存到文件
     matching_domains.sort()
