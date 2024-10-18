@@ -61,9 +61,9 @@ def process_domain(domain_line, cidr_ranges):
     for ip in ipv4_addresses + ipv6_addresses:
         if ip_in_cidr(ip, cidr_ranges):
             matched = True
-            return domain_line, domain  # 返回原始行和提取出来的纯域名
+            return domain_line, domain, matched  # 返回原始行和提取出来的纯域名
     
-    return domain_line, domain, matched
+    return domain_line, domain, matched  # 确保总是返回三个值
 
 # 主函数
 def main():
