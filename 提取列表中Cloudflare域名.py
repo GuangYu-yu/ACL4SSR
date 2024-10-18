@@ -31,23 +31,22 @@ def ip_in_cidr(ip, cidr_list):
             continue
     return False
 
-# Cloudflare DNS Resolver API 查询
-def query_cloudflare_dns(domain, record_type):
+# DNS 查询
+def query_dns(domain, record_type, dns_server='cloudflare'):
     try:
-        headers = {
-            'Accept': 'application/dns-json',
-        }
-        response = requests.get(f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}', headers=headers)
+        headers = {'Accept': 'application/dns-json'}
+        dns_url = f'https://{dns_server}-dns.com/dns-query?name={domain}&type={record_type}'
+        response = requests.get(dns_url, headers=headers)
         data = response.json()
         return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
     except Exception as e:
-        print(f"Cloudflare DNS API 查询失败: {e}")
+        print(f"DNS 查询失败: {e}")
         return []
 
 # 查询域名的IP地址
 def get_ip_from_domain(domain):
-    ipv4_addresses = query_cloudflare_dns(domain, "A")
-    ipv6_addresses = query_cloudflare_dns(domain, "AAAA")
+    ipv4_addresses = query_dns(domain, "A")
+    ipv6_addresses = query_dns(domain, "AAAA")
     return ipv4_addresses, ipv6_addresses
 
 # 并发处理每个域名
@@ -56,18 +55,15 @@ def process_domain(domain_line, cidr_ranges):
     
     # 查询IPv4和IPv6
     ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
-    
-    # 检查IPv4地址是否在CIDR范围内
-    for ip in ipv4_addresses:
+    matched = False
+
+    # 检查IPv4和IPv6地址是否在CIDR范围内
+    for ip in ipv4_addresses + ipv6_addresses:
         if ip_in_cidr(ip, cidr_ranges):
+            matched = True
             return domain_line, domain  # 返回原始行和提取出来的纯域名
     
-    # 检查IPv6地址是否在CIDR范围内
-    for ip in ipv6_addresses:
-        if ip_in_cidr(ip, cidr_ranges):
-            return domain_line, domain  # 返回原始行和提取出来的纯域名
-    
-    return None, None
+    return domain_line, domain, matched
 
 # 主函数
 def main():
@@ -79,24 +75,36 @@ def main():
     cidr_ranges = extract_cidrs(cidr_list)
     
     matching_domains = []
-    preferred_domains = []
+    unmatched_domains = []
 
     # 使用线程池并发查询
     with ThreadPoolExecutor(max_workers=35) as executor:
         futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
         for future in as_completed(futures):
-            domain_line, pure_domain = future.result()
-            if domain_line:
+            domain_line, pure_domain, matched = future.result()
+            if matched:
                 matching_domains.append(domain_line)
-            if pure_domain:
-                preferred_domains.append(pure_domain)
-    
-    # 保存匹配结果到 matching_domains.list
+            else:
+                unmatched_domains.append(domain_line)
+
+    # 对未匹配的域名进行Google DNS查询
+    for domain_line in unmatched_domains:
+        domain = domain_line.split(',')[1]
+        ipv4_addresses, ipv6_addresses = query_dns(domain, "A", 'google') + query_dns(domain, "AAAA", 'google')
+        
+        for ip in ipv4_addresses + ipv6_addresses:
+            if ip_in_cidr(ip, cidr_ranges):
+                matching_domains.append(domain_line)
+                break
+
+    # 排序结果并保存到文件
+    matching_domains.sort()
     with open('matching_domains.list', 'w') as f:
         for domain_line in matching_domains:
             f.write(domain_line + '\n')
     
-    # 保存提取的纯域名到 优选域名.txt
+    preferred_domains = [line.split(',')[1] for line in matching_domains]
+    preferred_domains = sorted(set(preferred_domains))  # 去重并排序
     with open('优选域名.txt', 'w') as f:
         for domain in preferred_domains:
             f.write(domain + '\n')
