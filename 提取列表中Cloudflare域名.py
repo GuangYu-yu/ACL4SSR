@@ -35,7 +35,12 @@ def ip_in_cidr(ip, cidr_list):
 def query_dns(domain, record_type, dns_server='cloudflare'):
     try:
         headers = {'Accept': 'application/dns-json'}
-        dns_url = f'https://{dns_server}-dns.com/dns-query?name={domain}&type={record_type}'
+        if dns_server == 'google':
+            dns_url = f'https://dns.google/dns-query?name={domain}&type={record_type}'
+        elif dns_server == 'opendns':
+            dns_url = f'https://resolver1.opendns.com/dns-query?name={domain}&type={record_type}'
+        else:
+            dns_url = f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}'
         response = requests.get(dns_url, headers=headers)
         data = response.json()
         return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
@@ -87,15 +92,47 @@ def main():
             else:
                 unmatched_domains.append(domain_line)
 
+    # 记录匹配的计数
+    cloudflare_count = len(matching_domains)
+
     # 对未匹配的域名进行Google DNS查询
     for domain_line in unmatched_domains:
         domain = domain_line.split(',')[1]
-        ipv4_addresses, ipv6_addresses = query_dns(domain, "A", 'google') + query_dns(domain, "AAAA", 'google')
+        ipv4_addresses = query_dns(domain, "A", 'google')
+        ipv6_addresses = query_dns(domain, "AAAA", 'google')
+
+        matched = False
+        if ipv4_addresses or ipv6_addresses:
+            for ip in ipv4_addresses + ipv6_addresses:
+                if ip_in_cidr(ip, cidr_ranges):
+                    matching_domains.append(domain_line)
+                    matched = True
+                    break
         
+        # 打印 Google DNS 匹配的数量
+        if matched:
+            print(f"Google DNS 匹配到域名: {domain}")
+
+    google_count = sum(1 for domain_line in matching_domains if domain_line in unmatched_domains)
+
+    # 如果 Google DNS 没有匹配，再进行 OpenDNS 查询
+    for domain_line in unmatched_domains:
+        domain = domain_line.split(',')[1]
+        ipv4_addresses = query_dns(domain, "A", 'opendns')
+        ipv6_addresses = query_dns(domain, "AAAA", 'opendns')
+        
+        matched = False
         for ip in ipv4_addresses + ipv6_addresses:
             if ip_in_cidr(ip, cidr_ranges):
                 matching_domains.append(domain_line)
+                matched = True
                 break
+
+        # 打印 OpenDNS 匹配的数量
+        if matched:
+            print(f"OpenDNS 匹配到域名: {domain}")
+
+    opendns_count = sum(1 for domain_line in matching_domains if domain_line in unmatched_domains)
 
     # 排序结果并保存到文件
     matching_domains.sort()
@@ -109,6 +146,10 @@ def main():
         for domain in preferred_domains:
             f.write(domain + '\n')
     
+    print(f"Cloudflare 匹配的域名数量: {cloudflare_count}")
+    print(f"Google 匹配的域名数量: {google_count}")
+    print(f"OpenDNS 匹配的域名数量: {opendns_count}")
+
     print(f"匹配的域名已保存到 matching_domains.list 文件中，共 {len(matching_domains)} 个。")
     print(f"提取的纯域名已保存到 优选域名.txt 文件中，共 {len(preferred_domains)} 个。")
 
