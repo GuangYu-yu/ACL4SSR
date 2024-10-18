@@ -118,7 +118,7 @@ jobs:
           python-version: '3.x'
 
       - name: 安装依赖
-        run: pip install netaddr requests beautifulsoup4
+        run: pip install netaddr requests beautifulsoup4 pythonping
 
       - name: 运行 获取Cloudflare各地区CIDR
         run: python 获取Cloudflare各地区CIDR.py
