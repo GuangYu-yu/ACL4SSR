@@ -50,15 +50,6 @@ def query_dns(domain, record_type):
         print(f"DNS 查询失败: {e}，域名: {domain}")
         return []
 
-# TCP Ping 检查 IP 地址可达性
-def tcp_ping(ip):
-    try:
-        response = ping(ip, count=1, timeout=1)
-        return response.success()
-    except Exception as e:
-        print(f"TCP Ping 失败: {e}，IP: {ip}")
-        return False
-
 # 查询域名的IP地址
 def get_ip_from_domain(domain):
     ipv4_addresses = query_dns(domain, "A")
@@ -110,9 +101,13 @@ def main():
         domain = domain_line.split(',')[1]
         ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
 
-        # 检查 IP 地址可达性
+        # 获取 IP 地址，不论 TCP Ping 是否成功
         for ip in ipv4_addresses + ipv6_addresses:
-            if tcp_ping(ip) and ip_in_cidr(ip, cidr_ranges):
+            # TCP Ping 获取 IP 地址
+            ping(ip, count=1, timeout=1)  # 执行 TCP Ping，但不需要捕获结果
+            
+            # 检查 IP 地址是否在 CIDR 范围内
+            if ip_in_cidr(ip, cidr_ranges):
                 return domain_line  # 返回匹配的域名行
         return None  # 返回 None 如果没有匹配
 
