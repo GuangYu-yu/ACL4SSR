@@ -2,6 +2,7 @@ import requests
 import ipaddress
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pythonping import ping
 
 # 下载域名列表和CIDR列表
 def download_lists():
@@ -32,15 +33,10 @@ def ip_in_cidr(ip, cidr_list):
     return False
 
 # DNS 查询
-def query_dns(domain, record_type, dns_server='cloudflare'):
+def query_dns(domain, record_type):
     try:
         headers = {'Accept': 'application/dns-json'}
-        if dns_server == 'google':
-            dns_url = f'https://dns.google/dns-query?name={domain}&type={record_type}'
-        elif dns_server == 'opendns':
-            dns_url = f'https://resolver1.opendns.com/dns-query?name={domain}&type={record_type}'
-        else:
-            dns_url = f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}'
+        dns_url = f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}'
         
         response = requests.get(dns_url, headers=headers)
         
@@ -53,6 +49,15 @@ def query_dns(domain, record_type, dns_server='cloudflare'):
     except Exception as e:
         print(f"DNS 查询失败: {e}，域名: {domain}")
         return []
+
+# TCP Ping 检查 IP 地址可达性
+def tcp_ping(ip):
+    try:
+        response = ping(ip, count=1, timeout=1)
+        return response.success()
+    except Exception as e:
+        print(f"TCP Ping 失败: {e}，IP: {ip}")
+        return False
 
 # 查询域名的IP地址
 def get_ip_from_domain(domain):
@@ -89,7 +94,7 @@ def main():
     unmatched_domains = []
 
     # 使用线程池并发查询
-    with ThreadPoolExecutor(max_workers=20) as executor:
+    with ThreadPoolExecutor(max_workers=35) as executor:
         futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
         for future in as_completed(futures):
             domain_line, pure_domain, matched = future.result()
@@ -98,39 +103,30 @@ def main():
             else:
                 unmatched_domains.append(domain_line)
 
-    # 记录匹配的计数
-    cloudflare_count = len(matching_domains)
+    # TCP Ping 检查未匹配的域名
+    successful_tcp_matches = 0  # 计数成功匹配的域名
 
-    # 对未匹配的域名进行Google DNS查询
-    for domain_line in unmatched_domains:
+    def tcp_ping_domain(domain_line):
         domain = domain_line.split(',')[1]
-        ipv4_addresses = query_dns(domain, "A", 'google')
-        ipv6_addresses = query_dns(domain, "AAAA", 'google')
+        ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
 
-        matched = False
-        if ipv4_addresses or ipv6_addresses:
-            for ip in ipv4_addresses + ipv6_addresses:
-                if ip_in_cidr(ip, cidr_ranges):
-                    matching_domains.append(domain_line)
-                    matched = True
-                    break
-        
-    google_count = len([domain_line for domain_line in matching_domains if domain_line in unmatched_domains])
-
-    # 如果 Google DNS 没有匹配，再进行 OpenDNS 查询
-    for domain_line in unmatched_domains:
-        domain = domain_line.split(',')[1]
-        ipv4_addresses = query_dns(domain, "A", 'opendns')
-        ipv6_addresses = query_dns(domain, "AAAA", 'opendns')
-        
-        matched = False
+        # 检查 IP 地址可达性
         for ip in ipv4_addresses + ipv6_addresses:
-            if ip_in_cidr(ip, cidr_ranges):
-                matching_domains.append(domain_line)
-                matched = True
-                break
+            if tcp_ping(ip) and ip_in_cidr(ip, cidr_ranges):
+                return domain_line  # 返回匹配的域名行
+        return None  # 返回 None 如果没有匹配
 
-    opendns_count = len([domain_line for domain_line in matching_domains if domain_line in unmatched_domains])
+    # 使用线程池并发执行 TCP Ping
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        futures = [executor.submit(tcp_ping_domain, domain_line) for domain_line in unmatched_domains]
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                matching_domains.append(result)
+                successful_tcp_matches += 1  # 增加计数
+
+    # 打印 TCP Ping 匹配的数量
+    print(f"通过 TCP Ping 成功匹配到 {successful_tcp_matches} 个域名。")
 
     # 排序结果并保存到文件
     matching_domains.sort()
@@ -143,10 +139,6 @@ def main():
     with open('优选域名.txt', 'w') as f:
         for domain in preferred_domains:
             f.write(domain + '\n')
-    
-    print(f"Cloudflare 匹配的域名数量: {cloudflare_count}")
-    print(f"Google 匹配的域名数量: {google_count}")
-    print(f"OpenDNS 匹配的域名数量: {opendns_count}")
 
     print(f"匹配的域名已保存到 matching_domains.list 文件中，共 {len(matching_domains)} 个。")
     print(f"提取的纯域名已保存到 优选域名.txt 文件中，共 {len(preferred_domains)} 个。")
