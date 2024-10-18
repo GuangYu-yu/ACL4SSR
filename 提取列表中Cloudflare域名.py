@@ -2,7 +2,7 @@ import requests
 import ipaddress
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from pythonping import ping
+import subprocess
 
 # 下载域名列表和CIDR列表
 def download_lists():
@@ -44,11 +44,17 @@ def query_dns(domain, record_type):
             data = response.json()
             return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
         else:
-            print(f"DNS 查询失败: 状态码 {response.status_code}，域名: {domain}")
             return []
-    except Exception as e:
-        print(f"DNS 查询失败: {e}，域名: {domain}")
+    except Exception:
         return []
+
+# 使用系统的 ping 命令检查 IP 地址可达性
+def ping(domain):
+    try:
+        output = subprocess.run(["ping", "-c", "1", domain], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        return output.returncode == 0  # Ping 成功返回 True
+    except Exception:
+        return False  # Ping 失败返回 False
 
 # 查询域名的IP地址
 def get_ip_from_domain(domain):
@@ -94,34 +100,30 @@ def main():
             else:
                 unmatched_domains.append(domain_line)
 
-    # TCP Ping 检查未匹配的域名
-    successful_tcp_matches = 0  # 计数成功匹配的域名
+    # 检查未匹配的域名
+    successful_matches = 0  # 计数成功匹配的域名
 
-    def tcp_ping_domain(domain_line):
+    def ping_domain(domain_line):
         domain = domain_line.split(',')[1]
         ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
 
-        # 获取 IP 地址，不论 TCP Ping 是否成功
+        # 检查 IP 地址是否在 CIDR 范围内
         for ip in ipv4_addresses + ipv6_addresses:
-            # TCP Ping 获取 IP 地址
-            ping(ip, count=1, timeout=1)  # 执行 TCP Ping，但不需要捕获结果
-            
-            # 检查 IP 地址是否在 CIDR 范围内
-            if ip_in_cidr(ip, cidr_ranges):
+            if ip_in_cidr(ip, cidr_ranges):  # 直接匹配 IP 地址
                 return domain_line  # 返回匹配的域名行
         return None  # 返回 None 如果没有匹配
 
-    # 使用线程池并发执行 TCP Ping
+    # 使用线程池并发执行 Ping
     with ThreadPoolExecutor(max_workers=50) as executor:
-        futures = [executor.submit(tcp_ping_domain, domain_line) for domain_line in unmatched_domains]
+        futures = [executor.submit(ping_domain, domain_line) for domain_line in unmatched_domains]
         for future in as_completed(futures):
             result = future.result()
             if result:
                 matching_domains.append(result)
-                successful_tcp_matches += 1  # 增加计数
+                successful_matches += 1  # 增加计数
 
-    # 打印 TCP Ping 匹配的数量
-    print(f"通过 TCP Ping 成功匹配到 {successful_tcp_matches} 个域名。")
+    # 打印成功匹配的数量
+    print(f"通过 Ping 成功匹配到 {successful_matches} 个域名。")
 
     # 排序结果并保存到文件
     matching_domains.sort()
