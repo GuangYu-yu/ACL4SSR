@@ -15,7 +15,7 @@ def fetch_domains(url):
     domains = []
     for line in response.text.splitlines():
         if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
-            domains.append(line.split(',')[1])
+            domains.append(line)
     return domains
 
 def cache_page(url):
@@ -32,8 +32,9 @@ def clear_cache(cache_file):
     if os.path.exists(cache_file):
         os.remove(cache_file)
 
-def check_cloudflare_ip_via_nslookup(domain):
+def check_cloudflare_ip_via_nslookup(domain_line):
     """通过 nslookup 查询 Cloudflare IP"""
+    domain = domain_line.split(',')[1]
     try:
         url = f'https://www.nslookup.io/domains/{domain}/dns-records/'
         cache_file = cache_page(url)
@@ -42,14 +43,15 @@ def check_cloudflare_ip_via_nslookup(domain):
             if 'Hosted by Cloudflare, Inc.' in content:
                 ip_matches = re.findall(r'<span>([\d\.a-fA-F:]+)</span>', content)
                 clear_cache(cache_file)
-                return domain, set(ip_matches)
+                return domain_line, domain, set(ip_matches)
     except Exception as e:
         print(f"通过nslookup检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
-def check_cloudflare_ip_via_bgp(domain):
+def check_cloudflare_ip_via_bgp(domain_line):
     """通过 bgp.he.net 查询 Cloudflare IP"""
+    domain = domain_line.split(',')[1]
     try:
         url = f'https://bgp.he.net/dns/{domain}#_ipinfo'
         cache_file = cache_page(url)
@@ -58,36 +60,38 @@ def check_cloudflare_ip_via_bgp(domain):
             if 'Cloudflare' in content:
                 ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
                 clear_cache(cache_file)
-                return domain, set(ip_matches)
+                return domain_line, domain, set(ip_matches)
     except Exception as e:
         print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
-def process_domain(domain, index):
+def process_domain(domain_line, index):
     """处理每个域名，轮流查询其 Cloudflare IP"""
     if index % 2 == 0:
-        return check_cloudflare_ip_via_nslookup(domain)
+        return check_cloudflare_ip_via_nslookup(domain_line)
     else:
-        return check_cloudflare_ip_via_bgp(domain)
+        return check_cloudflare_ip_via_bgp(domain_line)
 
 def main():
     """主函数，执行查询和结果保存"""
-    domains = fetch_domains(DOMAIN_LIST_URL)
+    domain_lines = fetch_domains(DOMAIN_LIST_URL)
+    matching_domain_lines = set()
     matching_domains = set()
     all_cloudflare_ips = set()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=80) as executor:
-        futures = {executor.submit(process_domain, domain, i): domain for i, domain in enumerate(domains)}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=70) as executor:
+        futures = {executor.submit(process_domain, domain_line, i): domain_line for i, domain_line in enumerate(domain_lines)}
         for future in concurrent.futures.as_completed(futures):
-            domain = futures[future]
+            domain_line = futures[future]
             try:
                 result = future.result()
                 if result:
-                    matching_domains.add(result[0])
-                    all_cloudflare_ips.update(result[1])
+                    matching_domain_lines.add(result[0])
+                    matching_domains.add(result[1])
+                    all_cloudflare_ips.update(result[2])
             except Exception as e:
-                print(f"处理域名 {domain} 时出错: {e}")
+                print(f"处理域名 {domain_line} 时出错: {e}")
 
     # 分离IPv4和IPv6地址
     ipv4_addresses = set()
@@ -107,12 +111,12 @@ def main():
     sorted_ipv4 = sorted(ipv4_addresses, key=lambda ip: ipaddress.IPv4Address(ip))
     sorted_ipv6 = sorted(ipv6_addresses, key=lambda ip: ipaddress.IPv6Address(ip))
 
-    # 保存匹配的域名到文件
+    # 保存匹配的域名（带前缀）到文件
     with open('matching_domains.list', 'w', encoding='utf-8') as f:
-        for domain in sorted(matching_domains):
-            f.write(f"{domain}\n")
+        for domain_line in sorted(matching_domain_lines):
+            f.write(f"{domain_line}\n")
 
-    # 保存优选域名到文件
+    # 保存优选域名（不带前缀）到文件
     with open('优选域名.txt', 'w', encoding='utf-8') as f:
         for domain in sorted(matching_domains):
             f.write(f"{domain}\n")
@@ -126,7 +130,8 @@ def main():
         for ip in sorted_ipv6:
             f.write(f"{ip}\n")
 
-    print(f"匹配的域名已保存到 matching_domains.list 和 优选域名.txt 文件中，共 {len(matching_domains)} 个。")
+    print(f"匹配的域名（带前缀）已保存到 matching_domains.list 文件中，共 {len(matching_domain_lines)} 个。")
+    print(f"优选域名（不带前缀）已保存到 优选域名.txt 文件中，共 {len(matching_domains)} 个。")
     print(f"提取的 Cloudflare IP 已保存到 优选域名ip.txt 文件中，共 {len(sorted_ipv4) + len(sorted_ipv6)} 个。")
     print(f"其中 IPv4 地址 {len(sorted_ipv4)} 个，IPv6 地址 {len(sorted_ipv6)} 个。")
 
