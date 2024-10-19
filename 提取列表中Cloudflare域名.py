@@ -3,6 +3,7 @@ import concurrent.futures
 import os
 import re
 import ipaddress
+import uuid
 
 # 定义文件路径
 DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
@@ -13,9 +14,7 @@ def fetch_domains(url):
     response.raise_for_status()
     domains = []
     for line in response.text.splitlines():
-        if line.startswith('DOMAIN-SUFFIX,'):
-            domains.append(line.split(',')[1])
-        elif line.startswith('DOMAIN,'):
+        if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
             domains.append(line.split(',')[1])
     return domains
 
@@ -23,7 +22,7 @@ def cache_page(url):
     """缓存网页内容到本地文件"""
     response = requests.get(url)
     response.raise_for_status()
-    cache_file = 'cache.html'
+    cache_file = f'cache_{uuid.uuid4()}.html'
     with open(cache_file, 'w', encoding='utf-8') as f:
         f.write(response.text)
     return cache_file
@@ -78,7 +77,7 @@ def main():
     matching_domains = set()
     all_cloudflare_ips = set()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=70) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=80) as executor:
         futures = {executor.submit(process_domain, domain, i): domain for i, domain in enumerate(domains)}
         for future in concurrent.futures.as_completed(futures):
             domain = futures[future]
@@ -113,6 +112,11 @@ def main():
         for domain in sorted(matching_domains):
             f.write(f"{domain}\n")
 
+    # 保存优选域名到文件
+    with open('优选域名.txt', 'w', encoding='utf-8') as f:
+        for domain in sorted(matching_domains):
+            f.write(f"{domain}\n")
+
     # 保存所有 Cloudflare IP 地址到文件
     with open('优选域名ip.txt', 'w', encoding='utf-8') as f:
         f.write("# IPv4 地址\n")
@@ -122,7 +126,7 @@ def main():
         for ip in sorted_ipv6:
             f.write(f"{ip}\n")
 
-    print(f"匹配的域名已保存到 matching_domains.list 文件中，共 {len(matching_domains)} 个。")
+    print(f"匹配的域名已保存到 matching_domains.list 和 优选域名.txt 文件中，共 {len(matching_domains)} 个。")
     print(f"提取的 Cloudflare IP 已保存到 优选域名ip.txt 文件中，共 {len(sorted_ipv4) + len(sorted_ipv6)} 个。")
     print(f"其中 IPv4 地址 {len(sorted_ipv4)} 个，IPv6 地址 {len(sorted_ipv6)} 个。")
 
