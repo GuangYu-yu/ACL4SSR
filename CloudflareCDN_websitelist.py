@@ -152,5 +152,9 @@ def main():
 
     logging.info(f"已提取并保存 {len(sorted_domains)} 个唯一域名到 CloudflareCDN_websitelist.txt")
 
+    # 清理缓存
+    clear_cache()
+    logging.info("缓存已清理")
+
 if __name__ == "__main__":
     main()
