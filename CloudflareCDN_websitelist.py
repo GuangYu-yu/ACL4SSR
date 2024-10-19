@@ -7,7 +7,7 @@ import logging
 import time
 import socks
 import socket
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 设置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -57,19 +57,13 @@ def test_proxy(proxy):
     return None
 
 def find_working_proxy(proxy_list):
-    def test_proxy_wrapper(proxy):
-        result = test_proxy(proxy)
-        if result:
-            raise StopIteration(result)
-        return None
-
     with ThreadPoolExecutor(max_workers=10) as executor:
-        try:
-            for result in executor.map(test_proxy_wrapper, proxy_list):
-                if result:
-                    return result
-        except StopIteration as e:
-            return e.value
+        futures = [executor.submit(test_proxy, proxy) for proxy in proxy_list]
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                executor.shutdown(wait=False, cancel_futures=True)
+                return result
     return None
 
 def fetch_and_cache(url, proxy, force_refresh=False):
