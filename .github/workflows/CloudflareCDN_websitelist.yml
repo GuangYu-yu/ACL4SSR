@@ -1,8 +1,6 @@
 name: CloudflareCDN_websitelist
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'  # 每6小时运行一次
   workflow_dispatch: # 保留手动触发选项
 
 jobs:
