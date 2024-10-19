@@ -22,7 +22,7 @@ jobs:
           pip install requests
 
       - name: 运行列表过滤脚本
-        run: python 优选域名汇聚.py
+        run: python 提取列表中Cloudflare域名.py
 
       - name: 检查是否有更改
         run: |
