@@ -7,7 +7,7 @@ import logging
 import time
 import socks
 import socket
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 
 # 设置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -57,12 +57,19 @@ def test_proxy(proxy):
     return None
 
 def find_working_proxy(proxy_list):
+    def test_proxy_wrapper(proxy):
+        result = test_proxy(proxy)
+        if result:
+            raise StopIteration(result)
+        return None
+
     with ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_proxy = {executor.submit(test_proxy, proxy): proxy for proxy in proxy_list}
-        for future in as_completed(future_to_proxy):
-            result = future.result()
-            if result:
-                return result
+        try:
+            for result in executor.map(test_proxy_wrapper, proxy_list):
+                if result:
+                    return result
+        except StopIteration as e:
+            return e.value
     return None
 
 def fetch_and_cache(url, proxy, force_refresh=False):
@@ -126,18 +133,24 @@ def main():
     if args.clear_cache:
         clear_cache()
 
+    logging.info("开始获取SOCKS5代理列表")
     proxy_list = get_socks5_list()
+    logging.info(f"获取到 {len(proxy_list)} 个代理")
+
+    logging.info("开始查找可用代理")
     working_proxy = find_working_proxy(proxy_list)
 
     if not working_proxy:
-        logging.error("No working proxy found. Exiting.")
+        logging.error("未找到可用代理。退出程序。")
         return
 
-    logging.info(f"Using proxy: {working_proxy}")
+    logging.info(f"找到可用代理: {working_proxy}")
+    logging.info("开始获取网页内容")
 
     all_domains = set()
 
     for url in urls:
+        logging.info(f"处理URL: {url}")
         domains = process_url(url, working_proxy, args.clear_cache)
         all_domains.update(domains)
         time.sleep(2)  # 添加延迟以避免过于频繁的请求
