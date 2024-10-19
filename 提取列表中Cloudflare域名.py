@@ -17,8 +17,6 @@ def fetch_domains(url):
             domains.append(line.split(',')[1])
         elif line.startswith('DOMAIN,'):
             domains.append(line.split(',')[1])
-        elif not line.startswith('#') and '.' in line:
-            domains.append(line)
     return domains
 
 def cache_page(url):
