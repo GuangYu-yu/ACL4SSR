@@ -2,8 +2,12 @@ import requests
 import re
 import os
 import argparse
-from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlparse
+import logging
+import time
+
+# 设置日志
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # 定义URL列表
 urls = [
@@ -29,30 +33,48 @@ def fetch_and_cache(url, force_refresh=False):
     filename = f"cache_{urlparse(url).path.split('/')[-1]}.html"
     if os.path.exists(filename) and not force_refresh:
         with open(filename, 'r', encoding='utf-8') as f:
+            logging.info(f"Reading from cache: {filename}")
             return f.read()
     else:
-        response = requests.get(url)
-        content = response.text
-        with open(filename, 'w', encoding='utf-8') as f:
-            f.write(content)
-        return content
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        try:
+            logging.info(f"Fetching URL: {url}")
+            response = requests.get(url, headers=headers, allow_redirects=True)
+            response.raise_for_status()
+            content = response.text
+            with open(filename, 'w', encoding='utf-8') as f:
+                f.write(content)
+            logging.info(f"Successfully fetched and cached: {url}")
+            return content
+        except requests.RequestException as e:
+            logging.error(f"Error fetching {url}: {e}")
+            return None
 
 def extract_domains(content):
     """从网页内容中提取域名"""
+    if content is None:
+        return []
     pattern = r'data-domain="([^"]+)"'
-    return re.findall(pattern, content)
+    domains = re.findall(pattern, content)
+    if not domains:
+        logging.warning("No domains found in the content. The page structure might have changed.")
+    return domains
 
 def process_url(url, force_refresh):
     """处理单个URL"""
     content = fetch_and_cache(url, force_refresh)
-    return extract_domains(content)
+    domains = extract_domains(content)
+    logging.info(f"Extracted {len(domains)} domains from {url}")
+    return domains
 
 def clear_cache():
     """删除所有缓存文件"""
     cache_files = [f for f in os.listdir() if f.startswith("cache_") and f.endswith(".html")]
     for file in cache_files:
         os.remove(file)
-    print(f"已删除 {len(cache_files)} 个缓存文件")
+    logging.info(f"Deleted {len(cache_files)} cache files")
 
 def main():
     parser = argparse.ArgumentParser(description="提取使用Cloudflare CDN的网站列表")
@@ -64,11 +86,10 @@ def main():
 
     all_domains = set()
 
-    # 使用线程池并发处理URL
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        results = executor.map(lambda url: process_url(url, args.clear_cache), urls)
-        for domains in results:
-            all_domains.update(domains)
+    for url in urls:
+        domains = process_url(url, args.clear_cache)
+        all_domains.update(domains)
+        time.sleep(2)  # 添加延迟以避免过于频繁的请求
 
     # 排序域名
     sorted_domains = sorted(all_domains)
@@ -78,7 +99,7 @@ def main():
         for domain in sorted_domains:
             f.write(f"{domain}\n")
 
-    print(f"已提取并保存 {len(sorted_domains)} 个唯一域名到 CloudflareCDN_websitelist.txt")
+    logging.info(f"已提取并保存 {len(sorted_domains)} 个唯一域名到 CloudflareCDN_websitelist.txt")
 
 if __name__ == "__main__":
     main()
