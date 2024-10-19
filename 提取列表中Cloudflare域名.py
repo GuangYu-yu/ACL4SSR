@@ -1,8 +1,8 @@
 import requests
 import ipaddress
 import re
+import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import os
 
 # 下载域名列表和CIDR列表
 def download_lists():
@@ -14,9 +14,9 @@ def download_lists():
     
     return domain_list, cidr_list
 
-# 提取 DOMAIN-SUFFIX 后的域名
+# 提取 DOMAIN 和 DOMAIN-SUFFIX 后的域名
 def extract_domains(domain_list):
-    return [line for line in domain_list if line.startswith('DOMAIN-SUFFIX')]
+    return [line for line in domain_list if line.startswith('DOMAIN')]
 
 # 提取 CIDR 范围
 def extract_cidrs(cidr_list):
@@ -32,50 +32,34 @@ def ip_in_cidr(ip, cidr_list):
             continue
     return False
 
-# DNS 查询
-def query_dns(domain, record_type):
+# 使用 nslookup 查询域名的IP地址
+def query_nslookup(domain):
     try:
-        headers = {'Accept': 'application/dns-json'}
-        dns_url = f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}'
+        result = subprocess.run(['nslookup', domain], capture_output=True, text=True)
+        output = result.stdout
         
-        response = requests.get(dns_url, headers=headers)
-        
-        if response.status_code == 200:
-            data = response.json()
-            return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
-        else:
-            print(f"DNS 查询失败: 状态码 {response.status_code}，域名: {domain}")
-            return []
+        # 提取IP地址
+        ips = re.findall(r'Address:\s+(\d+\.\d+\.\d+\.\d+)', output)
+        return ips
     except Exception as e:
-        print(f"DNS 查询失败: {e}，域名: {domain}")
+        print(f"NSLookup 查询失败: {e}，域名: {domain}")
         return []
-
-# Ping 检查 IP 地址
-def ping(ip):
-    response = os.system(f"ping -c 1 -W 1 {ip} > /dev/null 2>&1")
-    return response == 0
-
-# 查询域名的IP地址
-def get_ip_from_domain(domain):
-    ipv4_addresses = query_dns(domain, "A")
-    ipv6_addresses = query_dns(domain, "AAAA")
-    return ipv4_addresses, ipv6_addresses
 
 # 并发处理每个域名
 def process_domain(domain_line, cidr_ranges):
     domain = domain_line.split(',')[1]
     
-    # 查询IPv4和IPv6
-    ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
+    # 查询IP地址
+    ip_addresses = query_nslookup(domain)
     matched = False
 
-    # 检查IPv4和IPv6地址是否在CIDR范围内
-    for ip in ipv4_addresses + ipv6_addresses:
+    # 检查IP地址是否在CIDR范围内
+    for ip in ip_addresses:
         if ip_in_cidr(ip, cidr_ranges):
             matched = True
-            return domain_line, matched  # 返回原始行和匹配结果
+            return domain_line, domain, matched  # 返回原始行和提取出来的纯域名
     
-    return domain_line, matched  # 确保总是返回两个值
+    return domain_line, domain, matched  # 确保总是返回三个值
 
 # 主函数
 def main():
@@ -93,40 +77,14 @@ def main():
     with ThreadPoolExecutor(max_workers=35) as executor:
         futures = [executor.submit(process_domain, domain_line, cidr_ranges) for domain_line in domains]
         for future in as_completed(futures):
-            domain_line, matched = future.result()
+            domain_line, pure_domain, matched = future.result()
             if matched:
                 matching_domains.append(domain_line)
             else:
                 unmatched_domains.append(domain_line)
 
-    # Ping 检查未匹配的域名
-    successful_ping_matches = []  # 记录通过 ping 匹配的域名
-    ping_success_count = 0  # 计数通过 ping 成功匹配的数量
-
-    def ping_domain(domain_line):
-        domain = domain_line.split(',')[1]
-        ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
-
-        # 检查 IP 地址可达性
-        for ip in ipv4_addresses + ipv6_addresses:
-            if ping(ip) and ip_in_cidr(ip, cidr_ranges):
-                return domain_line  # 返回匹配的域名行
-        return None  # 返回 None 如果没有匹配
-
-    # 使用线程池并发执行 Ping
-    with ThreadPoolExecutor(max_workers=50) as executor:
-        futures = [executor.submit(ping_domain, domain_line) for domain_line in unmatched_domains]
-        for future in as_completed(futures):
-            result = future.result()
-            if result:
-                successful_ping_matches.append(result)  # 保存匹配结果
-                ping_success_count += 1  # 增加计数
-
-    # 合并结果
-    matching_domains.extend(successful_ping_matches)
-
-    # 打印通过 Ping 匹配成功的数量
-    print(f"通过 Ping 成功匹配到 {ping_success_count} 个域名。")
+    # 打印匹配的数量
+    print(f"通过 NSLookup 成功匹配到 {len(matching_domains)} 个域名。")
 
     # 排序结果并保存到文件
     matching_domains.sort()
