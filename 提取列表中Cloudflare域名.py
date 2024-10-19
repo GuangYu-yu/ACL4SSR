@@ -16,7 +16,7 @@ def fetch_domains(url):
     """获取域名列表"""
     response = requests.get(url)
     response.raise_for_status()
-    domains = set()
+    domains = []
     for line in response.text.splitlines():
         if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
             domains.append(line)
