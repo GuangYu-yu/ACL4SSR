@@ -19,16 +19,16 @@ def fetch_domains(url):
     domains = set()
     for line in response.text.splitlines():
         if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
-            domains.add(line)
+            domains.append(line)
     return domains
 
 def fetch_additional_domains(urls):
     """获取额外的域名列表"""
-    domains = set()
+    domains = []
     for url in urls:
         response = requests.get(url)
         response.raise_for_status()
-        domains.update(response.text.splitlines())
+        domains.extend(response.text.splitlines())
     return domains
 
 def cache_page(url):
@@ -89,7 +89,7 @@ def main():
     global_domains = fetch_domains(GLOBAL_LIST_URL)
     additional_domains = fetch_additional_domains(DOMAIN_LIST_URLS)
     
-    all_domains = list(global_domains.union(additional_domains))
+    all_domains = global_domains + additional_domains
     matching_domain_lines = set()
     matching_domains = set()
     all_cloudflare_ips = set()
