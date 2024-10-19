@@ -80,7 +80,7 @@ def main():
     matching_domains = set()
     all_cloudflare_ips = set()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=70) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=35) as executor:
         futures = {executor.submit(process_domain, domain_line, i): domain_line for i, domain_line in enumerate(domain_lines)}
         for future in concurrent.futures.as_completed(futures):
             domain_line = futures[future]
