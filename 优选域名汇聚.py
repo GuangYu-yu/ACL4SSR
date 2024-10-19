@@ -1,102 +1,185 @@
 import requests
-import ipaddress
+import concurrent.futures
+import os
 import re
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import ipaddress
+import uuid
 
-# 下载域名列表和CIDR列表
-def download_lists():
-    # 将多个域名列表的 URL 放在一个列表中，方便后续添加更多
-    domain_list_urls = [
-        'https://github.com/Potterli20/file/releases/download/dns-hosts-all/dnshosts-all-domain-whitelist_full.txt',
-        'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/refs/heads/main/大量优选域名.txt'
-    ]
-    
-    # 下载并合并所有域名列表
-    domain_list = []
-    for url in domain_list_urls:
-        domain_list += requests.get(url).text.splitlines()
-    
-    # 下载 CIDR 列表
-    cidr_list_url = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
-    cidr_list = requests.get(cidr_list_url).text.splitlines()
-    
-    return domain_list, cidr_list
+# 定义文件路径
+GLOBAL_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
+DOMAIN_LIST_URLS = [
+    'https://github.com/Potterli20/file/releases/download/dns-hosts-all/dnshosts-all-domain-whitelist_full.txt',
+    'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/refs/heads/main/大量优选域名.txt'
+]
 
-# 提取 CIDR 范围
-def extract_cidrs(cidr_list):
-    return [line for line in cidr_list if re.match(r'[\d:a-fA-F]+/[0-9]+', line)]
+def fetch_domains(url):
+    """获取域名列表"""
+    response = requests.get(url)
+    response.raise_for_status()
+    domains = []
+    for line in response.text.splitlines():
+        if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
+            domains.append(line)
+    return domains
 
-# 检查IP是否在CIDR内
-def ip_in_cidr(ip, cidr_list):
-    for cidr in cidr_list:
-        try:
-            if ipaddress.ip_address(ip) in ipaddress.ip_network(cidr, strict=False):
-                return True
-        except ValueError:
-            continue
-    return False
+def fetch_additional_domains(urls):
+    """获取额外的域名列表"""
+    domains = []
+    for url in urls:
+        response = requests.get(url)
+        response.raise_for_status()
+        domains.extend(response.text.splitlines())
+    return domains
 
-# Cloudflare DNS Resolver API 查询
-def query_cloudflare_dns(domain, record_type):
+def cache_page(url):
+    """缓存网页内容到本地文件"""
+    response = requests.get(url)
+    response.raise_for_status()
+    cache_file = f'cache_{uuid.uuid4()}.html'
+    with open(cache_file, 'w', encoding='utf-8') as f:
+        f.write(response.text)
+    return cache_file
+
+def clear_cache(cache_file):
+    """删除缓存文件"""
+    if os.path.exists(cache_file):
+        os.remove(cache_file)
+
+def check_cloudflare_ip_via_nslookup(domain):
+    """通过 nslookup 查询 Cloudflare IP"""
     try:
-        headers = {
-            'Accept': 'application/dns-json',
-        }
-        response = requests.get(f'https://cloudflare-dns.com/dns-query?name={domain}&type={record_type}', headers=headers)
-        data = response.json()
-        return [answer['data'] for answer in data.get('Answer', []) if answer['type'] == (1 if record_type == "A" else 28)]
+        url = f'https://www.nslookup.io/domains/{domain}/dns-records/'
+        cache_file = cache_page(url)
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            if 'Hosted by Cloudflare, Inc.' in content:
+                ip_matches = re.findall(r'<span>([\d\.a-fA-F:]+)</span>', content)
+                clear_cache(cache_file)
+                return domain, set(ip_matches)
     except Exception as e:
-        print(f"Cloudflare DNS API 查询失败: {e}")
-        return []
-
-# 查询域名的IP地址
-def get_ip_from_domain(domain):
-    ipv4_addresses = query_cloudflare_dns(domain, "A")
-    ipv6_addresses = query_cloudflare_dns(domain, "AAAA")
-    return ipv4_addresses, ipv6_addresses
-
-# 并发处理每个域名
-def process_domain(domain, cidr_ranges):
-    # 查询IPv4和IPv6
-    ipv4_addresses, ipv6_addresses = get_ip_from_domain(domain)
-    
-    # 检查IPv4地址是否在CIDR范围内
-    for ip in ipv4_addresses:
-        if ip_in_cidr(ip, cidr_ranges):
-            return domain
-    
-    # 检查IPv6地址是否在CIDR范围内
-    for ip in ipv6_addresses:
-        if ip_in_cidr(ip, cidr_ranges):
-            return domain
-    
+        print(f"通过nslookup检查 {domain} 时出错: {e}")
+    clear_cache(cache_file)
     return None
 
-# 主函数
+def check_cloudflare_ip_via_bgp(domain):
+    """通过 bgp.he.net 查询 Cloudflare IP"""
+    try:
+        url = f'https://bgp.he.net/dns/{domain}#_ipinfo'
+        cache_file = cache_page(url)
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            if 'Cloudflare' in content:
+                ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
+                clear_cache(cache_file)
+                return domain, set(ip_matches)
+    except Exception as e:
+        print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
+    clear_cache(cache_file)
+    return None
+
+def process_domain(domain, index):
+    """处理每个域名，轮流查询其 Cloudflare IP"""
+    if index % 2 == 0:
+        return check_cloudflare_ip_via_nslookup(domain)
+    else:
+        return check_cloudflare_ip_via_bgp(domain)
+
 def main():
-    # 下载域名和CIDR列表
-    domain_list, cidr_list = download_lists()
+    """主函数，执行查询和结果保存"""
+    global_domains = fetch_domains(GLOBAL_LIST_URL)
+    additional_domains = fetch_additional_domains(DOMAIN_LIST_URLS)
     
-    # 提取CIDR
-    cidr_ranges = extract_cidrs(cidr_list)
-    
-    preferred_domains = []
+    all_domains = global_domains + additional_domains
+    matching_domain_lines = set()
+    matching_domains = set()
+    all_cloudflare_ips = set()
 
-    # 使用线程池并发查询
-    with ThreadPoolExecutor(max_workers=35) as executor:
-        futures = [executor.submit(process_domain, domain, cidr_ranges) for domain in domain_list]
-        for future in as_completed(futures):
-            domain = future.result()
-            if domain:
-                preferred_domains.append(domain)
-    
-    # 保存提取的优选域名到 优选域名汇聚.txt
-    with open('优选域名汇聚.txt', 'w') as f:
-        for domain in preferred_domains:
-            f.write(domain + '\n')
-    
-    print(f"优选的域名已保存到 优选域名汇聚.txt 文件中，共 {len(preferred_domains)} 个。")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=70) as executor:
+        futures = {executor.submit(process_domain, domain.split(',')[-1], i): domain for i, domain in enumerate(all_domains)}
+        for future in concurrent.futures.as_completed(futures):
+            domain = futures[future]
+            try:
+                result = future.result()
+                if result:
+                    if domain in global_domains:
+                        matching_domain_lines.add(domain)
+                    matching_domains.add(result[0])
+                    all_cloudflare_ips.update(result[1])
+            except Exception as e:
+                print(f"处理域名 {domain} 时出错: {e}")
 
-# 脚本执行入口
-if __name__ == "__main__":
+    # 读取现有的优选域名
+    existing_domains = set()
+    if os.path.exists('优选域名.txt'):
+        with open('优选域名.txt', 'r') as f:
+            existing_domains = set(f.read().splitlines())
+
+    # 合并并去重域名
+    all_matching_domains = matching_domains.union(existing_domains)
+
+    # 读取现有的 IP 地址
+    existing_ipv4 = set()
+    existing_ipv6 = set()
+    if os.path.exists('优选域名ip.txt'):
+        with open('优选域名ip.txt', 'r') as f:
+            current_section = None
+            for line in f:
+                line = line.strip()
+                if line == "# IPv4 地址":
+                    current_section = "ipv4"
+                elif line == "# IPv6 地址":
+                    current_section = "ipv6"
+                elif line and not line.startswith('#'):
+                    if current_section == "ipv4":
+                        existing_ipv4.add(line)
+                    elif current_section == "ipv6":
+                        existing_ipv6.add(line.lower())
+
+    # 分离IPv4和IPv6地址
+    ipv4_addresses = set()
+    ipv6_addresses = set()
+
+    for ip in all_cloudflare_ips:
+        try:
+            ip_obj = ipaddress.ip_address(ip)
+            if ip_obj.version == 4:
+                ipv4_addresses.add(str(ip_obj))
+            else:
+                ipv6_addresses.add(str(ip_obj).lower())
+        except ValueError:
+            print(f"无效的IP地址: {ip}")
+
+    # 合并 IP 地址
+    all_ipv4 = ipv4_addresses.union(existing_ipv4)
+    all_ipv6 = ipv6_addresses.union(existing_ipv6)
+
+    # 排序 IP 地址
+    sorted_ipv4 = sorted(all_ipv4, key=lambda ip: ipaddress.IPv4Address(ip))
+    sorted_ipv6 = sorted(all_ipv6, key=lambda ip: ipaddress.IPv6Address(ip))
+
+    # 保存匹配的域名（带前缀）到文件
+    with open('matching_domains.list', 'w', encoding='utf-8') as f:
+        for domain_line in sorted(matching_domain_lines):
+            f.write(f"{domain_line}\n")
+
+    # 保存优选域名（不带前缀）到文件
+    with open('优选域名.txt', 'w', encoding='utf-8') as f:
+        for domain in sorted(all_matching_domains):
+            f.write(f"{domain}\n")
+
+    # 保存所有 Cloudflare IP 地址到文件
+    with open('优选域名ip.txt', 'w', encoding='utf-8') as f:
+        f.write("# IPv4 地址\n")
+        for ip in sorted_ipv4:
+            f.write(f"{ip}\n")
+        f.write("\n# IPv6 地址\n")
+        for ip in sorted_ipv6:
+            f.write(f"{ip}\n")
+
+    print(f"匹配的域名（带前缀）已保存到 matching_domains.list 文件中，共 {len(matching_domain_lines)} 个。")
+    print(f"优选域名（不带前缀）已保存到 优选域名.txt 文件中，共 {len(all_matching_domains)} 个。")
+    print(f"提取的 Cloudflare IP 已保存到 优选域名ip.txt 文件中，共 {len(sorted_ipv4) + len(sorted_ipv6)} 个。")
+    print(f"其中 IPv4 地址 {len(sorted_ipv4)} 个，IPv6 地址 {len(sorted_ipv6)} 个。")
+
+if __name__ == '__main__':
     main()
