@@ -2,6 +2,7 @@ import requests
 import concurrent.futures
 import os
 import re
+import ipaddress
 
 # 定义文件路径
 DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
@@ -10,7 +11,15 @@ def fetch_domains(url):
     """获取域名列表"""
     response = requests.get(url)
     response.raise_for_status()
-    return response.text.splitlines()
+    domains = []
+    for line in response.text.splitlines():
+        if line.startswith('DOMAIN-SUFFIX,'):
+            domains.append(line.split(',')[1])
+        elif line.startswith('DOMAIN,'):
+            domains.append(line.split(',')[1])
+        elif not line.startswith('#') and '.' in line:
+            domains.append(line)
+    return domains
 
 def cache_page(url):
     """缓存网页内容到本地文件"""
@@ -34,11 +43,11 @@ def check_cloudflare_ip_via_nslookup(domain):
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
             if 'Hosted by Cloudflare, Inc.' in content:
-                ip_matches = re.findall(r'<span>([\d\.]+)</span>', content)
+                ip_matches = re.findall(r'<span>([\d\.a-fA-F:]+)</span>', content)
                 clear_cache(cache_file)
                 return domain, set(ip_matches)
     except Exception as e:
-        print(f"Error checking {domain} via nslookup: {e}")
+        print(f"通过nslookup检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
@@ -50,11 +59,11 @@ def check_cloudflare_ip_via_bgp(domain):
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
             if 'Cloudflare' in content:
-                ip_matches = re.findall(r'<a href="/ip/([\d\.]+)" title="[\d\.]+">', content)
+                ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
                 clear_cache(cache_file)
                 return domain, set(ip_matches)
     except Exception as e:
-        print(f"Error checking {domain} via bgp.he.net: {e}")
+        print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
@@ -81,27 +90,43 @@ def main():
                     matching_domains.add(result[0])
                     all_cloudflare_ips.update(result[1])
             except Exception as e:
-                print(f"Error processing domain {domain}: {e}")
+                print(f"处理域名 {domain} 时出错: {e}")
+
+    # 分离IPv4和IPv6地址
+    ipv4_addresses = set()
+    ipv6_addresses = set()
+
+    for ip in all_cloudflare_ips:
+        try:
+            ip_obj = ipaddress.ip_address(ip)
+            if ip_obj.version == 4:
+                ipv4_addresses.add(ip)
+            else:
+                ipv6_addresses.add(ip)
+        except ValueError:
+            print(f"无效的IP地址: {ip}")
+
+    # 分别排序IPv4和IPv6地址
+    sorted_ipv4 = sorted(ipv4_addresses, key=lambda ip: ipaddress.IPv4Address(ip))
+    sorted_ipv6 = sorted(ipv6_addresses, key=lambda ip: ipaddress.IPv6Address(ip))
 
     # 保存匹配的域名到文件
     with open('matching_domains.list', 'w', encoding='utf-8') as f:
-        for domain in matching_domains:
+        for domain in sorted(matching_domains):
             f.write(f"{domain}\n")
-
-    # 保存纯域名到文件，不包含 DOMAIN 和 DOMAIN-SUFFIX
-    with open('优选域名.txt', 'w', encoding='utf-8') as f:
-        for domain in matching_domains:
-            if not domain.startswith(('DOMAIN', 'DOMAIN-SUFFIX')):
-                f.write(f"{domain}\n")
 
     # 保存所有 Cloudflare IP 地址到文件
     with open('优选域名ip.txt', 'w', encoding='utf-8') as f:
-        for ip in sorted(all_cloudflare_ips):
+        f.write("# IPv4 地址\n")
+        for ip in sorted_ipv4:
+            f.write(f"{ip}\n")
+        f.write("\n# IPv6 地址\n")
+        for ip in sorted_ipv6:
             f.write(f"{ip}\n")
 
     print(f"匹配的域名已保存到 matching_domains.list 文件中，共 {len(matching_domains)} 个。")
-    print(f"提取的纯域名已保存到 优选域名.txt 文件中，共 {len(matching_domains)} 个。")
-    print(f"提取的 Cloudflare IP 已保存到 优选域名ip.txt 文件中，共 {len(all_cloudflare_ips)} 个。")
+    print(f"提取的 Cloudflare IP 已保存到 优选域名ip.txt 文件中，共 {len(sorted_ipv4) + len(sorted_ipv6)} 个。")
+    print(f"其中 IPv4 地址 {len(sorted_ipv4)} 个，IPv6 地址 {len(sorted_ipv6)} 个。")
 
 if __name__ == '__main__':
     main()
