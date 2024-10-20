@@ -20,10 +20,6 @@ DNS_QUERY_GROUPS = [
     [
         'https://dns.twnic.tw/dns-query?name={domain}&type=AAAA',
         'https://dns.twnic.tw/dns-query?name={domain}&type=A'
-    ],
-    [
-        'https://doh.sb/dns-query?name={domain}&type=AAAA',
-        'https://doh.sb/dns-query?name={domain}&type=A'
     ]
 ]
 
@@ -98,9 +94,9 @@ def main():
                 # 成功查询后，增加成功计数
                 success_counts[selected_index] += 1
 
-                # 每成功 3 次增加一次 QPS，且不能超过某个最大值（例如 30）
+                # 每成功 50 次增加一次 QPS，且不能超过某个最大值（例如 20）
                 if success_counts[selected_index] % 50 == 0:
-                    qps_limits[selected_index] = min(qps_limits[selected_index] + 1, 10)
+                    qps_limits[selected_index] = min(qps_limits[selected_index] + 1, 20)
 
                 break  # 查询成功，退出重试循环
 
