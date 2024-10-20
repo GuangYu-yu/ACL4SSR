@@ -7,7 +7,6 @@ import uuid
 
 # 定义文件路径
 DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
-CIDR_LIST_URL = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/0a6ed79d2dc0412cef988fdd1f84f434bba710b5/Clash/Cloudflare.txt'
 
 def fetch_domains(url):
     """获取域名列表"""
@@ -18,16 +17,6 @@ def fetch_domains(url):
         if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
             domains.append(line)
     return domains
-
-def fetch_cidr_list(url):
-    """获取 CIDR 列表"""
-    response = requests.get(url)
-    response.raise_for_status()
-    cidr_list = []
-    for line in response.text.splitlines():
-        if line and not line.startswith('#'):  # 跳过空行和注释
-            cidr_list.append(line.strip())
-    return cidr_list
 
 def cache_page(url):
     """缓存网页内容到本地文件"""
@@ -43,45 +32,36 @@ def clear_cache(cache_file):
     if os.path.exists(cache_file):
         os.remove(cache_file)
 
-def check_cloudflare_ips(domain_line, cidr_list):
-    """查询 Cloudflare IP 并检查是否在 CIDR 列表中"""
+def check_cloudflare_ip_via_bgp(domain_line):
+    """通过 bgp.he.net 查询 Cloudflare IP"""
     domain = domain_line.split(',')[1]
     try:
         url = f'https://bgp.he.net/dns/{domain}#_ipinfo'
         cache_file = cache_page(url)
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
-            ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
-            clear_cache(cache_file)
-
-            # 过滤 IP，只保留命中的 IP
-            matched_ips = {ip for ip in ip_matches if is_ip_in_cidr(ip, cidr_list)}
-            if matched_ips:
-                return domain_line, domain, matched_ips
+            if 'Cloudflare' in content:
+                ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
+                clear_cache(cache_file)
+                return domain_line, domain, set(ip_matches)
     except Exception as e:
         print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
-def is_ip_in_cidr(ip, cidr_list):
-    """检查 IP 是否在 CIDR 列表中"""
-    ip_obj = ipaddress.ip_address(ip)
-    return any(ip_obj in ipaddress.ip_network(cidr) for cidr in cidr_list)
-
-def process_domain(domain_line, cidr_list):
+def process_domain(domain_line):
     """处理每个域名，查询其 Cloudflare IP"""
-    return check_cloudflare_ips(domain_line, cidr_list)
+    return check_cloudflare_ip_via_bgp(domain_line)
 
 def main():
     """主函数，执行查询和结果保存"""
     domain_lines = fetch_domains(DOMAIN_LIST_URL)
-    cidr_list = fetch_cidr_list(CIDR_LIST_URL)  # 获取 CIDR 列表
     matching_domain_lines = set()
     matching_domains = set()
     all_cloudflare_ips = set()
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(process_domain, domain_line, cidr_list): domain_line for domain_line in domain_lines}
+        futures = {executor.submit(process_domain, domain_line): domain_line for domain_line in domain_lines}
         for future in concurrent.futures.as_completed(futures):
             domain_line = futures[future]
             try:
