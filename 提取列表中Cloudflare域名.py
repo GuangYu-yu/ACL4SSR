@@ -83,7 +83,7 @@ def main():
             if ip_obj.version == 4:
                 ipv4_addresses.add(ip)
             else:
-                ipv6_addresses.add(ip)
+                ipv6_addresses.add(ip.lower())  # 转为小写
         except ValueError:
             print(f"无效的IP地址: {ip}")
 
@@ -103,10 +103,8 @@ def main():
 
     # 保存所有 Cloudflare IP 地址到文件
     with open('优选域名ip.txt', 'w', encoding='utf-8') as f:
-        f.write("# IPv4 地址\n")
         for ip in sorted_ipv4:
             f.write(f"{ip}\n")
-        f.write("\n# IPv6 地址\n")
         for ip in sorted_ipv6:
             f.write(f"{ip}\n")
 
