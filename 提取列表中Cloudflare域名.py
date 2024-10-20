@@ -20,6 +20,10 @@ DNS_QUERY_GROUPS = [
     [
         'https://dns.twnic.tw/dns-query?name={domain}&type=AAAA',
         'https://dns.twnic.tw/dns-query?name={domain}&type=A'
+    ],
+    [
+        'https://doh.sb/dns-query?name={domain}&type=AAAA',
+        'https://doh.sb/dns-query?name={domain}&type=A'
     ]
 ]
 
@@ -68,7 +72,7 @@ def main():
     all_cloudflare_ips = set()
 
     # 初始化 QPS 和使用记录
-    qps_limits = [20] * len(DNS_QUERY_GROUPS)  # 初始 QPS
+    qps_limits = [10] * len(DNS_QUERY_GROUPS)  # 初始 QPS
     dns_usage = [0] * len(DNS_QUERY_GROUPS)
     success_counts = [0] * len(DNS_QUERY_GROUPS)  # 记录成功查询次数
 
@@ -94,14 +98,14 @@ def main():
                 # 成功查询后，增加成功计数
                 success_counts[selected_index] += 1
 
-                # 每成功 30 次增加一次 QPS，且不能超过某个最大值（例如 200）
-                if success_counts[selected_index] % 30 == 0:
-                    qps_limits[selected_index] = min(qps_limits[selected_index] + 1, 200)
+                # 每成功 3 次增加一次 QPS，且不能超过某个最大值（例如 30）
+                if success_counts[selected_index] % 3 == 0:
+                    qps_limits[selected_index] = min(qps_limits[selected_index] + 1, 30)
 
                 break  # 查询成功，退出重试循环
 
             except requests.exceptions.RequestException as e:
-                print(f"查询失败: {e}")
+                print(f"查询失败: {e}，当前 QPS: {qps_limits[selected_index]}")
                 retries += 1
                 time.sleep(5)  # 等待重试时间
 
