@@ -40,10 +40,17 @@ def check_cloudflare_ip_via_bgp(domain_line):
         cache_file = cache_page(url)
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
-            if 'Cloudflare' in content:
-                ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
-                clear_cache(cache_file)
-                return domain_line, domain, set(ip_matches)
+
+            # 使用正则表达式匹配每一组 IP 和 ASN
+            matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">.*?</a>.*?<a href="/AS\d+" title=".*?">(.*?)</a>', content, re.DOTALL)
+
+            cloudflare_ips = set()
+            for ip, asn in matches:
+                if 'Cloudflare' in asn:
+                    cloudflare_ips.add(ip)
+
+            clear_cache(cache_file)
+            return domain_line, domain, cloudflare_ips
     except Exception as e:
         print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
