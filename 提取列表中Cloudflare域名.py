@@ -72,7 +72,7 @@ def main():
     all_cloudflare_ips = set()
 
     # 初始化 QPS 和使用记录
-    qps_limits = [10] * len(DNS_QUERY_GROUPS)  # 初始 QPS
+    qps_limits = [5] * len(DNS_QUERY_GROUPS)  # 初始 QPS
     dns_usage = [0] * len(DNS_QUERY_GROUPS)
     success_counts = [0] * len(DNS_QUERY_GROUPS)  # 记录成功查询次数
 
@@ -99,8 +99,8 @@ def main():
                 success_counts[selected_index] += 1
 
                 # 每成功 3 次增加一次 QPS，且不能超过某个最大值（例如 30）
-                if success_counts[selected_index] % 3 == 0:
-                    qps_limits[selected_index] = min(qps_limits[selected_index] + 1, 30)
+                if success_counts[selected_index] % 50 == 0:
+                    qps_limits[selected_index] = min(qps_limits[selected_index] + 1, 10)
 
                 break  # 查询成功，退出重试循环
 
