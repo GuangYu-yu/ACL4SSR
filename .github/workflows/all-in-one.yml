@@ -23,7 +23,7 @@ jobs:
         # 下载 mmdb
       - name: 下载 Country.mmdb
         run: |
-          wget -O Country.mmdb https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
+          wget -O Country.mmdb https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-Country.mmdb
       
       - name: 运行 job1 脚本
         run: python 提取地区-CIDR.py
