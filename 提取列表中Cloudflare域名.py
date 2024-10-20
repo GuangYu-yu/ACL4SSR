@@ -123,8 +123,8 @@ def check_cloudflare_ip_via_browserleaks(domain_line):
 
 def process_domain(domain_line, index, retry_count=0):
     """处理每个域名，轮流查询其 Cloudflare IP"""
-    if retry_count >= 5:
-        print(f"{domain_line} 查询失败5次，跳过该域名。")
+    if retry_count >= 10:
+        print(f"{domain_line} 查询失败10次，跳过该域名。")
         return None
 
     if index % n_channels == 0:
