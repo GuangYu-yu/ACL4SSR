@@ -63,7 +63,7 @@ def main():
 
     processed_count = 0
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor: 
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor: 
         futures = {executor.submit(process_domain, domain_line): domain_line for domain_line in domain_lines}
         for future in concurrent.futures.as_completed(futures):
             domain_line = futures[future]
@@ -77,9 +77,9 @@ def main():
                 print(f"处理域名 {domain_line} 时出错: {e}")
 
             processed_count += 1
-            if processed_count % 500 == 0:
-                print("已处理500个域名，等待10秒...")
-                time.sleep(10)
+            if processed_count % 25 == 0:
+                print("已处理25个域名，等待3秒...")
+                time.sleep(1)
 
     # 分离IPv4和IPv6地址
     ipv4_addresses = set()
