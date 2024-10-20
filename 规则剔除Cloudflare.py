@@ -27,7 +27,7 @@ def main():
     filtered_list = filter_lists(global_list, cloudflare_list, matching_domains_list)
 
     # 保存结果
-    with open("filtered_list.txt", "w") as f:
+    with open("filtered.list", "w") as f:
         for line in filtered_list:
             f.write(line + "\n")
 
