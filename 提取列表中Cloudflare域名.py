@@ -27,15 +27,17 @@ DNS_QUERY_GROUPS = [
     ]
 ]
 
+# 初始化 QPS 设置
+INITIAL_QPS = 15
+MIN_QPS = 1
+RETRY_LIMIT = 5
+RETRY_DELAY = 5
+
 def fetch_domains(url):
     """获取域名列表"""
     response = requests.get(url)
     response.raise_for_status()
-    domains = []
-    for line in response.text.splitlines():
-        if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
-            domains.append(line)
-    return domains
+    return [line for line in response.text.splitlines() if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,')]
 
 def fetch_cloudflare_cidrs(url):
     """获取 Cloudflare CIDR 列表"""
@@ -43,15 +45,24 @@ def fetch_cloudflare_cidrs(url):
     response.raise_for_status()
     return set(line.strip() for line in response.text.splitlines() if line.strip())
 
-def query_dns(domain, urls):
+def query_dns(domain, urls, dns_qps):
     """查询 DNS 并返回 IP 地址"""
     ips = set()
     for url in urls:
-        response = requests.get(url.format(domain=domain))
-        response.raise_for_status()
-        data = response.json()
-        if 'Answer' in data:
-            ips.update({answer['data'] for answer in data['Answer'] if 'data' in answer})
+        time.sleep(1 / dns_qps)  # 应用 QPS 限制
+        try:
+            response = requests.get(url.format(domain=domain))
+            response.raise_for_status()
+            data = response.json()
+            if 'Answer' in data:
+                ips.update({answer['data'] for answer in data['Answer'] if 'data' in answer})
+            break  # 成功后跳出循环
+        except requests.exceptions.HTTPError as e:
+            if response.status_code == 503:
+                print(f"503 错误，等待重试: {url} 对于域名 {domain}")
+                return None  # 返回 None 表示需要重试
+            else:
+                print(f"查询错误: {e}")
     return ips
 
 def is_cloudflare_ip(ip, cidr_set):
@@ -71,27 +82,36 @@ def main():
     matching_domains = set()
     all_cloudflare_ips = set()
 
-    # 记录每个 DNS 的调用次数
+    # 记录每个 DNS 的调用次数和 QPS
     dns_usage = [0] * len(DNS_QUERY_GROUPS)
+    dns_qps = [INITIAL_QPS] * len(DNS_QUERY_GROUPS)
 
     for domain_line in domain_lines:
-        # 随机选择 DNS 查询组，但确保均衡使用
+        # 随机选择 DNS 查询组，确保均衡使用
         selected_index = min(range(len(DNS_QUERY_GROUPS)), key=lambda i: dns_usage[i])
         urls = DNS_QUERY_GROUPS[selected_index]
         dns_usage[selected_index] += 1  # 更新调用次数
 
-        # 查询 IP 地址
-        result = query_dns(domain_line.split(',')[1], urls)
+        # 重试计数
+        for attempt in range(RETRY_LIMIT):
+            result = query_dns(domain_line.split(',')[1], urls, dns_qps[selected_index])
+            if result is not None:
+                # 判断每个 IP 是否属于 Cloudflare
+                for ip in result:
+                    if is_cloudflare_ip(ip, cloudflare_cidrs):
+                        matching_domain_lines.add(domain_line)
+                        matching_domains.add(domain_line.split(',')[1])
+                        all_cloudflare_ips.add(ip)
+                break  # 成功查询后跳出重试循环
+            else:
+                # 减少 QPS 并等待重试
+                dns_qps[selected_index] = max(dns_qps[selected_index] - 1, MIN_QPS)
+                print(f"重试第 {attempt + 1} 次...")
+                time.sleep(RETRY_DELAY)
 
-        # 判断每个 IP 是否属于 Cloudflare
-        for ip in result:
-            if is_cloudflare_ip(ip, cloudflare_cidrs):
-                matching_domain_lines.add(domain_line)
-                matching_domains.add(domain_line.split(',')[1])
-                all_cloudflare_ips.add(ip)
-
-        # 等待以确保每组查询速率不超过15 QPS
-        time.sleep(1 / 15)
+        # 在查询成功时逐渐增加 QPS
+        if attempt < RETRY_LIMIT - 1:  # 如果没有达到重试上限
+            dns_qps[selected_index] += 1  # 增加 QPS
 
     # 保存匹配的域名和 Cloudflare IP 地址
     with open('matching_domains.list', 'w', encoding='utf-8') as f:
@@ -107,6 +127,10 @@ def main():
     with open('优选域名ip.txt', 'w', encoding='utf-8') as f:
         for ip in sorted_unique_ips:
             f.write(f"{ip}\n")
+
+    # 打印每个 DNS 的最终 QPS
+    for i, qps in enumerate(dns_qps):
+        print(f"DNS {i + 1} 的最终 QPS: {qps}")
 
     print(f"匹配的域名（带前缀）已保存到 matching_domains.list 文件中，共 {len(matching_domain_lines)} 个。")
     print(f"优选域名（不带前缀）已保存到 优选域名.txt 文件中，共 {len(matching_domains)} 个。")
