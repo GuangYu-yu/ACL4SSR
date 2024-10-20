@@ -47,6 +47,7 @@ def check_cloudflare_ip_via_nslookup(domain_line):
             if 'Hosted by Cloudflare, Inc.' in content:
                 ip_matches = re.findall(r'<span>([\d\.a-fA-F:]+)</span>', content)
                 clear_cache(cache_file)
+                print(f"通过nslookup匹配到 {domain}")
                 return domain_line, domain, set(ip_matches)
     except Exception as e:
         print(f"通过nslookup检查 {domain} 时出错: {e}")
@@ -64,6 +65,7 @@ def check_cloudflare_ip_via_ipaddress(domain_line):
             if '<em>Cloudflare</em>' in content:
                 ip_matches = re.findall(r'<a href="https://www.ipaddress.com/ipv4/([\d\.]+)">([\d\.]+)</a>|<a href="https://www.ipaddress.com/ipv6/([^"]+)">([^<]+)</a>', content)
                 clear_cache(cache_file)
+                print(f"通过ipaddress.com匹配到 {domain}")
                 return domain_line, domain, {ip for match in ip_matches for ip in match if ip}
     except Exception as e:
         print(f"通过ipaddress.com检查 {domain} 时出错: {e}")
@@ -81,6 +83,7 @@ def check_cloudflare_ip_via_bgp(domain_line):
             if 'Cloudflare' in content:
                 ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
                 clear_cache(cache_file)
+                print(f"通过bgp.he.net匹配到 {domain}")
                 return domain_line, domain, set(ip_matches)
     except Exception as e:
         print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
@@ -98,6 +101,7 @@ def check_cloudflare_ip_via_ipleak(domain_line):
             if 'CLOUDFLARE' in content:
                 ip_matches = re.findall(r'<a class="ip" rel="nofollow" href="/([\d\.a-fA-F:]+)">([\d\.a-fA-F:]+)</a>', content)
                 clear_cache(cache_file)
+                print(f"通过ipleak.net匹配到 {domain}")
                 return domain_line, domain, {ip for match in ip_matches for ip in match if ip}
     except Exception as e:
         print(f"通过ipleak.net检查 {domain} 时出错: {e}")
@@ -115,6 +119,7 @@ def check_cloudflare_ip_via_browserleaks(domain_line):
             if 'Cloudflare' in content:
                 ip_matches = re.findall(r'<div id="lookup-ip" class="wball">([\d\.a-fA-F:]+)</div>|<a href="/ip/([\d\.a-fA-F:]+)" title="Get IP Address Details">([\d\.a-fA-F:]+)</a>', content)
                 clear_cache(cache_file)
+                print(f"通过browserleaks.com匹配到 {domain}")
                 return domain_line, domain, {ip for match in ip_matches for ip in match if ip}
     except Exception as e:
         print(f"通过browserleaks.com检查 {domain} 时出错: {e}")
