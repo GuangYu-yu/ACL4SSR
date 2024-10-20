@@ -4,6 +4,7 @@ import os
 import re
 import ipaddress
 import uuid
+import time
 
 # 定义文件路径
 DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
@@ -60,7 +61,9 @@ def main():
     matching_domains = set()
     all_cloudflare_ips = set()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    processed_count = 0
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor: 
         futures = {executor.submit(process_domain, domain_line): domain_line for domain_line in domain_lines}
         for future in concurrent.futures.as_completed(futures):
             domain_line = futures[future]
@@ -72,6 +75,11 @@ def main():
                     all_cloudflare_ips.update(result[2])
             except Exception as e:
                 print(f"处理域名 {domain_line} 时出错: {e}")
+
+            processed_count += 1
+            if processed_count % 500 == 0:
+                print("已处理500个域名，等待10秒...")
+                time.sleep(10)
 
     # 分离IPv4和IPv6地址
     ipv4_addresses = set()
