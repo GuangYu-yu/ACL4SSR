@@ -20,10 +20,6 @@ DNS_QUERY_GROUPS = [
     [
         'https://dns.twnic.tw/dns-query?name={domain}&type=AAAA',
         'https://dns.twnic.tw/dns-query?name={domain}&type=A'
-    ],
-    [
-        'https://doh.sb/dns-query?name={domain}&type=AAAA',
-        'https://doh.sb/dns-query?name={domain}&type=A'
     ]
 ]
 
