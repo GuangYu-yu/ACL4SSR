@@ -10,7 +10,7 @@ import random
 # 定义文件路径
 DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
 n_channels = 5  # 查询渠道数量
-max_concurrent_queries = 10  # 每个查询渠道的最大并发量
+max_concurrent_queries = 20  # 每个查询渠道的最大并发量
 
 def fetch_domains(url):
     """获取域名列表"""
