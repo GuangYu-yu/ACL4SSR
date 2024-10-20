@@ -7,9 +7,10 @@ import uuid
 import time
 import random
 
-# 定义文件路径和查询渠道
+# 定义文件路径
 DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
-n_channels = 4  # 更新为4个查询渠道
+n_channels = 5  # 查询渠道数量
+max_concurrent_queries = 10  # 每个查询渠道的最大并发量
 
 def fetch_domains(url):
     """获取域名列表"""
@@ -35,6 +36,40 @@ def clear_cache(cache_file):
     if os.path.exists(cache_file):
         os.remove(cache_file)
 
+def check_cloudflare_ip_via_nslookup(domain_line):
+    """通过 nslookup 查询 Cloudflare IP"""
+    domain = domain_line.split(',')[1]
+    try:
+        url = f'https://www.nslookup.io/domains/{domain}/dns-records/'
+        cache_file = cache_page(url)
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            if 'Hosted by Cloudflare, Inc.' in content:
+                ip_matches = re.findall(r'<span>([\d\.a-fA-F:]+)</span>', content)
+                clear_cache(cache_file)
+                return domain_line, domain, set(ip_matches)
+    except Exception as e:
+        print(f"通过nslookup检查 {domain} 时出错: {e}")
+    clear_cache(cache_file)
+    return None
+
+def check_cloudflare_ip_via_ipaddress(domain_line):
+    """通过 ipaddress.com 查询 Cloudflare IP"""
+    domain = domain_line.split(',')[1]
+    try:
+        url = f'https://www.ipaddress.com/website/{domain}/'
+        cache_file = cache_page(url)
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            if '<em>Cloudflare</em>' in content:
+                ip_matches = re.findall(r'<a href="https://www.ipaddress.com/ipv4/([\d\.]+)">([\d\.]+)</a>|<a href="https://www.ipaddress.com/ipv6/([^"]+)">([^<]+)</a>', content)
+                clear_cache(cache_file)
+                return domain_line, domain, {ip for match in ip_matches for ip in match if ip}
+    except Exception as e:
+        print(f"通过ipaddress.com检查 {domain} 时出错: {e}")
+    clear_cache(cache_file)
+    return None
+
 def check_cloudflare_ip_via_bgp(domain_line):
     """通过 bgp.he.net 查询 Cloudflare IP"""
     domain = domain_line.split(',')[1]
@@ -52,21 +87,20 @@ def check_cloudflare_ip_via_bgp(domain_line):
     clear_cache(cache_file)
     return None
 
-def check_cloudflare_ip_via_ipaddress(domain_line):
-    """通过 ipaddress.com 查询 Cloudflare IP"""
+def check_cloudflare_ip_via_ipleak(domain_line):
+    """通过 ipleak.net 查询 Cloudflare IP"""
     domain = domain_line.split(',')[1]
     try:
-        url = f'https://www.ipaddress.com/website/{domain}/'
+        url = f'https://ipleak.net/?q={domain}'
         cache_file = cache_page(url)
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
-            ip_matches = re.findall(r'<a href="https://www.ipaddress.com/ipv4/([\d\.]+)">([\d\.]+)</a>', content)
-            ipv6_matches = re.findall(r'<a href="https://www.ipaddress.com/ipv6/([\d%3A]+)">([\d:a-fA-F:]+)</a>', content)
-            if '<em>Cloudflare</em>' in content:
+            if 'CLOUDFLARE' in content:
+                ip_matches = re.findall(r'<a class="ip" rel="nofollow" href="/([\d\.a-fA-F:]+)">([\d\.a-fA-F:]+)</a>', content)
                 clear_cache(cache_file)
-                return domain_line, domain, set(ip[1] for ip in ip_matches).union(set(ipv6[1] for ipv6 in ipv6_matches))
+                return domain_line, domain, {ip for match in ip_matches for ip in match if ip}
     except Exception as e:
-        print(f"通过ipaddress.com检查 {domain} 时出错: {e}")
+        print(f"通过ipleak.net检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
@@ -78,42 +112,31 @@ def check_cloudflare_ip_via_browserleaks(domain_line):
         cache_file = cache_page(url)
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
-            ip_matches = re.findall(r'<div class="ip">([\d\.a-fA-F:]+)</div>', content)
-            if '<td>Cloudflare, Inc.</td>' in content:
+            if 'Cloudflare' in content:
+                ip_matches = re.findall(r'<div id="lookup-ip" class="wball">([\d\.a-fA-F:]+)</div>|<a href="/ip/([\d\.a-fA-F:]+)" title="Get IP Address Details">([\d\.a-fA-F:]+)</a>', content)
                 clear_cache(cache_file)
-                return domain_line, domain, set(ip_matches)
+                return domain_line, domain, {ip for match in ip_matches for ip in match if ip}
     except Exception as e:
         print(f"通过browserleaks.com检查 {domain} 时出错: {e}")
     clear_cache(cache_file)
     return None
 
-def check_cloudflare_ip_via_ipleak(domain_line):
-    """通过 ipleak.net 查询 Cloudflare IP"""
-    domain = domain_line.split(',')[1]
-    try:
-        url = f'https://ipleak.net/?q={domain}'
-        cache_file = cache_page(url)
-        with open(cache_file, 'r', encoding='utf-8') as f:
-            content = f.read()
-            ip_matches = re.findall(r'<a data-tooltip="Click for more details about this IP" class="ip" rel="nofollow" href="(/[\d\.a-fA-F:]+)">([\d\.a-fA-F:]+)</a>', content)
-            if 'CLOUDFLARE' in content:
-                clear_cache(cache_file)
-                return domain_line, domain, set(ip[1] for ip in ip_matches)
-    except Exception as e:
-        print(f"通过ipleak.net检查 {domain} 时出错: {e}")
-    clear_cache(cache_file)
-    return None
-
-def process_domain(domain_line, index):
+def process_domain(domain_line, index, retry_count=0):
     """处理每个域名，轮流查询其 Cloudflare IP"""
+    if retry_count >= 5:
+        print(f"{domain_line} 查询失败5次，跳过该域名。")
+        return None
+
     if index % n_channels == 0:
-        return check_cloudflare_ip_via_bgp(domain_line)
+        return check_cloudflare_ip_via_nslookup(domain_line)
     elif index % n_channels == 1:
         return check_cloudflare_ip_via_ipaddress(domain_line)
     elif index % n_channels == 2:
-        return check_cloudflare_ip_via_browserleaks(domain_line)
-    else:
+        return check_cloudflare_ip_via_bgp(domain_line)
+    elif index % n_channels == 3:
         return check_cloudflare_ip_via_ipleak(domain_line)
+    elif index % n_channels == 4:
+        return check_cloudflare_ip_via_browserleaks(domain_line)
 
 def main():
     """主函数，执行查询和结果保存"""
@@ -122,22 +145,20 @@ def main():
     matching_domains = set()
     all_cloudflare_ips = set()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-        futures = {}
-        for i, domain_line in enumerate(domain_lines):
-            futures[executor.submit(process_domain, domain_line, i)] = domain_line
-            time.sleep(random.uniform(0, 2))  # 随机延迟
+    for i in range(len(domain_lines)):
+        retries = 0
+        while True:
+            result = process_domain(domain_lines[i], i, retries)
+            if result:
+                matching_domain_lines.add(result[0])
+                matching_domains.add(result[1])
+                all_cloudflare_ips.update(result[2])
+                break
+            else:
+                retries += 1
+                time.sleep(5 + retries)  # 等待 5 秒并增加重试时间
 
-        for future in concurrent.futures.as_completed(futures):
-            domain_line = futures[future]
-            try:
-                result = future.result()
-                if result:
-                    matching_domain_lines.add(result[0])
-                    matching_domains.add(result[1])
-                    all_cloudflare_ips.update(result[2])
-            except Exception as e:
-                print(f"处理域名 {domain_line} 时出错: {e}")
+        time.sleep(random.uniform(1, 2))  # 随机延迟
 
     # 分离IPv4和IPv6地址
     ipv4_addresses = set()
@@ -176,10 +197,8 @@ def main():
         for ip in sorted_ipv6:
             f.write(f"{ip}\n")
 
-    print(f"匹配的域名（带前缀）已保存到 matching_domains.list 文件中，共 {len(matching_domain_lines)} 个。")
     print(f"优选域名（不带前缀）已保存到 优选域名.txt 文件中，共 {len(matching_domains)} 个。")
-    print(f"提取的 Cloudflare IP 已保存到 优选域名ip.txt 文件中，共 {len(sorted_ipv4) + len(sorted_ipv6)} 个。")
-    print(f"其中 IPv4 地址 {len(sorted_ipv4)} 个，IPv6 地址 {len(sorted_ipv6)} 个。")
+    print(f"Cloudflare IP 地址已保存到 优选域名ip.txt 文件中，共 {len(all_cloudflare_ips)} 个。")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
