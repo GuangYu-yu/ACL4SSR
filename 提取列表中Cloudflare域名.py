@@ -71,7 +71,7 @@ def main():
         domains = fetch_domain_list()
         
         queried_domains = set()  # 记录已查询的域名
-        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
             future_to_domain = {executor.submit(query_ip_info, domain, index): (domain, index) 
                                 for index, domain in enumerate(domains) if domain not in queried_domains}
             for future in concurrent.futures.as_completed(future_to_domain):
