@@ -10,7 +10,7 @@ URLS_WITH_PREFIX = [
 ]
 
 def fetch_domains_with_prefix(url):
-    """获取带前缀的域名列表"""
+    """获取带前缀的域名列表，包括 DOMAIN-SUFFIX 和 DOMAIN"""
     response = requests.get(url)
     response.raise_for_status()
     domains = set()
