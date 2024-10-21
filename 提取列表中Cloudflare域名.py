@@ -21,6 +21,17 @@ def fetch_domains_with_prefix(url):
             domains.add(domain)
     return domains
 
+def fetch_domains(url):
+    """获取不带前缀的域名列表"""
+    response = requests.get(url)
+    response.raise_for_status()
+    domains = set()
+    for line in response.text.splitlines():
+        if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
+            domain = line.split(',')[1].strip()
+            domains.add(domain)
+    return domains
+
 def cache_page(url):
     """缓存网页内容到本地文件"""
     response = requests.get(url)
@@ -37,19 +48,17 @@ def clear_cache(cache_file):
 
 def check_cloudflare_ip_via_bgp(domain):
     """通过 bgp.he.net 查询域名对应的 IP 地址"""
-    cache_file = None
     try:
         url = f'https://bgp.he.net/dns/{domain}#_ipinfo'
         cache_file = cache_page(url)
         with open(cache_file, 'r', encoding='utf-8') as f:
             content = f.read()
             ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', content)
+        clear_cache(cache_file)
         return domain, set(ip_matches)
     except Exception as e:
         print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
-    finally:
-        if cache_file:
-            clear_cache(cache_file)
+    clear_cache(cache_file)
     return None
 
 def is_ip_in_cloudflare(ip, cloudflare_cidrs):
@@ -69,19 +78,26 @@ def process_domain(domain, cloudflare_cidrs):
 def main():
     """主函数，执行查询和结果保存"""
     all_domains = set()
+    all_domains_with_prefix = set()
 
     # 从带前缀的域名获取
     for url in URLS_WITH_PREFIX:
-        all_domains.update(fetch_domains_with_prefix(url))
+        all_domains_with_prefix.update(fetch_domains_with_prefix(url))
+
+    # 提取不带前缀的域名
+    for domain in all_domains_with_prefix:
+        # 去掉前缀
+        if domain.startswith('DOMAIN-SUFFIX,'):
+            domain_without_prefix = domain.split(',')[1].strip()
+            all_domains.add(domain_without_prefix)
+        elif domain.startswith('DOMAIN,'):
+            domain_without_prefix = domain.split(',')[1].strip()
+            all_domains.add(domain_without_prefix)
 
     # 获取 Cloudflare CIDR 列表
     cloudflare_cidrs_url = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
-    try:
-        response = requests.get(cloudflare_cidrs_url)
-        cloudflare_cidrs = [ipaddress.ip_network(cidr.strip()) for cidr in response.text.splitlines() if cidr.strip()]
-    except Exception as e:
-        print(f"获取 Cloudflare CIDR 列表时出错: {e}")
-        return
+    response = requests.get(cloudflare_cidrs_url)
+    cloudflare_cidrs = [ipaddress.ip_network(cidr.strip()) for cidr in response.text.splitlines() if cidr.strip()]
 
     all_cloudflare_ips = set()
     domain_ip_mapping = {}
@@ -101,13 +117,30 @@ def main():
             except Exception as e:
                 print(f"处理域名 {domain} 时出错: {e}")
 
-    # 保存匹配的域名（带前缀）到文件
-    matching_domain_lines = sorted(domain_ip_mapping.keys())
-    with open('matching_domains.list', 'w', encoding='utf-8') as f:
-        for line in matching_domain_lines:
-            f.write(f"{line}\n")
+    # 分离IPv4和IPv6地址
+    ipv4_addresses = set()
+    ipv6_addresses = set()
 
-    print(f"匹配的域名（带前缀）已保存到 matching_domains.list 文件中，共 {len(matching_domain_lines)} 个。")
+    for ip in all_cloudflare_ips:
+        try:
+            ip_obj = ipaddress.ip_address(ip)
+            if ip_obj.version == 4:
+                ipv4_addresses.add(ip)
+            else:
+                ipv6_addresses.add(ip.lower())
+        except ValueError:
+            print(f"无效的IP地址: {ip}")
+
+    # 分别排序IPv4和IPv6地址
+    sorted_ipv4 = sorted(ipv4_addresses, key=lambda ip: ipaddress.IPv4Address(ip))
+    sorted_ipv6 = sorted(ipv6_addresses, key=lambda ip: ipaddress.IPv6Address(ip))
+
+    # 保存带前缀的域名到文件
+    with open('matching_domains.list', 'w', encoding='utf-8') as f:
+        for domain in sorted(all_domains_with_prefix):
+            f.write(f"{domain}\n")
+
+    print(f"带前缀的域名已保存到 matching_domains.list 文件中，共 {len(all_domains_with_prefix)} 个。")
 
 if __name__ == '__main__':
     main()
