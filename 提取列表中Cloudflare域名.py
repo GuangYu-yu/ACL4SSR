@@ -9,7 +9,7 @@ import random
 import time
 
 # 定义常量
-DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/refs/heads/main/test.list'
+DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
 CIDR_URL = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
 TEMP_YAML_FILE = 'temp_domains.yaml'
 MATCHING_DOMAINS_FILE = 'matching_domains.list'
@@ -71,7 +71,7 @@ def main():
         domains = fetch_domain_list()
         
         queried_domains = set()  # 记录已查询的域名
-        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
             future_to_domain = {executor.submit(query_ip_info, domain, index): (domain, index) 
                                 for index, domain in enumerate(domains) if domain not in queried_domains}
             for future in concurrent.futures.as_completed(future_to_domain):
