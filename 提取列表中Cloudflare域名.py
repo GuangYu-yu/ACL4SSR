@@ -3,7 +3,6 @@ import concurrent.futures
 import os
 import re
 import ipaddress
-import uuid
 
 # 定义文件路径
 URLS_WITH_PREFIX = [
@@ -21,13 +20,15 @@ def fetch_domains_with_prefix(url):
     return domains
 
 def check_cloudflare_ip_via_bgp(domain):
-    """通过 bgp.he.net 查询域名对应的 IP 地址"""
+    """通过 bgp.he.net 查询域名对应的 IP 地址，不带前缀"""
     try:
-        url = f'https://bgp.he.net/dns/{domain}#_ipinfo'
+        # 仅获取不带前缀的域名
+        domain_without_prefix = domain.split(',')[1].strip() 
+        url = f'https://bgp.he.net/dns/{domain_without_prefix}#_ipinfo'
         response = requests.get(url)
         response.raise_for_status()
         ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', response.text)
-        return domain, set(ip_matches)
+        return domain, set(ip_matches)  # 返回带前缀的域名和对应的IP
     except Exception as e:
         print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
     return None
@@ -60,7 +61,7 @@ def main():
 
     # 并发查询所有域名对应的 IP
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(process_domain, domain.split(',')[1].strip(), cloudflare_cidrs): domain for domain in all_domains_with_prefix}
+        futures = {executor.submit(process_domain, domain, cloudflare_cidrs): domain for domain in all_domains_with_prefix}
         for future in concurrent.futures.as_completed(futures):
             domain = futures[future]
             try:
@@ -68,7 +69,7 @@ def main():
                 if result:
                     domain, cloudflare_ips = result
                     if cloudflare_ips:
-                        matched_domains.add(domain)
+                        matched_domains.add(domain)  # 保留带前缀的域名
                         domain_ip_mapping[domain] = cloudflare_ips
             except Exception as e:
                 print(f"处理域名 {domain} 时出错: {e}")
