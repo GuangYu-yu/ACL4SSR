@@ -1,85 +1,115 @@
 import requests
+import yaml
+from bs4 import BeautifulSoup
 import concurrent.futures
 import os
-import re
 import ipaddress
+import threading
+import random
+import time
 
-# 定义文件路径
-URLS_WITH_PREFIX = [
-    'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list',
-]
+# 定义常量
+DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/GuangYu-yu/About-Cloudflare/refs/heads/main/test.list'
+CIDR_URL = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
+TEMP_YAML_FILE = 'temp_domains.yaml'
+MATCHING_DOMAINS_FILE = 'matching_domains.list'
+CACHED_CIDR_FILE = 'cached_cidr.txt'
 
-def fetch_domains_with_prefix(url):
-    """获取带前缀的域名列表"""
-    response = requests.get(url)
+# 初始化锁
+file_lock = threading.Lock()
+
+def fetch_domain_list():
+    print("正在获取域名列表...")
+    response = requests.get(DOMAIN_LIST_URL)
     response.raise_for_status()
-    domains = set()
+    domains = {}
     for line in response.text.splitlines():
-        if line.startswith('DOMAIN-SUFFIX,') or line.startswith('DOMAIN,'):
-            domains.add(line.strip())
+        if line.startswith("DOMAIN") or line.startswith("DOMAIN-SUFFIX"):
+            parts = line.split(',')
+            if len(parts) == 2:
+                prefix, domain = parts
+                if domain not in domains:
+                    domains[domain] = {'prefix': prefix, 'ips': []}
     return domains
 
-def check_cloudflare_ip_via_bgp(domain):
-    """通过 bgp.he.net 查询域名对应的 IP 地址，不带前缀"""
-    try:
-        # 仅获取不带前缀的域名
-        domain_without_prefix = domain.split(',')[1].strip() 
-        url = f'https://bgp.he.net/dns/{domain_without_prefix}#_ipinfo'
-        response = requests.get(url)
-        response.raise_for_status()
-        ip_matches = re.findall(r'<a href="/ip/([\d\.a-fA-F:]+)" title="[\d\.a-fA-F:]+">', response.text)
-        return domain, set(ip_matches)  # 返回带前缀的域名和对应的IP
-    except Exception as e:
-        print(f"通过bgp.he.net检查 {domain} 时出错: {e}")
-    return None
+def query_ip_info(domain, index, retries=3):
+    for attempt in range(retries):
+        try:
+            time.sleep(random.uniform(3, 5))  # Delay of 3 to 5 seconds
+            query_url = f"https://bgp.he.net/dns/{domain}#_ipinfo"
+            response = requests.get(query_url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            ip_info_div = soup.find('div', id='ipinfo')
+            if ip_info_div:
+                ips = [a.get('title') for a in ip_info_div.find_all('a') if a.get('href', '').startswith('/ip/')]
+                return list(set(ips))  # 这里确保返回的IP去重
+            return []
+        except Exception as e:
+            if attempt < retries - 1:
+                continue  # 继续重试
+            else:
+                return []  # 返回空列表
 
-def is_ip_in_cloudflare(ip, cloudflare_cidrs):
-    """检查 IP 是否在 Cloudflare CIDR 范围内"""
-    ip_obj = ipaddress.ip_address(ip)
-    return any(ip_obj in cidr for cidr in cloudflare_cidrs)
+def load_cidr_list():
+    print("加载 CIDR 列表...")
+    response = requests.get(CIDR_URL)
+    response.raise_for_status()
+    return response.text.splitlines()
 
-def process_domain(domain, cloudflare_cidrs):
-    """处理每个域名，查询其 IP 并检查是否属于 Cloudflare"""
-    result = check_cloudflare_ip_via_bgp(domain)
-    if result:
-        domain, ips = result
-        cloudflare_ips = {ip for ip in ips if is_ip_in_cloudflare(ip, cloudflare_cidrs)}
-        return domain, cloudflare_ips if cloudflare_ips else None
-    return None
+def is_ip_in_cidr(ip, cidr_list):
+    for cidr in cidr_list:
+        if '/' in cidr:
+            network = ipaddress.ip_network(cidr.strip())
+            if ipaddress.ip_address(ip) in network:
+                return True
+    return False
 
 def main():
-    """主函数，执行查询和结果保存"""
-    all_domains_with_prefix = fetch_domains_with_prefix(URLS_WITH_PREFIX[0])
+    try:
+        print("脚本开始执行...")
+        domains = fetch_domain_list()
+        
+        queried_domains = set()  # 记录已查询的域名
+        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+            future_to_domain = {executor.submit(query_ip_info, domain, index): (domain, index) 
+                                for index, domain in enumerate(domains) if domain not in queried_domains}
+            for future in concurrent.futures.as_completed(future_to_domain):
+                domain, index = future_to_domain[future]
+                queried_domains.add(domain)  # 添加到已查询列表
+                try:
+                    ips = future.result()
+                    if ips:
+                        domains[domain]['ips'].extend(ips)
+                except Exception:
+                    continue  # 忽略查询错误
 
-    # 获取 Cloudflare CIDR 列表
-    cloudflare_cidrs_url = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
-    response = requests.get(cloudflare_cidrs_url)
-    cloudflare_cidrs = [ipaddress.ip_network(cidr.strip()) for cidr in response.text.splitlines() if cidr.strip()]
+        # 加载并缓存 CIDR 列表
+        cidr_list = load_cidr_list()
 
-    matched_domains = set()
-    domain_ip_mapping = {}
+        cf_domains = []
 
-    # 并发查询所有域名对应的 IP
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        futures = {executor.submit(process_domain, domain, cloudflare_cidrs): domain for domain in all_domains_with_prefix}
-        for future in concurrent.futures.as_completed(futures):
-            domain = futures[future]
-            try:
-                result = future.result()
-                if result:
-                    domain, cloudflare_ips = result
-                    if cloudflare_ips:
-                        matched_domains.add(domain)  # 保留带前缀的域名
-                        domain_ip_mapping[domain] = cloudflare_ips
-            except Exception as e:
-                print(f"处理域名 {domain} 时出错: {e}")
+        # 匹配 IP 地址与 CIDR 列表
+        for domain, data in domains.items():
+            for ip in data['ips']:
+                if is_ip_in_cidr(ip, cidr_list):
+                    cf_domains.append(domain)
+                    break
 
-    # 保存匹配的带前缀的域名到文件
-    with open('matching_domains.list', 'w', encoding='utf-8') as f:
-        for domain in matched_domains:
-            f.write(f"{domain}\n")
+        # 排序并处理 CF 域名
+        cf_domains = sorted(set(cf_domains))
 
-    print(f"匹配的带前缀的域名已保存到 matching_domains.list 文件中，共 {len(matched_domains)} 个。")
+        # 写入匹配的域名
+        with open(MATCHING_DOMAINS_FILE, 'w') as f:
+            for domain in cf_domains:
+                prefix = domains[domain]['prefix']
+                f.write(f"{prefix},{domain}\n")
+
+        # 打印匹配到的域名数量
+        print(f"匹配到的域名数量: {len(cf_domains)}")
+
+    except Exception as e:
+        print(f"发生错误: {e}")
 
 if __name__ == '__main__':
     main()
