@@ -4,31 +4,18 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
-- alterId: 0
-  cipher: auto
-  name: US美国(mibei77.com 米贝节点分享)_miebei
-  network: ws
-  port: 2082
-  server: japan.com
+- name: US美国(mibei77.com 米贝节点分享)_miebei
+  password: blue2024
+  port: 443
+  server: dnschecker.org
   skip-cert-verify: true
-  tls: false
-  type: vmess
+  sni: dnschecker.org
+  type: trojan
   udp: true
-  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-  ws-headers:
-    Host: ip16.6929198.xyz
-  ws-path: /github.com/Alvin9999
 - name: GB英国(mibei77.com 米贝节点分享)_miebei
   password: NISHIKUITAN222
   port: 443
   server: 144.24.83.39
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 2_miebei
-  password: NISHIKUITAN222
-  port: 443
-  server: 192.18.159.129
   skip-cert-verify: true
   type: trojan
   udp: true
@@ -39,14 +26,12 @@ proxy-groups:
   - 🎯 全球直连
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
@@ -56,7 +41,6 @@ proxy-groups:
   - 🎯 全球直连
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 - name: ⛔️ 广告拦截
   proxies:
@@ -77,7 +61,6 @@ proxy-groups:
   - 🎯 全球直连
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -90,7 +73,6 @@ proxy-groups:
   - 🔰 节点选择
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 - name: 📲 电报信息
   proxies:
@@ -98,7 +80,6 @@ proxy-groups:
   - 🎯 全球直连
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -107,7 +88,6 @@ proxy-groups:
   - ♻️ 自动选择
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -125,7 +105,6 @@ proxy-groups:
   - ♻️ 自动选择
   - US美国(mibei77.com 米贝节点分享)_miebei
   - GB英国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
