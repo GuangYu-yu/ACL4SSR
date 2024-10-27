@@ -22,7 +22,7 @@ jobs:
           pip install requests beautifulsoup4 aiohttp
 
       - name: 运行列表过滤脚本
-        run: python 规则剔除Cloudflare.py
+        run: python 提取列表中Cloudflare域名.py
 
       - name: 检查是否有更改
         run: |
