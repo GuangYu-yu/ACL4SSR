@@ -20,6 +20,10 @@ HEADERS = {
     'dns.google': {
         'accept': 'application/dns-json',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    },
+    'quad9': {
+        'accept': 'application/dns-json',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
 }
 
@@ -100,6 +104,12 @@ async def query_dns_google(session: aiohttp.ClientSession, domain: str) -> Set[s
         f"https://dns.google/resolve?name={domain}&type=AAAA",
         headers=HEADERS['dns.google'])
 
+async def query_dns_quad9(session: aiohttp.ClientSession, domain: str) -> Set[str]:
+    return await query_dns_json(session, 
+        f"https://dns10.quad9.net:5053/dns-query?name={domain}&type=A",
+        f"https://dns10.quad9.net:5053/dns-query?name={domain}&type=AAAA",
+        headers=HEADERS['quad9'])
+
 def is_ip_in_cidr(ip: str, cidr_list: List[str]) -> bool:
     try:
         ip_obj = ipaddress.ip_address(ip)
@@ -134,31 +144,40 @@ async def main():
         cidr_list = await load_cidr_list()
         print(f"加载了 {len(cidr_list)} 条 CIDR 记录")
 
-        # 将域名分成两组
+        # 将域名分成三组
         domain_items = list(domains.items())
-        mid = math.ceil(len(domain_items) / 2)
-        sb_domains = domain_items[:mid]
-        google_domains = domain_items[mid:]
+        total = len(domain_items)
+        part = math.ceil(total / 3)
+        
+        sb_domains = domain_items[:part]
+        google_domains = domain_items[part:2*part]
+        quad9_domains = domain_items[2*part:]  # 剩余的所有域名
 
         # 创建限速器
         sb_limiter = RateLimiter(10)
         google_limiter = RateLimiter(10)
+        quad9_limiter = RateLimiter(10)
 
         cf_domains = []
         async with aiohttp.ClientSession() as session:
-            # 创建两个独立的任务
+            # 创建三个独立的任务
             sb_task = asyncio.create_task(
                 process_domains(session, sb_domains, query_dns_sb, sb_limiter)
             )
             google_task = asyncio.create_task(
                 process_domains(session, google_domains, query_dns_google, google_limiter)
             )
+            quad9_task = asyncio.create_task(
+                process_domains(session, quad9_domains, query_dns_quad9, quad9_limiter)
+            )
             
-            # 等待两个任务完成
-            sb_results, google_results = await asyncio.gather(sb_task, google_task)
+            # 等待三个任务完成
+            sb_results, google_results, quad9_results = await asyncio.gather(
+                sb_task, google_task, quad9_task
+            )
             
             # 合并结果
-            all_results = {**sb_results, **google_results}
+            all_results = {**sb_results, **google_results, **quad9_results}
 
             # 检查IP是否在Cloudflare CIDR范围内
             for domain, ips in all_results.items():
