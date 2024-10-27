@@ -50,9 +50,16 @@ async def fetch_domain_list() -> Dict[str, str]:
             text = await response.text()
             domains = {}
             for line in text.splitlines():
-                if line.startswith(("DOMAIN", "DOMAIN-SUFFIX")):
-                    prefix, domain = line.split(',')
-                    domains[domain] = prefix
+                # 跳过空行和注释
+                if not line or line.startswith('#'):
+                    continue
+                # 检查是否包含DOMAIN-SUFFIX或DOMAIN
+                if any(line.startswith(prefix) for prefix in ['DOMAIN-SUFFIX,', 'DOMAIN,']):
+                    try:
+                        prefix, domain = [x.strip() for x in line.split(',', 1)]
+                        domains[domain] = prefix
+                    except ValueError:
+                        continue
             return domains
 
 async def load_cidr_list() -> List[str]:
@@ -105,18 +112,16 @@ def is_ip_in_cidr(ip: str, cidr_list: List[str]) -> bool:
         return False
     return False
 
-async def process_domain_batch(session: aiohttp.ClientSession, 
-                             domains: List[tuple], 
-                             query_func, 
-                             rate_limiter: RateLimiter,
-                             cidr_list: List[str]) -> Dict[str, Set[str]]:
+async def process_domains(session: aiohttp.ClientSession,
+                         domains: List[tuple],
+                         query_func,
+                         rate_limiter: RateLimiter) -> Dict[str, Set[str]]:
     results = defaultdict(set)
     total = len(domains)
     for idx, (domain, prefix) in enumerate(domains, 1):
         await rate_limiter.acquire()
         ips = await query_func(session, domain)
         results[domain] = ips
-        print(f"进度: {idx}/{total} - 域名 {domain} 查询完成")
     return results
 
 async def main():
@@ -141,14 +146,19 @@ async def main():
 
         cf_domains = []
         async with aiohttp.ClientSession() as session:
-            # 并行处理两组域名
-            sb_task = process_domain_batch(session, sb_domains, query_dns_sb, sb_limiter, cidr_list)
-            google_task = process_domain_batch(session, google_domains, query_dns_google, google_limiter, cidr_list)
+            # 创建两个独立的任务
+            sb_task = asyncio.create_task(
+                process_domains(session, sb_domains, query_dns_sb, sb_limiter)
+            )
+            google_task = asyncio.create_task(
+                process_domains(session, google_domains, query_dns_google, google_limiter)
+            )
             
-            results = await asyncio.gather(sb_task, google_task)
+            # 等待两个任务完成
+            sb_results, google_results = await asyncio.gather(sb_task, google_task)
             
             # 合并结果
-            all_results = {**results[0], **results[1]}
+            all_results = {**sb_results, **google_results}
 
             # 检查IP是否在Cloudflare CIDR范围内
             for domain, ips in all_results.items():
