@@ -61,23 +61,25 @@ async def load_cidr_list() -> List[str]:
             return (await response.text()).splitlines()
 
 async def query_dns_json(session: aiohttp.ClientSession, *urls: str, headers: dict) -> Set[str]:
-    ips = set()
-    for url in urls:
+    while True:  # 无限重试直到成功
+        ips = set()
         try:
-            async with session.get(url, headers=headers) as response:
-                if response.status == 200:
-                    data = await response.json()
-                    if 'Answer' in data:
-                        for answer in data['Answer']:
-                            if answer.get('data'):
-                                try:
-                                    ipaddress.ip_address(answer['data'])
-                                    ips.add(answer['data'])
-                                except ValueError:
-                                    continue
+            for url in urls:
+                async with session.get(url, headers=headers) as response:
+                    if response.status == 200:
+                        data = await response.json()
+                        if 'Answer' in data:
+                            for answer in data['Answer']:
+                                if answer.get('data'):
+                                    try:
+                                        ipaddress.ip_address(answer['data'])
+                                        ips.add(answer['data'])
+                                    except ValueError:
+                                        continue
+            return ips  # 只有成功获取到结果才返回
         except Exception as e:
-            print(f"查询出错: {e}")
-    return ips
+            print(f"查询出错: {e}，3秒后重试...")
+            await asyncio.sleep(3)  # 失败后等待3秒重试
 
 async def query_dns_sb(session: aiohttp.ClientSession, domain: str) -> Set[str]:
     return await query_dns_json(session, 
@@ -109,10 +111,12 @@ async def process_domain_batch(session: aiohttp.ClientSession,
                              rate_limiter: RateLimiter,
                              cidr_list: List[str]) -> Dict[str, Set[str]]:
     results = defaultdict(set)
-    for domain, prefix in domains:
+    total = len(domains)
+    for idx, (domain, prefix) in enumerate(domains, 1):
         await rate_limiter.acquire()
         ips = await query_func(session, domain)
         results[domain] = ips
+        print(f"进度: {idx}/{total} - 域名 {domain} 查询完成")
     return results
 
 async def main():
