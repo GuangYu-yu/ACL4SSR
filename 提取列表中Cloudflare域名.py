@@ -89,6 +89,7 @@ async def query_dns_json(session: aiohttp.ClientSession, *urls: str, headers: di
                                         continue
             return ips  # 只有成功获取到结果才返回
         except Exception as e:
+            print(f"查询出错: {e}，立即重试...")  # 添加了缺失的缩进块
 
 async def query_dns_sb(session: aiohttp.ClientSession, domain: str) -> Set[str]:
     return await query_dns_json(session, 
