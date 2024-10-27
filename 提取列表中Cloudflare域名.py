@@ -89,8 +89,6 @@ async def query_dns_json(session: aiohttp.ClientSession, *urls: str, headers: di
                                         continue
             return ips  # 只有成功获取到结果才返回
         except Exception as e:
-            print(f"查询出错: {e}，3秒后重试...")
-            await asyncio.sleep(3)  # 失败后等待3秒重试
 
 async def query_dns_sb(session: aiohttp.ClientSession, domain: str) -> Set[str]:
     return await query_dns_json(session, 
