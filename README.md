@@ -8,6 +8,8 @@
 
 日本 (JP) - Japan
 
+希腊 (GR) - Greece
+
 越南 (VN) - Vietnam
 
 泰国 (TH) - Thailand
