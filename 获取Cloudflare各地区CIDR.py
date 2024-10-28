@@ -38,6 +38,7 @@ def save_cidrs_to_file(filename, ipv4_cidrs, ipv6_cidrs):
 # 各地区 CIDR 文件 URL
 region_cidr_urls = {
     'Hong Kong': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Country/HK_cidr.txt',  # 香港特别行政区
+    'Greece': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Country/GR_cidr.txt',  # 希腊
     'Taiwan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Country/TW_cidr.txt',  # 台湾省
     'Japan': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Country/JP_cidr.txt',  # 日本
     'South Korea': 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/main/Country/KR_cidr.txt',  # 韩国
