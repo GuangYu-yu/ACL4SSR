@@ -31,6 +31,7 @@ regions = {
     'SE': 'Sweden',           # 瑞典
     'CH': 'Switzerland',      # 瑞士
     'PL': 'Poland',           # 波兰
+    'GR': 'Greece',           # 希腊
 
     # 北美洲
     'US': 'United States',    # 美国
