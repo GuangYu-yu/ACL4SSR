@@ -6,76 +6,128 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: "[SS] 高性价比机场:https://kfyun.uk_clashgithub", server: 127.0.0.1, port: 443, type: ss, cipher: aes-128-gcm, password: 6601fb90e9b3, udp: true}
-  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub", server: www.darkroom.lol, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.darkroom.lol}}, udp: true}
-  - {name: "[SS] 🇺🇸 美国科罗拉多州布隆菲尔德市+Level3_clashgithub", server: service.ouluyun9803.com, port: 20003, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2, udp: true}
-  - {name: "[SS] 🇺🇸 美国科罗拉多州布隆菲尔德市+Level3 2_clashgithub", server: service.ouluyun9803.com, port: 20005, type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2, udp: true}
-  - {name: "[VMess] 🇺🇸 美国 Fastly全球Anycast节点_clashgithub", server: gov.uk, port: 443, type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei", server: z3.fragranceninja.com, port: 12901, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei", server: speed.cloudflare.com, port: 80, type: vmess, uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /glweidf.sbs/linkws, headers: {Host: 7ehhjdelicate-unit-e634.bowik41429.workers.dev}}, udp: true}
-  - {name: "[SS] 🇮🇳 IN印度(mibei77.com 米贝节点分享)_miebei", server: 159.65.149.72, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: p7EhC8MR7o7GuRn27YF8SQNAKJ2lUbBNIjcyqSmBHsy8wLbJ, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei", server: z8.fragranceninja.com, port: 12910, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: z8.fragranceninja.com}}, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei", server: 144.202.112.106, port: 3913, type: ss, cipher: chacha20-ietf-poly1305, password: 76dze09gQEvqS_jOuo, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei", server: 208.67.105.196, port: 42029, type: ss, cipher: chacha20-ietf-poly1305, password: SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei", server: z2.fragranceninja.com, port: 12941, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: z2.fragranceninja.com}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei", server: d.baodesign.top, port: 25004, type: vmess, uuid: ba2e86ee-65fc-4b4e-97c7-165b5b64023b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇪🇸 西班牙(mibei77.com 米贝节点分享)_miebei", server: 150.241.95.62, port: 9366, type: ss, cipher: chacha20-ietf-poly1305, password: rZv1$9veNc, udp: true}
-  - {name: "[SS] 🇬🇧 GB英国(mibei77.com 米贝节点分享)_miebei", server: 141.98.101.180, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei", server: z6.fragranceninja.com, port: 12928, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei", server: 103.174.86.113, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: vZr8MlUXUihNEndqIpjDxQdSeqi37FbgoHBmQ1syy6ZjkbBn, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei", server: z2.fragranceninja.com, port: 12968, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: z2.fragranceninja.com}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei", server: z3.fragranceninja.com, port: 12970, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei", server: z2.fragranceninja.com, port: 12925, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: z2.fragranceninja.com}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei", server: 120.232.153.37, port: 42055, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei", server: 142.202.48.105, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei", server: 185.24.151.214, port: 52952, type: ss, cipher: chacha20-ietf-poly1305, password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei", server: z2.fragranceninja.com, port: 12938, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: z2.fragranceninja.com}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei", server: 120.232.153.71, port: 43526, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei", server: hsj.lbxjc.online, port: 80, type: vmess, uuid: e6543319-0574-42ac-b778-1c4325d626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: chunchuan.kejixiaoqi666.store}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 19_miebei", server: z3.fragranceninja.com, port: 12960, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇨🇦 CA加拿大(mibei77.com 米贝节点分享)_miebei", server: russia.com, port: 2082, type: vmess, uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: ip18.6929198.xyz}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 20_miebei", server: singapore.com, port: 2095, type: vmess, uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip2.6016725.xyz}}, udp: true}
-  - {name: "[VMess] 🇨🇦 加拿大(mibei77.com 米贝节点分享)_miebei", server: malaysia.com, port: 2082, type: vmess, uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip3.6929198.xyz}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 21_miebei", server: c.baodesign.top, port: 25003, type: vmess, uuid: ba2e86ee-65fc-4b4e-97c7-165b5b64023b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 22_miebei", server: 38.110.1.107, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 23_miebei", server: 141.98.168.127, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ZoCmoonMg5GWwpi0FCqLcQ, udp: true}
-  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 24_miebei", server: naiu-us.05vr9nyqg5.download, port: 13021, type: trojan, password: 5b4becce-5739-483f-97ec-68b81a855d68, sni: naiu-us.05vr9nyqg5.download, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 25_miebei", server: russia.com, port: 2082, type: vmess, uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip3.6929198.xyz}}, udp: true}
-  - {name: "[SS] 🇩🇪 DE德国(mibei77.com 米贝节点分享)_miebei", server: 45.87.175.157, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 26_miebei", server: malaysia.com, port: 2095, type: vmess, uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip2.6016725.xyz}}, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 27_miebei", server: exchange.gameaurela.click, port: 52952, type: ss, cipher: chacha20-ietf-poly1305, password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 28_miebei", server: 149.22.87.240, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 29_miebei", server: fbi.gov, port: 2095, type: vmess, uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip2.6016725.xyz}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 30_miebei", server: 183.236.48.161, port: 33288, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 31_miebei", server: 23.150.152.41, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: "[SS] 🇺🇦 乌克兰(mibei77.com 米贝节点分享)_miebei", server: 37.19.198.160, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 32_miebei", server: 149.22.95.183, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 33_miebei", server: b.baodesign.top, port: 25002, type: vmess, uuid: ba2e86ee-65fc-4b4e-97c7-165b5b64023b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 34_miebei", server: 203.23.128.33, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 35_miebei", server: 120.237.79.157, port: 46665, type: vmess, uuid: 3ac820af-becb-45d7-9e7a-e33d02961bb3, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 36_miebei", server: russia.com, port: 2095, type: vmess, uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: ip11.6016725.xyz}}, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 37_miebei", server: 156.146.38.168, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 23.157.88.61, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国_1_oneclash", server: 141.98.101.180, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇦 _UA_乌克兰_1_oneclash", server: 37.19.198.160, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 34.220.167.70, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 69.50.93.47, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 144.202.112.106, port: 3913, type: ss, cipher: chacha20-ietf-poly1305, password: 76dze09gQEvqS_jOuo, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 208.67.105.196, port: 42029, type: ss, cipher: chacha20-ietf-poly1305, password: SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: 23.150.152.41, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国_2_oneclash", server: 141.98.101.179, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 38.110.1.107, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇨🇦 _CA_加拿大_oneclash", server: 23.154.136.247, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰_oneclash", server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇮🇳 _IN_印度_oneclash", server: 159.65.149.72, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: p7EhC8MR7o7GuRn27YF8SQNAKJ2lUbBNIjcyqSmBHsy8wLbJ, udp: true}
-  - {name: "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_oneclash", server: 13.215.205.186, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_oneclash", server: 44.243.115.246, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_oneclash", server: 52.89.233.31, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇩🇪 _CN_中国->🇩🇪_DE_德国_oneclash", server: 183.232.159.51, port: 50225, type: ss, cipher: chacha20-ietf-poly1305, password: 7ac75754-fde2-407d-ac00-17cd5ddc53d1, udp: true}
-  - {name: "[SS] 🇨🇿 _CZ_捷克->🇹🇷_TR_土耳其_oneclash", server: ams1.fromblancwithlove.com, port: 19175, type: ss, cipher: chacha20-ietf-poly1305, password: 5Au7NhFmcBqMnika4KVk7h4ZdV3wD4hFtJ8PJ3AlHzLeU1chEBaz19a643q7hBPV, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 23.150.152.41, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_oneclash", server: 156.146.38.168, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_oneclash", server: 34.210.94.67, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇦 _UA_乌克兰_2_oneclash", server: 37.19.198.243, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 0|--1_clashgithub", server: 217.30.10.18, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
+  - {name: "[SS] 0|--2_clashgithub", server: 217.30.10.18, port: 9093, type: ss, cipher: aes-256-cfb, password: wfLC2y7rzZyCmuyt, udp: true}
+  - {name: "[SS] 0|--3_clashgithub", server: 217.30.10.18, port: 9026, type: ss, cipher: aes-256-cfb, password: QWDDvVE9npNurQfA, udp: true}
+  - {name: "[SS] 0|--4_clashgithub", server: 43.203.141.93, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--5_clashgithub", server: 3.1.79.116, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--6_clashgithub", server: 54.191.252.235, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--7_clashgithub", server: 34.222.132.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--8_clashgithub", server: 54.180.232.93, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--10_clashgithub", server: 43.203.122.162, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--11_clashgithub", server: 217.30.10.18, port: 9041, type: ss, cipher: aes-256-cfb, password: U6qnYRhfyDmn8sgn, udp: true}
+  - {name: "[SS] 0|--12_clashgithub", server: 52.79.248.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--13_clashgithub", server: 3.38.212.48, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--14_clashgithub", server: 217.30.10.18, port: 9006, type: ss, cipher: aes-256-cfb, password: FAdUvMJUq5vDgKEq, udp: true}
+  - {name: "[Trojan] 🇭🇰 13,14|香港|@ripaojiedian_clashgithub", server: 36.151.192.239, port: 42395, type: trojan, password: DNUMdmnJ, sni: 36.151.192.239, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub", server: 36.151.192.203, port: 25241, type: trojan, password: QwwHvrnN, sni: 36.151.192.203, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 15011, type: ss, cipher: aes-256-gcm, password: ANTGT74MO57KLLLE, udp: true}
+  - {name: "[SS] 🇭🇰 13|🇭🇰 香港4|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 15015, type: ss, cipher: aes-256-gcm, password: 9UB4OF8WZ0YXIPBD, udp: true}
+  - {name: "[Trojan] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub", server: 18.162.246.4, port: 18443, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub", server: hk1.tiljkc.top, port: 39041, type: vmess, uuid: 92dae006-a1bd-3eea-837e-64c8d09ab291, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub", server: 183.236.51.23, port: 46602, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 13|🇹🇼 台湾|@ripaojiedian_clashgithub", server: 210.61.97.241, port: 81, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[Trojan] 🇯🇵 13,14|日本|@ripaojiedian_clashgithub", server: 36.151.192.198, port: 38698, type: trojan, password: QwwHvrnN, sni: 36.151.192.198, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 18015, type: ss, cipher: aes-256-gcm, password: JJ4PSU7MN1VRHN5Y, udp: true}
+  - {name: "[VMess] 🇯🇵 13|🇯🇵 日本3|@ripaojiedian_clashgithub", server: jp1.tiljkc.top, port: 38953, type: vmess, uuid: 92dae006-a1bd-3eea-837e-64c8d09ab291, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 13|🇯🇵 日本4|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 18003, type: ss, cipher: aes-256-gcm, password: YUMTKV8ECSXBPNU6, udp: true}
+  - {name: "[SS] 🇯🇵 13|🇯🇵 日本5|@ripaojiedian_clashgithub", server: soonjp.soon.guru, port: 40003, type: ss, cipher: chacha20-ietf-poly1305, password: ab8b625c-efb8-45cd-b509-c7cceabe0cc6, udp: true}
+  - {name: "[VMess] 🇸🇬 13|🇸🇬 新加坡|@ripaojiedian_clashgithub", server: sg1.tiljkc.top, port: 34843, type: vmess, uuid: 92dae006-a1bd-3eea-837e-64c8d09ab291, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇸🇬 13|🇸🇬 新加坡2|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 16003, type: ss, cipher: aes-256-gcm, password: LOHI96W4MY7U2T8T, udp: true}
+  - {name: "[Trojan] 🇺🇸 13,14|美国|@ripaojiedian_clashgithub", server: usla.mjt000.com, port: 443, type: trojan, password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c, sni: usla.mjt000.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub", server: 65.75.193.154, port: 14491, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[SS] 🇺🇸 13|🇺🇸 美国3|@ripaojiedian_clashgithub", server: 113.99.142.153, port: 17005, type: ss, cipher: aes-256-gcm, password: ZV4YVDAYK5O0H3QP, udp: true}
+  - {name: "[SS] 🇺🇸 13|🇺🇸 美国5|@ripaojiedian_clashgithub", server: 113.99.142.152, port: 17008, type: ss, cipher: aes-256-gcm, password: P4RAHM7S01HTCHPW, udp: true}
+  - {name: "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub", server: 3.36.126.174, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub", server: 13.125.90.251, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub", server: 43.203.219.196, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[Trojan] 🇻🇳 13,14|越南|@ripaojiedian_clashgithub", server: vn.mjt000.com, port: 443, type: trojan, password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c, sni: vn.mjt000.com, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 14|香港3|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 15011, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206QU5UR1Q3NE1PNTdLTExMRQ, udp: true}
+  - {name: "[SS] 🇭🇰 14|香港4|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 15015, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206OVVCNE9GOFdaMFlYSVBCRA, udp: true}
+  - {name: "[Trojan] 🇭🇰 14|香港5|@ripaojiedian_clashgithub", server: 18.162.246.4, port: 18443, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[VMess] 🇭🇰 14|香港6|@ripaojiedian_clashgithub", server: hk1.tiljkc.top, port: 39041, type: vmess, uuid: 92dae006-a1bd-3eea-837e-64c8d09ab291, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 14|香港7|@ripaojiedian_clashgithub", server: 183.236.51.23, port: 46602, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇨🇳 14|台湾|@ripaojiedian_clashgithub", server: 210.61.97.241, port: 81, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[SS] 🇯🇵 14|日本2|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 18015, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206Sko0UFNVN01OMVZSSE41WQ, udp: true}
+  - {name: "[VMess] 🇯🇵 14|日本3|@ripaojiedian_clashgithub", server: jp1.tiljkc.top, port: 38953, type: vmess, uuid: 92dae006-a1bd-3eea-837e-64c8d09ab291, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 14|日本4|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 18003, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206WVVNVEtWOEVDU1hCUE5VNg, udp: true}
+  - {name: "[SS] 🇯🇵 14|日本5|@ripaojiedian_clashgithub", server: soonjp.soon.guru, port: 40003, type: ss, cipher: ss, password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphYjhiNjI1Yy1lZmI4LTQ1Y2QtYjUwOS1jN2NjZWFiZTBjYzY, udp: true}
+  - {name: "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub", server: sg1.tiljkc.top, port: 34843, type: vmess, uuid: 92dae006-a1bd-3eea-837e-64c8d09ab291, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇸🇬 14|新加坡2|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 16003, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206TE9ISTk2VzRNWTdVMlQ4VA, udp: true}
+  - {name: "[Trojan] 🇺🇸 14|美国2|@ripaojiedian_clashgithub", server: 65.75.193.154, port: 14491, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[SS] 🇺🇸 14|美国3|@ripaojiedian_clashgithub", server: 113.99.142.153, port: 17005, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206WlY0WVZEQVlLNU8wSDNRUA, udp: true}
+  - {name: "[SS] 🇺🇸 14|美国5|@ripaojiedian_clashgithub", server: 113.99.142.152, port: 17008, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206UDRSQUhNN1MwMUhUQ0hQVw, udp: true}
+  - {name: "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub", server: 3.36.126.174, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
+  - {name: "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub", server: 13.125.90.251, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
+  - {name: "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub", server: 43.203.219.196, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
+  - {name: "[Vless] 15|AU_speednode_0001_clashgithub", server: 168.138.13.201, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|AU_speednode_0002_clashgithub", server: 152.67.112.71, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|EE_speednode_0005_clashgithub", server: 45.80.108.253, port: 443, type: vless, uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd, tls: true, skip-cert-verify: true, servername: mmdserver.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048fp=ios", headers: {Host: mmdserver.us.kg}}, udp: true}
+  - {name: "[Vless] 15|FR_speednode_0006_clashgithub", server: 92.222.181.77, port: 80, type: vless, uuid: f4859fc9-dc44-11ee-b9ba-00505603e70d, tls: false, skip-cert-verify: true, servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc, client-fingerprint: chrome, network: ws, ws-opts: {path: /websocket, headers: {Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc}}, udp: true}
+  - {name: "[Vless] 15|JP_speednode_0008_clashgithub", server: 141.147.147.180, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|KR_speednode_0020_clashgithub", server: 132.145.94.80, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|KR_speednode_0021_clashgithub", server: 138.2.123.70, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|RU_speednode_0022_clashgithub", server: 46.254.92.33, port: 443, type: vless, uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd, tls: true, skip-cert-verify: true, servername: mmdserver.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048fp=ios", headers: {Host: mmdserver.us.kg}}, udp: true}
+  - {name: "[Vless] 15|SI_speednode_0025_clashgithub", server: 92.60.74.100, port: 443, type: vless, uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd, tls: true, skip-cert-verify: true, servername: mmdserver.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048fp=ios", headers: {Host: mmdserver.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0031_clashgithub", server: 104.24.20.150, port: 80, type: vless, uuid: 442ac940-bbdd-4044-9b2c-e4e53cbe0055, tls: false, skip-cert-verify: true, servername: little-grass-d3f7az.cijof58321.workers.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: little-grass-d3f7az.cijof58321.workers.dev}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0032_clashgithub", server: 104.16.140.135, port: 2086, type: vless, uuid: 31348b17-4ab2-40c0-b79e-c81032331d30, tls: false, skip-cert-verify: true, servername: b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: "/tsgg0FHbT55sIEXC?ed=2560", headers: {Host: b4f0b859-super-smoke-7916.bouncy-vulture1054.workers.dev}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0034_clashgithub", server: cf.cishanjichang.me, port: 443, type: vless, uuid: 89b90001-4206-4871-a99d-1744d48f215b, tls: false, skip-cert-verify: true, servername: gbr.cishanjichang.me, client-fingerprint: chrome, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: swordnewnewsecurity%3Dtls}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0035_clashgithub", server: 192.0.54.235, port: 443, type: vless, uuid: 41abecd9-8096-4142-a75c-4e1d36d990bd, tls: true, skip-cert-verify: true, servername: mmdserver.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048fp=ios", headers: {Host: mmdserver.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0036_clashgithub", server: 188.114.97.3, port: 8080, type: vless, uuid: 260c4900-69a9-465c-8c3a-272eb1b4ec00, tls: false, skip-cert-verify: true, servername: ShaHrAmcOnfIgWoRKERcjsA9898.CoNfIGshaHrAmcOnfIg.woRKeRs.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: /0URHFxBSQcqVmgqm, headers: {Host: ShaHrAmcOnfIgWoRKERcjsA9898.CoNfIGshaHrAmcOnfIg.woRKeRs.dev}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0038_clashgithub", server: 132.226.114.74, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0039_clashgithub", server: speedtest.net, port: 80, type: vless, uuid: bbcc6a4f-de43-4599-b48f-42a8cf994324, tls: false, skip-cert-verify: true, servername: JOIN.unlimiteddev.4.4.4.4.wWw.CloudFlare.cOm.wWw.SpeedTeSt.cOm.Home.iRan.0.0.0.0.Hide.my.IP.xXx.333.22.1.CDN.Free.unlimiteddev.DDNS1-IP.nEt, client-fingerprint: chrome, network: ws, ws-opts: {path: "/@UnlimitedDev----@UnlimitedDev-----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev?ed=2480", headers: {Host: JOIN.unlimiteddev.4.4.4.4.wWw.CloudFlare.cOm.wWw.SpeedTeSt.cOm.Home.iRan.0.0.0.0.Hide.my.IP.xXx.333.22.1.CDN.Free.unlimiteddev.DDNS1-IP.nEt}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0040_clashgithub", server: 129.213.136.180, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0042_clashgithub", server: 141.148.187.195, port: 443, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0043_clashgithub", server: 151.101.64.155, port: 80, type: vless, uuid: 64ccb313-d2bd-4b44-a6fd-522a14c819fd, tls: false, skip-cert-verify: true, servername: iranvpn.com., client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: iranvpn.com.}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0044_clashgithub", server: 151.101.130.133, port: 80, type: vless, uuid: 82fc176f-7cc7-40a1-e1ec-af2298e23eab, tls: false, skip-cert-verify: true, servername: fatmelo.com, client-fingerprint: chrome, network: ws, ws-opts: {path: "/olem/ws?e@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn-d=2048", headers: {Host: fatmelo.com}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0045_clashgithub", server: 205.233.181.36, port: 2053, type: vless, uuid: b9dad5ed-74da-4a43-8145-90d06df1f890, tls: false, skip-cert-verify: true, servername: rix.tgzdyz2.top, client-fingerprint: chrome, network: ws, ws-opts: {path: /security=tls, headers: {Host: rix.tgzdyz2.top}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0047_clashgithub", server: ISVvpn.fastly80-2.hosting-ip.com, port: 80, type: vless, uuid: d74acf2c-2148-4343-891c-627c4b5d690b, tls: false, skip-cert-verify: true, servername: 5774.ir, client-fingerprint: chrome, network: ws, ws-opts: {path: "/VLESS?ed=80", headers: {Host: 5774.ir}}, udp: true}
+  - {name: "[Trojan] 15|VN_speednode_0048_clashgithub", server: 160.30.21.105, port: 443, type: trojan, password: 94d219c9-1afc-4d42-b090-8b3794764380, sni: std1.loadingip.com, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 16|d*********g.com_2_clashgithub", server: 42.236.73.72, port: 443, type: vmess, uuid: 044f0177-0675-4dcf-89d4-804b6788e518, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.zitian.cn, udp: true}
+  - {name: "[Trojan] 16|d*********g.com_3_clashgithub", server: 42.236.73.72, port: 443, type: trojan, password: fuck, sni: www.zitian.cn, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇫🇷 FR法国(mibei77.com 米贝节点分享)_miebei", server: 45.87.175.164, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: cvII85TrW6n0OGyfpHVS1u, udp: true}
+  - {name: "[VMess] 🇫🇷 FR法国(mibei77.com 米贝节点分享) 2_miebei", server: 163.5.159.231, port: 443, type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}, udp: true}
+  - {name: "[SS] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei", server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei", server: us01.ssr.ee, port: 443, type: trojan, password: 9d0a75d2-f747-4afa-b43f-d208af9e8f9a, sni: us01.ssr.ee, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei", server: 183.236.48.143, port: 31878, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei", server: hsj.lbxjc.online, port: 80, type: vmess, uuid: e6543319-0574-42ac-b778-1c4325d626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: chunchuan.kejixiaoqi666.store}}, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei", server: 151.101.2.133, port: 80, type: vmess, uuid: a983c698-cae4-4254-d047-51898ccd8ee7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: kim.gov.kp}}, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei", server: usnew.lbxjc.site, port: 80, type: vmess, uuid: e6543319-0574-42ac-b778-1c4325d626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: chunchuan.kejixiaoqi666.store}}, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei", server: 160.19.78.75, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei", server: 120.232.153.63, port: 40972, type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇩🇪 德国(mibei77.com 米贝节点分享)_miebei", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[VMess] 🇫🇷 法国(mibei77.com 米贝节点分享)_miebei", server: 163.5.159.231, port: 443, type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}, udp: true}
+  - {name: "[SS] 🇫🇷 法国(mibei77.com 米贝节点分享) 2_miebei", server: 84.19.31.63, port: 50841, type: ss, cipher: chacha20-ietf-poly1305, password: 2EtPqn6HYjUNcHohLfUpFQwnfjCCQ5mh1mJdEMCBucuWZ9P1udkRKHnVxuo55k1KXz2Fo6jrgt18W66opty1e4bm1jzfCfBb, udp: true}
+  - {name: "[Trojan] 🇺🇦 乌克兰(mibei77.com 米贝节点分享)_miebei", server: 138.2.237.121, port: 443, type: trojan, password: 9d0a75d2-f747-4afa-b43f-d208af9e8f9a, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_1_oneclash", server: 217.30.10.18, port: 9026, type: ss, cipher: aes-256-cfb, password: QWDDvVE9npNurQfA, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_2_oneclash", server: 217.30.10.18, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 54.184.77.199, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c, udp: true}
+  - {name: "[SS] 未知_oneclash", server: 3.v2.a.www.speedtest.net.2.op.jahesh-tolid.website, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Yeud3qg58vv3mgu/SIW/2cIphtimMYsTHGBI1jAKF/A=, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_3_oneclash", server: 217.30.10.18, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 137.175.97.159, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
+  - {name: "[SS] 🇬🇧 _GB_英国_oneclash", server: 51.15.15.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 79.110.53.169, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 92.118.205.228, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇱🇻 _LV_拉脱维亚_oneclash", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_4_oneclash", server: 217.30.10.18, port: 9014, type: ss, cipher: aes-256-cfb, password: KnJGad3FqTvjqbaX, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: 51.120.1.158, port: 32091, type: ss, cipher: chacha20-ietf-poly1305, password: xjzsiMfTByKjA9URbdXWNp, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_5_oneclash", server: 217.30.10.18, port: 9084, type: ss, cipher: aes-256-cfb, password: c3NtHJ5ujV2tGDfj, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_6_oneclash", server: 217.30.10.18, port: 9059, type: ss, cipher: aes-256-cfb, password: 9XwYyZsK8SNzQDtY, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_7_oneclash", server: 217.30.10.18, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_8_oneclash", server: 217.30.10.18, port: 9037, type: ss, cipher: aes-256-cfb, password: TN2YqghxeFDKZfLU, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 34.211.105.26, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_9_oneclash", server: 217.30.10.18, port: 9045, type: ss, cipher: aes-256-cfb, password: Lp27rqyJq72bZsqX, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_10_oneclash", server: 217.30.10.18, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_11_oneclash", server: 217.30.10.18, port: 9005, type: ss, cipher: aes-256-cfb, password: ZET59LF6DvCC8KVt, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 35.88.126.102, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_12_oneclash", server: 217.30.10.18, port: 9064, type: ss, cipher: aes-256-cfb, password: cp8pRSUAyLhTfVWH, udp: true}
+  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_oneclash", server: 18.237.72.225, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_9_oneclash", server: 52.89.164.115, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_10_oneclash", server: 54.200.220.184, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_13_oneclash", server: 217.30.10.18, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_14_oneclash", server: 217.30.10.18, port: 9042, type: ss, cipher: aes-256-cfb, password: S7KwUu7yBy58S3Ga, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_15_oneclash", server: 217.30.10.18, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true}
   - {name: "[VMess] 🇭🇰 香港_openrunner", server: z3.fragranceninja.com, port: 12959, type: vmess, uuid: a32313ad-5e39-4f9a-9cad-512041790050, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: z3.fragranceninja.com, network: ws, ws-opts: {path: /, headers: {Host: z3.fragranceninja.com}}, udp: true}
   - {name: "[VMess] 🇭🇰 香港2_openrunner", server: cdn1.bpcdn.cc, port: 2086, type: vmess, uuid: aaa1b350-15f7-4837-9a08-2129ff9c6d1e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hkrg0nf30ik5piq1zr.lovebaipiao.com}}, udp: true}
   - {name: "[VMess] 🇭🇰 香港5_openrunner", server: 143.92.42.65, port: 2902, type: vmess, uuid: 640c1077-d10b-4225-a9fb-d3e9c3ce7a00, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
@@ -102,28 +154,35 @@ proxies:
   - {name: "[VMess] 🇩🇪 德国2_openrunner", server: 183.236.48.166, port: 33288, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇨🇦 加拿大_openrunner", server: 149.22.95.183, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
   - {name: "[SS] 🇬🇧 英国_openrunner", server: mmt.bjcu.donghui.tech, port: 55800, type: ss, cipher: aes-256-gcm, password: bebfbeb0-2797-4996-a8ef-c360bc457f15, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 23.157.88.61, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国_1_wenode", server: 141.98.101.180, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇦 _UA_乌克兰_1_wenode", server: 37.19.198.160, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 34.220.167.70, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 69.50.93.47, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 144.202.112.106, port: 3913, type: ss, cipher: chacha20-ietf-poly1305, password: 76dze09gQEvqS_jOuo, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 208.67.105.196, port: 42029, type: ss, cipher: chacha20-ietf-poly1305, password: SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: 23.150.152.41, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国_2_wenode", server: 141.98.101.179, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 38.110.1.107, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇨🇦 _CA_加拿大_wenode", server: 23.154.136.247, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰_wenode", server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇮🇳 _IN_印度_wenode", server: 159.65.149.72, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: p7EhC8MR7o7GuRn27YF8SQNAKJ2lUbBNIjcyqSmBHsy8wLbJ, udp: true}
-  - {name: "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_wenode", server: 13.215.205.186, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_wenode", server: 44.243.115.246, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_wenode", server: 52.89.233.31, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇩🇪 _CN_中国->🇩🇪_DE_德国_wenode", server: 183.232.159.51, port: 50225, type: ss, cipher: chacha20-ietf-poly1305, password: 7ac75754-fde2-407d-ac00-17cd5ddc53d1, udp: true}
-  - {name: "[SS] 🇨🇿 _CZ_捷克->🇹🇷_TR_土耳其_wenode", server: ams1.fromblancwithlove.com, port: 19175, type: ss, cipher: chacha20-ietf-poly1305, password: 5Au7NhFmcBqMnika4KVk7h4ZdV3wD4hFtJ8PJ3AlHzLeU1chEBaz19a643q7hBPV, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 23.150.152.41, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_wenode", server: 156.146.38.168, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_wenode", server: 34.210.94.67, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇦 _UA_乌克兰_2_wenode", server: 37.19.198.243, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_1_wenode", server: 217.30.10.18, port: 9026, type: ss, cipher: aes-256-cfb, password: QWDDvVE9npNurQfA, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_2_wenode", server: 217.30.10.18, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 54.184.77.199, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c, udp: true}
+  - {name: "[SS] 未知_wenode", server: 3.v2.a.www.speedtest.net.2.op.jahesh-tolid.website, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Yeud3qg58vv3mgu/SIW/2cIphtimMYsTHGBI1jAKF/A=, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_3_wenode", server: 217.30.10.18, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 137.175.97.159, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
+  - {name: "[SS] 🇬🇧 _GB_英国_wenode", server: 51.15.15.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 79.110.53.169, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 92.118.205.228, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇱🇻 _LV_拉脱维亚_wenode", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_4_wenode", server: 217.30.10.18, port: 9014, type: ss, cipher: aes-256-cfb, password: KnJGad3FqTvjqbaX, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: 51.120.1.158, port: 32091, type: ss, cipher: chacha20-ietf-poly1305, password: xjzsiMfTByKjA9URbdXWNp, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_5_wenode", server: 217.30.10.18, port: 9084, type: ss, cipher: aes-256-cfb, password: c3NtHJ5ujV2tGDfj, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_6_wenode", server: 217.30.10.18, port: 9059, type: ss, cipher: aes-256-cfb, password: 9XwYyZsK8SNzQDtY, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_7_wenode", server: 217.30.10.18, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_8_wenode", server: 217.30.10.18, port: 9037, type: ss, cipher: aes-256-cfb, password: TN2YqghxeFDKZfLU, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 34.211.105.26, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_9_wenode", server: 217.30.10.18, port: 9045, type: ss, cipher: aes-256-cfb, password: Lp27rqyJq72bZsqX, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_10_wenode", server: 217.30.10.18, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_11_wenode", server: 217.30.10.18, port: 9005, type: ss, cipher: aes-256-cfb, password: ZET59LF6DvCC8KVt, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 35.88.126.102, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_12_wenode", server: 217.30.10.18, port: 9064, type: ss, cipher: aes-256-cfb, password: cp8pRSUAyLhTfVWH, udp: true}
+  - {name: "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_wenode", server: 18.237.72.225, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_9_wenode", server: 52.89.164.115, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_10_wenode", server: 54.200.220.184, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_13_wenode", server: 217.30.10.18, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_14_wenode", server: 217.30.10.18, port: 9042, type: ss, cipher: aes-256-cfb, password: S7KwUu7yBy58S3Ga, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_15_wenode", server: 217.30.10.18, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -142,76 +201,128 @@ proxy-groups:
     type: select
     proxies:
       - "[SS] 高性价比机场:https://kfyun.uk_clashgithub"
-      - "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub"
-      - "[SS] 🇺🇸 美国科罗拉多州布隆菲尔德市+Level3_clashgithub"
-      - "[SS] 🇺🇸 美国科罗拉多州布隆菲尔德市+Level3 2_clashgithub"
-      - "[VMess] 🇺🇸 美国 Fastly全球Anycast节点_clashgithub"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
+      - "[SS] 0|--1_clashgithub"
+      - "[SS] 0|--2_clashgithub"
+      - "[SS] 0|--3_clashgithub"
+      - "[SS] 0|--4_clashgithub"
+      - "[SS] 0|--5_clashgithub"
+      - "[SS] 0|--6_clashgithub"
+      - "[SS] 0|--7_clashgithub"
+      - "[SS] 0|--8_clashgithub"
+      - "[SS] 0|--10_clashgithub"
+      - "[SS] 0|--11_clashgithub"
+      - "[SS] 0|--12_clashgithub"
+      - "[SS] 0|--13_clashgithub"
+      - "[SS] 0|--14_clashgithub"
+      - "[Trojan] 🇭🇰 13,14|香港|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港4|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇨🇳 13|🇹🇼 台湾|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇯🇵 13,14|日本|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 13|🇯🇵 日本3|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本4|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本5|@ripaojiedian_clashgithub"
+      - "[VMess] 🇸🇬 13|🇸🇬 新加坡|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 13|🇸🇬 新加坡2|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇺🇸 13,14|美国|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 13|🇺🇸 美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 13|🇺🇸 美国5|@ripaojiedian_clashgithub"
+      - "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇻🇳 13,14|越南|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港3|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港4|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇭🇰 14|香港5|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港7|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇨🇳 14|台湾|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本2|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 14|日本3|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本4|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本5|@ripaojiedian_clashgithub"
+      - "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 14|新加坡2|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇺🇸 14|美国2|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 14|美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 14|美国5|@ripaojiedian_clashgithub"
+      - "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub"
+      - "[Vless] 15|AU_speednode_0001_clashgithub"
+      - "[Vless] 15|AU_speednode_0002_clashgithub"
+      - "[Vless] 15|EE_speednode_0005_clashgithub"
+      - "[Vless] 15|FR_speednode_0006_clashgithub"
+      - "[Vless] 15|JP_speednode_0008_clashgithub"
+      - "[Vless] 15|KR_speednode_0020_clashgithub"
+      - "[Vless] 15|KR_speednode_0021_clashgithub"
+      - "[Vless] 15|RU_speednode_0022_clashgithub"
+      - "[Vless] 15|SI_speednode_0025_clashgithub"
+      - "[Vless] 15|US_speednode_0031_clashgithub"
+      - "[Vless] 15|US_speednode_0032_clashgithub"
+      - "[Vless] 15|US_speednode_0034_clashgithub"
+      - "[Vless] 15|US_speednode_0035_clashgithub"
+      - "[Vless] 15|US_speednode_0036_clashgithub"
+      - "[Vless] 15|US_speednode_0038_clashgithub"
+      - "[Vless] 15|US_speednode_0039_clashgithub"
+      - "[Vless] 15|US_speednode_0040_clashgithub"
+      - "[Vless] 15|US_speednode_0042_clashgithub"
+      - "[Vless] 15|US_speednode_0043_clashgithub"
+      - "[Vless] 15|US_speednode_0044_clashgithub"
+      - "[Vless] 15|US_speednode_0045_clashgithub"
+      - "[Vless] 15|US_speednode_0047_clashgithub"
+      - "[Trojan] 15|VN_speednode_0048_clashgithub"
+      - "[VMess] 16|d*********g.com_2_clashgithub"
+      - "[Trojan] 16|d*********g.com_3_clashgithub"
+      - "[SS] 🇫🇷 FR法国(mibei77.com 米贝节点分享)_miebei"
+      - "[VMess] 🇫🇷 FR法国(mibei77.com 米贝节点分享) 2_miebei"
+      - "[SS] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
-      - "[SS] 🇮🇳 IN印度(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
-      - "[SS] 🇪🇸 西班牙(mibei77.com 米贝节点分享)_miebei"
-      - "[SS] 🇬🇧 GB英国(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 19_miebei"
-      - "[VMess] 🇨🇦 CA加拿大(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 20_miebei"
-      - "[VMess] 🇨🇦 加拿大(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 21_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 22_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 23_miebei"
-      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 24_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 25_miebei"
-      - "[SS] 🇩🇪 DE德国(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 26_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 27_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 28_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 29_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 30_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 31_miebei"
-      - "[SS] 🇺🇦 乌克兰(mibei77.com 米贝节点分享)_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 32_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 33_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 34_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 35_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 36_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 37_miebei"
+      - "[SS] 🇩🇪 德国(mibei77.com 米贝节点分享)_miebei"
+      - "[VMess] 🇫🇷 法国(mibei77.com 米贝节点分享)_miebei"
+      - "[SS] 🇫🇷 法国(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇺🇦 乌克兰(mibei77.com 米贝节点分享)_miebei"
+      - "[SS] 🇷🇺 _RU_俄罗斯_1_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_2_oneclash"
       - "[SS] 🇺🇸 _US_美国_1_oneclash"
-      - "[SS] 🇬🇧 _GB_英国_1_oneclash"
-      - "[SS] 🇺🇦 _UA_乌克兰_1_oneclash"
       - "[SS] 🇺🇸 _US_美国_2_oneclash"
+      - "[SS] 未知_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_3_oneclash"
       - "[SS] 🇺🇸 _US_美国_3_oneclash"
+      - "[SS] 🇬🇧 _GB_英国_oneclash"
       - "[SS] 🇺🇸 _US_美国_4_oneclash"
       - "[SS] 🇺🇸 _US_美国_5_oneclash"
+      - "[SS] 🇱🇻 _LV_拉脱维亚_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_4_oneclash"
       - "[SS] 🇺🇸 _US_美国_6_oneclash"
-      - "[SS] 🇬🇧 _GB_英国_2_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_5_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_6_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_7_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_8_oneclash"
       - "[SS] 🇺🇸 _US_美国_7_oneclash"
-      - "[SS] 🇨🇦 _CA_加拿大_oneclash"
-      - "[SS] 🇳🇱 _NL_荷兰_oneclash"
-      - "[SS] 🇮🇳 _IN_印度_oneclash"
-      - "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_oneclash"
-      - "[SS] 🇩🇪 _CN_中国->🇩🇪_DE_德国_oneclash"
-      - "[SS] 🇨🇿 _CZ_捷克->🇹🇷_TR_土耳其_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_9_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_10_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_11_oneclash"
       - "[SS] 🇺🇸 _US_美国_8_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_12_oneclash"
+      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_oneclash"
       - "[SS] 🇺🇸 _US_美国_9_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_oneclash"
-      - "[SS] 🇺🇦 _UA_乌克兰_2_oneclash"
+      - "[SS] 🇺🇸 _US_美国_10_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_13_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_14_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_15_oneclash"
       - "[VMess] 🇭🇰 香港_openrunner"
       - "[VMess] 🇭🇰 香港2_openrunner"
       - "[VMess] 🇭🇰 香港5_openrunner"
@@ -238,28 +349,35 @@ proxy-groups:
       - "[VMess] 🇩🇪 德国2_openrunner"
       - "[SS] 🇨🇦 加拿大_openrunner"
       - "[SS] 🇬🇧 英国_openrunner"
+      - "[SS] 🇷🇺 _RU_俄罗斯_1_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_2_wenode"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
-      - "[SS] 🇬🇧 _GB_英国_1_wenode"
-      - "[SS] 🇺🇦 _UA_乌克兰_1_wenode"
       - "[SS] 🇺🇸 _US_美国_2_wenode"
+      - "[SS] 未知_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_3_wenode"
       - "[SS] 🇺🇸 _US_美国_3_wenode"
+      - "[SS] 🇬🇧 _GB_英国_wenode"
       - "[SS] 🇺🇸 _US_美国_4_wenode"
       - "[SS] 🇺🇸 _US_美国_5_wenode"
+      - "[SS] 🇱🇻 _LV_拉脱维亚_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_4_wenode"
       - "[SS] 🇺🇸 _US_美国_6_wenode"
-      - "[SS] 🇬🇧 _GB_英国_2_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_5_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_6_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_7_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_8_wenode"
       - "[SS] 🇺🇸 _US_美国_7_wenode"
-      - "[SS] 🇨🇦 _CA_加拿大_wenode"
-      - "[SS] 🇳🇱 _NL_荷兰_wenode"
-      - "[SS] 🇮🇳 _IN_印度_wenode"
-      - "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_wenode"
-      - "[SS] 🇩🇪 _CN_中国->🇩🇪_DE_德国_wenode"
-      - "[SS] 🇨🇿 _CZ_捷克->🇹🇷_TR_土耳其_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_9_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_10_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_11_wenode"
       - "[SS] 🇺🇸 _US_美国_8_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_12_wenode"
+      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_wenode"
       - "[SS] 🇺🇸 _US_美国_9_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_wenode"
-      - "[SS] 🇺🇦 _UA_乌克兰_2_wenode"
+      - "[SS] 🇺🇸 _US_美国_10_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_13_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_14_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_15_wenode"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -498,6 +616,18 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "[Trojan] 🇭🇰 13,14|香港|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港4|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港3|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港4|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇭🇰 14|香港5|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港7|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 香港_openrunner"
       - "[VMess] 🇭🇰 香港2_openrunner"
       - "[VMess] 🇭🇰 香港5_openrunner"
@@ -507,61 +637,57 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_oneclash"
+      - "[Trojan] 🇯🇵 13,14|日本|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 13|🇯🇵 日本3|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本4|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本5|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本2|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 14|日本3|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本4|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本5|@ripaojiedian_clashgithub"
+      - "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub"
+      - "[Vless] 15|JP_speednode_0008_clashgithub"
       - "[VMess] 🇯🇵 日本_openrunner"
       - "[Trojan] 🇯🇵 日本2_openrunner"
       - "[SS] 🇯🇵 日本3_openrunner"
       - "[SS] 🇯🇵 日本4_openrunner"
       - "[SS] 🇯🇵 日本5_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
-      - "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_wenode"
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
     proxies:
-      - "[VMess] 🇺🇸 美国 CloudFlare节点_clashgithub"
-      - "[SS] 🇺🇸 美国科罗拉多州布隆菲尔德市+Level3_clashgithub"
-      - "[SS] 🇺🇸 美国科罗拉多州布隆菲尔德市+Level3 2_clashgithub"
-      - "[VMess] 🇺🇸 美国 Fastly全球Anycast节点_clashgithub"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇺🇸 13,14|美国|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 13|🇺🇸 美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 13|🇺🇸 美国5|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇺🇸 14|美国2|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 14|美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 14|美国5|@ripaojiedian_clashgithub"
+      - "[Vless] 15|US_speednode_0031_clashgithub"
+      - "[Vless] 15|US_speednode_0032_clashgithub"
+      - "[Vless] 15|US_speednode_0034_clashgithub"
+      - "[Vless] 15|US_speednode_0035_clashgithub"
+      - "[Vless] 15|US_speednode_0036_clashgithub"
+      - "[Vless] 15|US_speednode_0038_clashgithub"
+      - "[Vless] 15|US_speednode_0039_clashgithub"
+      - "[Vless] 15|US_speednode_0040_clashgithub"
+      - "[Vless] 15|US_speednode_0042_clashgithub"
+      - "[Vless] 15|US_speednode_0043_clashgithub"
+      - "[Vless] 15|US_speednode_0044_clashgithub"
+      - "[Vless] 15|US_speednode_0045_clashgithub"
+      - "[Vless] 15|US_speednode_0047_clashgithub"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 19_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 20_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 21_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 22_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 23_miebei"
-      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 24_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 25_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 26_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 27_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 28_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 29_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 30_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 31_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 32_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 33_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 34_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 35_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 36_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 37_miebei"
       - "[SS] 🇺🇸 _US_美国_1_oneclash"
       - "[SS] 🇺🇸 _US_美国_2_oneclash"
       - "[SS] 🇺🇸 _US_美国_3_oneclash"
@@ -569,12 +695,10 @@ proxy-groups:
       - "[SS] 🇺🇸 _US_美国_5_oneclash"
       - "[SS] 🇺🇸 _US_美国_6_oneclash"
       - "[SS] 🇺🇸 _US_美国_7_oneclash"
-      - "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_oneclash"
       - "[SS] 🇺🇸 _US_美国_8_oneclash"
+      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_oneclash"
       - "[SS] 🇺🇸 _US_美国_9_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_oneclash"
+      - "[SS] 🇺🇸 _US_美国_10_oneclash"
       - "[SS] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
@@ -584,18 +708,18 @@ proxy-groups:
       - "[SS] 🇺🇸 _US_美国_5_wenode"
       - "[SS] 🇺🇸 _US_美国_6_wenode"
       - "[SS] 🇺🇸 _US_美国_7_wenode"
-      - "[SS] 🇯🇵 _US_美国->🇯🇵_JP_日本_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_wenode"
       - "[SS] 🇺🇸 _US_美国_8_wenode"
+      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_wenode"
       - "[SS] 🇺🇸 _US_美国_9_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_wenode"
+      - "[SS] 🇺🇸 _US_美国_10_wenode"
   - name: 🇹🇼 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "[Trojan] 🇨🇳 13|🇹🇼 台湾|@ripaojiedian_clashgithub"
+      - "[Trojan] 🇨🇳 14|台湾|@ripaojiedian_clashgithub"
       - "[SS] 🇨🇳 台湾_openrunner"
       - "[SS] 🇨🇳 台湾2_openrunner"
       - "[SS] 🇨🇳 台湾3_openrunner"
@@ -606,22 +730,29 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_oneclash"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_oneclash"
+      - "[VMess] 🇸🇬 13|🇸🇬 新加坡|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 13|🇸🇬 新加坡2|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub"
+      - "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 14|新加坡2|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_oneclash"
       - "[SS] 🇸🇬 新加坡_openrunner"
       - "[Trojan] 🇸🇬 新加坡2_openrunner"
       - "[SS] 🇸🇬 新加坡3_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_1_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_2_wenode"
-      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_3_wenode"
+      - "[SS] 🇸🇬 _US_美国->🇸🇬_SG_新加坡_wenode"
   - name: 🇰🇷 韩国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub"
+      - "[Vless] 15|KR_speednode_0020_clashgithub"
+      - "[Vless] 15|KR_speednode_0021_clashgithub"
+      - "[SS] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei"
       - "[SS] 🇰🇷 韩国2_openrunner"
       - "[SS] 🇰🇷 韩国3_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
@@ -2447,6 +2578,7 @@ rules:
   - DOMAIN-SUFFIX,steamcontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamusercontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软Bing
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft,Ⓜ️ 微软Bing
   - DOMAIN-SUFFIX,copilot.microsoft.com,Ⓜ️ 微软Bing
   - PROCESS-NAME,OneDrive,Ⓜ️ 微软云盘
   - PROCESS-NAME,OneDriveUpdater,Ⓜ️ 微软云盘
@@ -2579,6 +2711,7 @@ rules:
   - DOMAIN-SUFFIX,telegram.org,📲 电报消息
   - DOMAIN-SUFFIX,telesco.pe,📲 电报消息
   - IP-CIDR,91.108.0.0/16,📲 电报消息,no-resolve
+  - IP-CIDR,95.161.64.0/20,📲 电报消息,no-resolve
   - IP-CIDR,109.239.140.0/24,📲 电报消息,no-resolve
   - IP-CIDR,149.154.160.0/20,📲 电报消息,no-resolve
   - IP-CIDR6,2001:67c:4e8::/48,📲 电报消息,no-resolve
@@ -2621,6 +2754,62 @@ rules:
   - DOMAIN-SUFFIX,aistudio.google.com,🤖 OpenAi
   - DOMAIN-SUFFIX,ciciai.com,🤖 OpenAi
   - DOMAIN-KEYWORD,chatgpt,🤖 OpenAi
+  - DOMAIN,api.msn.com,🤖 OpenAi
+  - DOMAIN,api.statsig.com,🤖 OpenAi
+  - DOMAIN,assets.msn.com,🤖 OpenAi
+  - DOMAIN,browser-intake-datadoghq.com,🤖 OpenAi
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net,🤖 OpenAi
+  - DOMAIN,copilot.microsoft.com,🤖 OpenAi
+  - DOMAIN,gateway.bingviz.microsoft.net,🤖 OpenAi
+  - DOMAIN,gateway.bingviz.microsoftapp.net,🤖 OpenAi
+  - DOMAIN,in.appcenter.ms,🤖 OpenAi
+  - DOMAIN,location.microsoft.com,🤖 OpenAi
+  - DOMAIN,odc.officeapps.live.com,🤖 OpenAi
+  - DOMAIN,openai-api.arkoselabs.com,🤖 OpenAi
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net,🤖 OpenAi
+  - DOMAIN,production-openaicom-storage.azureedge.net,🤖 OpenAi
+  - DOMAIN,r.bing.com,🤖 OpenAi
+  - DOMAIN,self.events.data.microsoft.com,🤖 OpenAi
+  - DOMAIN,services.bingapis.com,🤖 OpenAi
+  - DOMAIN,static.cloudflareinsights.com,🤖 OpenAi
+  - DOMAIN,sydney.bing.com,🤖 OpenAi
+  - DOMAIN,www.bing.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,algolia.net,🤖 OpenAi
+  - DOMAIN-SUFFIX,api.microsoftapp.net,🤖 OpenAi
+  - DOMAIN-SUFFIX,auth0.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io,🤖 OpenAi
+  - DOMAIN-SUFFIX,challenges.cloudflare.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud,🤖 OpenAi
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,edgeservices.bing.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,events.statsigapi.net,🤖 OpenAi
+  - DOMAIN-SUFFIX,featuregates.org,🤖 OpenAi
+  - DOMAIN-SUFFIX,host.livekit.cloud,🤖 OpenAi
+  - DOMAIN-SUFFIX,identrust.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,intercom.io,🤖 OpenAi
+  - DOMAIN-SUFFIX,intercomcdn.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,launchdarkly.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,oaistatic.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,observeit.net,🤖 OpenAi
+  - DOMAIN-SUFFIX,openai.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🤖 OpenAi
+  - DOMAIN-SUFFIX,openaicom.imgix.net,🤖 OpenAi
+  - DOMAIN-SUFFIX,segment.io,🤖 OpenAi
+  - DOMAIN-SUFFIX,sentry.io,🤖 OpenAi
+  - DOMAIN-SUFFIX,stripe.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,turn.livekit.cloud,🤖 OpenAi
+  - DOMAIN-KEYWORD,openaicom-api,🤖 OpenAi
+  - IP-CIDR,24.199.123.28/32,🤖 OpenAi,no-resolve
+  - IP-CIDR,64.23.132.171/32,🤖 OpenAi,no-resolve
+  - DOMAIN-KEYWORD,cocopilot,🤖 OpenAi
+  - DOMAIN,api.github.com,🤖 OpenAi
+  - DOMAIN,copilot-proxy.githubusercontent.com,🤖 OpenAi
+  - DOMAIN,api.githubcopilot.com,🤖 OpenAi
+  - DOMAIN,api.individual.githubcopilot.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,anthropic.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,claude.ai,🤖 OpenAi
   - IP-CIDR,185.122.0.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,1.0.0.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,1.1.1.0/24,☁️ CloudFlareCDN,no-resolve
@@ -2742,13 +2931,13 @@ rules:
   - IP-CIDR,23.227.37.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,23.227.38.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,23.227.60.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,49.238.236.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,65.110.63.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,66.118.0.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,66.235.200.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,68.67.65.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.21.244.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.22.200.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,103.31.4.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.81.228.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.143.32.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.156.22.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2765,6 +2954,7 @@ rules:
   - IP-CIDR,108.162.240.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,108.162.248.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,108.162.250.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,123.108.74.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,131.0.72.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.65.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.66.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2783,13 +2973,13 @@ rules:
   - IP-CIDR,141.101.110.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.112.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,150.48.128.0/18,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,154.223.134.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,159.242.242.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.0.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.32.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.34.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.36.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.41.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.42.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.40.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.44.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.48.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.51.0/24,☁️ CloudFlareCDN,no-resolve
@@ -2798,41 +2988,26 @@ rules:
   - IP-CIDR,162.158.59.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.60.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.72.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.80.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.89.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.90.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.93.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.94.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.96.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.104.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.109.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.110.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.112.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.128.0/19,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.160.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.176.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.185.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.186.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.188.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.192.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.194.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.196.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.80.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.96.0/19,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.128.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.144.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.153.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.154.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.156.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.160.0/19,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.192.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.196.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.198.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.200.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.204.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.206.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.208.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.212.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.214.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.216.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.214.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.219.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.220.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.224.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.229.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.230.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.232.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.240.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.244.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.247.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,162.158.248.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,162.158.224.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.159.0.0/18,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.159.64.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.159.80.0/22,☁️ CloudFlareCDN,no-resolve
@@ -2840,6 +3015,7 @@ rules:
   - IP-CIDR,162.251.82.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.64.0.0/15,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.66.0.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.66.31.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.66.40.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.66.128.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.66.160.0/20,☁️ CloudFlareCDN,no-resolve
@@ -2848,9 +3024,7 @@ rules:
   - IP-CIDR,172.66.208.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.66.216.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.67.0.0/16,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.0.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.4.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.6.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.0.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.8.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.13.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.14.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2860,26 +3034,25 @@ rules:
   - IP-CIDR,172.68.45.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.46.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.48.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.57.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.58.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.60.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.64.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.72.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.76.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.78.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.81.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.82.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.84.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.88.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.96.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.112.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.114.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.117.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.118.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.116.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.121.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.123.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.124.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.128.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.138.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.139.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.140.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.144.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.148.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2889,8 +3062,7 @@ rules:
   - IP-CIDR,172.68.159.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.160.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.162.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.165.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.166.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.164.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.168.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.170.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.172.0/22,☁️ CloudFlareCDN,no-resolve
@@ -2898,29 +3070,28 @@ rules:
   - IP-CIDR,172.68.179.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.180.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.184.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.192.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.208.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.210.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.192.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.200.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.203.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.204.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.209.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.210.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.212.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.216.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.224.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.228.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.232.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.236.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.238.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.216.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.220.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.222.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.224.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.228.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.230.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.232.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.240.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.248.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.68.251.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.68.248.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.252.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.68.255.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.0.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.8.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.10.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.12.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.16.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.18.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.20.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.32.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.0.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.16.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.32.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.36.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.40.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.45.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.46.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2930,24 +3101,17 @@ rules:
   - IP-CIDR,172.69.56.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.60.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.62.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.64.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.69.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.70.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.72.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.64.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.80.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.83.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.84.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.88.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.96.0/19,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.128.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.136.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.140.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.142.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.144.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.149.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.150.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.152.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.156.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.96.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.112.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.114.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.116.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.120.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.128.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.160.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.177.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.178.0/23,☁️ CloudFlareCDN,no-resolve
@@ -2958,36 +3122,29 @@ rules:
   - IP-CIDR,172.69.210.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.212.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.216.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.224.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.228.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.231.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.225.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.226.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.228.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.232.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.240.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.240.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.245.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.246.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.248.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.250.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.253.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.69.254.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.33.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.34.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.37.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.38.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.41.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.42.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.44.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.252.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.69.254.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.32.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.48.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.56.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.61.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.62.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.80.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.84.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.86.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.80.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.88.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.92.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.94.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.100.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.103.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.104.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.106.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.108.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.104.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.112.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.116.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.120.0/21,☁️ CloudFlareCDN,no-resolve
@@ -3000,38 +3157,25 @@ rules:
   - IP-CIDR,172.70.144.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.148.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.150.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.152.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.156.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.158.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.152.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.160.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.173.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.174.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.172.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.176.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.192.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.195.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.196.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.200.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.205.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.206.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.209.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.210.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.213.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.214.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.217.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.218.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.70.220.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.200.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.202.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.204.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.70.208.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.70.224.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.0.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.8.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.12.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.14.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.17.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.20.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.24.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.81.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.82.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.84.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.86.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.80.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.88.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.90.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.92.0/22,☁️ CloudFlareCDN,no-resolve
@@ -3046,6 +3190,7 @@ rules:
   - IP-CIDR,172.71.140.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.144.0/20,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.160.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.176.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.180.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.184.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.189.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3054,21 +3199,16 @@ rules:
   - IP-CIDR,172.71.201.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.202.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.204.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.208.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.216.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.221.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.222.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.224.0/21,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.208.0/20,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.224.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.228.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.230.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.233.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.234.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.237.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.238.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.236.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.242.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.245.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.246.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.249.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.250.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,172.71.252.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.244.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,172.71.248.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,173.245.49.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,173.245.54.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,173.245.58.0/23,☁️ CloudFlareCDN,no-resolve
@@ -3090,7 +3230,7 @@ rules:
   - IP-CIDR,198.41.214.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.216.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.224.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.226.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.226.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.228.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.232.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.236.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3100,13 +3240,15 @@ rules:
   - IP-CIDR,198.217.251.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,199.27.128.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,204.195.192.0/18,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,216.19.107.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.64.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.91.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.32.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.71.64.0/20,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.148.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.150.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.10.244.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.42.65.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,5.175.141.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.182.34.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.182.84.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,5.226.179.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3114,6 +3256,7 @@ rules:
   - IP-CIDR,8.12.10.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,12.221.133.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,14.102.228.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,23.141.168.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,23.167.152.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,23.178.112.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,23.247.163.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3137,7 +3280,6 @@ rules:
   - IP-CIDR,45.95.241.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.131.4.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.131.208.0/22,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,45.133.247.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.135.235.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.137.99.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.142.120.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3148,13 +3290,16 @@ rules:
   - IP-CIDR,45.158.56.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.159.216.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.194.53.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,45.202.113.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,45.205.0.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,46.8.199.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,46.202.30.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,46.254.92.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,62.72.166.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,62.169.155.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,64.69.24.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,65.205.150.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,66.45.118.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,66.81.247.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,66.81.255.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,66.94.32.0/20,☁️ CloudFlareCDN,no-resolve
@@ -3183,12 +3328,13 @@ rules:
   - IP-CIDR,91.192.106.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,91.193.58.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,91.199.81.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,91.209.253.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,91.221.116.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,92.53.188.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,92.60.74.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,92.243.74.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,93.113.175.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,93.114.64.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,93.115.102.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,93.152.234.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,94.140.0.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,94.242.228.0/22,☁️ CloudFlareCDN,no-resolve
@@ -3205,6 +3351,7 @@ rules:
   - IP-CIDR,103.116.7.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.121.59.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.133.1.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,103.138.246.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.160.204.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.169.142.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.172.110.0/23,☁️ CloudFlareCDN,no-resolve
@@ -3217,12 +3364,13 @@ rules:
   - IP-CIDR,108.165.48.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,108.165.152.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,108.165.216.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,123.253.174.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,114.129.43.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,130.108.73.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,130.108.104.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,130.108.253.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,136.143.138.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,138.5.248.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,139.64.234.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,140.99.233.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.11.194.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.11.202.0/23,☁️ CloudFlareCDN,no-resolve
@@ -3260,6 +3408,7 @@ rules:
   - IP-CIDR,154.219.2.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,154.219.5.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,155.46.213.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,156.224.73.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,156.225.72.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,156.229.48.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,156.237.4.0/23,☁️ CloudFlareCDN,no-resolve
@@ -3294,6 +3443,7 @@ rules:
   - IP-CIDR,176.53.144.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,176.124.223.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,176.126.206.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,178.211.142.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,178.213.76.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,181.214.1.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,184.174.80.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3301,7 +3451,6 @@ rules:
   - IP-CIDR,185.18.250.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,185.38.135.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,185.59.218.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,185.109.21.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,185.135.9.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,185.135.44.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,185.148.104.0/22,☁️ CloudFlareCDN,no-resolve
@@ -3327,6 +3476,7 @@ rules:
   - IP-CIDR,188.244.122.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,192.65.217.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,192.133.11.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,192.152.138.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,192.236.26.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,193.9.49.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,193.16.63.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3334,27 +3484,27 @@ rules:
   - IP-CIDR,193.33.87.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,193.67.144.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,193.162.35.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,193.188.14.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,193.227.99.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,193.233.21.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,193.233.132.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.1.194.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.26.68.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.36.49.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.36.55.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.36.216.0/22,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.39.112.0/21,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,194.40.240.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.53.53.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.59.5.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.113.223.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.152.44.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,194.169.194.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,195.13.44.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,195.13.54.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.26.229.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.28.190.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.82.109.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.85.23.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.85.59.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,195.189.177.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.245.221.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,195.250.46.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,196.13.241.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3384,7 +3534,6 @@ rules:
   - IP-CIDR,203.34.80.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,203.55.107.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,203.89.5.0/24,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,203.107.173.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,203.193.21.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,204.62.141.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,204.68.111.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3401,6 +3550,7 @@ rules:
   - IP-CIDR,212.239.86.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,213.109.205.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,213.182.199.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,213.219.247.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,213.241.198.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,216.116.134.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,216.120.131.0/24,☁️ CloudFlareCDN,no-resolve
@@ -3411,6 +3561,7 @@ rules:
   - IP-CIDR,216.205.52.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,223.27.176.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.21.246.0/23,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,104.23.0.0/19,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,141.101.88.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,162.158.64.0/21,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,172.69.24.0/21,☁️ CloudFlareCDN,no-resolve
@@ -3421,7 +3572,8 @@ rules:
   - IP-CIDR,198.41.243.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.245.0/24,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.246.0/23,☁️ CloudFlareCDN,no-resolve
-  - IP-CIDR,198.41.248.0/22,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.248.0/24,☁️ CloudFlareCDN,no-resolve
+  - IP-CIDR,198.41.250.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,198.41.254.0/23,☁️ CloudFlareCDN,no-resolve
   - IP-CIDR,103.184.44.0/23,☁️ CloudFlareCDN,no-resolve
   - DOMAIN-SUFFIX,163yun.com,🎶 网易音乐
@@ -4716,6 +4868,7 @@ rules:
   - DOMAIN-SUFFIX,buzzhand.com,🚀 节点选择
   - DOMAIN-SUFFIX,buzzhand.net,🚀 节点选择
   - DOMAIN-SUFFIX,buzzorange.com,🚀 节点选择
+  - DOMAIN-SUFFIX,buzzsprout.com,🚀 节点选择
   - DOMAIN-SUFFIX,bvpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,bwbx.io,🚀 节点选择
   - DOMAIN-SUFFIX,bwgyhw.com,🚀 节点选择
@@ -5551,6 +5704,7 @@ rules:
   - DOMAIN-SUFFIX,fa.gov.tw,🚀 节点选择
   - DOMAIN-SUFFIX,facebook.br,🚀 节点选择
   - DOMAIN-SUFFIX,facebook.com,🚀 节点选择
+  - DOMAIN-SUFFIX,facebook.de,🚀 节点选择
   - DOMAIN-SUFFIX,facebook.design,🚀 节点选择
   - DOMAIN-SUFFIX,facebook.hu,🚀 节点选择
   - DOMAIN-SUFFIX,facebook.in,🚀 节点选择
@@ -6796,6 +6950,7 @@ rules:
   - DOMAIN-SUFFIX,iuksky.com,🚀 节点选择
   - DOMAIN-SUFFIX,ivacy.com,🚀 节点选择
   - DOMAIN-SUFFIX,iverycd.com,🚀 节点选择
+  - DOMAIN-SUFFIX,ivonblog.com,🚀 节点选择
   - DOMAIN-SUFFIX,ivpn.net,🚀 节点选择
   - DOMAIN-SUFFIX,iwara.tv,🚀 节点选择
   - DOMAIN-SUFFIX,ixquick.com,🚀 节点选择
@@ -6812,6 +6967,7 @@ rules:
   - DOMAIN-SUFFIX,jamaat.org,🚀 节点选择
   - DOMAIN-SUFFIX,jamestown.org,🚀 节点选择
   - DOMAIN-SUFFIX,jamyangnorbu.com,🚀 节点选择
+  - DOMAIN-SUFFIX,jan.ai,🚀 节点选择
   - DOMAIN-SUFFIX,jandyx.com,🚀 节点选择
   - DOMAIN-SUFFIX,janwongphoto.com,🚀 节点选择
   - DOMAIN-SUFFIX,japan-whores.com,🚀 节点选择
@@ -7282,6 +7438,7 @@ rules:
   - DOMAIN-SUFFIX,meshrep.com,🚀 节点选择
   - DOMAIN-SUFFIX,mesotw.com,🚀 节点选择
   - DOMAIN-SUFFIX,messenger.com,🚀 节点选择
+  - DOMAIN-SUFFIX,meta.com,🚀 节点选择
   - DOMAIN-SUFFIX,metacafe.com,🚀 节点选择
   - DOMAIN-SUFFIX,metafilter.com,🚀 节点选择
   - DOMAIN-SUFFIX,metart.com,🚀 节点选择
@@ -7886,6 +8043,7 @@ rules:
   - DOMAIN-SUFFIX,partypoker.com,🚀 节点选择
   - DOMAIN-SUFFIX,passion.com,🚀 节点选择
   - DOMAIN-SUFFIX,passiontimes.hk,🚀 节点选择
+  - DOMAIN-SUFFIX,passwords.google,🚀 节点选择
   - DOMAIN-SUFFIX,paste.ee,🚀 节点选择
   - DOMAIN-SUFFIX,pastebin.com,🚀 节点选择
   - DOMAIN-SUFFIX,pastie.org,🚀 节点选择
@@ -7919,8 +8077,6 @@ rules:
   - DOMAIN-SUFFIX,pen.io,🚀 节点选择
   - DOMAIN-SUFFIX,penchinese.com,🚀 节点选择
   - DOMAIN-SUFFIX,penchinese.net,🚀 节点选择
-  - DOMAIN-SUFFIX,pengyulong.com,🚀 节点选择
-  - DOMAIN-SUFFIX,penisbot.com,🚀 节点选择
   - DOMAIN-SUFFIX,pentalogic.net,🚀 节点选择
   - DOMAIN-SUFFIX,penthouse.com,🚀 节点选择
   - DOMAIN-SUFFIX,pentoy.hk,🚀 节点选择
@@ -7937,7 +8093,6 @@ rules:
   - DOMAIN-SUFFIX,phapluan.org,🚀 节点选择
   - DOMAIN-SUFFIX,phayul.com,🚀 节点选择
   - DOMAIN-SUFFIX,philborges.com,🚀 节点选择
-  - DOMAIN-SUFFIX,philly.com,🚀 节点选择
   - DOMAIN-SUFFIX,phmsociety.org,🚀 节点选择
   - DOMAIN-SUFFIX,phncdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,phonegap.com,🚀 节点选择
@@ -8082,7 +8237,6 @@ rules:
   - DOMAIN-SUFFIX,provpnaccounts.com,🚀 节点选择
   - DOMAIN-SUFFIX,proxfree.com,🚀 节点选择
   - DOMAIN-SUFFIX,proxifier.com,🚀 节点选择
-  - DOMAIN-SUFFIX,proxlet.com,🚀 节点选择
   - DOMAIN-SUFFIX,proxomitron.info,🚀 节点选择
   - DOMAIN-SUFFIX,proxpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,proxyanonimo.es,🚀 节点选择
@@ -8149,7 +8303,6 @@ rules:
   - DOMAIN-SUFFIX,qkshare.com,🚀 节点选择
   - DOMAIN-SUFFIX,qmzdd.com,🚀 节点选择
   - DOMAIN-SUFFIX,qoos.com,🚀 节点选择
-  - DOMAIN-SUFFIX,qooza.hk,🚀 节点选择
   - DOMAIN-SUFFIX,qpoe.com,🚀 节点选择
   - DOMAIN-SUFFIX,qq.co.za,🚀 节点选择
   - DOMAIN-SUFFIX,qstatus.com,🚀 节点选择
@@ -8191,13 +8344,11 @@ rules:
   - DOMAIN-SUFFIX,raizoji.or.jp,🚀 节点选择
   - DOMAIN-SUFFIX,ramcity.com.au,🚀 节点选择
   - DOMAIN-SUFFIX,rangwang.biz,🚀 节点选择
-  - DOMAIN-SUFFIX,rangzen.com,🚀 节点选择
   - DOMAIN-SUFFIX,rangzen.net,🚀 节点选择
   - DOMAIN-SUFFIX,rangzen.org,🚀 节点选择
   - DOMAIN-SUFFIX,ranxiang.com,🚀 节点选择
   - DOMAIN-SUFFIX,ranyunfei.com,🚀 节点选择
   - DOMAIN-SUFFIX,rapbull.net,🚀 节点选择
-  - DOMAIN-SUFFIX,rapidgator.net,🚀 节点选择
   - DOMAIN-SUFFIX,rapidmoviez.com,🚀 节点选择
   - DOMAIN-SUFFIX,rapidvpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,rarbgprx.org,🚀 节点选择
@@ -9039,6 +9190,7 @@ rules:
   - DOMAIN-SUFFIX,ticket.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,tigervpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,tiktok.com,🚀 节点选择
+  - DOMAIN-SUFFIX,tiktokv.com,🚀 节点选择
   - DOMAIN-SUFFIX,tiltbrush.com,🚀 节点选择
   - DOMAIN-SUFFIX,timdir.com,🚀 节点选择
   - DOMAIN-SUFFIX,time.com,🚀 节点选择
@@ -9098,6 +9250,7 @@ rules:
   - DOMAIN-SUFFIX,torrentproject.se,🚀 节点选择
   - DOMAIN-SUFFIX,torrenty.org,🚀 节点选择
   - DOMAIN-SUFFIX,torrentz.eu,🚀 节点选择
+  - DOMAIN-SUFFIX,tortoisesvn.net,🚀 节点选择
   - DOMAIN-SUFFIX,torvpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,totalvpn.com,🚀 节点选择
   - DOMAIN-SUFFIX,toutiaoabc.com,🚀 节点选择
@@ -12092,4 +12245,162 @@ rules:
   - DOMAIN,7cl578y97h.adobestats.io,🍃 应用净化
   - DOMAIN,8vf1533hg0.adobestats.io,🍃 应用净化
   - DOMAIN,j065cjonho.adobestats.io,🍃 应用净化
+  - DOMAIN,gkuhot62li.adobestats.io,🍃 应用净化
+  - DOMAIN,3jxakfyart.adobestats.io,🍃 应用净化
+  - DOMAIN,eilhhpyrhk.adobestats.io,🍃 应用净化
+  - DOMAIN,fi07tozbmh.adobestats.io,🍃 应用净化
+  - DOMAIN,int03thy3s.adobestats.io,🍃 应用净化
+  - DOMAIN,sk3nb074wt.adobestats.io,🍃 应用净化
+  - DOMAIN,k5hez87wo3.adobestats.io,🍃 应用净化
+  - DOMAIN,z8bpa11zz5.adobestats.io,🍃 应用净化
+  - DOMAIN,op6ya9mf18.adobestats.io,🍃 应用净化
+  - DOMAIN,p9jaddiqux.adobe.io,🍃 应用净化
+  - DOMAIN,0mgqdi537f.adobestats.io,🍃 应用净化
+  - DOMAIN,224me58l5q.adobestats.io,🍃 应用净化
+  - DOMAIN,37ng6po6bp.adobestats.io,🍃 应用净化
+  - DOMAIN,8mt9obctot.adobestats.io,🍃 应用净化
+  - DOMAIN,aen6torhir.adobestats.io,🍃 应用净化
+  - DOMAIN,dnqofyouwm.adobestats.io,🍃 应用净化
+  - DOMAIN,h1sp8k6bhv.adobestats.io,🍃 应用净化
+  - DOMAIN,hnebe5wyyy.adobestats.io,🍃 应用净化
+  - DOMAIN,s8cxczmvh5.adobestats.io,🍃 应用净化
+  - DOMAIN,v7yl9ajfg9.adobestats.io,🍃 应用净化
+  - DOMAIN,wvfhx4enq4.adobestats.io,🍃 应用净化
+  - DOMAIN,1s0s64nq7w.adobestats.io,🍃 应用净化
+  - DOMAIN,9uxtpeji2v.adobestats.io,🍃 应用净化
+  - DOMAIN,be4jspokx2.adobestats.io,🍃 应用净化
+  - DOMAIN,r7x9tbvsvx.adobestats.io,🍃 应用净化
+  - DOMAIN,w20hk05cgp.adobestats.io,🍃 应用净化
+  - DOMAIN,x915sjr4n9.adobestats.io,🍃 应用净化
+  - DOMAIN,xoq8wwlhsp.adobestats.io,🍃 应用净化
+  - DOMAIN,64a4g05fmn.adobestats.io,🍃 应用净化
+  - DOMAIN,6j5lc5swyh.adobestats.io,🍃 应用净化
+  - DOMAIN,xwr6ju22ai.adobestats.io,🍃 应用净化
+  - DOMAIN,1o54s13pxf.adobestats.io,🍃 应用净化
+  - DOMAIN,4ypokgsgmb.adobestats.io,🍃 应用净化
+  - DOMAIN,dvndpazg45.adobestats.io,🍃 应用净化
+  - DOMAIN,eyp31zax99.adobestats.io,🍃 应用净化
+  - DOMAIN,g059w52e5a.adobestats.io,🍃 应用净化
+  - DOMAIN,p9t0tf8p73.adobestats.io,🍃 应用净化
+  - DOMAIN,vyso4gf2fo.adobestats.io,🍃 应用净化
+  - DOMAIN,ytm4prvsic.adobestats.io,🍃 应用净化
+  - DOMAIN,3yx324cjrc.adobestats.io,🍃 应用净化
+  - DOMAIN,zarflqrb4e.adobestats.io,🍃 应用净化
+  - DOMAIN,u8dy2x6ofx.adobestats.io,🍃 应用净化
+  - DOMAIN,d9u8iw3ec6.adobestats.io,🍃 应用净化
+  - DOMAIN,8ksw9jeglo.adobestats.io,🍃 应用净化
+  - DOMAIN,av91c4swlr.adobestats.io,🍃 应用净化
+  - DOMAIN,nhijoow8u9.adobestats.io,🍃 应用净化
+  - DOMAIN,ukl1tj2nvv.adobestats.io,🍃 应用净化
+  - DOMAIN,w76a6nm3fs.adobestats.io,🍃 应用净化
+  - DOMAIN,2uzp2kpn5r.adobestats.io,🍃 应用净化
+  - DOMAIN,309q77jr8y.adobestats.io,🍃 应用净化
+  - DOMAIN,3cb9jccasz.adobestats.io,🍃 应用净化
+  - DOMAIN,3t80jr3icl.adobestats.io,🍃 应用净化
+  - DOMAIN,46w37ofmyh.adobestats.io,🍃 应用净化
+  - DOMAIN,4br2ud69pv.adobestats.io,🍃 应用净化
+  - DOMAIN,8qq1w94u66.adobestats.io,🍃 应用净化
+  - DOMAIN,fnx5ng6n5k.adobestats.io,🍃 应用净化
+  - DOMAIN,je7b0l8vdo.adobestats.io,🍃 应用净化
+  - DOMAIN,l7imn8j82x.adobestats.io,🍃 应用净化
+  - DOMAIN,mbiowykjov.adobestats.io,🍃 应用净化
+  - DOMAIN,oc64zoqehy.adobestats.io,🍃 应用净化
+  - DOMAIN,r97n5i4gui.adobestats.io,🍃 应用净化
+  - DOMAIN,sn7ul2kyne.adobestats.io,🍃 应用净化
+  - DOMAIN,tz8aenh3nl.adobestats.io,🍃 应用净化
+  - DOMAIN,bv7iaks1q0.adobestats.io,🍃 应用净化
+  - DOMAIN,lmy2aip7t9.adobestats.io,🍃 应用净化
+  - DOMAIN,v1p7zr510j.adobestats.io,🍃 应用净化
+  - DOMAIN,aw725q3eth.adobestats.io,🍃 应用净化
+  - DOMAIN,ltnk9caeyt.adobestats.io,🍃 应用净化
+  - DOMAIN,ykcaj6bh15.adobestats.io,🍃 应用净化
+  - DOMAIN,9ohyfdvj27.adobestats.io,🍃 应用净化
+  - DOMAIN,lmvu17gkya.adobestats.io,🍃 应用净化
+  - DOMAIN,0np4eiuov7.adobestats.io,🍃 应用净化
+  - DOMAIN,6u32mwnaxq.adobestats.io,🍃 应用净化
+  - DOMAIN,d3my5g4jna.adobestats.io,🍃 应用净化
+  - DOMAIN,j8iepl91av.adobestats.io,🍃 应用净化
+  - DOMAIN,no8yw4nh6e.adobestats.io,🍃 应用净化
+  - DOMAIN,nop4h5fp61.adobestats.io,🍃 应用净化
+  - DOMAIN,wvwrj2y0li.adobestats.io,🍃 应用净化
+  - DOMAIN,zxv4wvfvi9.adobestats.io,🍃 应用净化
+  - DOMAIN,2oyz2t4wq9.adobestats.io,🍃 应用净化
+  - DOMAIN,5xnbj0m6t2.adobestats.io,🍃 应用净化
+  - DOMAIN,6asnsetik3.adobestats.io,🍃 应用净化
+  - DOMAIN,hknkvizuc2.adobestats.io,🍃 应用净化
+  - DOMAIN,w8s4afl50t.adobestats.io,🍃 应用净化
+  - DOMAIN,xaggdolnhv.adobestats.io,🍃 应用净化
+  - DOMAIN,0nx23dhzap.adobestats.io,🍃 应用净化
+  - DOMAIN,744jei1415.adobestats.io,🍃 应用净化
+  - DOMAIN,ahuu2xu1ya.adobestats.io,🍃 应用净化
+  - DOMAIN,al76al5u4u.adobestats.io,🍃 应用净化
+  - DOMAIN,fq8re9lavq.adobestats.io,🍃 应用净化
+  - DOMAIN,m38l9rfnry.adobestats.io,🍃 应用净化
+  - DOMAIN,uzantvo0as.adobe.io,🍃 应用净化
+  - DOMAIN,7gag9ygrcx.adobestats.io,🍃 应用净化
+  - DOMAIN,7jg7m1ces4.adobestats.io,🍃 应用净化
+  - DOMAIN,kk0sjamt88.adobestats.io,🍃 应用净化
+  - DOMAIN,xygpp0qk24.adobestats.io,🍃 应用净化
+  - DOMAIN,1kez8509ag.adobestats.io,🍃 应用净化
+  - DOMAIN,ja7czxetms.adobestats.io,🍃 应用净化
+  - DOMAIN,xldcvdx24q.adobestats.io,🍃 应用净化
+  - DOMAIN,f03ibhcdnc.adobestats.io,🍃 应用净化
+  - DOMAIN,cbfqosfuqi.adobestats.io,🍃 应用净化
+  - DOMAIN,f95w5c40ys.adobestats.io,🍃 应用净化
+  - DOMAIN,6mfhu1z5u7.adobestats.io,🍃 应用净化
+  - DOMAIN,b360ay92q3.adobestats.io,🍃 应用净化
+  - DOMAIN,xmmg8xhkjb.adobestats.io,🍃 应用净化
+  - DOMAIN,it86bgy8qf.adobestats.io,🍃 应用净化
+  - DOMAIN,ecsdxf3wl3.adobestats.io,🍃 应用净化
+  - DOMAIN,3ivg7wus63.adobestats.io,🍃 应用净化
+  - DOMAIN,nqnnfmo9od.adobestats.io,🍃 应用净化
+  - DOMAIN,08g6cm4kaq.adobestats.io,🍃 应用净化
+  - DOMAIN,32gijtiveo.adobestats.io,🍃 应用净化
+  - DOMAIN,7i8vjvlwuc.adobestats.io,🍃 应用净化
+  - DOMAIN,8bm7q3s69i.adobestats.io,🍃 应用净化
+  - DOMAIN,9lz057fho1.adobestats.io,🍃 应用净化
+  - DOMAIN,9oyru5uulx.adobestats.io,🍃 应用净化
+  - DOMAIN,dwv18zn96z.adobestats.io,🍃 应用净化
+  - DOMAIN,faag4y3x73.adobestats.io,🍃 应用净化
+  - DOMAIN,jtc0fjhor2.adobestats.io,🍃 应用净化
+  - DOMAIN,mkzec8b0pu.adobestats.io,🍃 应用净化
+  - DOMAIN,nv8ysttp93.adobestats.io,🍃 应用净化
+  - DOMAIN,rp9pax976k.adobestats.io,🍃 应用净化
+  - DOMAIN,tzd44dufds.adobestats.io,🍃 应用净化
+  - DOMAIN,w1tw8nuikr.adobestats.io,🍃 应用净化
+  - DOMAIN,wdk81mqjw2.adobestats.io,🍃 应用净化
+  - DOMAIN,xu0fl2f2fa.adobestats.io,🍃 应用净化
+  - DOMAIN,fel2ajqj6q.adobestats.io,🍃 应用净化
+  - DOMAIN,szlpwlqsj9.adobestats.io,🍃 应用净化
+  - DOMAIN,1yqnqu95vt.adobestats.io,🍃 应用净化
+  - DOMAIN,2drlj3q5q9.adobestats.io,🍃 应用净化
+  - DOMAIN,6c2odkl2f7.adobestats.io,🍃 应用净化
+  - DOMAIN,dzx1z8to3i.adobestats.io,🍃 应用净化
+  - DOMAIN,8xi6eh0lbe.adobestats.io,🍃 应用净化
+  - DOMAIN,3reqj2xxjr.adobestats.io,🍃 应用净化
+  - DOMAIN,c0u53co2dl.adobestats.io,🍃 应用净化
+  - DOMAIN,fsp66w06d8.adobestats.io,🍃 应用净化
+  - DOMAIN,bu5igmshqe.adobestats.io,🍃 应用净化
+  - DOMAIN,4dnzt2a3yd.adobestats.io,🍃 应用净化
+  - DOMAIN,06gxcm6fht.adobestats.io,🍃 应用净化
+  - DOMAIN,1p014nzyz5.adobestats.io,🍃 应用净化
+  - DOMAIN,60adt728mj.adobestats.io,🍃 应用净化
+  - DOMAIN,7ft5r2tw1c.adobestats.io,🍃 应用净化
+  - DOMAIN,aucuqn10nq.adobestats.io,🍃 应用净化
+  - DOMAIN,fvm4504pg4.adobestats.io,🍃 应用净化
+  - DOMAIN,m3c5dyurfm.adobestats.io,🍃 应用净化
+  - DOMAIN,3f7nyb1cmo.adobestats.io,🍃 应用净化
+  - DOMAIN,h6qwjn09i0.adobestats.io,🍃 应用净化
+  - DOMAIN,m4tqrsehwo.adobestats.io,🍃 应用净化
+  - DOMAIN,nhcnhmyfie.adobestats.io,🍃 应用净化
+  - DOMAIN,r9aqp228e3.adobestats.io,🍃 应用净化
+  - DOMAIN,7kpv4nhhu8.adobestats.io,🍃 应用净化
+  - DOMAIN,7qr89jp327.adobestats.io,🍃 应用净化
+  - DOMAIN,86cboa1jke.adobestats.io,🍃 应用净化
+  - DOMAIN,fj7wvx0sjj.adobestats.io,🍃 应用净化
+  - DOMAIN,fo769jz0do.adobestats.io,🍃 应用净化
+  - DOMAIN,hj9yifc8qu.adobestats.io,🍃 应用净化
+  - DOMAIN,m8pnjvx56g.adobestats.io,🍃 应用净化
+  - DOMAIN,n9q1ifg1xl.adobestats.io,🍃 应用净化
+  - DOMAIN,82m37u4z1r.adobe.io,🍃 应用净化
   - MATCH,🐟 漏网之鱼
