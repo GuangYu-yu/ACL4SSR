@@ -6,72 +6,79 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: "[SS] 高性价比机场:https://kfyun.uk_clashgithub", server: 127.0.0.1, port: 443, type: ss, cipher: aes-128-gcm, password: 6601fb90e9b3, udp: true}
-  - {name: "[SS] 0|--1_clashgithub", server: 54.218.229.170, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 0|--2_clashgithub", server: 35.94.51.2, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 0|--3_clashgithub", server: 3.1.79.116, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 0|--4_clashgithub", server: 51.15.15.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 0|--6_clashgithub", server: 79.110.53.169, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true}
-  - {name: "[SS] 0|--7_clashgithub", server: 52.79.248.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 0|--31_clashgithub", server: 91.199.84.112, port: 40380, type: vmess, uuid: 13364789-a8b2-4bcd-8df7-a794fb6f87e5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: zfa04.333210.xyz, udp: true}
-  - {name: "[Trojan] 0|--35_clashgithub", server: 1906e95f0a4e34cca3d5618e3498505d.v1.cac.node-is.green, port: 48539, type: trojan, password: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856, sni: hk12.bilibili.com, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 0|--1_clashgithub", server: 54.201.174.149, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--2_clashgithub", server: 34.222.136.128, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--3_clashgithub", server: 211.22.161.135, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, udp: true}
+  - {name: "[SS] 0|--4_clashgithub", server: 211.22.161.134, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, udp: true}
+  - {name: "[SS] 0|--5_clashgithub", server: 54.70.176.73, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--6_clashgithub", server: 43.202.65.32, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--7_clashgithub", server: 3.38.212.48, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--8_clashgithub", server: 43.203.141.93, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--9_clashgithub", server: 43.200.1.13, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 0|--11_clashgithub", server: 52.79.52.119, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[Trojan] 🇭🇰 13,14|香港|@ripaojiedian_clashgithub", server: 36.151.192.239, port: 42395, type: trojan, password: DNUMdmnJ, sni: 36.151.192.239, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub", server: 36.151.192.203, port: 25241, type: trojan, password: QwwHvrnN, sni: 36.151.192.203, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub", server: fiwejniavzoj.xn--fiqs8sjz2bull.com, port: 64667, type: vmess, uuid: c8963961-034c-4ac5-bc9a-6c76900eeb2b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇭🇰 13,14|香港4|@ripaojiedian_clashgithub", server: naiu-hk.05vr9nyqg5.download, port: 13007, type: trojan, password: 3bb73c5b-2500-484a-8ee4-68aaca381a6d, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub", server: 18.162.246.4, port: 18443, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
-  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub", server: hk1.tiljkc.top, port: 39041, type: vmess, uuid: d1063964-2b13-372c-9b45-28f356e844aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub", server: hk1.tiljkc.top, port: 39042, type: vmess, uuid: 2e4e8fd5-5ffa-336c-83a8-d4f1fcf64d46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港4|@ripaojiedian_clashgithub", server: 120.198.71.214, port: 34493, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub", server: ccc-v3-11.rabbitpro-in-1.com, port: 29011, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub", server: js.wnwwv.cn, port: 48043, type: ss, cipher: aes-128-gcm, password: 01b60010-2e93-4018-af7c-b7546b26febf, udp: true}
   - {name: "[VMess] 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub", server: 183.236.51.23, port: 46602, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇨🇳 13|🇹🇼 台湾|@ripaojiedian_clashgithub", server: 210.61.97.241, port: 81, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
+  - {name: "[SS] 🇭🇰 13|🇭🇰 香港8|@ripaojiedian_clashgithub", server: 114.80.150.220, port: 52466, type: ss, cipher: aes-128-gcm, password: 34f92654-04c2-456f-9418-ababeef0d77b, udp: true}
+  - {name: "[SS] 🇭🇰 13|🇭🇰 香港9|@ripaojiedian_clashgithub", server: soonhk.soon.guru, port: 40000, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
+  - {name: "[SS] 🇭🇰 13|🇭🇰 香港10|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 15010, type: ss, cipher: aes-256-gcm, password: QM1BB5SMWC47IVWA, udp: true}
   - {name: "[Trojan] 🇨🇳 13,14|台湾2|@ripaojiedian_clashgithub", server: naiu-other.05vr9nyqg5.download, port: 13035, type: trojan, password: 3bb73c5b-2500-484a-8ee4-68aaca381a6d, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇯🇵 13,14|日本|@ripaojiedian_clashgithub", server: 36.151.192.198, port: 38698, type: trojan, password: QwwHvrnN, sni: 36.151.192.198, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub", server: jp1.tiljkc.top, port: 38951, type: vmess, uuid: d1063964-2b13-372c-9b45-28f356e844aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇯🇵 13|🇯🇵 日本5|@ripaojiedian_clashgithub", server: soonjp.soon.guru, port: 40003, type: ss, cipher: chacha20-ietf-poly1305, password: ab8b625c-efb8-45cd-b509-c7cceabe0cc6, udp: true}
-  - {name: "[VMess] 🇸🇬 13|🇸🇬 新加坡|@ripaojiedian_clashgithub", server: sg1.tiljkc.top, port: 34843, type: vmess, uuid: d1063964-2b13-372c-9b45-28f356e844aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub", server: jp1.tiljkc.top, port: 38951, type: vmess, uuid: 2e4e8fd5-5ffa-336c-83a8-d4f1fcf64d46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub", server: ccc-v3-21.rabbitpro-in-1.com, port: 29021, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇰🇷 13|🇰🇷 韩国|@ripaojiedian_clashgithub", server: soonkr.soon.guru, port: 40032, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
+  - {name: "[VMess] 🇸🇬 13|🇸🇬 新加坡|@ripaojiedian_clashgithub", server: ccc-v3-15.rabbitpro-in-1.com, port: 29015, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇸 13,14|美国|@ripaojiedian_clashgithub", server: usla.mjt000.com, port: 443, type: trojan, password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c, sni: usla.mjt000.com, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub", server: 65.75.193.154, port: 14491, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
-  - {name: "[SS] 🇺🇸 13|🇺🇸 美国3|@ripaojiedian_clashgithub", server: blog.netsdddru.xyz, port: 3031, type: ss, cipher: chacha20-ietf-poly1305, password: 974ff236-21f2-42a3-b633-2b957061d767, udp: true}
-  - {name: "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub", server: 43.202.1.19, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub", server: 54.180.229.222, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub", server: 3.38.100.128, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 17001, type: ss, cipher: aes-256-gcm, password: BGX8OXD6P10X53LY, udp: true}
+  - {name: "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub", server: 52.77.239.64, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub", server: 3.113.31.223, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub", server: 43.203.122.162, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[Trojan] 🇻🇳 13,14|越南|@ripaojiedian_clashgithub", server: vn.mjt000.com, port: 443, type: trojan, password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c, sni: vn.mjt000.com, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇭🇰 14|香港3|@ripaojiedian_clashgithub", server: fiwejniavzoj.xn--fiqs8sjz2bull.com, port: 64667, type: vmess, uuid: c8963961-034c-4ac5-bc9a-6c76900eeb2b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇭🇰 14|香港5|@ripaojiedian_clashgithub", server: 18.162.246.4, port: 18443, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
-  - {name: "[VMess] 🇭🇰 14|香港6|@ripaojiedian_clashgithub", server: hk1.tiljkc.top, port: 39041, type: vmess, uuid: d1063964-2b13-372c-9b45-28f356e844aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 14|香港3|@ripaojiedian_clashgithub", server: hk1.tiljkc.top, port: 39042, type: vmess, uuid: 2e4e8fd5-5ffa-336c-83a8-d4f1fcf64d46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 14|香港4|@ripaojiedian_clashgithub", server: 120.198.71.214, port: 34493, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 14|香港5|@ripaojiedian_clashgithub", server: ccc-v3-11.rabbitpro-in-1.com, port: 29011, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 14|香港6|@ripaojiedian_clashgithub", server: js.wnwwv.cn, port: 48043, type: ss, cipher: ss, password: //YWVzLTEyOC1nY206MDFiNjAwMTAtMmU5My00MDE4LWFmN2MtYjc1NDZiMjZmZWJm, udp: true}
   - {name: "[VMess] 🇭🇰 14|香港7|@ripaojiedian_clashgithub", server: 183.236.51.23, port: 46602, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇨🇳 14|台湾|@ripaojiedian_clashgithub", server: 210.61.97.241, port: 81, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
-  - {name: "[VMess] 🇯🇵 14|日本2|@ripaojiedian_clashgithub", server: jp1.tiljkc.top, port: 38951, type: vmess, uuid: d1063964-2b13-372c-9b45-28f356e844aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇯🇵 14|日本5|@ripaojiedian_clashgithub", server: soonjp.soon.guru, port: 40003, type: ss, cipher: ss, password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphYjhiNjI1Yy1lZmI4LTQ1Y2QtYjUwOS1jN2NjZWFiZTBjYzY, udp: true}
-  - {name: "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub", server: sg1.tiljkc.top, port: 34843, type: vmess, uuid: d1063964-2b13-372c-9b45-28f356e844aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 14|美国2|@ripaojiedian_clashgithub", server: 65.75.193.154, port: 14491, type: trojan, password: ouo, sni: tr.koiok.us.kg, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: tr.koiok.us.kg}}, udp: true}
-  - {name: "[SS] 🇺🇸 14|美国3|@ripaojiedian_clashgithub", server: blog.netsdddru.xyz, port: 3031, type: ss, cipher: ss, password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5NzRmZjIzNi0yMWYyLTQyYTMtYjYzMy0yYjk1NzA2MWQ3Njc, udp: true}
-  - {name: "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub", server: 43.202.1.19, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
-  - {name: "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub", server: 54.180.229.222, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
-  - {name: "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub", server: 3.38.100.128, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
-  - {name: "[Trojan] 15|HK_speednode_0010_clashgithub", server: 43.198.96.173, port: 45181, type: trojan, password: aa6ddd2f-d1cf-4a52-ba1b-2640c41a7856, sni: de1.bilibili.com, skip-cert-verify: true, udp: true}
-  - {name: "[Vless] 15|US_speednode_0023_clashgithub", server: cf.cishanjichang.me, port: 443, type: vless, uuid: 89b90001-4206-4871-a99d-1744d48f215b, tls: false, skip-cert-verify: true, servername: gbr.cishanjichang.me, client-fingerprint: chrome, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: swordnewnewsecurity%3Dtls}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0024_clashgithub", server: 172.67.163.189, port: 8080, type: vless, uuid: dc580147-c87c-4527-bf90-192eb1cf62d1, tls: false, skip-cert-verify: true, servername: stArt.siTEG52770.WorKeRS.deV, client-fingerprint: chrome, network: ws, ws-opts: {path: "/V7zmCPZUuL2T1r5r/MC4wLjAuMA==?ed=2560", headers: {Host: stArt.siTEG52770.WorKeRS.deV}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0026_clashgithub", server: 199.232.125.55, port: 443, type: vless, uuid: 8f90c65d-b352-496d-a9d1-7e914199c658, tls: true, skip-cert-verify: true, servername: joinbede-ELiV2RAY.info, client-fingerprint: chrome, network: ws, ws-opts: {path: /fp=firefox, headers: {Host: joinbede-ELiV2RAY.info}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0027_clashgithub", server: 104.26.5.157, port: 2083, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0028_clashgithub", server: 104.26.4.157, port: 2083, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0029_clashgithub", server: 172.67.75.52, port: 2083, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0030_clashgithub", server: 199.232.125.50, port: 443, type: vless, uuid: e9f6766e-b137-5a7d-97d7-373ef67e46b2, tls: true, skip-cert-verify: true, servername: ELI-V2-RAY.COM, client-fingerprint: chrome, network: ws, ws-opts: {path: /fp=qq, headers: {Host: ELI-V2-RAY.COM}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0031_clashgithub", server: 172.67.71.122, port: 2087, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0032_clashgithub", server: 104.26.4.57, port: 2087, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0033_clashgithub", server: 104.26.12.140, port: 8443, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0034_clashgithub", server: 151.101.64.155, port: 80, type: vless, uuid: 64ccb313-d2bd-4b44-a6fd-522a14c819fd, tls: false, skip-cert-verify: true, servername: iranvpn.com., client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: iranvpn.com.}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0035_clashgithub", server: 104.26.5.57, port: 2087, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0036_clashgithub", server: 172.67.75.194, port: 8443, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0037_clashgithub", server: 104.26.13.140, port: 8443, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0038_clashgithub", server: 172.64.146.66, port: 8443, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0039_clashgithub", server: 104.18.41.190, port: 8443, type: vless, uuid: 59860b15-b2d9-47f9-9b92-81bd1639fcc5, tls: true, skip-cert-verify: true, servername: 3-fs4f6s46.huangyurong.cfd, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=random", headers: {Host: 3-fs4f6s46.huangyurong.cfd}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0040_clashgithub", server: 199.232.125.44, port: 443, type: vless, uuid: 8f6f8193-0f0b-5933-9346-718542befff9, tls: true, skip-cert-verify: true, servername: ELiV2--ELENA.COM, client-fingerprint: chrome, network: ws, ws-opts: {path: /fp=qq, headers: {Host: ELiV2--ELENA.COM}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0041_clashgithub", server: 199.232.125.43, port: 443, type: vless, uuid: ec1540bf-39b1-5901-bc00-4aa9c81e27af, tls: true, skip-cert-verify: true, servername: ELI-V2-RAY.COM, client-fingerprint: chrome, network: ws, ws-opts: {path: /fp=qq, headers: {Host: ELI-V2-RAY.COM}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0042_clashgithub", server: 199.232.125.55, port: 443, type: vless, uuid: 9a3d1319-e75c-46a6-994a-58fac1b86907, tls: true, skip-cert-verify: true, servername: 0-ELiV2RAY.COM, client-fingerprint: chrome, network: ws, ws-opts: {path: /fp=qq, headers: {Host: 0-ELiV2RAY.COM}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0045_clashgithub", server: 170.114.45.6, port: 80, type: vless, uuid: 24e01a84-4864-40e4-abc4-2dc0432d68d4, tls: false, skip-cert-verify: true, servername: paid.free.pranithsandaruwan.shop, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: paid.free.pranithsandaruwan.shop}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0049_clashgithub", server: speedtest.net, port: 80, type: vless, uuid: bd2c5ea2-47a0-4892-8202-2b4fea3151d0, tls: false, skip-cert-verify: true, servername: JOIN.unlimiteddev.4.4.4.4.wWw.CloudFlare.cOm.wWw.SpeedTeSt.cOm.Home.iRan.0.0.0.0.Hide.my.IP.xXx.333.22.1.CDN.Free.unlimiteddev.DDNS1-IP.nEt, client-fingerprint: chrome, network: ws, ws-opts: {path: "/@UnlimitedDev----@UnlimitedDev-----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev?ed=2480", headers: {Host: JOIN.unlimiteddev.4.4.4.4.wWw.CloudFlare.cOm.wWw.SpeedTeSt.cOm.Home.iRan.0.0.0.0.Hide.my.IP.xXx.333.22.1.CDN.Free.unlimiteddev.DDNS1-IP.nEt}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0053_clashgithub", server: 151.101.3.8, port: 80, type: vless, uuid: 5e32df7f-dbf7-5bb8-8a37-c189e11365e6, tls: false, skip-cert-verify: true, servername: www.x-ui.com, client-fingerprint: chrome, network: ws, ws-opts: {path: "/vless?ed=1048", headers: {Host: www.x-ui.com}}, udp: true}
-  - {name: "[Vless] 15|US_speednode_0055_clashgithub", server: 151.101.193.6, port: 80, type: vless, uuid: c55ceb81-ded6-5f51-b960-08223fecb4dd, tls: false, skip-cert-verify: true, servername: TEHRANARGO.COM, client-fingerprint: chrome, network: ws, ws-opts: {path: "/@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO-|-@TEHRANARGO?ed=2560", headers: {Host: TEHRANARGO.COM}}, udp: true}
-  - {name: "[Vless] 15|ZA_speednode_0061_clashgithub", server: 160.123.255.213, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdc.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdc.bgm2024.us.kg}}, udp: true}
+  - {name: "[SS] 🇭🇰 14|香港8|@ripaojiedian_clashgithub", server: 114.80.150.220, port: 52466, type: ss, cipher: ss, password: //YWVzLTEyOC1nY206MzRmOTI2NTQtMDRjMi00NTZmLTk0MTgtYWJhYmVlZjBkNzdi, udp: true}
+  - {name: "[SS] 🇭🇰 14|香港9|@ripaojiedian_clashgithub", server: soonhk.soon.guru, port: 40000, type: ss, cipher: ss, password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyOWZlZmNjMy05YWUxLTRlMDEtYTFkMC01MzRmYzE2NzExMjE, udp: true}
+  - {name: "[SS] 🇭🇰 14|香港10|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 15010, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206UU0xQkI1U01XQzQ3SVZXQQ, udp: true}
+  - {name: "[VMess] 🇯🇵 14|日本|@ripaojiedian_clashgithub", server: jp1.tiljkc.top, port: 38951, type: vmess, uuid: 2e4e8fd5-5ffa-336c-83a8-d4f1fcf64d46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 14|日本2|@ripaojiedian_clashgithub", server: ccc-v3-21.rabbitpro-in-1.com, port: 29021, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇰🇷 14|韩国|@ripaojiedian_clashgithub", server: soonkr.soon.guru, port: 40032, type: ss, cipher: ss, password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyOWZlZmNjMy05YWUxLTRlMDEtYTFkMC01MzRmYzE2NzExMjE, udp: true}
+  - {name: "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub", server: ccc-v3-15.rabbitpro-in-1.com, port: 29015, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 14|美国2|@ripaojiedian_clashgithub", server: 219.135.227.209, port: 17001, type: ss, cipher: ss, password: //YWVzLTI1Ni1nY206QkdYOE9YRDZQMTBYNTNMWQ, udp: true}
+  - {name: "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub", server: 52.77.239.64, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
+  - {name: "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub", server: 3.113.31.223, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
+  - {name: "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub", server: 43.203.122.162, port: 443, type: ss, cipher: ss, password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU, udp: true}
+  - {name: "[Vless] 15|CR_speednode_0003_clashgithub", server: 190.93.245.137, port: 443, type: vless, uuid: 15c64822-1a11-419c-9ec2-7cb2807ec3b4, tls: true, skip-cert-verify: true, servername: www.arashiphone.com., client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560fp=chrome", headers: {Host: www.arashiphone.com.}}, udp: true}
+  - {name: "[Vless] 15|DE_speednode_0004_clashgithub", server: 132.226.203.64, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|DE_speednode_0006_clashgithub", server: 141.144.244.120, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Trojan] 15|HK_speednode_0007_clashgithub", server: 43.198.203.106, port: 40091, type: trojan, password: 3e5cb4f5-8dcf-492a-b4c8-06bc06f158bb, sni: hk12.bilibili.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 15|HK_speednode_0008_clashgithub", server: 43.198.107.166, port: 40091, type: trojan, password: 3e5cb4f5-8dcf-492a-b4c8-06bc06f158bb, sni: hk12.bilibili.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 15|HK_speednode_0009_clashgithub", server: 18.167.167.110, port: 40091, type: trojan, password: 3e5cb4f5-8dcf-492a-b4c8-06bc06f158bb, sni: hk12.bilibili.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 15|HK_speednode_0010_clashgithub", server: 18.166.212.182, port: 40091, type: trojan, password: 3e5cb4f5-8dcf-492a-b4c8-06bc06f158bb, sni: hk12.bilibili.com, skip-cert-verify: true, udp: true}
+  - {name: "[Vless] 15|JP_speednode_0011_clashgithub", server: 150.230.216.127, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|JP_speednode_0012_clashgithub", server: zmaoz.faculty.ucdavis.edu, port: 443, type: vless, uuid: 99f0273f-b1ea-49d8-bfba-e8d9080492bc, tls: true, skip-cert-verify: true, servername: zmaoz.faculty.ucdavis.edu, client-fingerprint: chrome, network: ws, ws-opts: {path: "/@UnlimitedDev----@UnlimitedDev-----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev----@UnlimitedDev?ed=2480fp=randomized", headers: {Host: zmaoz.faculty.ucdavis.edu}}, udp: true}
+  - {name: "[Vless] 15|KR_speednode_0013_clashgithub", server: 144.24.73.232, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Trojan] 15|KZ_speednode_0014_clashgithub", server: 194.76.18.129, port: 443, type: trojan, password: tg-fq521free, sni: torjan.xn--xhq44j.eu.org, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: torjan.xn--xhq44j.eu.org}}, udp: true}
+  - {name: "[Vless] 15|NL_speednode_0015_clashgithub", server: 158.101.205.99, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|NL_speednode_0016_clashgithub", server: 141.148.227.53, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|NL_speednode_0017_clashgithub", server: 158.101.209.76, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Trojan] 15|RU_speednode_0018_clashgithub", server: 45.67.215.95, port: 443, type: trojan, password: tg-fq521free, sni: torjan.xn--xhq44j.eu.org, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: torjan.xn--xhq44j.eu.org}}, udp: true}
+  - {name: "[Vless] 15|SE_speednode_0019_clashgithub", server: 129.151.204.91, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0020_clashgithub", server: 160.79.105.205, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0021_clashgithub", server: 63.141.128.214, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0022_clashgithub", server: 160.79.104.82, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0023_clashgithub", server: 129.153.223.37, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0024_clashgithub", server: 69.84.182.27, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: /ProxyIP=ProxyIP.US.fxxk.dedyn.iosecurity=tls, headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Trojan] 15|US_speednode_0025_clashgithub", server: 216.24.57.30, port: 443, type: trojan, password: tg-fq521free, sni: torjan.xn--xhq44j.eu.org, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: torjan.xn--xhq44j.eu.org}}, udp: true}
+  - {name: "[Trojan] 15|US_speednode_0026_clashgithub", server: 198.62.62.67, port: 443, type: trojan, password: tg-fq521free, sni: torjan.xn--xhq44j.eu.org, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: torjan.xn--xhq44j.eu.org}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0027_clashgithub", server: 69.84.182.178, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: /ProxyIP=ProxyIP.US.fxxk.dedyn.iosecurity=tls, headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0028_clashgithub", server: 198.62.62.91, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: /ProxyIP=ProxyIP.US.fxxk.dedyn.iosecurity=tls, headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
+  - {name: "[Vless] 15|US_speednode_0029_clashgithub", server: 160.79.105.247, port: 443, type: vless, uuid: 531bf100-1477-487c-a979-6adebf8f105f, tls: false, skip-cert-verify: true, servername: vdb.bgm2024.us.kg, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560security=tls", headers: {Host: vdb.bgm2024.us.kg}}, udp: true}
   - {name: "[VMess] 16|d*********g.com_2_clashgithub", server: 42.236.73.72, port: 443, type: vmess, uuid: 044f0177-0675-4dcf-89d4-804b6788e518, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.zitian.cn, udp: true}
   - {name: "[Trojan] 16|d*********g.com_3_clashgithub", server: 42.236.73.72, port: 443, type: trojan, password: fuck, sni: www.zitian.cn, skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇩🇪 德国(mibei77.com 米贝节点分享)_miebei", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
@@ -87,74 +94,78 @@ proxies:
   - {name: "[SS] 🇫🇷 法国(mibei77.com 米贝节点分享)_miebei", server: 84.19.31.63, port: 50841, type: ss, cipher: chacha20-ietf-poly1305, password: 2EtPqn6HYjUNcHohLfUpFQwnfjCCQ5mh1mJdEMCBucuWZ9P1udkRKHnVxuo55k1KXz2Fo6jrgt18W66opty1e4bm1jzfCfBb, udp: true}
   - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei", server: hsj.lbxjc.online, port: 80, type: vmess, uuid: e6543319-0574-42ac-b778-1c4325d626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: chunchuan.kejixiaoqi666.store}}, udp: true}
   - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei", server: 205.134.180.150, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 5cp9Z3iWnJZ2, udp: true}
-  - {name: "[SS] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash", server: soonfrk.soon.guru, port: 40011, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 54.184.77.199, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 54.244.200.142, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 54.218.229.170, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国->🇦🇺_AU_澳大利亚_oneclash", server: 44.243.243.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇱🇻 _LV_拉脱维亚_oneclash", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_1_oneclash", server: 217.30.10.18, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_2_oneclash", server: 217.30.10.18, port: 9040, type: ss, cipher: aes-256-cfb, password: p9z5BVADH2YFs3MN, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰_oneclash", server: 45.158.77.153, port: 40034, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇳🇱 _CN_中国->🇳🇱_NL_荷兰_oneclash", server: soonfr.soon.guru, port: 40034, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_3_oneclash", server: 217.30.10.18, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 51.120.1.158, port: 32091, type: ss, cipher: chacha20-ietf-poly1305, password: xjzsiMfTByKjA9URbdXWNp, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_4_oneclash", server: 217.30.10.18, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 54.200.220.184, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 未知_oneclash", server: soonusjp.soon.guru, port: 40001, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_5_oneclash", server: 217.30.10.18, port: 9026, type: ss, cipher: aes-256-cfb, password: QWDDvVE9npNurQfA, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_6_oneclash", server: 217.30.10.18, port: 9011, type: ss, cipher: aes-256-cfb, password: M3t2ZEQcMGRWBjRa, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 51.120.1.158, port: 32091, type: ss, cipher: chacha20-ietf-poly1305, password: xjzsiMfTByKjA9URbdXWNp, udp: true}
   - {name: "[SS] 🇨🇭 _CH_瑞士_oneclash", server: 138.124.60.136, port: 44915, type: ss, cipher: chacha20-ietf-poly1305, password: fMcrsQuZhCNiHBmXT80AhQ3mPK5alh/iLuDz4pILlYU=, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_7_oneclash", server: 217.30.10.18, port: 9041, type: ss, cipher: aes-256-cfb, password: U6qnYRhfyDmn8sgn, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国_oneclash", server: 51.15.15.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_8_oneclash", server: 217.30.10.18, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 34.222.132.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_oneclash", server: 52.89.164.115, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_1_oneclash", server: 217.30.10.18, port: 9027, type: ss, cipher: aes-256-cfb, password: EXN3S3eQpjE7EJu8, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_2_oneclash", server: 217.30.10.18, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 44.243.243.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 54.218.229.170, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇩🇪 _IR_伊朗->🇩🇪_DE_德国_oneclash", server: 31.59.111.4, port: 4001, type: ss, cipher: aes-128-gcm, password: 89b90001-4206-4871-a99d-1744d48f215b, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_3_oneclash", server: 217.30.10.18, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_4_oneclash", server: 217.30.10.18, port: 9018, type: ss, cipher: aes-256-cfb, password: fG2artUmHfNT2cX7, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_5_oneclash", server: 217.30.10.18, port: 9006, type: ss, cipher: aes-256-cfb, password: FAdUvMJUq5vDgKEq, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_6_oneclash", server: 217.30.10.18, port: 9033, type: ss, cipher: aes-256-cfb, password: UTJA57ypk2XKQpnm, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_7_oneclash", server: 217.30.10.18, port: 9025, type: ss, cipher: aes-256-cfb, password: XPtzA9sCug3SPR4c, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_8_oneclash", server: 217.30.10.18, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true}
+  - {name: "[SS] 🇱🇻 _LV_拉脱维亚_oneclash", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_9_oneclash", server: 217.30.10.18, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_10_oneclash", server: 217.30.10.18, port: 9037, type: ss, cipher: aes-256-cfb, password: TN2YqghxeFDKZfLU, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 35.94.51.2, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 34.215.192.217, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _BG_保加利亚->🇺🇸_US_美国_oneclash", server: 149.34.244.82, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_11_oneclash", server: 62.133.63.154, port: 20255, type: ss, cipher: chacha20-ietf-poly1305, password: ebrYpJsRfFtlKuO2HygBoD, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_12_oneclash", server: 217.30.10.18, port: 9042, type: ss, cipher: aes-256-cfb, password: S7KwUu7yBy58S3Ga, udp: true}
+  - {name: "[SS] 🇨🇳 _CN_中国_oneclash", server: 194.41.59.80, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: 34.222.132.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 79.110.53.169, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 35.88.126.102, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[HTTPS] tg频道:@ripaojiedian_openrunner", server: hk9.ftq.ink, port: 4000, type: http, tls: true, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇭🇰 香港_openrunner", server: 36.151.192.239, port: 42395, type: trojan, password: DNUMdmnJ, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇭🇰 香港2_openrunner", server: 36.151.192.203, port: 25241, type: trojan, password: QwwHvrnN, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇭🇰 香港3_openrunner", server: hk1.tiljkc.top, port: 39042, type: vmess, uuid: 2e4e8fd5-5ffa-336c-83a8-d4f1fcf64d46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 香港2_openrunner", server: 223.113.54.145, port: 36442, type: trojan, password: QwwHvrnN, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 香港3_openrunner", server: 219.135.227.209, port: 15007, type: ss, cipher: aes-256-gcm, password: KGPWD7ZZY2F0ZYPY, udp: true}
   - {name: "[VMess] 🇭🇰 香港4_openrunner", server: 120.198.71.214, port: 34493, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇭🇰 香港5_openrunner", server: ccc-v3-11.rabbitpro-in-1.com, port: 29011, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港6_openrunner", server: js.wnwwv.cn, port: 48043, type: ss, cipher: aes-128-gcm, password: 01b60010-2e93-4018-af7c-b7546b26febf, udp: true}
+  - {name: "[VMess] 🇭🇰 香港5_openrunner", server: hk1.tiljkc.top, port: 41002, type: vmess, uuid: 869760fe-7f4f-320c-b223-697f8e870088, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: api.teborder.com, network: http, http-opts: {method: GET, path: [/game], headers: {Host: [api.teborder.com]}}, udp: true}
+  - {name: "[VMess] 🇭🇰 香港6_openrunner", server: ccc-v3-14.rabbitpro-in-1.com, port: 29014, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[VMess] 🇭🇰 香港7_openrunner", server: 183.236.51.23, port: 46602, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港8_openrunner", server: 114.80.150.220, port: 52466, type: ss, cipher: aes-128-gcm, password: 34f92654-04c2-456f-9418-ababeef0d77b, udp: true}
-  - {name: "[SS] 🇭🇰 香港9_openrunner", server: soonhk.soon.guru, port: 40000, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇭🇰 香港10_openrunner", server: 219.135.227.209, port: 15010, type: ss, cipher: aes-256-gcm, password: QM1BB5SMWC47IVWA, udp: true}
-  - {name: "[Trojan] 🇨🇳 台湾2_openrunner", server: naiu-other.05vr9nyqg5.download, port: 13035, type: trojan, password: 3bb73c5b-2500-484a-8ee4-68aaca381a6d, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇯🇵 日本_openrunner", server: jp1.tiljkc.top, port: 38951, type: vmess, uuid: 2e4e8fd5-5ffa-336c-83a8-d4f1fcf64d46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇯🇵 日本2_openrunner", server: ccc-v3-21.rabbitpro-in-1.com, port: 29021, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇰🇷 韩国_openrunner", server: soonkr.soon.guru, port: 40032, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[VMess] 🇸🇬 新加坡_openrunner", server: ccc-v3-15.rabbitpro-in-1.com, port: 29015, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 香港8_openrunner", server: 183.236.51.23, port: 41020, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 台湾_openrunner", server: ccc-29.rabbitpro-in-3.com, port: 27029, type: vmess, uuid: 4aaca0a5-7d55-3358-81ec-25b5e371ed90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hls, headers: {Host: v1-29.rabbitpro-out.com}}, udp: true}
+  - {name: "[SS] 🇯🇵 日本_openrunner", server: 219.135.227.209, port: 18009, type: ss, cipher: aes-256-gcm, password: YD5ETBMPY0O6L2A9, udp: true}
+  - {name: "[VMess] 🇯🇵 日本2_openrunner", server: jp1.tiljkc.top, port: 38953, type: vmess, uuid: 869760fe-7f4f-320c-b223-697f8e870088, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇸🇬 新加坡_openrunner", server: 219.135.227.209, port: 16015, type: ss, cipher: aes-256-gcm, password: CVPPFA5LEN1NRWWO, udp: true}
+  - {name: "[VMess] 🇸🇬 新加坡2_openrunner", server: sg1.tiljkc.top, port: 34843, type: vmess, uuid: 869760fe-7f4f-320c-b223-697f8e870088, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇸 美国_openrunner", server: usla.mjt000.com, port: 443, type: trojan, password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c, sni: usla.mjt000.com, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 美国2_openrunner", server: 219.135.227.209, port: 17001, type: ss, cipher: aes-256-gcm, password: BGX8OXD6P10X53LY, udp: true}
-  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 52.77.239.64, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 3.113.31.223, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 43.203.122.162, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 美国2_openrunner", server: 31.59.111.4, port: 4001, type: ss, cipher: aes-128-gcm, password: 89b90001-4206-4871-a99d-1744d48f215b, udp: true}
+  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 52.79.52.119, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 43.203.243.93, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 43.202.65.32, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[Trojan] 🇻🇳 越南_openrunner", server: vn.mjt000.com, port: 443, type: trojan, password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c, sni: vn.mjt000.com, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _CN_中国->🇺🇸_US_美国_wenode", server: soonfrk.soon.guru, port: 40011, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 54.184.77.199, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 54.244.200.142, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 54.218.229.170, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国->🇦🇺_AU_澳大利亚_wenode", server: 44.243.243.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇱🇻 _LV_拉脱维亚_wenode", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_1_wenode", server: 217.30.10.18, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_2_wenode", server: 217.30.10.18, port: 9040, type: ss, cipher: aes-256-cfb, password: p9z5BVADH2YFs3MN, udp: true}
-  - {name: "[SS] 🇳🇱 _NL_荷兰_wenode", server: 45.158.77.153, port: 40034, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇳🇱 _CN_中国->🇳🇱_NL_荷兰_wenode", server: soonfr.soon.guru, port: 40034, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_3_wenode", server: 217.30.10.18, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 51.120.1.158, port: 32091, type: ss, cipher: chacha20-ietf-poly1305, password: xjzsiMfTByKjA9URbdXWNp, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_4_wenode", server: 217.30.10.18, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 54.200.220.184, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 未知_wenode", server: soonusjp.soon.guru, port: 40001, type: ss, cipher: chacha20-ietf-poly1305, password: 29fefcc3-9ae1-4e01-a1d0-534fc1671121, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_5_wenode", server: 217.30.10.18, port: 9026, type: ss, cipher: aes-256-cfb, password: QWDDvVE9npNurQfA, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_6_wenode", server: 217.30.10.18, port: 9011, type: ss, cipher: aes-256-cfb, password: M3t2ZEQcMGRWBjRa, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 51.120.1.158, port: 32091, type: ss, cipher: chacha20-ietf-poly1305, password: xjzsiMfTByKjA9URbdXWNp, udp: true}
   - {name: "[SS] 🇨🇭 _CH_瑞士_wenode", server: 138.124.60.136, port: 44915, type: ss, cipher: chacha20-ietf-poly1305, password: fMcrsQuZhCNiHBmXT80AhQ3mPK5alh/iLuDz4pILlYU=, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_7_wenode", server: 217.30.10.18, port: 9041, type: ss, cipher: aes-256-cfb, password: U6qnYRhfyDmn8sgn, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国_wenode", server: 51.15.15.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇷🇺 _RU_俄罗斯_8_wenode", server: 217.30.10.18, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 34.222.132.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_wenode", server: 52.89.164.115, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_1_wenode", server: 217.30.10.18, port: 9027, type: ss, cipher: aes-256-cfb, password: EXN3S3eQpjE7EJu8, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_2_wenode", server: 217.30.10.18, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 44.243.243.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 54.218.229.170, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇩🇪 _IR_伊朗->🇩🇪_DE_德国_wenode", server: 31.59.111.4, port: 4001, type: ss, cipher: aes-128-gcm, password: 89b90001-4206-4871-a99d-1744d48f215b, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_3_wenode", server: 217.30.10.18, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_4_wenode", server: 217.30.10.18, port: 9018, type: ss, cipher: aes-256-cfb, password: fG2artUmHfNT2cX7, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_5_wenode", server: 217.30.10.18, port: 9006, type: ss, cipher: aes-256-cfb, password: FAdUvMJUq5vDgKEq, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_6_wenode", server: 217.30.10.18, port: 9033, type: ss, cipher: aes-256-cfb, password: UTJA57ypk2XKQpnm, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_7_wenode", server: 217.30.10.18, port: 9025, type: ss, cipher: aes-256-cfb, password: XPtzA9sCug3SPR4c, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_8_wenode", server: 217.30.10.18, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true}
+  - {name: "[SS] 🇱🇻 _LV_拉脱维亚_wenode", server: 46.183.217.232, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_9_wenode", server: 217.30.10.18, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_10_wenode", server: 217.30.10.18, port: 9037, type: ss, cipher: aes-256-cfb, password: TN2YqghxeFDKZfLU, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 35.94.51.2, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 34.215.192.217, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _BG_保加利亚->🇺🇸_US_美国_wenode", server: 149.34.244.82, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_11_wenode", server: 62.133.63.154, port: 20255, type: ss, cipher: chacha20-ietf-poly1305, password: ebrYpJsRfFtlKuO2HygBoD, udp: true}
+  - {name: "[SS] 🇷🇺 _RU_俄罗斯_12_wenode", server: 217.30.10.18, port: 9042, type: ss, cipher: aes-256-cfb, password: S7KwUu7yBy58S3Ga, udp: true}
+  - {name: "[SS] 🇨🇳 _CN_中国_wenode", server: 194.41.59.80, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: 34.222.132.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 79.110.53.169, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true}
+  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 35.88.126.102, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -177,68 +188,75 @@ proxy-groups:
       - "[SS] 0|--2_clashgithub"
       - "[SS] 0|--3_clashgithub"
       - "[SS] 0|--4_clashgithub"
+      - "[SS] 0|--5_clashgithub"
       - "[SS] 0|--6_clashgithub"
       - "[SS] 0|--7_clashgithub"
-      - "[VMess] 0|--31_clashgithub"
-      - "[Trojan] 0|--35_clashgithub"
+      - "[SS] 0|--8_clashgithub"
+      - "[SS] 0|--9_clashgithub"
+      - "[SS] 0|--11_clashgithub"
       - "[Trojan] 🇭🇰 13,14|香港|@ripaojiedian_clashgithub"
       - "[Trojan] 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇭🇰 13,14|香港4|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub"
-      - "[VMess] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港4|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇨🇳 13|🇹🇼 台湾|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港8|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港9|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港10|@ripaojiedian_clashgithub"
       - "[Trojan] 🇨🇳 13,14|台湾2|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇯🇵 13,14|日本|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub"
       - "[VMess] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub"
-      - "[SS] 🇯🇵 13|🇯🇵 日本5|@ripaojiedian_clashgithub"
+      - "[SS] 🇰🇷 13|🇰🇷 韩国|@ripaojiedian_clashgithub"
       - "[VMess] 🇸🇬 13|🇸🇬 新加坡|@ripaojiedian_clashgithub"
       - "[Trojan] 🇺🇸 13,14|美国|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub"
-      - "[SS] 🇺🇸 13|🇺🇸 美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub"
       - "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub"
       - "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub"
       - "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub"
       - "[Trojan] 🇻🇳 13,14|越南|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 14|香港3|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇭🇰 14|香港5|@ripaojiedian_clashgithub"
-      - "[VMess] 🇭🇰 14|香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港4|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港5|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港6|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 14|香港7|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇨🇳 14|台湾|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港8|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港9|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港10|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 14|日本|@ripaojiedian_clashgithub"
       - "[VMess] 🇯🇵 14|日本2|@ripaojiedian_clashgithub"
-      - "[SS] 🇯🇵 14|日本5|@ripaojiedian_clashgithub"
+      - "[SS] 🇰🇷 14|韩国|@ripaojiedian_clashgithub"
       - "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇺🇸 14|美国2|@ripaojiedian_clashgithub"
-      - "[SS] 🇺🇸 14|美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 14|美国2|@ripaojiedian_clashgithub"
       - "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub"
       - "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub"
       - "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub"
+      - "[Vless] 15|CR_speednode_0003_clashgithub"
+      - "[Vless] 15|DE_speednode_0004_clashgithub"
+      - "[Vless] 15|DE_speednode_0006_clashgithub"
+      - "[Trojan] 15|HK_speednode_0007_clashgithub"
+      - "[Trojan] 15|HK_speednode_0008_clashgithub"
+      - "[Trojan] 15|HK_speednode_0009_clashgithub"
       - "[Trojan] 15|HK_speednode_0010_clashgithub"
+      - "[Vless] 15|JP_speednode_0011_clashgithub"
+      - "[Vless] 15|JP_speednode_0012_clashgithub"
+      - "[Vless] 15|KR_speednode_0013_clashgithub"
+      - "[Trojan] 15|KZ_speednode_0014_clashgithub"
+      - "[Vless] 15|NL_speednode_0015_clashgithub"
+      - "[Vless] 15|NL_speednode_0016_clashgithub"
+      - "[Vless] 15|NL_speednode_0017_clashgithub"
+      - "[Trojan] 15|RU_speednode_0018_clashgithub"
+      - "[Vless] 15|SE_speednode_0019_clashgithub"
+      - "[Vless] 15|US_speednode_0020_clashgithub"
+      - "[Vless] 15|US_speednode_0021_clashgithub"
+      - "[Vless] 15|US_speednode_0022_clashgithub"
       - "[Vless] 15|US_speednode_0023_clashgithub"
       - "[Vless] 15|US_speednode_0024_clashgithub"
-      - "[Vless] 15|US_speednode_0026_clashgithub"
+      - "[Trojan] 15|US_speednode_0025_clashgithub"
+      - "[Trojan] 15|US_speednode_0026_clashgithub"
       - "[Vless] 15|US_speednode_0027_clashgithub"
       - "[Vless] 15|US_speednode_0028_clashgithub"
       - "[Vless] 15|US_speednode_0029_clashgithub"
-      - "[Vless] 15|US_speednode_0030_clashgithub"
-      - "[Vless] 15|US_speednode_0031_clashgithub"
-      - "[Vless] 15|US_speednode_0032_clashgithub"
-      - "[Vless] 15|US_speednode_0033_clashgithub"
-      - "[Vless] 15|US_speednode_0034_clashgithub"
-      - "[Vless] 15|US_speednode_0035_clashgithub"
-      - "[Vless] 15|US_speednode_0036_clashgithub"
-      - "[Vless] 15|US_speednode_0037_clashgithub"
-      - "[Vless] 15|US_speednode_0038_clashgithub"
-      - "[Vless] 15|US_speednode_0039_clashgithub"
-      - "[Vless] 15|US_speednode_0040_clashgithub"
-      - "[Vless] 15|US_speednode_0041_clashgithub"
-      - "[Vless] 15|US_speednode_0042_clashgithub"
-      - "[Vless] 15|US_speednode_0045_clashgithub"
-      - "[Vless] 15|US_speednode_0049_clashgithub"
-      - "[Vless] 15|US_speednode_0053_clashgithub"
-      - "[Vless] 15|US_speednode_0055_clashgithub"
-      - "[Vless] 15|ZA_speednode_0061_clashgithub"
       - "[VMess] 16|d*********g.com_2_clashgithub"
       - "[Trojan] 16|d*********g.com_3_clashgithub"
       - "[SS] 🇩🇪 德国(mibei77.com 米贝节点分享)_miebei"
@@ -254,74 +272,78 @@ proxy-groups:
       - "[SS] 🇫🇷 法国(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
       - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
-      - "[SS] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash"
       - "[SS] 🇺🇸 _US_美国_1_oneclash"
-      - "[SS] 🇺🇸 _US_美国_2_oneclash"
-      - "[SS] 🇺🇸 _US_美国_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国->🇦🇺_AU_澳大利亚_oneclash"
-      - "[SS] 🇱🇻 _LV_拉脱维亚_oneclash"
+      - "[SS] 🇨🇭 _CH_瑞士_oneclash"
+      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_1_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_2_oneclash"
-      - "[SS] 🇳🇱 _NL_荷兰_oneclash"
-      - "[SS] 🇳🇱 _CN_中国->🇳🇱_NL_荷兰_oneclash"
+      - "[SS] 🇺🇸 _US_美国_2_oneclash"
+      - "[SS] 🇺🇸 _US_美国_3_oneclash"
+      - "[SS] 🇩🇪 _IR_伊朗->🇩🇪_DE_德国_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国_4_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_4_oneclash"
-      - "[SS] 🇺🇸 _US_美国_5_oneclash"
-      - "[SS] 未知_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_5_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_6_oneclash"
-      - "[SS] 🇺🇸 _US_美国_6_oneclash"
-      - "[SS] 🇨🇭 _CH_瑞士_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_7_oneclash"
-      - "[SS] 🇬🇧 _GB_英国_oneclash"
       - "[SS] 🇷🇺 _RU_俄罗斯_8_oneclash"
+      - "[SS] 🇱🇻 _LV_拉脱维亚_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_9_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_10_oneclash"
+      - "[SS] 🇺🇸 _US_美国_4_oneclash"
+      - "[SS] 🇺🇸 _US_美国_5_oneclash"
+      - "[SS] 🇺🇸 _BG_保加利亚->🇺🇸_US_美国_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_11_oneclash"
+      - "[SS] 🇷🇺 _RU_俄罗斯_12_oneclash"
+      - "[SS] 🇨🇳 _CN_中国_oneclash"
+      - "[SS] 🇺🇸 _US_美国_6_oneclash"
       - "[SS] 🇺🇸 _US_美国_7_oneclash"
+      - "[SS] 🇺🇸 _US_美国_8_oneclash"
       - "[HTTPS] tg频道:@ripaojiedian_openrunner"
       - "[Trojan] 🇭🇰 香港_openrunner"
       - "[Trojan] 🇭🇰 香港2_openrunner"
-      - "[VMess] 🇭🇰 香港3_openrunner"
+      - "[SS] 🇭🇰 香港3_openrunner"
       - "[VMess] 🇭🇰 香港4_openrunner"
       - "[VMess] 🇭🇰 香港5_openrunner"
-      - "[SS] 🇭🇰 香港6_openrunner"
+      - "[VMess] 🇭🇰 香港6_openrunner"
       - "[VMess] 🇭🇰 香港7_openrunner"
-      - "[SS] 🇭🇰 香港8_openrunner"
-      - "[SS] 🇭🇰 香港9_openrunner"
-      - "[SS] 🇭🇰 香港10_openrunner"
-      - "[Trojan] 🇨🇳 台湾2_openrunner"
-      - "[VMess] 🇯🇵 日本_openrunner"
+      - "[VMess] 🇭🇰 香港8_openrunner"
+      - "[VMess] 🇨🇳 台湾_openrunner"
+      - "[SS] 🇯🇵 日本_openrunner"
       - "[VMess] 🇯🇵 日本2_openrunner"
-      - "[SS] 🇰🇷 韩国_openrunner"
-      - "[VMess] 🇸🇬 新加坡_openrunner"
+      - "[SS] 🇸🇬 新加坡_openrunner"
+      - "[VMess] 🇸🇬 新加坡2_openrunner"
       - "[Trojan] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
       - "[Trojan] 🇻🇳 越南_openrunner"
-      - "[SS] 🇺🇸 _CN_中国->🇺🇸_US_美国_wenode"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
-      - "[SS] 🇺🇸 _US_美国_2_wenode"
-      - "[SS] 🇺🇸 _US_美国_3_wenode"
-      - "[SS] 🇺🇸 _US_美国->🇦🇺_AU_澳大利亚_wenode"
-      - "[SS] 🇱🇻 _LV_拉脱维亚_wenode"
+      - "[SS] 🇨🇭 _CH_瑞士_wenode"
+      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_1_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_2_wenode"
-      - "[SS] 🇳🇱 _NL_荷兰_wenode"
-      - "[SS] 🇳🇱 _CN_中国->🇳🇱_NL_荷兰_wenode"
+      - "[SS] 🇺🇸 _US_美国_2_wenode"
+      - "[SS] 🇺🇸 _US_美国_3_wenode"
+      - "[SS] 🇩🇪 _IR_伊朗->🇩🇪_DE_德国_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_3_wenode"
-      - "[SS] 🇺🇸 _US_美国_4_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_4_wenode"
-      - "[SS] 🇺🇸 _US_美国_5_wenode"
-      - "[SS] 未知_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_5_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_6_wenode"
-      - "[SS] 🇺🇸 _US_美国_6_wenode"
-      - "[SS] 🇨🇭 _CH_瑞士_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_7_wenode"
-      - "[SS] 🇬🇧 _GB_英国_wenode"
       - "[SS] 🇷🇺 _RU_俄罗斯_8_wenode"
+      - "[SS] 🇱🇻 _LV_拉脱维亚_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_9_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_10_wenode"
+      - "[SS] 🇺🇸 _US_美国_4_wenode"
+      - "[SS] 🇺🇸 _US_美国_5_wenode"
+      - "[SS] 🇺🇸 _BG_保加利亚->🇺🇸_US_美国_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_11_wenode"
+      - "[SS] 🇷🇺 _RU_俄罗斯_12_wenode"
+      - "[SS] 🇨🇳 _CN_中国_wenode"
+      - "[SS] 🇺🇸 _US_美国_6_wenode"
       - "[SS] 🇺🇸 _US_美国_7_wenode"
+      - "[SS] 🇺🇸 _US_美国_8_wenode"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -563,40 +585,49 @@ proxy-groups:
       - "[Trojan] 🇭🇰 13,14|香港|@ripaojiedian_clashgithub"
       - "[Trojan] 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇭🇰 13,14|香港4|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub"
-      - "[VMess] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港4|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港8|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港9|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 13|🇭🇰 香港10|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 14|香港3|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇭🇰 14|香港5|@ripaojiedian_clashgithub"
-      - "[VMess] 🇭🇰 14|香港6|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港4|@ripaojiedian_clashgithub"
+      - "[VMess] 🇭🇰 14|香港5|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港6|@ripaojiedian_clashgithub"
       - "[VMess] 🇭🇰 14|香港7|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港8|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港9|@ripaojiedian_clashgithub"
+      - "[SS] 🇭🇰 14|香港10|@ripaojiedian_clashgithub"
+      - "[Trojan] 15|HK_speednode_0007_clashgithub"
+      - "[Trojan] 15|HK_speednode_0008_clashgithub"
+      - "[Trojan] 15|HK_speednode_0009_clashgithub"
       - "[Trojan] 15|HK_speednode_0010_clashgithub"
       - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
       - "[Trojan] 🇭🇰 香港_openrunner"
       - "[Trojan] 🇭🇰 香港2_openrunner"
-      - "[VMess] 🇭🇰 香港3_openrunner"
+      - "[SS] 🇭🇰 香港3_openrunner"
       - "[VMess] 🇭🇰 香港4_openrunner"
       - "[VMess] 🇭🇰 香港5_openrunner"
-      - "[SS] 🇭🇰 香港6_openrunner"
+      - "[VMess] 🇭🇰 香港6_openrunner"
       - "[VMess] 🇭🇰 香港7_openrunner"
-      - "[SS] 🇭🇰 香港8_openrunner"
-      - "[SS] 🇭🇰 香港9_openrunner"
-      - "[SS] 🇭🇰 香港10_openrunner"
+      - "[VMess] 🇭🇰 香港8_openrunner"
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "[Trojan] 🇯🇵 13,14|日本|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub"
       - "[VMess] 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub"
-      - "[SS] 🇯🇵 13|🇯🇵 日本5|@ripaojiedian_clashgithub"
       - "[SS] 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub"
+      - "[VMess] 🇯🇵 14|日本|@ripaojiedian_clashgithub"
       - "[VMess] 🇯🇵 14|日本2|@ripaojiedian_clashgithub"
-      - "[SS] 🇯🇵 14|日本5|@ripaojiedian_clashgithub"
       - "[SS] 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub"
-      - "[VMess] 🇯🇵 日本_openrunner"
+      - "[Vless] 15|JP_speednode_0011_clashgithub"
+      - "[Vless] 15|JP_speednode_0012_clashgithub"
+      - "[SS] 🇯🇵 日本_openrunner"
       - "[VMess] 🇯🇵 日本2_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
   - name: 🇺🇲 美国节点
@@ -606,33 +637,18 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "[Trojan] 🇺🇸 13,14|美国|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub"
-      - "[SS] 🇺🇸 13|🇺🇸 美国3|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇺🇸 14|美国2|@ripaojiedian_clashgithub"
-      - "[SS] 🇺🇸 14|美国3|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub"
+      - "[SS] 🇺🇸 14|美国2|@ripaojiedian_clashgithub"
+      - "[Vless] 15|US_speednode_0020_clashgithub"
+      - "[Vless] 15|US_speednode_0021_clashgithub"
+      - "[Vless] 15|US_speednode_0022_clashgithub"
       - "[Vless] 15|US_speednode_0023_clashgithub"
       - "[Vless] 15|US_speednode_0024_clashgithub"
-      - "[Vless] 15|US_speednode_0026_clashgithub"
+      - "[Trojan] 15|US_speednode_0025_clashgithub"
+      - "[Trojan] 15|US_speednode_0026_clashgithub"
       - "[Vless] 15|US_speednode_0027_clashgithub"
       - "[Vless] 15|US_speednode_0028_clashgithub"
       - "[Vless] 15|US_speednode_0029_clashgithub"
-      - "[Vless] 15|US_speednode_0030_clashgithub"
-      - "[Vless] 15|US_speednode_0031_clashgithub"
-      - "[Vless] 15|US_speednode_0032_clashgithub"
-      - "[Vless] 15|US_speednode_0033_clashgithub"
-      - "[Vless] 15|US_speednode_0034_clashgithub"
-      - "[Vless] 15|US_speednode_0035_clashgithub"
-      - "[Vless] 15|US_speednode_0036_clashgithub"
-      - "[Vless] 15|US_speednode_0037_clashgithub"
-      - "[Vless] 15|US_speednode_0038_clashgithub"
-      - "[Vless] 15|US_speednode_0039_clashgithub"
-      - "[Vless] 15|US_speednode_0040_clashgithub"
-      - "[Vless] 15|US_speednode_0041_clashgithub"
-      - "[Vless] 15|US_speednode_0042_clashgithub"
-      - "[Vless] 15|US_speednode_0045_clashgithub"
-      - "[Vless] 15|US_speednode_0049_clashgithub"
-      - "[Vless] 15|US_speednode_0053_clashgithub"
-      - "[Vless] 15|US_speednode_0055_clashgithub"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
       - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
@@ -641,36 +657,36 @@ proxy-groups:
       - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
       - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
-      - "[SS] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash"
       - "[SS] 🇺🇸 _US_美国_1_oneclash"
+      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_oneclash"
       - "[SS] 🇺🇸 _US_美国_2_oneclash"
       - "[SS] 🇺🇸 _US_美国_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国->🇦🇺_AU_澳大利亚_oneclash"
       - "[SS] 🇺🇸 _US_美国_4_oneclash"
       - "[SS] 🇺🇸 _US_美国_5_oneclash"
+      - "[SS] 🇺🇸 _BG_保加利亚->🇺🇸_US_美国_oneclash"
       - "[SS] 🇺🇸 _US_美国_6_oneclash"
       - "[SS] 🇺🇸 _US_美国_7_oneclash"
+      - "[SS] 🇺🇸 _US_美国_8_oneclash"
       - "[Trojan] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
-      - "[SS] 🇺🇸 _CN_中国->🇺🇸_US_美国_wenode"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
+      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_wenode"
       - "[SS] 🇺🇸 _US_美国_2_wenode"
       - "[SS] 🇺🇸 _US_美国_3_wenode"
-      - "[SS] 🇺🇸 _US_美国->🇦🇺_AU_澳大利亚_wenode"
       - "[SS] 🇺🇸 _US_美国_4_wenode"
       - "[SS] 🇺🇸 _US_美国_5_wenode"
+      - "[SS] 🇺🇸 _BG_保加利亚->🇺🇸_US_美国_wenode"
       - "[SS] 🇺🇸 _US_美国_6_wenode"
       - "[SS] 🇺🇸 _US_美国_7_wenode"
+      - "[SS] 🇺🇸 _US_美国_8_wenode"
   - name: 🇹🇼 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "[Trojan] 🇨🇳 13|🇹🇼 台湾|@ripaojiedian_clashgithub"
       - "[Trojan] 🇨🇳 13,14|台湾2|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇨🇳 14|台湾|@ripaojiedian_clashgithub"
-      - "[Trojan] 🇨🇳 台湾2_openrunner"
+      - "[VMess] 🇨🇳 台湾_openrunner"
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -681,7 +697,8 @@ proxy-groups:
       - "[SS] 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub"
       - "[VMess] 🇸🇬 14|新加坡|@ripaojiedian_clashgithub"
       - "[SS] 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub"
-      - "[VMess] 🇸🇬 新加坡_openrunner"
+      - "[SS] 🇸🇬 新加坡_openrunner"
+      - "[VMess] 🇸🇬 新加坡2_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
   - name: 🇰🇷 韩国节点
     type: url-test
@@ -689,10 +706,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "[SS] 🇰🇷 13|🇰🇷 韩国|@ripaojiedian_clashgithub"
       - "[SS] 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub"
+      - "[SS] 🇰🇷 14|韩国|@ripaojiedian_clashgithub"
       - "[SS] 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub"
+      - "[Vless] 15|KR_speednode_0013_clashgithub"
       - "[SS] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei"
-      - "[SS] 🇰🇷 韩国_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
 rules:
   - PROCESS-NAME,cfnat-android-arm64,🎯 全球直连
@@ -12341,4 +12360,14 @@ rules:
   - DOMAIN,m8pnjvx56g.adobestats.io,🍃 应用净化
   - DOMAIN,n9q1ifg1xl.adobestats.io,🍃 应用净化
   - DOMAIN,82m37u4z1r.adobe.io,🍃 应用净化
+  - DOMAIN,za6qix6pf9.adobestats.io,🍃 应用净化
+  - DOMAIN,08m8pxczga.adobestats.io,🍃 应用净化
+  - DOMAIN,758a7hh9v7.adobestats.io,🍃 应用净化
+  - DOMAIN,1tgf8m1yhs.adobestats.io,🍃 应用净化
+  - DOMAIN,4p9vvzbj8z.adobestats.io,🍃 应用净化
+  - DOMAIN,9pljajqiu6.adobestats.io,🍃 应用净化
+  - DOMAIN,oo1pbkecqz.adobestats.io,🍃 应用净化
+  - DOMAIN,dcmg06rbqr.adobestats.io,🍃 应用净化
+  - DOMAIN,4z2g6m5zv9.adobestats.io,🍃 应用净化
+  - DOMAIN,o7oqoo81cp.adobestats.io,🍃 应用净化
   - MATCH,🐟 漏网之鱼
