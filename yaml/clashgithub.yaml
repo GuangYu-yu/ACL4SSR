@@ -22,20 +22,20 @@ proxies:
   server: 127.0.0.1
   tfo: false
   type: ss
-- cipher: aes-256-cfb
+- cipher: aes-128-cfb
   client-fingerprint: chrome
   name: 0|--1_clashgithub
-  password: amazonskr05
+  password: shadowsocks
   port: 443
-  server: 18.179.197.216
+  server: 184.170.241.194
   tfo: false
   type: ss
-- cipher: chacha20-ietf-poly1305
+- cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 0|--2_clashgithub
-  password: 49JPbl6SMH1hDoskOR6irG
-  port: 55939
-  server: 13.79.98.64
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 38.114.114.69
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -43,23 +43,23 @@ proxies:
   name: 0|--3_clashgithub
   password: amazonskr05
   port: 443
-  server: 43.200.1.13
+  server: 18.179.197.216
   tfo: false
   type: ss
-- cipher: aes-256-cfb
+- cipher: rc4-md5
   client-fingerprint: chrome
   name: 0|--4_clashgithub
-  password: amazonskr05
-  port: 443
-  server: 43.203.243.93
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 169.150.210.233
   tfo: false
   type: ss
 - cipher: aes-256-cfb
   client-fingerprint: chrome
-  name: 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  name: 0|--5_clashgithub
   password: amazonskr05
   port: 443
-  server: 3.35.206.24
+  server: 52.79.52.119
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -67,40 +67,41 @@ proxies:
   name: 0|--6_clashgithub
   password: amazonskr05
   port: 443
-  server: 52.68.44.53
+  server: 43.203.243.93
   tfo: false
   type: ss
-- cipher: rc4-md5
+- cipher: aes-256-cfb
   client-fingerprint: chrome
   name: 0|--7_clashgithub
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.155.57.11
+  password: amazonskr05
+  port: 443
+  server: 43.200.1.13
   tfo: false
   type: ss
-- cipher: aes-128-cfb
+- alterId: 0
+  cipher: auto
   client-fingerprint: chrome
-  name: 0|--8_clashgithub
-  password: shadowsocks
+  name: 0|--38_clashgithub
+  network: ws
   port: 443
-  server: 184.170.241.194
-  tfo: false
-  type: ss
-- client-fingerprint: chrome
-  name: 0|--36_clashgithub
-  password: 71409d3e488548e8bb076d229778f008
-  port: 443
-  server: 38.99.82.225
+  server: sg25.jnstore.biz.id
+  servername: sg25.jnstore.biz.id
   skip-cert-verify: false
-  sni: jobsfortheworldtoday.com
-  type: trojan
+  tfo: false
+  tls: true
+  type: vmess
+  uuid: 1d1c1d94-6987-4658-a4dc-8821a30fe7e0
+  ws-opts:
+    headers:
+      Host: sg25.jnstore.biz.id
+    path: /vmess
 - client-fingerprint: chrome
   name: 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
-  password: DNUMdmnJ
-  port: 42395
-  server: 36.151.192.239
+  password: lidnBTGb
+  port: 2524
+  server: 223.113.54.149
   skip-cert-verify: false
-  sni: 36.151.192.239
+  sni: 223.113.54.149
   type: trojan
 - client-fingerprint: chrome
   name: 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
@@ -143,19 +144,17 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- client-fingerprint: chrome
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
   name: 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
-  network: ws
-  password: TGCitizenScyu
-  port: 443
-  server: cf.zhetengsha.eu.org
+  port: 34728
+  server: 149.104.15.104
   skip-cert-verify: false
-  sni: maikeaxiang.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: maikeaxiang.me
-    path: /?ed=2560
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: c94a21b5-43f6-477d-82a6-cdae1de397c3
 - alterId: 64
   cipher: auto
   client-fingerprint: chrome
@@ -167,14 +166,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
-  password: uoXctIQ4L89ykUZwn17Pn3CzNDNcZSRabCgN5hyNV7JQ
-  port: 36918
-  server: tw.ssrxray.click
-  tfo: false
-  type: ss
 - client-fingerprint: chrome
   name: 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
   password: 9ad5228f-3e01-4353-b717-935272e5f2d6
@@ -182,14 +173,6 @@ proxies:
   server: naiu-hk.05vr9nyqg5.download
   skip-cert-verify: false
   sni: cloudflare.node-ssl.cdn-alibaba.com
-  type: trojan
-- client-fingerprint: chrome
-  name: 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
-  password: da1b02af-a91b-425c-8b43-10ecb80adc08
-  port: 18147
-  server: svip.88de.hongxingdl.vip
-  skip-cert-verify: false
-  sni: mm2.redapricotcloud.com
   type: trojan
 - cipher: aes-128-gcm
   client-fingerprint: chrome
@@ -202,6 +185,17 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
+  name: 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
+  port: 60852
+  server: fiwejniavzoj.xn--fiqs8sjz2bull.com
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 17e51677-587d-4312-972a-3f51afd2fe4f
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
   name: 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
   port: 38953
   server: jpp1.pfdsddla.com
@@ -209,7 +203,23 @@ proxies:
   tfo: false
   tls: false
   type: vmess
-  uuid: 84d83b7e-d390-3aee-901b-257a3a2fe79d
+  uuid: 426d4ed6-fde6-3751-9a5b-ec4220c52abb
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: none
+    grpc-service-name: /
+  name: 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
+  network: grpc
+  port: 443
+  server: America.com
+  servername: us.anycast.us.kg
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vmess
+  uuid: 33f6d8b0-81f8-4fce-b3df-79dc8fd6d8c5
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -229,38 +239,33 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: none
-    grpc-service-name: /
-  name: 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  network: grpc
-  port: 443
-  server: America.com
-  servername: us.anycast.us.kg
+  name: '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  network: ws
+  port: 10004
+  server: 45.154.207.99
   skip-cert-verify: false
   tfo: false
-  tls: true
+  tls: false
   type: vmess
-  uuid: 33f6d8b0-81f8-4fce-b3df-79dc8fd6d8c5
-- client-fingerprint: chrome
-  name: 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
-  network: ws
-  password: TGCitizenScyu
-  port: 2087
-  server: www.visa.com.hk
-  skip-cert-verify: false
-  sni: maikeaxiang.me
-  type: trojan
+  uuid: 0084b5d0-8966-4398-87f8-d5d8b64aa356
   ws-opts:
     headers:
-      Host: maikeaxiang.me
-    path: /?ed=2560
+      Host: 45.154.207.99
+    path: github.com/Alvin9999
+- cipher: aes-256-cfb
+  client-fingerprint: chrome
+  name: 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  password: amazonskr05
+  port: 443
+  server: 3.112.236.3
+  tfo: false
+  type: ss
 - cipher: aes-256-cfb
   client-fingerprint: chrome
   name: 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   password: amazonskr05
   port: 443
-  server: 13.112.235.194
+  server: 13.115.231.64
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -268,7 +273,7 @@ proxies:
   name: 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   password: amazonskr05
   port: 443
-  server: 52.79.248.193
+  server: 43.207.232.228
   tfo: false
   type: ss
 - client-fingerprint: chrome
@@ -279,14 +284,6 @@ proxies:
   skip-cert-verify: false
   sni: vn.mjt000.com
   type: trojan
-- cipher: rc4-md5
-  client-fingerprint: chrome
-  name: 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.18
-  tfo: false
-  type: ss
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -337,19 +334,17 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- client-fingerprint: chrome
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
   name: 🇭🇰 14|香港6|@ripaojiedian_clashgithub
-  network: ws
-  password: TGCitizenScyu
-  port: 443
-  server: cf.zhetengsha.eu.org
+  port: 34728
+  server: 149.104.15.104
   skip-cert-verify: false
-  sni: maikeaxiang.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: maikeaxiang.me
-    path: /?ed=2560
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: c94a21b5-43f6-477d-82a6-cdae1de397c3
 - alterId: 64
   cipher: auto
   client-fingerprint: chrome
@@ -363,20 +358,23 @@ proxies:
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - cipher: ss
   client-fingerprint: chrome
-  name: 🇹🇼 14|台湾|@ripaojiedian_clashgithub
-  password: //YWVzLTI1Ni1nY206dW9YY3RJUTRMODl5a1Vad24xN1BuM0N6TkROY1pTUmFiQ2dONWh5TlY3SlE
-  port: 36918
-  server: tw.ssrxray.click
-  tfo: false
-  type: ss
-- cipher: ss
-  client-fingerprint: chrome
   name: 🇯🇵 14|日本|@ripaojiedian_clashgithub
   password: //YWVzLTEyOC1nY206c2hhZG93c29ja3M
   port: 443
   server: 149.22.87.204
   tfo: false
   type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇹🇼 14|台湾|@ripaojiedian_clashgithub
+  port: 60852
+  server: fiwejniavzoj.xn--fiqs8sjz2bull.com
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: 17e51677-587d-4312-972a-3f51afd2fe4f
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -387,26 +385,21 @@ proxies:
   tfo: false
   tls: false
   type: vmess
-  uuid: 84d83b7e-d390-3aee-901b-257a3a2fe79d
-- client-fingerprint: chrome
-  name: 🇺🇸 14|美国2|@ripaojiedian_clashgithub
-  network: ws
-  password: TGCitizenScyu
-  port: 2087
-  server: www.visa.com.hk
-  skip-cert-verify: false
-  sni: maikeaxiang.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: maikeaxiang.me
-    path: /?ed=2560
+  uuid: 426d4ed6-fde6-3751-9a5b-ec4220c52abb
+- cipher: ss
+  client-fingerprint: chrome
+  name: 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
+  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
+  port: 443
+  server: 3.112.236.3
+  tfo: false
+  type: ss
 - cipher: ss
   client-fingerprint: chrome
   name: 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
   port: 443
-  server: 13.112.235.194
+  server: 13.115.231.64
   tfo: false
   type: ss
 - cipher: ss
@@ -414,27 +407,27 @@ proxies:
   name: 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
   password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
   port: 443
-  server: 52.79.248.193
-  tfo: false
-  type: ss
-- cipher: ss
-  client-fingerprint: chrome
-  name: 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
-  port: 443
-  server: 3.35.206.24
-  tfo: false
-  type: ss
-- cipher: ss
-  client-fingerprint: chrome
-  name: 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  password: //cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg
-  port: 8080
-  server: 146.70.61.18
+  server: 43.207.232.228
   tfo: false
   type: ss
 - client-fingerprint: chrome
-  name: 15|DE_speednode_0008_clashgithub
+  name: 15|CN_speednode_0004_clashgithub
+  password: QwwHvrnN
+  port: 42395
+  server: 36.151.192.239
+  skip-cert-verify: false
+  sni: 36.151.192.239
+  type: trojan
+- client-fingerprint: chrome
+  name: 15|CN_speednode_0007_clashgithub
+  password: 38571ca6-6692-4559-b901-0bc5826b7661
+  port: 60194
+  server: ru0195.alibabaokz.com
+  skip-cert-verify: false
+  sni: ru0195.alibabaokz.com
+  type: trojan
+- client-fingerprint: chrome
+  name: 15|DE_speednode_0010_clashgithub
   network: ws
   port: 443
   server: 212.224.93.93
@@ -449,96 +442,20 @@ proxies:
       Host: blog.codegethub.org
     path: /ws@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channel----@PersiaTM_Channelsecurity=tls
 - client-fingerprint: chrome
-  name: 15|US_speednode_0033_clashgithub
-  password: ypDt8RkT7J
-  port: 43118
-  server: 89.187.181.172
-  skip-cert-verify: false
-  sni: egcmi.phooeyunfold.com
-  type: trojan
-- client-fingerprint: chrome
-  name: 15|US_speednode_0034_clashgithub
-  password: ypDt8RkT7J
-  port: 43118
-  server: 89.187.181.172
-  skip-cert-verify: false
-  sni: 89.187.181.172
-  type: trojan
-- client-fingerprint: chrome
-  name: 15|US_speednode_0035_clashgithub
-  network: ws
-  port: 2087
-  server: 199.34.228.48
-  servername: vv.cscfwoker.fun
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: c9577b4c-d52d-4eea-b2ab-6f855fa18ae5
-  ws-opts:
-    headers:
-      Host: vv.cscfwoker.fun
-    path: /?ed=2560fp=random
-- client-fingerprint: chrome
-  name: 15|US_speednode_0036_clashgithub
-  network: ws
-  port: 8443
-  server: 108.165.152.38
-  servername: vv.cscfwoker.fun
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: c9577b4c-d52d-4eea-b2ab-6f855fa18ae5
-  ws-opts:
-    headers:
-      Host: vv.cscfwoker.fun
-    path: /?ed=2560fp=random
-- client-fingerprint: chrome
-  name: 15|US_speednode_0037_clashgithub
-  network: ws
-  port: 2053
-  server: 108.165.152.241
-  servername: vv.cscfwoker.fun
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: c9577b4c-d52d-4eea-b2ab-6f855fa18ae5
-  ws-opts:
-    headers:
-      Host: vv.cscfwoker.fun
-    path: /?ed=2560fp=random
-- client-fingerprint: chrome
-  name: 15|US_speednode_0038_clashgithub
-  network: ws
-  port: 2096
-  server: 167.68.4.10
-  servername: vv.cscfwoker.fun
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: c9577b4c-d52d-4eea-b2ab-6f855fa18ae5
-  ws-opts:
-    headers:
-      Host: vv.cscfwoker.fun
-    path: /?ed=2560fp=random
-- client-fingerprint: chrome
   name: 15|US_speednode_0039_clashgithub
   network: ws
-  port: 443
-  server: 216.24.57.207
-  servername: vv.cscfwoker.fun
+  port: 8880
+  server: 216.24.57.130
+  servername: mohsenfitshr.wibibin259.workers.dev
   skip-cert-verify: false
   tfo: false
-  tls: true
+  tls: false
   type: vless
-  uuid: c9577b4c-d52d-4eea-b2ab-6f855fa18ae5
+  uuid: 1b6ae0f5-01dc-4b96-bca9-31c672dcf0aa
   ws-opts:
     headers:
-      Host: vv.cscfwoker.fun
-    path: /?ed=2560fp=random
+      Host: mohsenfitshr.wibibin259.workers.dev
+    path: /@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2560
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -569,11 +486,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -581,39 +497,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
@@ -626,11 +535,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -638,39 +546,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
@@ -686,11 +587,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -698,39 +598,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
@@ -745,9 +638,8 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
@@ -765,11 +657,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -777,39 +668,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
@@ -823,11 +707,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -835,39 +718,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
@@ -882,11 +758,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -894,39 +769,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
@@ -950,11 +818,10 @@ proxy-groups:
   - 0|--2_clashgithub
   - 0|--3_clashgithub
   - 0|--4_clashgithub
-  - 🇸🇬 0,13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
+  - 0|--5_clashgithub
   - 0|--6_clashgithub
   - 0|--7_clashgithub
-  - 0|--8_clashgithub
-  - 0|--36_clashgithub
+  - 0|--38_clashgithub
   - 🇭🇰 13,14|香港|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港2|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港3|@ripaojiedian_clashgithub
@@ -962,39 +829,32 @@ proxy-groups:
   - 🇭🇰 13|🇭🇰 香港5|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港6|@ripaojiedian_clashgithub
   - 🇭🇰 13|🇭🇰 香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇭🇰 13,14|香港8|@ripaojiedian_clashgithub
-  - 🇹🇼 13,14|台湾2|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本|@ripaojiedian_clashgithub
+  - 🇹🇼 13|🇹🇼 台湾|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本2|@ripaojiedian_clashgithub
-  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
   - 🇺🇸 13,14|美国|@ripaojiedian_clashgithub
-  - 🇺🇸 13|🇺🇸 美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 13,14|新加坡|@ripaojiedian_clashgithub
+  - '🇺🇸 13,14|美国|@ripaojiedian #1_clashgithub'
+  - 🇸🇬 13|🇸🇬 狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 13|🇰🇷 韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 13|🇯🇵 日本特殊|@ripaojiedian_clashgithub
   - 🇻🇳 13,14|越南|@ripaojiedian_clashgithub
-  - 🇬🇧 13|🇬🇧 英国|@ripaojiedian_clashgithub
   - 🇫🇷 13,14|法国|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港3|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港4|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港5|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港6|@ripaojiedian_clashgithub
   - 🇭🇰 14|香港7|@ripaojiedian_clashgithub
-  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本|@ripaojiedian_clashgithub
+  - 🇹🇼 14|台湾|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本2|@ripaojiedian_clashgithub
-  - 🇺🇸 14|美国2|@ripaojiedian_clashgithub
+  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
   - 🇰🇷 14|韩国特殊|@ripaojiedian_clashgithub
   - 🇯🇵 14|日本特殊|@ripaojiedian_clashgithub
-  - 🇸🇬 14|狮城特殊|@ripaojiedian_clashgithub
-  - 🇬🇧 14|英国|@ripaojiedian_clashgithub
-  - 15|DE_speednode_0008_clashgithub
-  - 15|US_speednode_0033_clashgithub
-  - 15|US_speednode_0034_clashgithub
-  - 15|US_speednode_0035_clashgithub
-  - 15|US_speednode_0036_clashgithub
-  - 15|US_speednode_0037_clashgithub
-  - 15|US_speednode_0038_clashgithub
+  - 15|CN_speednode_0004_clashgithub
+  - 15|CN_speednode_0007_clashgithub
+  - 15|DE_speednode_0010_clashgithub
   - 15|US_speednode_0039_clashgithub
   - 16|d*********g.com_2_clashgithub
   - 16|d*********g.com_3_clashgithub
