@@ -33,45 +33,24 @@ mixed-port: 7890
 mode: rule
 proxies:
 - cipher: aes-256-cfb
-  name: 🇺🇸_US_美国_1_wenode
-  password: amazonskr05
-  port: 443
-  server: 52.32.68.164
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
   name: 🇷🇺_RU_俄罗斯_1_wenode
-  password: rpgbNnU9rDDU4aWZ
-  port: 9094
+  password: rNBfNuuANFCAk7KB
+  port: 9056
   server: 217.30.10.18
   type: ss
   udp: true
-- cipher: rc4-md5
-  name: 🇺🇸_US_美国_2_wenode
-  password: 14fFPrbezE3HDZzsMOr6
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪_DE_德国_1_wenode
+  password: 1RWwXhwfAB5gAEozU4G2Pg
   port: 8080
-  server: 169.150.210.233
+  server: 45.87.175.164
   type: ss
   udp: true
-- cipher: rc4-md5
-  name: 🇷🇴_RO_罗马尼亚_wenode
-  password: 14fFPrbezE3HDZzsMOr6
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪_DE_德国_2_wenode
+  password: 4a2rfixophdjffa8KVA4Aa
   port: 8080
-  server: 194.5.215.59
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_2_wenode
-  password: BejrQvtu9sqUeNuZ
-  port: 9024
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 51.15.15.82
+  server: 45.87.175.199
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -82,30 +61,44 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-cfb
+  name: 🇷🇺_RU_俄罗斯_2_wenode
+  password: ueLXVkvh4hckhErQ
+  port: 9060
+  server: 217.30.10.18
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_1_wenode
+  password: amazonskr05
+  port: 443
+  server: 34.213.242.165
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_2_wenode
+  password: amazonskr05
+  port: 443
+  server: 34.219.80.203
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇬🇧_GB_英国_1_wenode
+  password: shadowsocks
+  port: 443
+  server: 212.102.53.193
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
   name: 🇷🇺_RU_俄罗斯_3_wenode
-  password: GA9KzeEgvfxNrgmM
-  port: 9019
+  password: cp8pRSUAyLhTfVWH
+  port: 9064
   server: 217.30.10.18
   type: ss
   udp: true
 - cipher: aes-256-cfb
   name: 🇷🇺_RU_俄罗斯_4_wenode
-  password: QWDDvVE9npNurQfA
-  port: 9026
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_5_wenode
-  password: M3t2ZEQcMGRWBjRa
-  port: 9011
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_6_wenode
-  password: TN2YqghxeFDKZfLU
-  port: 9037
+  password: Lp27rqyJq72bZsqX
+  port: 9045
   server: 217.30.10.18
   type: ss
   udp: true
@@ -113,56 +106,77 @@ proxies:
   name: 🇺🇸_US_美国_3_wenode
   password: amazonskr05
   port: 443
-  server: 34.211.229.86
+  server: 54.244.200.142
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
+  name: 🇺🇸_US_美国_4_wenode
   password: amazonskr05
   port: 443
-  server: 54.200.223.152
+  server: 52.89.164.115
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺_RU_俄罗斯_5_wenode
+  password: 9XwYyZsK8SNzQDtY
+  port: 9059
+  server: 217.30.10.18
   type: ss
   udp: true
 - cipher: rc4-md5
-  name: 🇺🇸_US_美国_4_wenode
+  name: 🇷🇴_RO_罗马尼亚_wenode
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  server: 23.251.121.242
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  password: cvII85TrW6n0OGyfpHVS1u
-  port: 8080
-  server: 45.87.175.171
+  server: 194.5.215.59
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  name: 🇺🇸_US_美国_5_wenode
   password: amazonskr05
   port: 443
-  server: 35.161.59.194
+  server: 54.245.207.144
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇹🇷_TR_土耳其_wenode
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 185.123.101.241
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺_RU_俄罗斯_6_wenode
+  password: M3t2ZEQcMGRWBjRa
+  port: 9011
+  server: 217.30.10.18
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_6_wenode
+  password: amazonskr05
+  port: 443
+  server: 35.85.33.177
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧_GB_英国_2_wenode
+  password: SK8DG4IJFnDwuhy35hOWUj
+  port: 20760
+  server: 51.13.35.115
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇬🇧_GB_英国_3_wenode
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 51.15.15.82
   type: ss
   udp: true
 - cipher: aes-256-cfb
   name: 🇷🇺_RU_俄罗斯_7_wenode
-  password: XPtzA9sCug3SPR4c
-  port: 9025
+  password: ZET59LF6DvCC8KVt
+  port: 9005
   server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇷🇺_RU_俄罗斯_8_wenode
-  password: dongtaiwang.com
-  port: 23456
-  server: 185.22.155.228
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
-  password: 4a2rfixophdjffa8KVA4Aa
-  port: 8080
-  server: 45.87.175.157
   type: ss
   udp: true
 proxy-groups:
@@ -170,48 +184,52 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -220,97 +238,105 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   type: select
 - name: 📲 电报信息
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   type: select
 - name: 🍎 苹果服务
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -333,25 +359,27 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 🇺🇸_US_美国_1_wenode
   - 🇷🇺_RU_俄罗斯_1_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇷🇴_RO_罗马尼亚_wenode
-  - 🇷🇺_RU_俄罗斯_2_wenode
-  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  - 🇩🇪_DE_德国_1_wenode
+  - 🇩🇪_DE_德国_2_wenode
   - 🇧🇬_BG_保加利亚->🇺🇸_US_美国_wenode
+  - 🇷🇺_RU_俄罗斯_2_wenode
+  - 🇺🇸_US_美国_1_wenode
+  - 🇺🇸_US_美国_2_wenode
+  - 🇬🇧_GB_英国_1_wenode
   - 🇷🇺_RU_俄罗斯_3_wenode
   - 🇷🇺_RU_俄罗斯_4_wenode
-  - 🇷🇺_RU_俄罗斯_5_wenode
-  - 🇷🇺_RU_俄罗斯_6_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_wenode
   - 🇺🇸_US_美国_4_wenode
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国->🇩🇪_DE_德国_wenode
+  - 🇷🇺_RU_俄罗斯_5_wenode
+  - 🇷🇴_RO_罗马尼亚_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇹🇷_TR_土耳其_wenode
+  - 🇷🇺_RU_俄罗斯_6_wenode
+  - 🇺🇸_US_美国_6_wenode
+  - 🇬🇧_GB_英国_2_wenode
+  - 🇬🇧_GB_英国_3_wenode
   - 🇷🇺_RU_俄罗斯_7_wenode
-  - 🇷🇺_RU_俄罗斯_8_wenode
-  - 🇩🇪_DE_德国->🇨🇳_CN_中国_wenode
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
