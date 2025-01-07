@@ -32,88 +32,81 @@ log-level: info
 mixed-port: 7890
 mode: rule
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  password: QCXDxuDlTTMD7jtgHUjIoj
-  port: 8080
-  server: 45.87.175.181
-  type: ss
-  udp: true
 - cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_1_oneclash
-  password: rpgbNnU9rDDU4aWZ
-  port: 9094
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
   name: 🇺🇸_US_美国_1_oneclash
-  password: LuxyNetBot
+  password: amazonskr05
   port: 443
-  server: 23.88.37.31
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪_DE_德国_oneclash
-  password: cvII85TrW6n0OGyfpHVS1u
-  port: 8080
-  server: 45.87.175.192
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_2_oneclash
-  password: TPqX8edgbAURcAMb
-  port: 9079
-  server: 217.30.10.18
+  server: 35.92.45.179
   type: ss
   udp: true
 - cipher: aes-256-cfb
   name: 🇺🇸_US_美国_2_oneclash
   password: amazonskr05
   port: 443
-  server: 35.85.33.177
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇺🇸_US_美国_3_oneclash
-  password: amazonskr05
-  port: 443
-  server: 54.186.92.34
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_3_oneclash
-  password: XPtzA9sCug3SPR4c
-  port: 9025
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_4_oneclash
-  password: FAdUvMJUq5vDgKEq
-  port: 9006
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_5_oneclash
-  password: S7KwUu7yBy58S3Ga
-  port: 9042
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇹🇷_TR_土耳其_oneclash
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 185.123.101.241
+  server: 34.213.242.165
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 64.74.163.130
+  name: 🇺🇸_US_美国_3_oneclash
+  password: LuxyNetBot
+  port: 443
+  server: apple.slumbo.com
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  password: NChVdloynewtqS0847jui6PQejHLO3gUuw1tnUmYVPI=
+  port: 55098
+  server: 77.105.147.212
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸_US_美国_4_oneclash
+  password: u17T3BvpYaaiuW2c
+  port: 443
+  server: 51.112.86.251
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_5_oneclash
+  password: amazonskr05
+  port: 443
+  server: 34.222.132.123
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧_GB_英国_oneclash
+  password: M7x1mGNOwhPiRB9jSxZJNy
+  port: 6870
+  server: 51.13.182.236
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.155.57.11
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺_RU_俄罗斯_1_oneclash
+  password: Lp27rqyJq72bZsqX
+  port: 9045
+  server: 217.30.10.18
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_6_oneclash
+  password: amazonskr05
+  port: 443
+  server: 54.245.207.144
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_7_oneclash
+  password: amazonskr05
+  port: 443
+  server: 54.186.92.34
   type: ss
   udp: true
 - cipher: rc4-md5
@@ -123,60 +116,53 @@ proxies:
   server: 194.5.215.59
   type: ss
   udp: true
+- cipher: rc4-md5
+  name: 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.18
+  type: ss
+  udp: true
 - cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_6_oneclash
-  password: U6qnYRhfyDmn8sgn
-  port: 9041
+  name: 🇷🇺_RU_俄罗斯_2_oneclash
+  password: ZET59LF6DvCC8KVt
+  port: 9005
   server: 217.30.10.18
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_7_oneclash
-  password: f63gg8EruDnUrmz4
-  port: 9010
+  name: 🇷🇺_RU_俄罗斯_3_oneclash
+  password: JdmRK9gMEqFgs8nP
+  port: 9003
   server: 217.30.10.18
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: 🇺🇸_US_美国_4_oneclash
-  password: amazonskr05
-  port: 443
-  server: 52.89.164.115
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇱🇻_LV_拉脱维亚_oneclash
-  password: f8f7aCzcPKbsF8p3
-  port: 990
-  server: 46.183.217.232
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  password: amazonskr05
-  port: 443
-  server: 35.93.31.33
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_8_oneclash
-  password: ueLXVkvh4hckhErQ
-  port: 9060
-  server: 217.30.10.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇺🇸_US_美国_5_oneclash
-  password: amazonskr05
-  port: 443
-  server: 35.88.126.102
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇷🇺_RU_俄罗斯_9_oneclash
+  name: 🇷🇺_RU_俄罗斯_4_oneclash
   password: FG5ddLsMPbV5CutE
   port: 9050
   server: 217.30.10.18
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇺🇸_US_美国_8_oneclash
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 169.150.210.233
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国_9_oneclash
+  password: amazonskr05
+  port: 443
+  server: 54.200.223.152
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
+  password: 21586aab-3a37-4f55-b8b7-5ae69572d403
+  port: 1935
+  server: 85.133.241.75
   type: ss
   udp: true
 proxy-groups:
@@ -184,52 +170,48 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -238,105 +220,97 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   type: select
 - name: 📲 电报信息
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   type: select
 - name: 🍎 苹果服务
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -359,27 +333,25 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇩🇪_DE_德国_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇺🇸_US_美国_2_oneclash
   - 🇺🇸_US_美国_3_oneclash
+  - 🇷🇺_RU_俄罗斯->🇯🇵_JP_日本_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_oneclash
+  - 🇷🇺_RU_俄罗斯_2_oneclash
   - 🇷🇺_RU_俄罗斯_3_oneclash
   - 🇷🇺_RU_俄罗斯_4_oneclash
-  - 🇷🇺_RU_俄罗斯_5_oneclash
-  - 🇹🇷_TR_土耳其_oneclash
-  - 🇨🇦_CA_加拿大->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇴_RO_罗马尼亚->🇷🇺_RU_俄罗斯_oneclash
-  - 🇷🇺_RU_俄罗斯_6_oneclash
-  - 🇷🇺_RU_俄罗斯_7_oneclash
-  - 🇺🇸_US_美国_4_oneclash
-  - 🇱🇻_LV_拉脱维亚_oneclash
-  - 🇺🇸_US_美国->🇧🇬_BG_保加利亚_oneclash
-  - 🇷🇺_RU_俄罗斯_8_oneclash
-  - 🇺🇸_US_美国_5_oneclash
-  - 🇷🇺_RU_俄罗斯_9_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇺🇸_US_美国_9_oneclash
+  - 🇮🇷_IR_伊朗->🇨🇳_CN_中国_oneclash
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
