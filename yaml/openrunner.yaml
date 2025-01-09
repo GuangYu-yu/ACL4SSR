@@ -66,14 +66,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇭🇰 香港6_openrunner
-  password: e3e6bacf-030c-4bcd-b9ab-9fd29eec4dfd
-  port: 30018
-  server: 114.132.40.118
-  tfo: false
-  type: ss
 - client-fingerprint: chrome
   name: 🇭🇰 香港7_openrunner
   password: 243eab52-9ac1-405c-887c-eb112c0985b8
@@ -106,6 +98,14 @@ proxies:
   skip-cert-verify: false
   sni: tw01.trojanyyds.xyz
   type: trojan
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇹🇼 台湾2_openrunner
+  password: 3730d507-4825-4eca-ab8a-4c9ebd4bc3e6
+  port: 28995
+  server: gzyd3.piaomiaoxu.net
+  tfo: false
+  type: ss
 - cipher: aes-256-gcm
   client-fingerprint: chrome
   name: 🇯🇵 日本_openrunner
@@ -170,7 +170,7 @@ proxies:
   name: 🇯🇵 日本特殊_openrunner
   password: amazonskr05
   port: 443
-  server: 18.182.64.182
+  server: 54.151.212.176
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -178,7 +178,7 @@ proxies:
   name: 🇸🇬 狮城特殊_openrunner
   password: amazonskr05
   port: 443
-  server: 52.196.112.58
+  server: 54.179.78.99
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -186,7 +186,7 @@ proxies:
   name: 🇰🇷 韩国特殊_openrunner
   password: amazonskr05
   port: 443
-  server: 13.114.140.185
+  server: 52.195.214.124
   tfo: false
   type: ss
 - alterId: 0
@@ -217,11 +217,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -243,11 +243,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -273,11 +273,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -300,11 +300,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -327,11 +327,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -354,11 +354,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -382,11 +382,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
@@ -426,11 +426,11 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇭🇰 香港8_openrunner
   - 🇭🇰 香港9_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
