@@ -71,26 +71,25 @@ proxies:
   - {name: "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_oneclash", server: 13.61.202.11, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇪🇸 _ES_西班牙_oneclash", server: 150.241.97.212, port: 1601, type: ss, cipher: chacha20-ietf-poly1305, password: yhDWDX3XM7yLFr1YWB7QOe, udp: true}
   - {name: "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash", server: 219.135.231.205, port: 21019, type: trojan, password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5, skip-cert-verify: true, udp: true}
-  - {name: "[SS] tg频道:@freenodedaily_openrunner", server: 3.36.126.174, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇭🇰 香港_openrunner", server: 193.42.25.242, port: 49691, type: vmess, uuid: c7e04382-01be-40ab-b174-4dbff44b5cf4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[HTTPS] tg频道:@freenodedaily_openrunner", server: krecs.ftq.ink, port: 4002, type: http, tls: true, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 香港_openrunner", server: 59.42.247.247, port: 3601, type: ss, cipher: rc4-md5, password: RenzheCloudSS, plugin: obfs, plugin-opts: {mode: http, host: 78fe8292462.microsoft.com}, udp: true}
+  - {name: "[SS] 🇭🇰 香港2_openrunner", server: mdss-sg.04z3susick.download, port: 12017, type: ss, cipher: aes-128-gcm, password: 8f9ee4d3-f070-43ab-a0cd-b708d9e8de10, udp: true}
+  - {name: "[SS] 🇭🇰 香港3_openrunner", server: 0.o.0.cdn-node.ss.one.57.gmaes-cdn-usercontent.com, port: 52149, type: ss, cipher: chacha20-ietf-poly1305, password: 7c28b43c-41c4-4af1-81c4-48690133d1cd, udp: true}
   - {name: "[Trojan] 🇭🇰 香港4_openrunner", server: 104.251.227.182, port: 443, type: trojan, password: 43e5eeacbad3032bfe4c25a2f011b6b7, sni: hezijiasuqi.com, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇨🇳 台湾_openrunner", server: dozo01.flztjc.top, port: 5302, type: trojan, password: 069a7054-7269-554b-bfab-a7f2651f92e5, sni: tw-2-545.flztjc.net, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇯🇵 日本_openrunner", server: ywtwepcnwlou.xn--fiqs8sjz2bull.com, port: 33184, type: vmess, uuid: 0acfdca6-a960-469a-a7b8-2634371fd9d3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇯🇵 日本2_openrunner", server: lm.kaiqsz.com, port: 58148, type: ss, cipher: aes-256-gcm, password: ee2d2b8b-18b0-4fdd-afd1-a7c0030ec635, udp: true}
+  - {name: "[SS] 🇯🇵 日本_openrunner", server: 120.232.81.50, port: 15084, type: ss, cipher: aes-256-cfb, password: hGkQ6915tD, udp: true}
+  - {name: "[Trojan] 🇯🇵 日本2_openrunner", server: naiu-jp.05vr9nyqg5.download, port: 13011, type: trojan, password: dc15d997-8b26-4294-870e-c90a5784dca4, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 日本3_openrunner", server: ywtwepcnwlou.xn--fiqs8sjz2bull.com, port: 33184, type: vmess, uuid: b2d1e704-59f5-48ec-ba97-9a5e2005b37b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 韩国_openrunner", server: hopeful-seagull.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: hopeful-seagull.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇰🇷 韩国2_openrunner", server: 218.38.103.150, port: 28902, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
   - {name: "[VMess] 🇸🇬 新加坡_openrunner", server: 31.58.142.221, port: 8967, type: vmess, uuid: 7d29f1ca-647b-4b4e-b9c8-6beab7133535, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: neo.nicme.me, network: ws, ws-opts: {path: /BONRyKGhDE, headers: {Host: neo.nicme.me}}, udp: true}
   - {name: "[SS] 🇸🇬 新加坡2_openrunner", server: 103.106.229.219, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[Trojan] 🇸🇬 新加坡3_openrunner", server: summary-sawfish.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: summary-sawfish.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 新加坡3_openrunner", server: robust-redfish.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: robust-redfish.shiner427.skin, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇸 美国_openrunner", server: live-serval.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: live-serval.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 美国2_openrunner", server: 155.138.208.122, port: 8881, type: vmess, uuid: db5afae4-ac23-41a6-8378-f307a9a47436, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国3_openrunner", server: humorous-lioness.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: humorous-lioness.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国4_openrunner", server: grateful-lark.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: grateful-lark.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 18.143.103.137, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 43.206.238.113, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 43.207.97.53, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇮🇸 冰岛_openrunner", server: 89.221.224.166, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: NjBlZDlk, udp: true}
-  - {name: "[Trojan] 🇩🇪 德国_openrunner", server: mature-flamingo.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: mature-flamingo.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇮🇪 爱尔兰_openrunner", server: tops-lobster.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: tops-lobster.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇬🇧 英国_openrunner", server: grown-mackerel.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: grown-mackerel.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 美国3_openrunner", server: live-serval.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: live-serval.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国2_openrunner", server: 120.232.153.123, port: 45402, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 52.79.166.214, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 13.124.57.244, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 43.203.217.107, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[Trojan] 🇬🇧 _GB_英国_1_wenode", server: 18.135.122.249, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 47.129.223.160, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 54.212.56.86, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
@@ -201,26 +200,25 @@ proxy-groups:
       - "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_oneclash"
       - "[SS] 🇪🇸 _ES_西班牙_oneclash"
       - "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash"
-      - "[SS] tg频道:@freenodedaily_openrunner"
-      - "[VMess] 🇭🇰 香港_openrunner"
+      - "[HTTPS] tg频道:@freenodedaily_openrunner"
+      - "[SS] 🇭🇰 香港_openrunner"
+      - "[SS] 🇭🇰 香港2_openrunner"
+      - "[SS] 🇭🇰 香港3_openrunner"
       - "[Trojan] 🇭🇰 香港4_openrunner"
-      - "[Trojan] 🇨🇳 台湾_openrunner"
-      - "[VMess] 🇯🇵 日本_openrunner"
-      - "[SS] 🇯🇵 日本2_openrunner"
+      - "[SS] 🇯🇵 日本_openrunner"
+      - "[Trojan] 🇯🇵 日本2_openrunner"
+      - "[VMess] 🇯🇵 日本3_openrunner"
+      - "[Trojan] 🇰🇷 韩国_openrunner"
+      - "[SS] 🇰🇷 韩国2_openrunner"
       - "[VMess] 🇸🇬 新加坡_openrunner"
       - "[SS] 🇸🇬 新加坡2_openrunner"
       - "[Trojan] 🇸🇬 新加坡3_openrunner"
       - "[Trojan] 🇺🇸 美国_openrunner"
-      - "[VMess] 🇺🇸 美国2_openrunner"
       - "[Trojan] 🇺🇸 美国3_openrunner"
-      - "[Trojan] 🇺🇸 美国4_openrunner"
+      - "[VMess] 🇺🇸 美国2_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
-      - "[SS] 🇮🇸 冰岛_openrunner"
-      - "[Trojan] 🇩🇪 德国_openrunner"
-      - "[Trojan] 🇮🇪 爱尔兰_openrunner"
-      - "[Trojan] 🇬🇧 英国_openrunner"
       - "[Trojan] 🇬🇧 _GB_英国_1_wenode"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
       - "[SS] 🇺🇸 _US_美国_2_wenode"
@@ -487,7 +485,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇭🇰 香港_openrunner"
+      - "[SS] 🇭🇰 香港_openrunner"
+      - "[SS] 🇭🇰 香港2_openrunner"
+      - "[SS] 🇭🇰 香港3_openrunner"
       - "[Trojan] 🇭🇰 香港4_openrunner"
   - name: 🇯🇵 日本节点
     type: url-test
@@ -496,8 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[SS] 🇯🇵 JP日本(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇯🇵 日本_openrunner"
-      - "[SS] 🇯🇵 日本2_openrunner"
+      - "[SS] 🇯🇵 日本_openrunner"
+      - "[Trojan] 🇯🇵 日本2_openrunner"
+      - "[VMess] 🇯🇵 日本3_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
   - name: 🇺🇲 美国节点
     type: url-test
@@ -542,9 +543,8 @@ proxy-groups:
       - "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_oneclash"
       - "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash"
       - "[Trojan] 🇺🇸 美国_openrunner"
-      - "[VMess] 🇺🇸 美国2_openrunner"
       - "[Trojan] 🇺🇸 美国3_openrunner"
-      - "[Trojan] 🇺🇸 美国4_openrunner"
+      - "[VMess] 🇺🇸 美国2_openrunner"
       - "[SS] 🇺🇸 _US_美国_1_wenode"
       - "[SS] 🇺🇸 _US_美国_2_wenode"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode"
@@ -570,7 +570,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[Trojan] 🇨🇳 TW台湾(mibei77.com 米贝节点分享)_miebei"
-      - "[Trojan] 🇨🇳 台湾_openrunner"
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -589,6 +588,8 @@ proxy-groups:
     proxies:
       - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei"
       - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇰🇷 韩国_openrunner"
+      - "[SS] 🇰🇷 韩国2_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
 rules:
   - PROCESS-NAME,cfnat-android-arm64,🎯 全球直连
