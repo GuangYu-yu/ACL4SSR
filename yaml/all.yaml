@@ -44,79 +44,121 @@ proxies:
   - {name: "[VMess] 🇫🇷 FR法国(mibei77.com 米贝节点分享) 2_miebei", server: 151.101.0.155, port: 80, type: vmess, uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /racevpn, headers: {Host: telegram-isvvpn.ir}}, udp: true}
   - {name: "[SS] 🇦🇺 AU澳大利亚(mibei77.com 米贝节点分享)_miebei", server: south-korea-2.keenvpn.me, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 2afbc97400ca71c8f3306f9843a6e1c2, udp: true}
   - {name: "[SS] 🇦🇺 AU澳大利亚(mibei77.com 米贝节点分享) 2_miebei", server: 43.202.96.177, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 2afbc97400ca71c8f3306f9843a6e1c2, udp: true}
-  - {name: "[Trojan] 🇬🇧 _GB_英国_1_oneclash", server: 18.135.122.249, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 47.129.223.160, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 54.212.56.86, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash", server: 151.101.0.155, port: 80, type: vmess, uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /racevpn}, udp: true}
-  - {name: "[SS] 🇩🇪 _DE_德国_oneclash", server: 134.255.210.49, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 35.94.43.251, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 185.47.253.171, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国->🇷🇴_RO_罗马尼亚_oneclash", server: 54.188.92.179, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇺🇸 _DE_德国->🇺🇸_US_美国_oneclash", server: 3.126.41.247, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 35.91.180.231, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash", server: join.ISVvpn.fastly80-3.hosting-ip.com, port: 80, type: vmess, uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /racevpn, headers: {Host: join.ISVvpn.fastly80-3.hosting-ip.com}}, udp: true}
-  - {name: "[VMess] 🇷🇺 _RU_俄罗斯_oneclash", server: 185.22.153.73, port: 17479, type: vmess, uuid: af7f07dc-d726-4b1e-967d-dbb6c594999f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999}, udp: true}
-  - {name: "[Trojan] 🇬🇧 _GB_英国_2_oneclash", server: 18.133.167.84, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国_6_oneclash", server: 13.50.25.213, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇧🇪 _BE_比利时_oneclash", server: 192.71.249.146, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国_7_oneclash", server: 18.171.21.26, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇮🇹 _IT_意大利_oneclash", server: 37.143.129.230, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 35.91.120.138, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_oneclash", server: 34.221.167.203, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇱🇹 _LT_立陶宛_oneclash", server: 147.78.1.27, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_10_oneclash", server: 34.217.211.139, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_11_oneclash", server: 52.11.187.58, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇦 _UA_乌克兰_oneclash", server: 176.103.53.105, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[VMess] 🇺🇸 _US_美国_12_oneclash", server: 142.4.104.33, port: 52143, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_oneclash", server: 13.61.202.11, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇪🇸 _ES_西班牙_oneclash", server: 150.241.97.212, port: 1601, type: ss, cipher: chacha20-ietf-poly1305, password: yhDWDX3XM7yLFr1YWB7QOe, udp: true}
-  - {name: "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash", server: 219.135.231.205, port: 21019, type: trojan, password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_1_oneclash", server: 150.230.201.63, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_2_oneclash", server: 47.74.11.219, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_1_oneclash", server: 104.18.15.147, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_3_oneclash", server: 47.245.26.167, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_2_oneclash", server: 104.18.154.42, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_1_oneclash", server: 162.159.200.5, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_1_oneclash", server: 104.18.15.150, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[Trojan] 🇨🇦 _CA_加拿大_oneclash", server: 15.223.142.94, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.miwan.co.uk, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_4_oneclash", server: 150.230.197.156, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_5_oneclash", server: 131.186.63.127, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_6_oneclash", server: 47.91.19.249, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_7_oneclash", server: 47.74.40.13, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_8_oneclash", server: 43.153.181.217, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_2_oneclash", server: 104.19.159.144, port: 443, type: trojan, password: 4aec4e7f8cf8454ea4613659822e1a61, sni: avianrecruit.com, skip-cert-verify: true, network: ws, ws-opts: {path: 6b777a91, headers: {Host: avianrecruit.com}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_3_oneclash", server: www.nahck.site, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.nahck.site}}, udp: true}
+  - {name: "[Trojan] 🇬🇧 _GB_英国_oneclash", server: 13.43.210.187, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.miwan.co.uk, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_4_oneclash", server: 209.141.37.89, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash", server: 104.22.51.162, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_5_oneclash", server: 5.161.220.92, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_2_oneclash", server: 172.67.204.84, port: 443, type: trojan, password: qj1Dz1CJmFQRhWr1SP80aA, sni: cdn-21.gsmxreality.com, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-service-name: 443trojan}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_9_oneclash", server: 47.245.7.212, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_6_oneclash", server: zula.ir, port: 80, type: vmess, uuid: e8bdec3c-f2c7-469a-b6cc-a38cfea5aa19, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: zula.ir}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash", server: 198.41.202.5, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_10_oneclash", server: 8.209.242.25, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_7_oneclash", server: 104.21.31.244, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_oneclash", server: for-irancell.outline-vpn.cloud, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: for-irancell.outline-vpn.cloud}}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_11_oneclash", server: 138.2.6.15, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_12_oneclash", server: 47.91.31.231, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_oneclash", server: 104.16.77.74, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_3_oneclash", server: 162.159.200.6, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_4_oneclash", server: 162.159.200.7, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇩🇪 _DE_德国_1_oneclash", server: 185.218.126.248, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /v1893298323Py}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_13_oneclash", server: 141.147.181.148, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_oneclash", server: 104.24.208.37, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_3_oneclash", server: 162.159.200.3, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_1_oneclash", server: 188.114.96.113, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_oneclash", server: 104.21.69.44, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_2_oneclash", server: mci--join.outline-vpn.cloud, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: mci--join.outline-vpn.cloud}}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_14_oneclash", server: 47.245.54.58, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_oneclash", server: 104.20.231.30, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_15_oneclash", server: 47.245.40.161, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_16_oneclash", server: 47.245.58.250, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_4_oneclash", server: 104.18.15.148, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇩🇪 _DE_德国_2_oneclash", server: 5.75.190.50, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_3_oneclash", server: 188.114.96.11, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_8_oneclash", server: 104.21.1.28, port: 8880, type: vmess, uuid: 4b5e4565-322f-4223-a891-78a84f189726, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /XSjeg73o6ZdsheahCb5JG}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_9_oneclash", server: 104.18.15.149, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_10_oneclash", server: 172.67.180.248, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
   - {name: "[HTTPS] tg频道:@freenodedaily_openrunner", server: krecs.ftq.ink, port: 4002, type: http, tls: true, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港_openrunner", server: 59.42.247.247, port: 3601, type: ss, cipher: rc4-md5, password: RenzheCloudSS, plugin: obfs, plugin-opts: {mode: http, host: 78fe8292462.microsoft.com}, udp: true}
-  - {name: "[SS] 🇭🇰 香港2_openrunner", server: mdss-sg.04z3susick.download, port: 12017, type: ss, cipher: aes-128-gcm, password: 8f9ee4d3-f070-43ab-a0cd-b708d9e8de10, udp: true}
-  - {name: "[SS] 🇭🇰 香港3_openrunner", server: 0.o.0.cdn-node.ss.one.57.gmaes-cdn-usercontent.com, port: 52149, type: ss, cipher: chacha20-ietf-poly1305, password: 7c28b43c-41c4-4af1-81c4-48690133d1cd, udp: true}
+  - {name: "[VMess] 🇭🇰 香港_openrunner", server: AZHJ001.dmak.cyou, port: 20776, type: vmess, uuid: cd21873e-332d-3b13-98a7-f26996cfdfd9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 香港2_openrunner", server: AZHJ001.dmak.cyou, port: 20965, type: vmess, uuid: cd21873e-332d-3b13-98a7-f26996cfdfd9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇭🇰 香港4_openrunner", server: 104.251.227.182, port: 443, type: trojan, password: 43e5eeacbad3032bfe4c25a2f011b6b7, sni: hezijiasuqi.com, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇯🇵 日本_openrunner", server: 120.232.81.50, port: 15084, type: ss, cipher: aes-256-cfb, password: hGkQ6915tD, udp: true}
+  - {name: "[SS] 🇨🇳 台湾_openrunner", server: wb.kaiqsz.com, port: 48497, type: ss, cipher: aes-256-gcm, password: 961ab95c-7b17-4fea-8a3f-6b27a426172d, udp: true}
+  - {name: "[VMess] 🇯🇵 日本_openrunner", server: AZHJ.dmak.cyou, port: 20803, type: vmess, uuid: cd21873e-332d-3b13-98a7-f26996cfdfd9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇯🇵 日本2_openrunner", server: naiu-jp.05vr9nyqg5.download, port: 13011, type: trojan, password: dc15d997-8b26-4294-870e-c90a5784dca4, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇯🇵 日本3_openrunner", server: ywtwepcnwlou.xn--fiqs8sjz2bull.com, port: 33184, type: vmess, uuid: b2d1e704-59f5-48ec-ba97-9a5e2005b37b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇰🇷 韩国_openrunner", server: hopeful-seagull.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: hopeful-seagull.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 日本3_openrunner", server: AZHJ.dmak.cyou, port: 20800, type: vmess, uuid: cd21873e-332d-3b13-98a7-f26996cfdfd9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 韩国_openrunner", server: useful-jennet.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: useful-jennet.shiner427.skin, skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇰🇷 韩国2_openrunner", server: 218.38.103.150, port: 28902, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
-  - {name: "[VMess] 🇸🇬 新加坡_openrunner", server: 31.58.142.221, port: 8967, type: vmess, uuid: 7d29f1ca-647b-4b4e-b9c8-6beab7133535, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: neo.nicme.me, network: ws, ws-opts: {path: /BONRyKGhDE, headers: {Host: neo.nicme.me}}, udp: true}
+  - {name: "[SS] 🇸🇬 新加坡_openrunner", server: sgp.fastsoonlink.com, port: 40005, type: ss, cipher: chacha20-ietf-poly1305, password: 3FB23A19-9424-40C7-9139-3540228283FA, udp: true}
   - {name: "[SS] 🇸🇬 新加坡2_openrunner", server: 103.106.229.219, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[Trojan] 🇸🇬 新加坡3_openrunner", server: robust-redfish.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: robust-redfish.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国_openrunner", server: live-serval.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: live-serval.shiner427.skin, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国3_openrunner", server: live-serval.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: live-serval.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇸🇬 新加坡3_openrunner", server: pudvkjvvgdol.xn--fiqs8sjz2bull.com, port: 10564, type: vmess, uuid: ead8fb73-ff42-4fce-af33-5991e72006b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 新加坡4_openrunner", server: dynamic-shrew.shiner427.skin, port: 443, type: trojan, password: 65086441068973800, sni: dynamic-shrew.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 美国_openrunner", server: wb.kaiqsz.com, port: 56257, type: ss, cipher: aes-256-gcm, password: 961ab95c-7b17-4fea-8a3f-6b27a426172d, udp: true}
   - {name: "[VMess] 🇺🇸 美国2_openrunner", server: 120.232.153.123, port: 45402, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 52.79.166.214, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 13.124.57.244, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 43.203.217.107, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇬🇧 _GB_英国_1_wenode", server: 18.135.122.249, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 47.129.223.160, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 54.212.56.86, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode", server: 151.101.0.155, port: 80, type: vmess, uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /racevpn}, udp: true}
-  - {name: "[SS] 🇩🇪 _DE_德国_wenode", server: 134.255.210.49, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 35.94.43.251, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 185.47.253.171, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国->🇷🇴_RO_罗马尼亚_wenode", server: 54.188.92.179, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇺🇸 _DE_德国->🇺🇸_US_美国_wenode", server: 3.126.41.247, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 35.91.180.231, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode", server: join.ISVvpn.fastly80-3.hosting-ip.com, port: 80, type: vmess, uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /racevpn, headers: {Host: join.ISVvpn.fastly80-3.hosting-ip.com}}, udp: true}
-  - {name: "[VMess] 🇷🇺 _RU_俄罗斯_wenode", server: 185.22.153.73, port: 17479, type: vmess, uuid: af7f07dc-d726-4b1e-967d-dbb6c594999f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999}, udp: true}
-  - {name: "[Trojan] 🇬🇧 _GB_英国_2_wenode", server: 18.133.167.84, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国_6_wenode", server: 13.50.25.213, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇧🇪 _BE_比利时_wenode", server: 192.71.249.146, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国_7_wenode", server: 18.171.21.26, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇮🇹 _IT_意大利_wenode", server: 37.143.129.230, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 35.91.120.138, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_wenode", server: 34.221.167.203, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇱🇹 _LT_立陶宛_wenode", server: 147.78.1.27, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_10_wenode", server: 34.217.211.139, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_11_wenode", server: 52.11.187.58, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇦 _UA_乌克兰_wenode", server: 176.103.53.105, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[VMess] 🇺🇸 _US_美国_12_wenode", server: 142.4.104.33, port: 52143, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_wenode", server: 13.61.202.11, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [http/1.1], skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇪🇸 _ES_西班牙_wenode", server: 150.241.97.212, port: 1601, type: ss, cipher: chacha20-ietf-poly1305, password: yhDWDX3XM7yLFr1YWB7QOe, udp: true}
-  - {name: "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_wenode", server: 219.135.231.205, port: 21019, type: trojan, password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 43.207.2.243, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 35.77.91.116, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 52.195.220.7, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_1_wenode", server: 150.230.201.63, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_2_wenode", server: 47.74.11.219, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_1_wenode", server: 104.18.15.147, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_3_wenode", server: 47.245.26.167, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_2_wenode", server: 104.18.154.42, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_1_wenode", server: 162.159.200.5, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_1_wenode", server: 104.18.15.150, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[Trojan] 🇨🇦 _CA_加拿大_wenode", server: 15.223.142.94, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.miwan.co.uk, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_4_wenode", server: 150.230.197.156, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_5_wenode", server: 131.186.63.127, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_6_wenode", server: 47.91.19.249, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_7_wenode", server: 47.74.40.13, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_8_wenode", server: 43.153.181.217, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_2_wenode", server: 104.19.159.144, port: 443, type: trojan, password: 4aec4e7f8cf8454ea4613659822e1a61, sni: avianrecruit.com, skip-cert-verify: true, network: ws, ws-opts: {path: 6b777a91, headers: {Host: avianrecruit.com}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_3_wenode", server: www.nahck.site, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.nahck.site}}, udp: true}
+  - {name: "[Trojan] 🇬🇧 _GB_英国_wenode", server: 13.43.210.187, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.miwan.co.uk, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_4_wenode", server: 209.141.37.89, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode", server: 104.22.51.162, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_5_wenode", server: 5.161.220.92, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_2_wenode", server: 172.67.204.84, port: 443, type: trojan, password: qj1Dz1CJmFQRhWr1SP80aA, sni: cdn-21.gsmxreality.com, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-service-name: 443trojan}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_9_wenode", server: 47.245.7.212, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_6_wenode", server: zula.ir, port: 80, type: vmess, uuid: e8bdec3c-f2c7-469a-b6cc-a38cfea5aa19, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: zula.ir}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode", server: 198.41.202.5, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_10_wenode", server: 8.209.242.25, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_7_wenode", server: 104.21.31.244, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_wenode", server: for-irancell.outline-vpn.cloud, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: for-irancell.outline-vpn.cloud}}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_11_wenode", server: 138.2.6.15, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_12_wenode", server: 47.91.31.231, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_wenode", server: 104.16.77.74, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_3_wenode", server: 162.159.200.6, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_4_wenode", server: 162.159.200.7, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇩🇪 _DE_德国_1_wenode", server: 185.218.126.248, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /v1893298323Py}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_13_wenode", server: 141.147.181.148, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_wenode", server: 104.24.208.37, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_3_wenode", server: 162.159.200.3, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_1_wenode", server: 188.114.96.113, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_wenode", server: 104.21.69.44, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_2_wenode", server: mci--join.outline-vpn.cloud, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: mci--join.outline-vpn.cloud}}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_14_wenode", server: 47.245.54.58, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_wenode", server: 104.20.231.30, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_15_wenode", server: 47.245.40.161, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_16_wenode", server: 47.245.58.250, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_4_wenode", server: 104.18.15.148, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇩🇪 _DE_德国_2_wenode", server: 5.75.190.50, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_3_wenode", server: 188.114.96.11, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_8_wenode", server: 104.21.1.28, port: 8880, type: vmess, uuid: 4b5e4565-322f-4223-a891-78a84f189726, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /XSjeg73o6ZdsheahCb5JG}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_9_wenode", server: 104.18.15.149, port: 80, type: vmess, uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_10_wenode", server: 172.67.180.248, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -173,79 +215,121 @@ proxy-groups:
       - "[VMess] 🇫🇷 FR法国(mibei77.com 米贝节点分享) 2_miebei"
       - "[SS] 🇦🇺 AU澳大利亚(mibei77.com 米贝节点分享)_miebei"
       - "[SS] 🇦🇺 AU澳大利亚(mibei77.com 米贝节点分享) 2_miebei"
-      - "[Trojan] 🇬🇧 _GB_英国_1_oneclash"
-      - "[SS] 🇺🇸 _US_美国_1_oneclash"
-      - "[SS] 🇺🇸 _US_美国_2_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_1_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_1_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_1_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_1_oneclash"
+      - "[Trojan] 🇨🇦 _CA_加拿大_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_4_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_5_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_6_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_7_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_8_oneclash"
+      - "[Trojan] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_3_oneclash"
+      - "[Trojan] 🇬🇧 _GB_英国_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_4_oneclash"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash"
-      - "[SS] 🇩🇪 _DE_德国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国_4_oneclash"
-      - "[SS] 🇺🇸 _US_美国->🇷🇴_RO_罗马尼亚_oneclash"
-      - "[Trojan] 🇺🇸 _DE_德国->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_5_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_5_oneclash"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_2_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_9_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_6_oneclash"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash"
-      - "[VMess] 🇷🇺 _RU_俄罗斯_oneclash"
-      - "[Trojan] 🇬🇧 _GB_英国_2_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国_6_oneclash"
-      - "[SS] 🇧🇪 _BE_比利时_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国_7_oneclash"
-      - "[SS] 🇮🇹 _IT_意大利_oneclash"
-      - "[SS] 🇺🇸 _US_美国_8_oneclash"
-      - "[SS] 🇺🇸 _US_美国_9_oneclash"
-      - "[SS] 🇱🇹 _LT_立陶宛_oneclash"
-      - "[SS] 🇺🇸 _US_美国_10_oneclash"
-      - "[SS] 🇺🇸 _US_美国_11_oneclash"
-      - "[SS] 🇺🇦 _UA_乌克兰_oneclash"
-      - "[VMess] 🇺🇸 _US_美国_12_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_oneclash"
-      - "[SS] 🇪🇸 _ES_西班牙_oneclash"
-      - "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_10_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_7_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_11_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_12_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_4_oneclash"
+      - "[VMess] 🇩🇪 _DE_德国_1_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_13_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_3_oneclash"
+      - "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_1_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_oneclash"
+      - "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_2_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_14_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_15_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_16_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_4_oneclash"
+      - "[VMess] 🇩🇪 _DE_德国_2_oneclash"
+      - "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_8_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_9_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_10_oneclash"
       - "[HTTPS] tg频道:@freenodedaily_openrunner"
-      - "[SS] 🇭🇰 香港_openrunner"
-      - "[SS] 🇭🇰 香港2_openrunner"
-      - "[SS] 🇭🇰 香港3_openrunner"
+      - "[VMess] 🇭🇰 香港_openrunner"
+      - "[VMess] 🇭🇰 香港2_openrunner"
       - "[Trojan] 🇭🇰 香港4_openrunner"
-      - "[SS] 🇯🇵 日本_openrunner"
+      - "[SS] 🇨🇳 台湾_openrunner"
+      - "[VMess] 🇯🇵 日本_openrunner"
       - "[Trojan] 🇯🇵 日本2_openrunner"
       - "[VMess] 🇯🇵 日本3_openrunner"
       - "[Trojan] 🇰🇷 韩国_openrunner"
       - "[SS] 🇰🇷 韩国2_openrunner"
-      - "[VMess] 🇸🇬 新加坡_openrunner"
+      - "[SS] 🇸🇬 新加坡_openrunner"
       - "[SS] 🇸🇬 新加坡2_openrunner"
-      - "[Trojan] 🇸🇬 新加坡3_openrunner"
-      - "[Trojan] 🇺🇸 美国_openrunner"
-      - "[Trojan] 🇺🇸 美国3_openrunner"
+      - "[VMess] 🇸🇬 新加坡3_openrunner"
+      - "[Trojan] 🇸🇬 新加坡4_openrunner"
+      - "[SS] 🇺🇸 美国_openrunner"
       - "[VMess] 🇺🇸 美国2_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
-      - "[Trojan] 🇬🇧 _GB_英国_1_wenode"
-      - "[SS] 🇺🇸 _US_美国_1_wenode"
-      - "[SS] 🇺🇸 _US_美国_2_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_1_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国_1_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_1_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_1_wenode"
+      - "[Trojan] 🇨🇦 _CA_加拿大_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_4_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_5_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_6_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_7_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_8_wenode"
+      - "[Trojan] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国_3_wenode"
+      - "[Trojan] 🇬🇧 _GB_英国_wenode"
+      - "[VMess] 🇺🇸 _US_美国_4_wenode"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode"
-      - "[SS] 🇩🇪 _DE_德国_wenode"
-      - "[SS] 🇺🇸 _US_美国_3_wenode"
-      - "[SS] 🇺🇸 _US_美国_4_wenode"
-      - "[SS] 🇺🇸 _US_美国->🇷🇴_RO_罗马尼亚_wenode"
-      - "[Trojan] 🇺🇸 _DE_德国->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_5_wenode"
+      - "[VMess] 🇺🇸 _US_美国_5_wenode"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_2_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_9_wenode"
+      - "[VMess] 🇺🇸 _US_美国_6_wenode"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode"
-      - "[VMess] 🇷🇺 _RU_俄罗斯_wenode"
-      - "[Trojan] 🇬🇧 _GB_英国_2_wenode"
-      - "[Trojan] 🇺🇸 _US_美国_6_wenode"
-      - "[SS] 🇧🇪 _BE_比利时_wenode"
-      - "[Trojan] 🇺🇸 _US_美国_7_wenode"
-      - "[SS] 🇮🇹 _IT_意大利_wenode"
-      - "[SS] 🇺🇸 _US_美国_8_wenode"
-      - "[SS] 🇺🇸 _US_美国_9_wenode"
-      - "[SS] 🇱🇹 _LT_立陶宛_wenode"
-      - "[SS] 🇺🇸 _US_美国_10_wenode"
-      - "[SS] 🇺🇸 _US_美国_11_wenode"
-      - "[SS] 🇺🇦 _UA_乌克兰_wenode"
-      - "[VMess] 🇺🇸 _US_美国_12_wenode"
-      - "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_wenode"
-      - "[SS] 🇪🇸 _ES_西班牙_wenode"
-      - "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_10_wenode"
+      - "[VMess] 🇺🇸 _US_美国_7_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_11_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_12_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_4_wenode"
+      - "[VMess] 🇩🇪 _DE_德国_1_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_13_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_3_wenode"
+      - "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_1_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_wenode"
+      - "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_2_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_14_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_15_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_16_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_4_wenode"
+      - "[VMess] 🇩🇪 _DE_德国_2_wenode"
+      - "[VMess] 🇩🇪 _NL_荷兰->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国_8_wenode"
+      - "[VMess] 🇺🇸 _US_美国_9_wenode"
+      - "[VMess] 🇺🇸 _US_美国_10_wenode"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -485,9 +569,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
-      - "[SS] 🇭🇰 香港_openrunner"
-      - "[SS] 🇭🇰 香港2_openrunner"
-      - "[SS] 🇭🇰 香港3_openrunner"
+      - "[VMess] 🇭🇰 香港_openrunner"
+      - "[VMess] 🇭🇰 香港2_openrunner"
       - "[Trojan] 🇭🇰 香港4_openrunner"
   - name: 🇯🇵 日本节点
     type: url-test
@@ -496,10 +579,42 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[SS] 🇯🇵 JP日本(mibei77.com 米贝节点分享)_miebei"
-      - "[SS] 🇯🇵 日本_openrunner"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_1_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_2_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_4_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_5_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_6_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_7_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_8_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_9_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_10_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_11_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_12_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_13_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_14_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_15_oneclash"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_16_oneclash"
+      - "[VMess] 🇯🇵 日本_openrunner"
       - "[Trojan] 🇯🇵 日本2_openrunner"
       - "[VMess] 🇯🇵 日本3_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_1_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_2_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_4_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_5_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_6_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_7_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_8_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_9_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_10_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_11_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_12_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_13_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_14_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_15_wenode"
+      - "[VMess] 🇯🇵 _JP_日本->🇩🇪_DE_德国_16_wenode"
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -524,45 +639,58 @@ proxy-groups:
       - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei"
       - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei"
-      - "[SS] 🇺🇸 _US_美国_1_oneclash"
-      - "[SS] 🇺🇸 _US_美国_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_1_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_1_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_1_oneclash"
+      - "[Trojan] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_4_oneclash"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash"
-      - "[SS] 🇺🇸 _US_美国_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国_4_oneclash"
-      - "[SS] 🇺🇸 _US_美国->🇷🇴_RO_罗马尼亚_oneclash"
-      - "[Trojan] 🇺🇸 _DE_德国->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_5_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_5_oneclash"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_6_oneclash"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国_6_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国_7_oneclash"
-      - "[SS] 🇺🇸 _US_美国_8_oneclash"
-      - "[SS] 🇺🇸 _US_美国_9_oneclash"
-      - "[SS] 🇺🇸 _US_美国_10_oneclash"
-      - "[SS] 🇺🇸 _US_美国_11_oneclash"
-      - "[VMess] 🇺🇸 _US_美国_12_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_oneclash"
-      - "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_oneclash"
-      - "[Trojan] 🇺🇸 美国_openrunner"
-      - "[Trojan] 🇺🇸 美国3_openrunner"
+      - "[VMess] 🇺🇸 _US_美国_7_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_4_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_4_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_8_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_9_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_10_oneclash"
+      - "[SS] 🇺🇸 美国_openrunner"
       - "[VMess] 🇺🇸 美国2_openrunner"
-      - "[SS] 🇺🇸 _US_美国_1_wenode"
-      - "[SS] 🇺🇸 _US_美国_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国_1_wenode"
+      - "[VMess] 🇺🇸 _US_美国_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_1_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_1_wenode"
+      - "[Trojan] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国_4_wenode"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode"
-      - "[SS] 🇺🇸 _US_美国_3_wenode"
-      - "[SS] 🇺🇸 _US_美国_4_wenode"
-      - "[SS] 🇺🇸 _US_美国->🇷🇴_RO_罗马尼亚_wenode"
-      - "[Trojan] 🇺🇸 _DE_德国->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_5_wenode"
+      - "[VMess] 🇺🇸 _US_美国_5_wenode"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国_6_wenode"
       - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode"
-      - "[Trojan] 🇺🇸 _US_美国_6_wenode"
-      - "[Trojan] 🇺🇸 _US_美国_7_wenode"
-      - "[SS] 🇺🇸 _US_美国_8_wenode"
-      - "[SS] 🇺🇸 _US_美国_9_wenode"
-      - "[SS] 🇺🇸 _US_美国_10_wenode"
-      - "[SS] 🇺🇸 _US_美国_11_wenode"
-      - "[VMess] 🇺🇸 _US_美国_12_wenode"
-      - "[Trojan] 🇺🇸 _US_美国->🇫🇷_FR_法国_wenode"
-      - "[Trojan] 🇺🇸 _CN_中国->🇺🇸_US_美国_wenode"
+      - "[VMess] 🇺🇸 _US_美国_7_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_4_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇨🇦_CA_加拿大_4_wenode"
+      - "[VMess] 🇺🇸 _US_美国_8_wenode"
+      - "[VMess] 🇺🇸 _US_美国_9_wenode"
+      - "[VMess] 🇺🇸 _US_美国_10_wenode"
   - name: 🇹🇼 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -570,15 +698,17 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[Trojan] 🇨🇳 TW台湾(mibei77.com 米贝节点分享)_miebei"
+      - "[SS] 🇨🇳 台湾_openrunner"
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "[VMess] 🇸🇬 新加坡_openrunner"
+      - "[SS] 🇸🇬 新加坡_openrunner"
       - "[SS] 🇸🇬 新加坡2_openrunner"
-      - "[Trojan] 🇸🇬 新加坡3_openrunner"
+      - "[VMess] 🇸🇬 新加坡3_openrunner"
+      - "[Trojan] 🇸🇬 新加坡4_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
   - name: 🇰🇷 韩国节点
     type: url-test
