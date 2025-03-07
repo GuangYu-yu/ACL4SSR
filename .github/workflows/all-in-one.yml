@@ -6,46 +6,6 @@ on:
     - cron: "0 6 * * *"  # 每天6点运行一次
 
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v3
-      
-      - name: 设置 Python 环境
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-      
-      - name: 安装依赖
-        run: pip install maxminddb requests
-
-        # 下载 mmdb
-      - name: 下载 Country.mmdb
-        run: |
-          wget -O Country.mmdb https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-Country.mmdb
-      
-      - name: 运行 job1 脚本
-        run: python 提取地区-CIDR.py
-
-      - name: 检查是否有更改
-        run: |
-          git add .
-          if git diff --cached --quiet; then
-            echo "没有需要提交的更改"
-            exit 0
-          fi
-
-      - name: 提交并推送更改
-        if: success()
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
-          git pull --rebase
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git push || echo "没有需要推送的更改，跳过推送。"
-
   job2:
     runs-on: ubuntu-latest
     steps:
@@ -61,7 +21,7 @@ jobs:
         run: pip install requests beautifulsoup4
       
       - name: 运行 job2 脚本
-        run: python CloudflareCIDR-IPv4-and-IPv6.py  # 请替换为实际的脚本名称
+        run: python CloudflareCIDR-IPv4-and-IPv6.py
 
       - name: 下载并处理 chnroute_v6.txt
         run: |
@@ -106,7 +66,7 @@ jobs:
           git push || echo "没有需要推送的更改，跳过推送。"
 
   compare-cidrs:
-    needs: [job1, job2]  # 等待 job1 和 job2 完成
+    needs: [job2]  # 等待 job2
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
@@ -119,27 +79,6 @@ jobs:
 
       - name: 安装依赖
         run: pip install netaddr requests beautifulsoup4 aiohttp
-
-      - name: 运行 获取Cloudflare各地区CIDR
-        run: python 获取Cloudflare各地区CIDR.py
-
-      - name: 检查是否有更改
-        run: |
-          git add .
-          if git diff --cached --quiet; then
-            echo "没有需要提交的更改"
-            exit 0
-          fi
-
-      - name: 提交并推送更改
-        if: success()
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
-          git pull --rebase
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git push || echo "没有需要推送的更改，跳过推送。"
 
       - name: 提取列表中Cloudflare域名
         run: python 提取列表中Cloudflare域名.py
