@@ -3,82 +3,209 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei", server: 23.150.248.199, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei", server: 120.232.153.63, port: 40105, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei", server: 183.236.51.38, port: 59554, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享)_miebei", server: 185.174.138.196, port: 2082, type: vmess, uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/az05.beyondy.cfd/link?/TM@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1/?ed=2560", headers: {Host: yellow-paper-029c.yvonna.workers.dev}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei", server: v40.heduian.link, port: 30840, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /index, headers: {Host: api100-core-quic-lf.amemv.com}}, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei", server: 183.236.51.38, port: 55754, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei", server: 23.150.248.199, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei", server: 23.150.248.199, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei", server: 23.150.248.199, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei", server: 23.150.248.199, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei", server: 120.198.71.214, port: 40125, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei", server: 209.94.90.64, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 2_miebei", server: 185.174.138.196, port: 2082, type: vmess, uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/az05.beyondy.cfd/link?/TM@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1/?ed=2560", headers: {Host: yellow-paper-029c.yvonna.workers.dev}}, udp: true}
-  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 2_miebei", server: 120.198.71.219, port: 42055, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei", server: 23.150.248.199, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei", server: 23.150.248.199, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei", server: 183.236.51.38, port: 56901, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 3_miebei", server: 183.236.51.38, port: 51039, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei", server: 120.232.153.123, port: 41402, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei", server: 120.234.102.229, port: 31998, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇸🇰 _SK_斯洛伐克_oneclash", server: 156.146.40.194, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_oneclash", server: 34.222.2.112, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇦🇺 _AU_澳大利亚_oneclash", server: 43.162.127.44, port: 443, type: trojan, password: oIwjHDXpKePvYIg8, sni: myvps.cfd, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _RU_俄罗斯->🇺🇸_US_美国_oneclash", server: 81.19.137.66, port: 44316, type: ss, cipher: chacha20-ietf-poly1305, password: Qx22XZwNt4SCcnWNkypEAj, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_oneclash", server: 52.88.180.184, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_oneclash", server: 38.110.1.146, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_oneclash", server: 52.40.170.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_oneclash", server: 34.208.203.47, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_oneclash", server: 34.217.15.41, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_oneclash", server: 54.202.0.97, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_oneclash", server: 77.239.117.121, port: 28694, type: ss, cipher: chacha20-ietf-poly1305, password: sojzFfZN5WMHqzvVJcDJJ9, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_oneclash", server: 52.37.220.218, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国->🇪🇸_ES_西班牙_oneclash", server: 104.21.96.1, port: 2083, type: trojan, password: SD85M89IdW67, sni: yjc.twn24.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /🆔@M3HDIO1, headers: {Host: yjc.twn24.ir}}, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_oneclash", server: 137.175.113.215, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_oneclash", server: 34.209.118.169, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇹🇷 _TR_土耳其_oneclash", server: 193.31.116.198, port: 14034, type: vmess, uuid: e2dbd04f-63ff-4885-abdc-7b78e41a473d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] tg频道:@freenodedaily_openrunner", server: 43.203.206.73, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇭🇰 香港_openrunner", server: 107.151.245.175, port: 8880, type: vmess, uuid: cd92310f-afcf-4861-ac10-aaa20aa2e0dc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: cd92310f-afcf-4861-ac10-aaa20aa2e0dc-vm, headers: {Host: www.bing.com}}, udp: true}
-  - {name: "[VMess] 🇭🇰 香港3_openrunner", server: v2-hk1-zx.netcar.live, port: 10032, type: vmess, uuid: bfd93c5c-abc7-416a-a205-372d3db979a4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港2_openrunner", server: w72tapyb.slashdevslashnetslashtun.net, port: 15008, type: ss, cipher: aes-256-gcm, password: CDG9XK11MN9S70IY, udp: true}
-  - {name: "[SS] 🇭🇰 香港4_openrunner", server: w72tapyb.slashdevslashnetslashtun.net, port: 15004, type: ss, cipher: aes-256-gcm, password: QBUR7SN6CCSDQD9J, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei", server: 120.232.153.63, port: 40105, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei", server: 154.197.64.67, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享)_miebei", server: 213.241.198.189, port: 2053, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei", server: 120.234.102.229, port: 31998, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei", server: 167.68.5.248, port: 2087, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei", server: 108.165.152.78, port: 2083, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 2_miebei", server: 1387ebdd-su7b40-su6828-eme.b.fosant.com, port: 3683, type: vmess, uuid: 16d93f14-af0e-11ee-8ebe-f23c93136cb3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei", server: 108.165.152.82, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 2_miebei", server: 46.254.92.191, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享)_miebei", server: 188.164.159.25, port: 2053, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 2_miebei", server: 188.164.159.55, port: 2096, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 3_miebei", server: 77.232.140.101, port: 2053, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 3_miebei", server: 154.197.64.67, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 4_miebei", server: 5.182.85.189, port: 2096, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 5_miebei", server: 176.124.223.50, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei", server: damien.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: damien.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei", server: 108.165.152.131, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei", server: 209.94.90.64, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei", server: kip.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: kip.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei", server: theo.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: theo.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 6_miebei", server: 77.232.140.114, port: 2053, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei", server: duke.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: duke.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei", server: 209.94.90.64, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei", server: pranab.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: pranab.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei", server: thaddeus.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: thaddeus.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei", server: arvind.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: arvind.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei", server: s2.db-link01.top, port: 2095, type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.17.133.52, headers: {Host: 100-65-56-224.s2.db-link01.top}}, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 3_miebei", server: 188.164.159.74, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei", server: kip.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: kip.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 7_miebei", server: 45.67.214.41, port: 2083, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 4_miebei", server: 188.164.159.171, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 5_miebei", server: 188.164.159.220, port: 2083, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 6_miebei", server: 188.164.159.171, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 4_miebei", server: 154.197.64.240, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 7_miebei", server: 188.164.159.175, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 8_miebei", server: 5.182.85.255, port: 2096, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei", server: 38.110.1.146, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 19_miebei", server: 38.110.1.146, port: 8881, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 20_miebei", server: 38.107.226.14, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 21_miebei", server: 23.150.248.199, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei", server: 175.196.105.220, port: 12209, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 22_miebei", server: 38.110.1.146, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 23_miebei", server: 23.150.248.199, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 24_miebei", server: 154.9.207.173, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 25_miebei", server: 38.110.1.146, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 26_miebei", server: 38.110.1.146, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 27_miebei", server: 23.150.248.199, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 28_miebei", server: v40.heduian.link, port: 30840, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /index, headers: {Host: api100-core-quic-lf.amemv.com}}, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 29_miebei", server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 30_miebei", server: 183.236.51.38, port: 59554, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 31_miebei", server: 23.150.248.199, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 5_miebei", server: 120.232.153.40, port: 41002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 32_miebei", server: 38.110.1.146, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: "[SS] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 6_miebei", server: zf1.10101251.xyz, port: 41705, type: ss, cipher: aes-256-gcm, password: 4bccdfb7-f45b-44bb-9cd3-fb6f8fc8072f, udp: true}
+  - {name: "[Trojan] 🇳🇱 NL荷兰(mibei77.com 米贝节点分享)_miebei", server: 45.87.103.154, port: 52001, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 7_miebei", server: 183.236.51.38, port: 51039, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 33_miebei", server: 183.236.51.38, port: 56901, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 34_miebei", server: 23.150.248.199, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 8_miebei", server: b268cf3c-su7xc0-swx10p-cw9v.b.fosant.com, port: 3683, type: vmess, uuid: f39baabc-ef78-11ef-b714-f23c93136cb3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 35_miebei", server: 38.110.1.146, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 36_miebei", server: us7-03.890606.XyZ, port: 443, type: vmess, uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /bua2hMcbA8wMzbGFtV, headers: {Host: us7-03.890606.xyz}}, udp: true}
+  - {name: "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 37_miebei", server: 23.150.248.199, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 9_miebei", server: 120.198.71.219, port: 51095, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 2_miebei", server: 112.160.54.82, port: 21316, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 38_miebei", server: 47.79.88.27, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 10_miebei", server: 120.198.71.214, port: 34093, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 SG新加坡(mibei77.com 米贝节点分享)_miebei", server: 27.50.49.188, port: 2096, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 9_miebei", server: 92.243.74.239, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 11_miebei", server: 154.197.64.248, port: 8443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 3_miebei", server: 121.175.42.160, port: 32443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 39_miebei", server: sage.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: sage.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 4_miebei", server: 121.150.230.201, port: 12136, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇯🇵 JP日本(mibei77.com 米贝节点分享)_miebei", server: 103.116.7.103, port: 2083, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 5_miebei", server: 183.102.173.114, port: 10032, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 40_miebei", server: lynn.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: lynn.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 41_miebei", server: sage.ns.cloudflare.com, port: 443, type: trojan, password: Aimer, sni: sage.ns.cloudflare.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 10_miebei", server: 5.182.84.120, port: 443, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 6_miebei", server: 211.196.12.95, port: 12344, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 7_miebei", server: 222.97.135.19, port: 21242, type: trojan, password: Aimer, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 12_miebei", server: 183.236.51.38, port: 42550, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash", server: 104.21.225.104, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash", server: 104.21.226.32, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_oneclash", server: 104.21.225.68, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_oneclash", server: 104.21.229.47, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_oneclash", server: 104.21.225.187, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_oneclash", server: 104.21.225.123, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_oneclash", server: 104.21.225.193, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_8_oneclash", server: 104.21.225.92, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_9_oneclash", server: 104.21.225.96, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_10_oneclash", server: 104.21.227.36, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_11_oneclash", server: 104.21.235.58, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_12_oneclash", server: 104.21.225.121, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_13_oneclash", server: 104.21.230.30, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_14_oneclash", server: 104.21.225.229, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_15_oneclash", server: 104.21.225.133, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_16_oneclash", server: 104.21.237.85, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_17_oneclash", server: 104.21.238.93, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_18_oneclash", server: 104.21.225.2, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_19_oneclash", server: 104.21.225.27, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_20_oneclash", server: 104.21.225.209, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_21_oneclash", server: 104.21.237.65, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_22_oneclash", server: 104.21.225.99, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_23_oneclash", server: 104.21.233.65, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_24_oneclash", server: 104.21.225.126, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_25_oneclash", server: 104.21.225.55, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_26_oneclash", server: 104.21.225.94, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_27_oneclash", server: 104.21.228.21, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_28_oneclash", server: 104.21.233.68, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_oneclash", server: 172.67.204.84, port: 443, type: trojan, password: qj1Dz1CJmFQRhWr1SP80aA, sni: cdn-21.gsmxreality.com, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-service-name: 443trojan}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_29_oneclash", server: 104.21.225.176, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_30_oneclash", server: 104.21.225.243, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_31_oneclash", server: 104.21.225.221, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_32_oneclash", server: 104.21.232.64, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇫🇷 _CN_中国->🇫🇷_FR_法国_oneclash", server: yes.cnmjcn.net, port: 16645, type: vmess, uuid: c99074bd-bacd-48b5-9561-da069c481602, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.cnmjcn.net}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_33_oneclash", server: 104.21.225.157, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_34_oneclash", server: 104.21.225.64, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_35_oneclash", server: 104.21.225.59, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_oneclash", server: www.velvetmountain.shop, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.velvetmountain.shop}}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _CA_加拿大->🇺🇸_US_美国_oneclash", server: 23.227.38.11, port: 443, type: trojan, password: b17fa17d-13a0-4e8a-a398-8e549ea8b208, sni: syndication-statutes-wanted-logo.trycloudflare.com, skip-cert-verify: true, network: ws, ws-opts: {path: /argox-tr, headers: {Host: syndication-statutes-wanted-logo.trycloudflare.com}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_36_oneclash", server: 104.21.229.46, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_37_oneclash", server: 104.21.225.208, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_38_oneclash", server: 104.21.225.22, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_39_oneclash", server: 104.21.233.46, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_40_oneclash", server: 104.21.225.122, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_41_oneclash", server: 104.21.225.223, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_42_oneclash", server: 104.21.237.68, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_43_oneclash", server: 104.21.225.6, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_44_oneclash", server: 104.21.225.158, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_45_oneclash", server: 104.21.232.61, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[SS] tg频道:@freenodedaily_openrunner", server: 13.212.222.104, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇭🇰 香港_openrunner", server: rk1.nynode0.cc, port: 19873, type: ss, cipher: chacha20-ietf-poly1305, password: 9b0ea2c9-c013-4b13-9ba6-fceae06e69f4, udp: true}
+  - {name: "[VMess] 🇭🇰 香港2_openrunner", server: 103.30.76.96, port: 18279, type: vmess, uuid: 05ad1fb1-fb21-47c2-b036-22d163eef3a7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 香港3_openrunner", server: bgp-xdd.blue-bgp.xyz, port: 50103, type: ss, cipher: chacha20-ietf-poly1305, password: f203200f-f6a4-49d8-893e-6559804d79ae, udp: true}
   - {name: "[VMess] 🇭🇰 香港5_openrunner", server: 120.232.153.40, port: 41002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港6_openrunner", server: rk1.nynode0.cc, port: 36222, type: ss, cipher: chacha20-ietf-poly1305, password: fa7336fd-365d-4bc2-a1f3-7233d6abdb05, udp: true}
-  - {name: "[SS] 🇯🇵 日本_openrunner", server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-uvymC2YEG6.download.microsoft.com}, udp: true}
-  - {name: "[SS] 🇯🇵 日本2_openrunner", server: 156.231.104.15, port: 18005, type: ss, cipher: aes-256-gcm, password: 9X6HM83GN02K8GDR, udp: true}
-  - {name: "[SS] 🇯🇵 日本3_openrunner", server: 156.231.104.13, port: 18003, type: ss, cipher: aes-256-gcm, password: DXLMD9TRFJID5RBE, udp: true}
-  - {name: "[SS] 🇯🇵 日本4_openrunner", server: rk2.nynode0.cc, port: 48150, type: ss, cipher: chacha20-ietf-poly1305, password: c33861aa-18ce-4436-a3f5-81ff8f3c6e25, udp: true}
-  - {name: "[SS] 🇯🇵 日本5_openrunner", server: cn01.efan8867801.xyz, port: 8769, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-uvymC2YEG6.download.microsoft.com}, udp: true}
-  - {name: "[SS] 🇸🇬 新加坡_openrunner", server: w72tapyb.slashdevslashnetslashtun.net, port: 16001, type: ss, cipher: aes-256-gcm, password: 3IID3X30X5V41GUG, udp: true}
-  - {name: "[SS] 🇸🇬 新加坡2_openrunner", server: w72tapyb.slashdevslashnetslashtun.net, port: 16011, type: ss, cipher: aes-256-gcm, password: 73X9GBT73GSRS89R, udp: true}
-  - {name: "[SS] 🇸🇬 新加坡3_openrunner", server: rk2.nynode0.cc, port: 26712, type: ss, cipher: chacha20-ietf-poly1305, password: cfa82b34-bb9a-44e5-bb6c-e3df8284a070, udp: true}
-  - {name: "[SS] 🇸🇬 新加坡4_openrunner", server: south.inmysecretlife.xyz, port: 10003, type: ss, cipher: aes-128-gcm, password: Sj10bnYDe7w6V29E, plugin: obfs, plugin-opts: {mode: http, host: 55417938a8.m.ctrip.com}, udp: true}
-  - {name: "[SS] 🇺🇸 美国_openrunner", server: cn01.efan8867801.xyz, port: 8776, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-uvymC2YEG6.download.microsoft.com}, udp: true}
-  - {name: "[SS] 🇺🇸 美国2_openrunner", server: cn01.efan8867801.xyz, port: 8771, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-uvymC2YEG6.download.microsoft.com}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国3_openrunner", server: usa.visa.com, port: 2053, type: vmess, uuid: d79261b1-b706-49f6-b39d-af2a0b8ebac5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hax.hy.cloudns.ch, network: ws, ws-opts: {path: d79261b1-b706-49f6-b39d-af2a0b8ebac5-vm, headers: {Host: hax.hy.cloudns.ch}}, udp: true}
-  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 3.34.253.95, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 43.207.150.238, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 43.207.203.164, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇸🇰 _SK_斯洛伐克_wenode", server: 156.146.40.194, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_1_wenode", server: 34.222.2.112, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇦🇺 _AU_澳大利亚_wenode", server: 43.162.127.44, port: 443, type: trojan, password: oIwjHDXpKePvYIg8, sni: myvps.cfd, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇺🇸 _RU_俄罗斯->🇺🇸_US_美国_wenode", server: 81.19.137.66, port: 44316, type: ss, cipher: chacha20-ietf-poly1305, password: Qx22XZwNt4SCcnWNkypEAj, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_2_wenode", server: 52.88.180.184, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_3_wenode", server: 38.110.1.146, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_4_wenode", server: 52.40.170.193, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_5_wenode", server: 34.208.203.47, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_6_wenode", server: 34.217.15.41, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_wenode", server: 54.202.0.97, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_wenode", server: 77.239.117.121, port: 28694, type: ss, cipher: chacha20-ietf-poly1305, password: sojzFfZN5WMHqzvVJcDJJ9, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_7_wenode", server: 52.37.220.218, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[Trojan] 🇺🇸 _US_美国->🇪🇸_ES_西班牙_wenode", server: 104.21.96.1, port: 2083, type: trojan, password: SD85M89IdW67, sni: yjc.twn24.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /🆔@M3HDIO1, headers: {Host: yjc.twn24.ir}}, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_8_wenode", server: 137.175.113.215, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true}
-  - {name: "[SS] 🇺🇸 _US_美国_9_wenode", server: 34.209.118.169, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: "[VMess] 🇹🇷 _TR_土耳其_wenode", server: 193.31.116.198, port: 14034, type: vmess, uuid: e2dbd04f-63ff-4885-abdc-7b78e41a473d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇨🇳 台湾_openrunner", server: 104.17.137.127, port: 443, type: vmess, uuid: 56529ad8-61d2-4bfa-aa0b-a800719cb5fe, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: tw.niskakowski.ggff.net, network: ws, ws-opts: {path: /aa, headers: {Host: tw.niskakowski.ggff.net}}, udp: true}
+  - {name: "[SS] 🇯🇵 日本_openrunner", server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-V7W8Ez6eLg.download.microsoft.com}, udp: true}
+  - {name: "[VMess] 🇯🇵 日本2_openrunner", server: u2.huvicloud.com, port: 443, type: vmess, uuid: f07b9711-a6a4-4128-807d-fdb40dcaa488, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: u2.huvicloud.com, network: ws, ws-opts: {path: /f07b9711-a6a4-4128-807d-fdb40dcaa488, headers: {Host: u2.huvicloud.com}}, udp: true}
+  - {name: "[Trojan] 🇯🇵 日本3_openrunner", server: powerful-grackle.shiner427.skin, port: 443, type: trojan, password: 74260700211203800, sni: powerful-grackle.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 日本4_openrunner", server: rk2.nynode0.cc, port: 22094, type: ss, cipher: chacha20-ietf-poly1305, password: 9d1ca3a4-fe0f-4afc-ab10-66a0476093cc, udp: true}
+  - {name: "[SS] 🇯🇵 日本5_openrunner", server: cn01.efan8867801.xyz, port: 8769, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-V7W8Ez6eLg.download.microsoft.com}, udp: true}
+  - {name: "[SS] 🇰🇷 韩国_openrunner", server: 154.90.62.168, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: "[SS] 🇸🇬 新加坡_openrunner", server: rk1.nynode0.cc, port: 52134, type: ss, cipher: chacha20-ietf-poly1305, password: bc2c6c43-ead0-422d-ae03-a211523a34e9, udp: true}
+  - {name: "[SS] 🇸🇬 新加坡2_openrunner", server: 45.80.181.77, port: 28187, type: ss, cipher: aes-256-gcm, password: sgg7vReHnfEtUtAsWFPeeFOSJ6Q3d9owYfCQSwQMPnk=, udp: true}
+  - {name: "[SS] 🇺🇸 美国_openrunner", server: cn01.efan8867801.xyz, port: 8776, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-V7W8Ez6eLg.download.microsoft.com}, udp: true}
+  - {name: "[SS] 🇺🇸 美国2_openrunner", server: cn01.efan8867801.xyz, port: 8771, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202503170996717-V7W8Ez6eLg.download.microsoft.com}, udp: true}
+  - {name: "[Trojan] 🇺🇸 美国3_openrunner", server: 2024-us2a.88888806.xyz, port: 443, type: trojan, password: c97cf46e-1554-36cb-8b36-c3556b883dc4, sni: 2024-us2a.88888806.xyz, skip-cert-verify: true, network: ws, ws-opts: {path: /92024db4-eadf-4cd1-b7e5-87d047d353f0, headers: {Host: 2024-us2a.88888806.xyz}}, udp: true}
+  - {name: "[Trojan] 🇺🇸 美国4_openrunner", server: 2025-us4a.88888806.xyz, port: 443, type: trojan, password: c97cf46e-1554-36cb-8b36-c3556b883dc4, sni: 2025-us4a.88888806.xyz, skip-cert-verify: true, network: ws, ws-opts: {path: /92024db4-eadf-4cd1-b7e5-87d047d353f0, headers: {Host: 2025-us4a.88888806.xyz}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国5_openrunner", server: 104.21.21.226, port: 80, type: vmess, uuid: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /lsUVr8VBxF4ylXngZ, headers: {Host: 1c.890689.xyz}}, udp: true}
+  - {name: "[SS] 🇰🇷 韩国特殊_openrunner", server: 47.129.230.32, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇯🇵 日本特殊_openrunner", server: 13.229.48.116, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[SS] 🇸🇬 狮城特殊_openrunner", server: 47.128.80.62, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: "[Trojan] 🇫🇷 法国_openrunner", server: fr2a.88888806.xyz, port: 443, type: trojan, password: c97cf46e-1554-36cb-8b36-c3556b883dc4, sni: fr2a.88888806.xyz, skip-cert-verify: true, network: ws, ws-opts: {path: /3f741a9f-3c66-4102-838c-c77524d32d85, headers: {Host: fr2a.88888806.xyz}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode", server: 104.21.225.104, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode", server: 104.21.226.32, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_wenode", server: 104.21.225.68, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_wenode", server: 104.21.229.47, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_wenode", server: 104.21.225.187, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_wenode", server: 104.21.225.123, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_wenode", server: 104.21.225.193, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_8_wenode", server: 104.21.225.92, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_9_wenode", server: 104.21.225.96, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_10_wenode", server: 104.21.227.36, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_11_wenode", server: 104.21.235.58, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_12_wenode", server: 104.21.225.121, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_13_wenode", server: 104.21.230.30, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_14_wenode", server: 104.21.225.229, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_15_wenode", server: 104.21.225.133, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_16_wenode", server: 104.21.237.85, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_17_wenode", server: 104.21.238.93, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_18_wenode", server: 104.21.225.2, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_19_wenode", server: 104.21.225.27, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_20_wenode", server: 104.21.225.209, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_21_wenode", server: 104.21.237.65, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_22_wenode", server: 104.21.225.99, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_23_wenode", server: 104.21.233.65, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_24_wenode", server: 104.21.225.126, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_25_wenode", server: 104.21.225.55, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_26_wenode", server: 104.21.225.94, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_27_wenode", server: 104.21.228.21, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_28_wenode", server: 104.21.233.68, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_wenode", server: 172.67.204.84, port: 443, type: trojan, password: qj1Dz1CJmFQRhWr1SP80aA, sni: cdn-21.gsmxreality.com, skip-cert-verify: true, network: grpc, grpc-opts: {grpc-service-name: 443trojan}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_29_wenode", server: 104.21.225.176, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_30_wenode", server: 104.21.225.243, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_31_wenode", server: 104.21.225.221, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_32_wenode", server: 104.21.232.64, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇫🇷 _CN_中国->🇫🇷_FR_法国_wenode", server: yes.cnmjcn.net, port: 16645, type: vmess, uuid: c99074bd-bacd-48b5-9561-da069c481602, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.cnmjcn.net}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_33_wenode", server: 104.21.225.157, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_34_wenode", server: 104.21.225.64, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_35_wenode", server: 104.21.225.59, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国_wenode", server: www.velvetmountain.shop, port: 8080, type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.velvetmountain.shop}}, udp: true}
+  - {name: "[Trojan] 🇺🇸 _CA_加拿大->🇺🇸_US_美国_wenode", server: 23.227.38.11, port: 443, type: trojan, password: b17fa17d-13a0-4e8a-a398-8e549ea8b208, sni: syndication-statutes-wanted-logo.trycloudflare.com, skip-cert-verify: true, network: ws, ws-opts: {path: /argox-tr, headers: {Host: syndication-statutes-wanted-logo.trycloudflare.com}}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_36_wenode", server: 104.21.229.46, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_37_wenode", server: 104.21.225.208, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_38_wenode", server: 104.21.225.22, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_39_wenode", server: 104.21.233.46, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_40_wenode", server: 104.21.225.122, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_41_wenode", server: 104.21.225.223, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_42_wenode", server: 104.21.237.68, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_43_wenode", server: 104.21.225.6, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_44_wenode", server: 104.21.225.158, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_45_wenode", server: 104.21.232.61, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048"}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -96,80 +223,207 @@ proxy-groups:
   - name: ☑️ 手动切换
     type: select
     proxies:
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
-      - "[VMess] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享)_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
-      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
-      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei"
-      - "[VMess] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
       - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 2_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei"
-      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 3_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei"
-      - "[SS] 🇸🇰 _SK_斯洛伐克_oneclash"
-      - "[SS] 🇺🇸 _US_美国_1_oneclash"
-      - "[Trojan] 🇦🇺 _AU_澳大利亚_oneclash"
-      - "[SS] 🇺🇸 _RU_俄罗斯->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_2_oneclash"
-      - "[SS] 🇺🇸 _US_美国_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国_4_oneclash"
-      - "[SS] 🇺🇸 _US_美国_5_oneclash"
-      - "[SS] 🇺🇸 _US_美国_6_oneclash"
-      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_oneclash"
-      - "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_oneclash"
-      - "[SS] 🇺🇸 _US_美国_7_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国->🇪🇸_ES_西班牙_oneclash"
-      - "[SS] 🇺🇸 _US_美国_8_oneclash"
-      - "[SS] 🇺🇸 _US_美国_9_oneclash"
-      - "[VMess] 🇹🇷 _TR_土耳其_oneclash"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 7_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 7_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 8_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 19_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 20_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 21_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 22_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 23_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 24_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 25_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 26_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 27_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 28_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 29_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 30_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 31_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 5_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 32_miebei"
+      - "[SS] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇳🇱 NL荷兰(mibei77.com 米贝节点分享)_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 7_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 33_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 34_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 8_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 35_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 36_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 37_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 9_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 38_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 10_miebei"
+      - "[Trojan] 🇸🇬 SG新加坡(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 9_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 11_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 39_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇯🇵 JP日本(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 40_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 41_miebei"
+      - "[Trojan] 🇷🇺 俄罗斯(mibei77.com 米贝节点分享) 10_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 7_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 12_miebei"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_8_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_9_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_10_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_11_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_12_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_13_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_14_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_15_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_16_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_17_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_18_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_19_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_20_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_21_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_22_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_23_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_24_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_25_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_26_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_27_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_28_oneclash"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_29_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_30_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_31_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_32_oneclash"
+      - "[VMess] 🇫🇷 _CN_中国->🇫🇷_FR_法国_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_33_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_34_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_35_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_oneclash"
+      - "[Trojan] 🇺🇸 _CA_加拿大->🇺🇸_US_美国_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_36_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_37_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_38_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_39_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_40_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_41_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_42_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_43_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_44_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_45_oneclash"
       - "[SS] tg频道:@freenodedaily_openrunner"
-      - "[VMess] 🇭🇰 香港_openrunner"
-      - "[VMess] 🇭🇰 香港3_openrunner"
-      - "[SS] 🇭🇰 香港2_openrunner"
-      - "[SS] 🇭🇰 香港4_openrunner"
+      - "[SS] 🇭🇰 香港_openrunner"
+      - "[VMess] 🇭🇰 香港2_openrunner"
+      - "[SS] 🇭🇰 香港3_openrunner"
       - "[VMess] 🇭🇰 香港5_openrunner"
-      - "[SS] 🇭🇰 香港6_openrunner"
+      - "[VMess] 🇨🇳 台湾_openrunner"
       - "[SS] 🇯🇵 日本_openrunner"
-      - "[SS] 🇯🇵 日本2_openrunner"
-      - "[SS] 🇯🇵 日本3_openrunner"
+      - "[VMess] 🇯🇵 日本2_openrunner"
+      - "[Trojan] 🇯🇵 日本3_openrunner"
       - "[SS] 🇯🇵 日本4_openrunner"
       - "[SS] 🇯🇵 日本5_openrunner"
+      - "[SS] 🇰🇷 韩国_openrunner"
       - "[SS] 🇸🇬 新加坡_openrunner"
       - "[SS] 🇸🇬 新加坡2_openrunner"
-      - "[SS] 🇸🇬 新加坡3_openrunner"
-      - "[SS] 🇸🇬 新加坡4_openrunner"
       - "[SS] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
-      - "[VMess] 🇺🇸 美国3_openrunner"
+      - "[Trojan] 🇺🇸 美国3_openrunner"
+      - "[Trojan] 🇺🇸 美国4_openrunner"
+      - "[VMess] 🇺🇸 美国5_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
-      - "[SS] 🇸🇰 _SK_斯洛伐克_wenode"
-      - "[SS] 🇺🇸 _US_美国_1_wenode"
-      - "[Trojan] 🇦🇺 _AU_澳大利亚_wenode"
-      - "[SS] 🇺🇸 _RU_俄罗斯->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_2_wenode"
-      - "[SS] 🇺🇸 _US_美国_3_wenode"
-      - "[SS] 🇺🇸 _US_美国_4_wenode"
-      - "[SS] 🇺🇸 _US_美国_5_wenode"
-      - "[SS] 🇺🇸 _US_美国_6_wenode"
-      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_wenode"
-      - "[SS] 🇬🇧 _GB_英国->🇷🇺_RU_俄罗斯_wenode"
-      - "[SS] 🇺🇸 _US_美国_7_wenode"
-      - "[Trojan] 🇺🇸 _US_美国->🇪🇸_ES_西班牙_wenode"
-      - "[SS] 🇺🇸 _US_美国_8_wenode"
-      - "[SS] 🇺🇸 _US_美国_9_wenode"
-      - "[VMess] 🇹🇷 _TR_土耳其_wenode"
+      - "[Trojan] 🇫🇷 法国_openrunner"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_8_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_9_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_10_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_11_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_12_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_13_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_14_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_15_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_16_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_17_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_18_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_19_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_20_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_21_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_22_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_23_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_24_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_25_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_26_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_27_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_28_wenode"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_29_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_30_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_31_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_32_wenode"
+      - "[VMess] 🇫🇷 _CN_中国->🇫🇷_FR_法国_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_33_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_34_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_35_wenode"
+      - "[VMess] 🇺🇸 _US_美国_wenode"
+      - "[Trojan] 🇺🇸 _CA_加拿大->🇺🇸_US_美国_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_36_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_37_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_38_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_39_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_40_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_41_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_42_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_43_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_44_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_45_wenode"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -408,24 +662,32 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 2_miebei"
-      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 3_miebei"
-      - "[VMess] 🇭🇰 香港_openrunner"
-      - "[VMess] 🇭🇰 香港3_openrunner"
-      - "[SS] 🇭🇰 香港2_openrunner"
-      - "[SS] 🇭🇰 香港4_openrunner"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 4_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 5_miebei"
+      - "[SS] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 6_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 7_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 8_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 9_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 10_miebei"
+      - "[Trojan] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 11_miebei"
+      - "[VMess] 🇭🇰 HK香港(mibei77.com 米贝节点分享) 12_miebei"
+      - "[SS] 🇭🇰 香港_openrunner"
+      - "[VMess] 🇭🇰 香港2_openrunner"
+      - "[SS] 🇭🇰 香港3_openrunner"
       - "[VMess] 🇭🇰 香港5_openrunner"
-      - "[SS] 🇭🇰 香港6_openrunner"
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "[Trojan] 🇯🇵 JP日本(mibei77.com 米贝节点分享)_miebei"
       - "[SS] 🇯🇵 日本_openrunner"
-      - "[SS] 🇯🇵 日本2_openrunner"
-      - "[SS] 🇯🇵 日本3_openrunner"
+      - "[VMess] 🇯🇵 日本2_openrunner"
+      - "[Trojan] 🇯🇵 日本3_openrunner"
       - "[SS] 🇯🇵 日本4_openrunner"
       - "[SS] 🇯🇵 日本5_openrunner"
       - "[SS] 🇯🇵 日本特殊_openrunner"
@@ -435,65 +697,171 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享)_miebei"
       - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 2_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 10_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei"
-      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei"
-      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei"
-      - "[SS] 🇺🇸 _US_美国_1_oneclash"
-      - "[SS] 🇺🇸 _RU_俄罗斯->🇺🇸_US_美国_oneclash"
-      - "[SS] 🇺🇸 _US_美国_2_oneclash"
-      - "[SS] 🇺🇸 _US_美国_3_oneclash"
-      - "[SS] 🇺🇸 _US_美国_4_oneclash"
-      - "[SS] 🇺🇸 _US_美国_5_oneclash"
-      - "[SS] 🇺🇸 _US_美国_6_oneclash"
-      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_oneclash"
-      - "[SS] 🇺🇸 _US_美国_7_oneclash"
-      - "[Trojan] 🇺🇸 _US_美国->🇪🇸_ES_西班牙_oneclash"
-      - "[SS] 🇺🇸 _US_美国_8_oneclash"
-      - "[SS] 🇺🇸 _US_美国_9_oneclash"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 11_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 12_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 13_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 14_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 15_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 16_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 17_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇺🇸 亚美尼亚(mibei77.com 米贝节点分享) 7_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 18_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 19_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 20_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 21_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 22_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 23_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 24_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 25_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 26_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 27_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 28_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 29_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 30_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 31_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 32_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 33_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 34_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 35_miebei"
+      - "[VMess] 🇺🇸 US美国(mibei77.com 米贝节点分享) 36_miebei"
+      - "[SS] 🇺🇸 US美国(mibei77.com 米贝节点分享) 37_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 38_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 39_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 40_miebei"
+      - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 41_miebei"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_8_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_9_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_10_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_11_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_12_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_13_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_14_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_15_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_16_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_17_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_18_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_19_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_20_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_21_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_22_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_23_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_24_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_25_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_26_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_27_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_28_oneclash"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_29_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_30_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_31_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_32_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_33_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_34_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_35_oneclash"
+      - "[VMess] 🇺🇸 _US_美国_oneclash"
+      - "[Trojan] 🇺🇸 _CA_加拿大->🇺🇸_US_美国_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_36_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_37_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_38_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_39_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_40_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_41_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_42_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_43_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_44_oneclash"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_45_oneclash"
       - "[SS] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
-      - "[VMess] 🇺🇸 美国3_openrunner"
-      - "[SS] 🇺🇸 _US_美国_1_wenode"
-      - "[SS] 🇺🇸 _RU_俄罗斯->🇺🇸_US_美国_wenode"
-      - "[SS] 🇺🇸 _US_美国_2_wenode"
-      - "[SS] 🇺🇸 _US_美国_3_wenode"
-      - "[SS] 🇺🇸 _US_美国_4_wenode"
-      - "[SS] 🇺🇸 _US_美国_5_wenode"
-      - "[SS] 🇺🇸 _US_美国_6_wenode"
-      - "[SS] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯_wenode"
-      - "[SS] 🇺🇸 _US_美国_7_wenode"
-      - "[Trojan] 🇺🇸 _US_美国->🇪🇸_ES_西班牙_wenode"
-      - "[SS] 🇺🇸 _US_美国_8_wenode"
-      - "[SS] 🇺🇸 _US_美国_9_wenode"
+      - "[Trojan] 🇺🇸 美国3_openrunner"
+      - "[Trojan] 🇺🇸 美国4_openrunner"
+      - "[VMess] 🇺🇸 美国5_openrunner"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_1_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_2_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_3_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_4_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_5_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_6_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_7_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_8_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_9_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_10_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_11_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_12_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_13_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_14_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_15_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_16_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_17_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_18_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_19_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_20_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_21_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_22_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_23_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_24_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_25_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_26_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_27_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_28_wenode"
+      - "[Trojan] 🇺🇸 _US_美国->🇷🇺_RU_俄罗斯联邦_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_29_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_30_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_31_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_32_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_33_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_34_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_35_wenode"
+      - "[VMess] 🇺🇸 _US_美国_wenode"
+      - "[Trojan] 🇺🇸 _CA_加拿大->🇺🇸_US_美国_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_36_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_37_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_38_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_39_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_40_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_41_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_42_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_43_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_44_wenode"
+      - "[VMess] 🇺🇸 _US_美国->🇩🇪_DE_德国_45_wenode"
   - name: 🇹🇼 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
+      - "[VMess] 🇨🇳 台湾_openrunner"
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "[Trojan] 🇸🇬 SG新加坡(mibei77.com 米贝节点分享)_miebei"
       - "[SS] 🇸🇬 新加坡_openrunner"
       - "[SS] 🇸🇬 新加坡2_openrunner"
-      - "[SS] 🇸🇬 新加坡3_openrunner"
-      - "[SS] 🇸🇬 新加坡4_openrunner"
       - "[SS] 🇸🇬 狮城特殊_openrunner"
   - name: 🇰🇷 韩国节点
     type: url-test
@@ -501,6 +869,14 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享)_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 2_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 3_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 4_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 5_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 6_miebei"
+      - "[Trojan] 🇰🇷 KR韩国(mibei77.com 米贝节点分享) 7_miebei"
+      - "[SS] 🇰🇷 韩国_openrunner"
       - "[SS] 🇰🇷 韩国特殊_openrunner"
 rules:
   - PROCESS-NAME,cfnat-android-arm64,🎯 全球直连
@@ -2548,6 +2924,8 @@ rules:
   - DOMAIN-KEYWORD,openaicom-api,🤖 OpenAi
   - IP-CIDR,24.199.123.28/32,🤖 OpenAi,no-resolve
   - IP-CIDR,64.23.132.171/32,🤖 OpenAi,no-resolve
+  - IP-ASN,14061,🤖 OpenAi,no-resolve
+  - IP-ASN,20473,🤖 OpenAi,no-resolve
   - DOMAIN-KEYWORD,cocopilot,🤖 OpenAi
   - DOMAIN,api.github.com,🤖 OpenAi
   - DOMAIN,copilot-proxy.githubusercontent.com,🤖 OpenAi
@@ -13039,4 +13417,78 @@ rules:
   - DOMAIN,20y5y8p6lcg.61y77.adobestats.io,🍃 应用净化
   - DOMAIN,39rf5jqkp.2cmyg.adobestats.io,🍃 应用净化
   - DOMAIN,tnogky5ry.61y77.adobestats.io,🍃 应用净化
+  - DOMAIN,adu7qqk4xl.vf1av.adobestats.io,🍃 应用净化
+  - DOMAIN,mfzph1raux.g51h4.adobestats.io,🍃 应用净化
+  - DOMAIN,4rr89md6an.61y77.adobestats.io,🍃 应用净化
+  - DOMAIN,iv8ty573wf.4e2id.adobestats.io,🍃 应用净化
+  - DOMAIN,1qtv22u887.48fwz.adobestats.io,🍃 应用净化
+  - DOMAIN,9yhx05xcx9.051my.adobestats.io,🍃 应用净化
+  - DOMAIN,dnqb1e5b7u.adobestats.io,🍃 应用净化
+  - DOMAIN,h747bmm8r1.iwl5c.adobestats.io,🍃 应用净化
+  - DOMAIN,c1jop0xt23.adobestats.io,🍃 应用净化
+  - DOMAIN,igk7pm6ogw.adobestats.io,🍃 应用净化
+  - DOMAIN,jrxw7wllc7.adobestats.io,🍃 应用净化
+  - DOMAIN,k8erlmoywe.vf1av.adobestats.io,🍃 应用净化
+  - DOMAIN,m97tqvlcgv.61y77.adobestats.io,🍃 应用净化
+  - DOMAIN,12qnnw8wsu.iwl5c.adobestats.io,🍃 应用净化
+  - DOMAIN,jj37h2uz10.4e2id.adobestats.io,🍃 应用净化
+  - DOMAIN,mfgqzz5pny.adobestats.io,🍃 应用净化
+  - DOMAIN,u2i3ztfjbj.jdr5y.adobestats.io,🍃 应用净化
+  - DOMAIN,zrri2w3ds6.3xjvl.adobestats.io,🍃 应用净化
+  - DOMAIN,0ed6twc4qm.adobestats.io,🍃 应用净化
+  - DOMAIN,mmsds5hh4e.adobestats.io,🍃 应用净化
+  - DOMAIN,ojazm6ihk2.adobestats.io,🍃 应用净化
+  - DOMAIN,ygnf5yrsve.adobestats.io,🍃 应用净化
+  - DOMAIN,qgncmlvces.bgvqb.adobestats.io,🍃 应用净化
+  - DOMAIN,apsgfvd8zy.61y77.adobestats.io,🍃 应用净化
+  - DOMAIN,lprbx6oz8f.2cmyg.adobestats.io,🍃 应用净化
+  - DOMAIN,vkv3qffxbm.4p4bv.adobestats.io,🍃 应用净化
+  - DOMAIN,xgylid6k59.vf1av.adobestats.io,🍃 应用净化
+  - DOMAIN,051my.adobestats.io,🍃 应用净化
+  - DOMAIN,1q9cz.adobestats.io,🍃 应用净化
+  - DOMAIN,2cmyg.adobestats.io,🍃 应用净化
+  - DOMAIN,2coyv.adobestats.io,🍃 应用净化
+  - DOMAIN,3xjvl.adobestats.io,🍃 应用净化
+  - DOMAIN,48fwz.adobestats.io,🍃 应用净化
+  - DOMAIN,4cbdo.adobestats.io,🍃 应用净化
+  - DOMAIN,4e2id.adobestats.io,🍃 应用净化
+  - DOMAIN,4p4bv.adobestats.io,🍃 应用净化
+  - DOMAIN,4wbo1.adobestats.io,🍃 应用净化
+  - DOMAIN,5i38yezew7.pkxns.adobestats.io,🍃 应用净化
+  - DOMAIN,61y77.adobestats.io,🍃 应用净化
+  - DOMAIN,6u13v.adobestats.io,🍃 应用净化
+  - DOMAIN,75rah.adobestats.io,🍃 应用净化
+  - DOMAIN,7cnli.adobestats.io,🍃 应用净化
+  - DOMAIN,7r39q.adobestats.io,🍃 应用净化
+  - DOMAIN,AAAAAAAA.BBBBBBBB.adobestats.io,🍃 应用净化
+  - DOMAIN,a13cy.adobestats.io,🍃 应用净化
+  - DOMAIN,auyzf.adobestats.io,🍃 应用净化
+  - DOMAIN,ay6tu.adobestats.io,🍃 应用净化
+  - DOMAIN,bgvqb.adobestats.io,🍃 应用净化
+  - DOMAIN,g51h4.adobestats.io,🍃 应用净化
+  - DOMAIN,h2uqz.adobestats.io,🍃 应用净化
+  - DOMAIN,hzm8t.adobestats.io,🍃 应用净化
+  - DOMAIN,iwl5c.adobestats.io,🍃 应用净化
+  - DOMAIN,jdr5y.adobestats.io,🍃 应用净化
+  - DOMAIN,jiegg.adobestats.io,🍃 应用净化
+  - DOMAIN,jyqfm.adobestats.io,🍃 应用净化
+  - DOMAIN,lqn0m.adobestats.io,🍃 应用净化
+  - DOMAIN,mw1i8.adobestats.io,🍃 应用净化
+  - DOMAIN,n5wo7.adobestats.io,🍃 应用净化
+  - DOMAIN,nr94p.adobestats.io,🍃 应用净化
+  - DOMAIN,ok0r5.adobestats.io,🍃 应用净化
+  - DOMAIN,p5jr3.adobestats.io,🍃 应用净化
+  - DOMAIN,pkxns.adobestats.io,🍃 应用净化
+  - DOMAIN,ru0u22bmfi.pkxns.adobestats.io,🍃 应用净化
+  - DOMAIN,sf7e3.adobestats.io,🍃 应用净化
+  - DOMAIN,t8gxe.adobestats.io,🍃 应用净化
+  - DOMAIN,td3wc.adobestats.io,🍃 应用净化
+  - DOMAIN,ue8x82z2htb.pkxns.adobestats.io,🍃 应用净化
+  - DOMAIN,yb259ljs46.pkxns.adobestats.io,🍃 应用净化
+  - DOMAIN,3ya9bljnth.xwk4b.adobestats.io,🍃 应用净化
+  - DOMAIN,bjz0559qyw.g51h4.adobestats.io,🍃 应用净化
+  - DOMAIN,67amu7wrjd.jdr5y.adobestats.io,🍃 应用净化
+  - DOMAIN,q7jho8fqdl.48fwz.adobestats.io,🍃 应用净化
+  - DOMAIN,ni7aj3kn7p.2cmyg.adobestats.io,🍃 应用净化
+  - DOMAIN,hcid9jph3h.4p4bv.adobestats.io,🍃 应用净化
   - MATCH,🐟 漏网之鱼
