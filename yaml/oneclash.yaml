@@ -35,17 +35,252 @@ proxies:
 - alterId: 0
   cipher: auto
   ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  network: ws
-  port: 8083
-  server: 4d925cb8-suvds0-t8md9t-1cir.se.plebai.net
+  name: 🇨🇳_CN_中国_oneclash
+  network: tcp
+  port: 5228
+  server: fac9e438-sunz40-svabg7-1td06.cu.plebai.net
   type: vmess
   udp: true
-  uuid: 4b436ff0-05bc-11ee-a91f-f23c913c8d2b
+  uuid: de5486da-f19c-11ef-8eaf-f23c9164ca5d
 - alterId: 0
   cipher: auto
   ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
+  name: 🇺🇸_US_美国_1_oneclash
+  network: ws
+  port: 8083
+  server: dd26bf3b-sunz40-tavn57-1mtqy.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: e27137c8-5952-11ef-aa23-f23c9164ca5d
+- cipher: aes-256-cfb
+  ip-version: dual
+  name: 🇮🇸_IS_冰岛_oneclash
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 37.235.49.152
+  type: ss
+  udp: true
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  ip-version: dual
+  name: 🇫🇷_FR_法国_1_oneclash
+  network: tcp
+  password: hZ7JkYVAfB
+  port: 1935
+  server: 141.227.138.29
+  sni: x1ch-ovh.devefun.net
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国_2_oneclash
+  network: ws
+  port: 8083
+  server: ef87a39e-sunz40-t1tfcf-1o3sh.se.plebai.net
+  skip-cert-verify: true
+  sni: ''
+  type: vmess
+  udp: true
+  uuid: 96b3f2ee-5f66-11ee-804b-f23c9164ca5d
+  ws-opts:
+    headers:
+      host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  network: ws
+  port: 8083
+  server: dcd6b19c-sunz40-t78iw5-e7db.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: 213e222c-8e0f-11ef-8dc4-f23c91cfbbc9
+  ws-opts:
+    headers:
+      host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  network: tcp
+  port: 5228
+  server: f37db099-sum4g0-sy7yrp-1j3kc.cu.plebai.net
+  type: vmess
+  udp: true
+  uuid: 3a45a384-4ea7-11ed-a8bf-f23c91cfbbc9
+- cipher: chacha20-ietf-poly1305
+  ip-version: dual
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
+  password: d192a833-b118-4b46-8e54-12cf5025d4cd
+  port: 55601
+  server: gsyd.aicheetah.lol
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国_3_oneclash
+  network: ws
+  port: 8083
+  server: 8cf5cc50-sunz40-sumf02-155d9.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: 34f0cf42-0f8a-11ec-a8bf-f23c91cfbbc9
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国_4_oneclash
+  network: ws
+  port: 8083
+  server: 7af650bd-sunz40-svgb54-1m0fq.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: a698c4a6-c3c9-11ee-9693-f23c91cfbbc9
+  ws-opts:
+    headers:
+      host: 7af650bd-sunz40-svgb54-1m0fq.se.plebai.net
+    path: /
+- ip-version: dual
+  name: 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  network: ws
+  password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
+  port: 443
+  server: 104.21.96.1
+  sni: 1g.890699.xyZ
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      host: 1g.890699.xyZ
+    path: /lXENb74xF4ylXngZ
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  network: ws
+  port: 8083
+  server: 2ebc590b-suvds0-sv5llu-1ldl3.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: fd224a6c-addc-11ed-a8bf-f23c91cfbbc9
+  ws-opts:
+    path: /
+- cipher: chacha20-ietf-poly1305
+  ip-version: dual
+  name: 🇪🇸_ES_西班牙_oneclash
+  password: 0RsrcFJ1vOsWEqg3P55hvaacKfuShT0cc1h0t8AD0NA8u1uR
+  port: 31348
+  server: 92.38.171.215
+  type: ss
+  udp: true
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  ip-version: dual
+  name: 🇫🇷_FR_法国_2_oneclash
+  network: tcp
+  password: AXpQXM4vNh
+  port: 1935
+  server: 141.227.160.167
+  sni: x2swe-ovh.devefun.net
+  type: trojan
+  udp: true
+- alterId: 2
+  cipher: auto
+  ip-version: dual
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  network: ws
+  port: 30808
+  server: v8.heduian.link
+  skip-cert-verify: true
+  sni: ''
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      host: baidu.com
+    path: /oooo
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  network: ws
+  port: 8083
+  server: ab4cbb3b-suvds0-t0qij6-j20q.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: 5bd3e78e-f4b7-11ed-ab21-f23c913c8d2b
+- alterId: 2
+  cipher: auto
+  ip-version: dual
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  network: ws
+  port: 30830
+  server: v30.heduian.link
+  skip-cert-verify: true
+  sni: ''
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      host: ocbc.com
+    path: /oooo
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇮🇱_IL_以色列_oneclash
+  network: tcp
+  port: 58891
+  server: 91.194.11.162
+  type: vmess
+  udp: true
+  uuid: 4439cf3e-d072-4a5b-88b2-2a2ec6d71340
+- cipher: aes-256-cfb
+  ip-version: dual
+  name: 🇬🇧_GB_英国_oneclash
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 51.15.15.82
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  network: tcp
+  port: 5229
+  server: 20697491-supts0-t1rksu-1ssud.cu.plebai.net
+  type: vmess
+  udp: true
+  uuid: e6aa39b6-f0b5-11ef-bca1-f23c91cfbbc9
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国_5_oneclash
+  network: ws
+  port: 8083
+  server: 69bd7056-sunz40-tazb7x-1t848.se.plebai.net
+  skip-cert-verify: true
+  sni: ''
+  type: vmess
+  udp: true
+  uuid: 6b795e40-e75d-11ef-b717-f23c913c8d2b
+  ws-opts:
+    headers:
+      host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇺🇸_US_美国_6_oneclash
   network: ws
   port: 8083
   server: 2b72f3b0-sunz40-suqjqq-1pr35.se.plebai.net
@@ -54,258 +289,109 @@ proxies:
   uuid: 6b7c1278-ff9d-11ee-84ca-f23c913c8d2b
 - alterId: 0
   cipher: auto
-  fingerprint: ''
   ip-version: dual
-  name: 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  network: tcp
-  port: 28984
-  server: 91.194.11.178
-  sni: ''
+  name: 🇺🇸_US_美国_7_oneclash
+  network: ws
+  port: 8083
+  server: 40fd5436-suvds0-tb6yrr-1tfcw.se.plebai.net
   type: vmess
   udp: true
-  uuid: 9b2335af-f24c-4810-9c34-95568ebd579d
-- cipher: chacha20-ietf-poly1305
-  ip-version: dual
-  name: 🇷🇺_RU_俄罗斯_1_oneclash
-  password: RiPuKJJl18ZgvLpTjWxBwSfKiPkt9gzFKyxGCY8eHtOcDb2X
-  port: 31348
-  server: 5.189.201.250
-  type: ss
-  udp: true
-- cipher: aes-128-cfb
-  ip-version: dual
-  name: 🇺🇸_US_美国_1_oneclash
-  password: shadowsocks
-  port: 443
-  server: 184.170.241.194
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  fingerprint: ''
-  ip-version: dual
-  name: 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  network: tcp
-  port: 27699
-  server: 91.194.11.118
-  sni: ''
-  type: vmess
-  udp: true
-  uuid: c23b127b-af87-43bb-aa1e-ce42374a2b53
+  uuid: 1282cc1a-f426-11ef-9495-f23c91cfbbc9
 - alterId: 0
   cipher: auto
   ip-version: dual
-  name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  name: 🇺🇸_US_美国_8_oneclash
+  network: ws
+  port: 8083
+  server: 6a9461b5-sunz40-tbxbrk-1t53t.se.plebai.net
+  type: vmess
+  udp: true
+  uuid: 0e8a3ddc-c83e-11ef-8e74-f23c913c8d2b
+- alterId: 0
+  cipher: auto
+  ip-version: dual
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
   network: tcp
   port: 5229
-  server: 5d38531f-sum4g0-svq8ok-ebxr.cu.plebai.net
+  server: 42317099-supts0-sxw44d-1re2s.cu.plebai.net
   type: vmess
   udp: true
-  uuid: 5cfde7fa-ed1b-11ef-b5d9-f23c9164ca5d
-- alterId: 0
-  cipher: auto
-  fingerprint: ''
-  ip-version: dual
-  name: 🇺🇸_US_美国_2_oneclash
-  network: tcp
-  port: 22839
-  server: 45.12.138.47
-  sni: ''
-  type: vmess
-  udp: true
-  uuid: 2858a404-d0ca-4d67-80a6-ce8e95e383ff
+  uuid: a6a3c7fc-0de8-11ef-ba67-f23c91cfbbc9
 - alterId: 0
   cipher: auto
   ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   network: ws
-  port: 8083
-  server: a4902353-suvds0-tcubko-1r05y.se.plebai.net
+  port: 30840
+  server: v40.heduian.link
   type: vmess
   udp: true
-  uuid: d2a03964-ec12-11ee-893c-f23c91cfbbc9
-- alterId: 0
-  cipher: auto
-  fingerprint: ''
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  network: tcp
-  port: 54757
-  server: 45.12.138.82
-  sni: ''
-  type: vmess
-  udp: true
-  uuid: cde9f074-c930-4aa3-a558-46bbc9d0a5a1
-- cipher: rc4-md5
-  ip-version: dual
-  name: 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 193.108.119.230
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  network: ws
-  port: 8083
-  server: ce8e7ab5-suvds0-t9u6bf-ips0.se.plebai.net
-  type: vmess
-  udp: true
-  uuid: d56dab9c-174b-4776-0492-97772dc7f7af
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  network: ws
-  port: 8083
-  server: f7576a55-sunz40-taz53d-1j0y6.se.plebai.net
-  type: vmess
-  udp: true
-  uuid: 1cce7df2-251c-11ee-9409-f23c9164ca5d
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  network: ws
-  port: 8083
-  server: 95eeab25-sunz40-t5bgb3-l4nv.se.plebai.net
-  type: vmess
-  udp: true
-  uuid: 1469e09e-027c-11ec-a0fc-f23c913c8d2b
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  network: ws
-  port: 8083
-  server: 4887be5d-suvds0-t2oosc-xm0q.se.plebai.net
-  type: vmess
-  udp: true
-  uuid: 3437f34e-1b77-11eb-8684-f23c913c8d2b
-- cipher: aes-256-cfb
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
-  password: amazonskr05
-  port: 443
-  server: 54.212.246.0
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国_3_oneclash
-  network: tcp
-  port: 20779
-  server: 45.12.114.15
-  type: vmess
-  udp: true
-  uuid: 9dc5bff8-bcbb-4703-b0fe-4f91ba517402
-- ip-version: dual
-  name: 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  network: ws
-  password: 02926f9e-153a-42c8-8ecd-8fade7009ad1
-  port: 443
-  server: 107.173.87.40
-  skip-cert-verify: true
-  sni: golinkwuxian.top
-  type: trojan
-  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-opts:
     headers:
-      host: 111.golinkwuxian.top
-    path: /apple
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  network: ws
-  port: 8083
-  server: 99e8b297-sunz40-sz9bz5-1cs2x.se.plebai.net
-  type: vmess
-  udp: true
-  uuid: c62e7da0-38bb-11ed-bd7c-f23c913c8d2b
-- cipher: chacha20-ietf-poly1305
-  ip-version: dual
-  name: 🇷🇺_RU_俄罗斯_2_oneclash
-  password: w2HdZnGb5ibh
-  port: 443
-  server: 89.221.225.88
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  network: ws
-  port: 8083
-  server: ab4cbb3b-suvds0-t0qij6-j20q.se.plebai.net
-  type: vmess
-  udp: true
-  uuid: 5bd3e78e-f4b7-11ed-ab21-f23c913c8d2b
-- ip-version: dual
-  name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
-  password: 696cfe79
-  port: 443
-  server: 192.9.132.79
-  skip-cert-verify: true
-  sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-  type: trojan
-  udp: true
+      host: api100-core-quic-lf.amemv.com
+    path: /index
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   tolerance: 5000
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -314,109 +400,125 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   type: select
 - name: 📲 电报信息
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   type: select
 - name: 🍎 苹果服务
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -439,28 +541,32 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_1_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_2_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_1_oneclash
-  - 🇷🇺_RU_俄罗斯_1_oneclash
+  - 🇨🇳_CN_中国_oneclash
   - 🇺🇸_US_美国_1_oneclash
-  - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加_2_oneclash
-  - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇮🇸_IS_冰岛_oneclash
+  - 🇫🇷_FR_法国_1_oneclash
   - 🇺🇸_US_美国_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_3_oneclash
-  - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇩🇪_DE_德国->🇨🇷_CR_哥斯达黎加_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_4_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_5_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_6_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_7_oneclash
-  - 🇺🇸_US_美国->🇰🇷_KR_韩国_oneclash
+  - 🇺🇸_US_美国->🇨🇳_CN_中国_oneclash
+  - 🇨🇳_CN_中国->🇮🇱_IL_以色列_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_oneclash
   - 🇺🇸_US_美国_3_oneclash
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_8_oneclash
-  - 🇷🇺_RU_俄罗斯_2_oneclash
-  - 🇺🇸_US_美国->🇨🇳_CN_中国_9_oneclash
-  - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_oneclash
+  - 🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_1_oneclash
+  - 🇺🇸_US_美国->🇪🇸_ES_西班牙_2_oneclash
+  - 🇪🇸_ES_西班牙_oneclash
+  - 🇫🇷_FR_法国_2_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_oneclash
+  - 🇺🇸_US_美国->🇩🇪_DE_德国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_oneclash
+  - 🇮🇱_IL_以色列_oneclash
+  - 🇬🇧_GB_英国_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_4_oneclash
+  - 🇺🇸_US_美国_5_oneclash
+  - 🇺🇸_US_美国_6_oneclash
+  - 🇺🇸_US_美国_7_oneclash
+  - 🇺🇸_US_美国_8_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_5_oneclash
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_6_oneclash
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
