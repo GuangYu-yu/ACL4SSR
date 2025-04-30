@@ -19,7 +19,7 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: amazonskr05
   port: 443
-  server: 54.255.246.231
+  server: 52.13.124.105
   tfo: false
   type: ss
 - client-fingerprint: chrome
@@ -47,26 +47,18 @@ proxies:
     path: /utvbnrzejpmt
     skip-cert-verify: false
     tls: true
-  port: 24682
+  port: 50676
   server: hkkh11v1.xpmc.cc
   tfo: false
   type: ss
-- alterId: 2
-  cipher: auto
+- cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
   name: 🇭🇰 香港3_openrunner
-  network: ws
-  port: 8102
-  server: 3e1c8931-svhls0-t4yfev-1rz31.wtt5.p5pv.com
-  skip-cert-verify: false
+  password: 92uGfGQsAPq+HoB43r4u5b8lioGZrD/YTrvMUFbjgD8=
+  port: 56999
+  server: 175.178.13.108
   tfo: false
-  tls: false
-  type: vmess
-  uuid: 7699767c-44ae-11ef-80c7-f23c91cfbbc9
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
+  type: ss
 - client-fingerprint: chrome
   name: 🇭🇰 香港4_openrunner
   password: 2c605663-b89a-5734-a9d6-97d4743d72cf
@@ -97,19 +89,19 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
+- client-fingerprint: chrome
   name: 🇭🇰 香港7_openrunner
-  password: T1D1e8wJWN6EeHCae4F+cA==
-  port: 2525
-  server: 45.196.234.180
-  tfo: false
-  type: ss
+  password: f4ee6c1c-65cf-4e30-9ae4-71e62475d93b
+  port: 27102
+  server: 58.254.186.233
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
 - client-fingerprint: chrome
   name: 🇹🇼 台湾_openrunner
-  password: dcc3fba3-9b9a-48b7-94be-c2e566535d66
-  port: 27202
-  server: 183.2.150.90
+  password: 8e189046-034d-47b6-9448-7edde2689568
+  port: 27201
+  server: 183.2.150.98
   skip-cert-verify: false
   sni: q08m.vgraxiw73s.hasyaf.cn
   type: trojan
@@ -119,26 +111,10 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202504271541968-w4fkyyqQBp.download.microsoft.com
+    host: 202504281461390-eUluP1Ncv7.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
-  tfo: false
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  client-fingerprint: chrome
-  name: 🇯🇵 日本2_openrunner
-  password: f6e49310f2ad
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: ydyhcmiv1.kvote.cn
-    mode: websocket
-    mux: true
-    path: /ypazzviwr
-    skip-cert-verify: false
-    tls: true
-  port: 33747
-  server: 103.103.245.90
   tfo: false
   type: ss
 - alterId: 0
@@ -157,6 +133,22 @@ proxies:
     headers:
       Host: www.bing.com
     path: /nmkj
+- cipher: chacha20-ietf-poly1305
+  client-fingerprint: chrome
+  name: 🇯🇵 日本2_openrunner
+  password: 59224ed0f0e4
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: jp06v1.3ci.xyz
+    mode: websocket
+    mux: true
+    path: /zwqdkxwkk
+    skip-cert-verify: false
+    tls: true
+  port: 443
+  server: 103.140.136.242
+  tfo: false
+  type: ss
 - client-fingerprint: chrome
   name: 🇯🇵 日本4_openrunner
   password: f57f01e6-9bb1-4277-a5cb-75ad0ce1fa11
@@ -168,31 +160,28 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
-  name: 🇯🇵 日本5_openrunner
+  name: 🇰🇷 韩国_openrunner
   network: ws
-  port: 1053
-  server: 198.13.44.24
-  servername: vu-tokyo-01.vnode.info
+  port: 443
+  server: cg1c16.waimaoglobaldirect.cc
+  servername: cg1c16.waimaoglobaldirect.cc
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vmess
-  uuid: 5147a5d1-ae9b-407e-8e27-8a4e333df4b0
+  uuid: 3493e94c-1769-43d8-8308-f87b460adc65
   ws-opts:
     headers:
-      Host: vu-tokyo-01.vnode.info
-    path: /
-- alterId: 2
-  cipher: auto
+      Host: cg1c16.waimaoglobaldirect.cc
+    path: /api/v1/graphql
+- cipher: aes-256-cfb
   client-fingerprint: chrome
-  name: 🇰🇷 韩国_openrunner
-  port: 11213
-  server: 13.wogg1.top
-  skip-cert-verify: false
+  name: 🇰🇷 韩国2_openrunner
+  password: qwerREWQ@@
+  port: 4857
+  server: 125.141.26.12
   tfo: false
-  tls: false
-  type: vmess
-  uuid: 48af369b-07f9-30f3-9210-354bd85eea27
+  type: ss
 - alterId: 2
   cipher: auto
   client-fingerprint: chrome
@@ -209,6 +198,14 @@ proxies:
     headers:
       Host: ocbc.com
     path: /oooo
+- client-fingerprint: chrome
+  name: 🇸🇬 新加坡2_openrunner
+  password: 7eccaecb-10ea-460f-975a-77a9cdc1fea7
+  port: 27401
+  server: 120.232.220.45
+  skip-cert-verify: false
+  sni: q08m.vgraxiw73s.hasyaf.cn
+  type: trojan
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -226,7 +223,7 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202504271541968-w4fkyyqQBp.download.microsoft.com
+    host: 202504281461390-eUluP1Ncv7.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
@@ -253,7 +250,7 @@ proxies:
   name: 🇯🇵 日本特殊_openrunner
   password: amazonskr05
   port: 443
-  server: 54.180.247.149
+  server: 54.95.213.25
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -261,7 +258,7 @@ proxies:
   name: 🇰🇷 韩国特殊_openrunner
   password: amazonskr05
   port: 443
-  server: 35.94.146.58
+  server: 54.95.213.25
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -269,7 +266,7 @@ proxies:
   name: 🇸🇬 狮城特殊_openrunner
   password: amazonskr05
   port: 443
-  server: 13.212.96.232
+  server: 13.212.82.255
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -277,26 +274,9 @@ proxies:
   name: 🇻🇳 越南_openrunner
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.154.21
+  server: 103.186.154.24
   tfo: false
   type: ss
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇷🇺 俄罗斯_openrunner
-  network: ws
-  port: 1053
-  server: 199.247.1.99
-  servername: just-moscow-01.vnode.info
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vmess
-  uuid: 5147a5d1-ae9b-407e-8e27-8a4e333df4b0
-  ws-opts:
-    headers:
-      Host: just-moscow-01.vnode.info
-    path: /
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
@@ -312,12 +292,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -325,7 +306,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -340,12 +320,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -353,7 +334,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -372,12 +352,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -385,7 +366,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 - name: 📲 电报信息
   proxies:
@@ -401,12 +381,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -414,7 +395,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
@@ -430,12 +410,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -443,7 +424,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -459,12 +439,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -472,7 +453,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -489,12 +469,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -502,7 +483,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -535,12 +515,13 @@ proxy-groups:
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
-  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
+  - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
@@ -548,7 +529,6 @@ proxy-groups:
   - 🇰🇷 韩国特殊_openrunner
   - 🇸🇬 狮城特殊_openrunner
   - 🇻🇳 越南_openrunner
-  - 🇷🇺 俄罗斯_openrunner
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
