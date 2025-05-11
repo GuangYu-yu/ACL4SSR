@@ -19,7 +19,7 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: awsps0501
   port: 443
-  server: 18.179.178.170
+  server: 18.236.149.239
   tfo: false
   type: ss
 - client-fingerprint: chrome
@@ -47,7 +47,7 @@ proxies:
     path: /utvbnrzejpmt
     skip-cert-verify: false
     tls: true
-  port: 48565
+  port: 54259
   server: hkkh11v1.xpmc.cc
   tfo: false
   type: ss
@@ -62,22 +62,14 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
+- cipher: chacha20-ietf
   client-fingerprint: chrome
   name: 🇭🇰 香港4_openrunner
-  network: ws
-  port: 8080
-  server: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
-  skip-cert-verify: false
+  password: asd123456
+  port: 8388
+  server: 103.149.182.191
   tfo: false
-  tls: false
-  type: vmess
-  uuid: a2b0fd2b-716f-0df8-d4e2-03a1c00e5f1a
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
+  type: ss
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -116,13 +108,21 @@ proxies:
   skip-cert-verify: false
   sni: 45.32.28.232
   type: trojan
+- client-fingerprint: chrome
+  name: 🇹🇼 台湾2_openrunner
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: taifo01a.kbservice.club
+  skip-cert-verify: false
+  sni: 45.32.28.232
+  type: trojan
 - cipher: rc4-md5
   client-fingerprint: chrome
   name: 🇯🇵 日本_openrunner
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202505081193439-fXcPpumg6a.download.microsoft.com
+    host: 202505081193439-ADTUVtshPJ.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
@@ -131,16 +131,16 @@ proxies:
 - cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
   name: 🇯🇵 日本2_openrunner
-  password: ee003c5fb8d8
+  password: e03b35b40a25
   plugin: v2ray-plugin
   plugin-opts:
     host: jp06v1.3ci.xyz
     mode: websocket
     mux: true
-    path: /ywkyahjulb
+    path: /ymfvpytvkdp
     skip-cert-verify: false
     tls: true
-  port: 48512
+  port: 16622
   server: 103.140.136.242
   tfo: false
   type: ss
@@ -217,7 +217,7 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202505081193439-fXcPpumg6a.download.microsoft.com
+    host: 202505081193439-ADTUVtshPJ.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
@@ -264,7 +264,7 @@ proxies:
   name: 🇯🇵 日本特殊_openrunner
   password: awsps0501
   port: 443
-  server: 43.206.214.213
+  server: 52.199.191.145
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -272,7 +272,7 @@ proxies:
   name: 🇸🇬 狮城特殊_openrunner
   password: awsps0501
   port: 443
-  server: 52.27.142.2
+  server: 3.35.231.158
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -280,7 +280,7 @@ proxies:
   name: 🇰🇷 韩国特殊_openrunner
   password: awsps0501
   port: 443
-  server: 13.212.202.199
+  server: 52.197.184.25
   tfo: false
   type: ss
 - cipher: aes-256-cfb
@@ -305,6 +305,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -333,6 +334,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -365,6 +367,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -394,6 +397,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -423,6 +427,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -452,6 +457,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -482,6 +488,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
@@ -528,6 +535,7 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇭🇰 香港7_openrunner
   - 🇹🇼 台湾_openrunner
+  - 🇹🇼 台湾2_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
