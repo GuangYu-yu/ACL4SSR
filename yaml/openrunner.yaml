@@ -19,20 +19,20 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: qawszxc123
   port: 443
-  server: 47.129.223.224
+  server: 54.169.30.154
   tfo: false
   type: ss
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
   name: 🇭🇰 香港_openrunner
-  port: 22359
-  server: 38.147.188.74
+  port: 22052
+  server: 103.224.80.32
   skip-cert-verify: false
   tfo: false
   tls: false
   type: vmess
-  uuid: 36797754-bb59-4741-b085-86feb2ec547c
+  uuid: 8fb24cb8-7d4e-4108-87cc-579b31d5ffa6
 - cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
   name: 🇭🇰 香港2_openrunner
@@ -45,7 +45,7 @@ proxies:
     path: /simieepvt
     skip-cert-verify: false
     tls: true
-  port: 14556
+  port: 26902
   server: kh36v1.pmxiaonan.xyz
   tfo: false
   type: ss
@@ -106,7 +106,7 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202506131022370-H9pCj24A70.download.microsoft.com
+    host: 202506131022370-2YdmYEMC2J.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
@@ -171,12 +171,12 @@ proxies:
   skip-cert-verify: true
   sni: www.yrtok.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
+- cipher: aes-256-cfb
   client-fingerprint: chrome
   name: 🇰🇷 韩国3_openrunner
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 9898
-  server: 3.36.114.140
+  password: qwerREWQ@@
+  port: 5344
+  server: 125.141.26.14
   tfo: false
   type: ss
 - alterId: 2
@@ -201,7 +201,7 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202506131022370-H9pCj24A70.download.microsoft.com
+    host: 202506131022370-2YdmYEMC2J.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
@@ -220,50 +220,17 @@ proxies:
   client-fingerprint: chrome
   name: 🇺🇸 美国4_openrunner
   network: ws
-  port: 22642
-  server: tk.hzlt.tkddns.xyz
-  servername: zxjp-b.tkong.cc
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vmess
-  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
-  ws-opts:
-    headers:
-      Host: zxjp-b.tkong.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇺🇸 美国5_openrunner
-  network: ws
-  port: 80
-  server: OOoOOOooOp.222769.XYZ
+  port: 30828
+  server: 111.26.109.79
   skip-cert-verify: false
   tfo: false
   tls: false
   type: vmess
-  uuid: ce921385-2b31-45fe-84c5-1843e8ae845b
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-opts:
     headers:
-      Host: ooooooooop.222769.xyz
-    path: /VaaSEfNLHdW3I98dxLkez
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇺🇸 美国6_openrunner
-  network: ws
-  port: 80
-  server: LllLLLllllLKJh.222560.xyZ
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: ce921385-2b31-45fe-84c5-1843e8ae845b
-  ws-opts:
-    headers:
-      Host: lllllllllllkjh.222560.xyz
-    path: /VaaSEfNLHdW3I98dxLkez
+      Host: ocbc.com
+    path: /oooo
 - cipher: aes-256-cfb
   client-fingerprint: chrome
   name: 🇻🇳 越南_openrunner
@@ -297,8 +264,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 - interval: 300
@@ -324,8 +289,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   tolerance: 50
   type: url-test
@@ -355,8 +318,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 - name: 📲 电报信息
@@ -383,8 +344,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 - name: Ⓜ️ 微软服务
@@ -411,8 +370,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 - name: 🍎 苹果服务
@@ -439,8 +396,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 - name: 📢 谷歌FCM
@@ -468,8 +423,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 - name: 🎯 全球直连
@@ -513,8 +466,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇺🇸 美国5_openrunner
-  - 🇺🇸 美国6_openrunner
   - 🇻🇳 越南_openrunner
   type: select
 rules:
