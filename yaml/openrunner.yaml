@@ -19,7 +19,7 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: qawszxc123
   port: 443
-  server: 18.143.181.137
+  server: 47.129.2.253
   tfo: false
   type: ss
 - alterId: 2
@@ -92,7 +92,7 @@ proxies:
   tfo: false
   tls: false
   type: vmess
-  uuid: b68f4b4c-2d02-11ec-9ee8-f23c913c8d2b
+  uuid: 9b604194-17b7-11ef-80b0-f23c913c8d2b
   ws-opts:
     headers:
       Host: broadcastlv.chat.bilibili.com
@@ -103,20 +103,36 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202507020089439-ZZW4Z8jpet.download.microsoft.com
+    host: 202506101686237-pCdX1ZAl7Y.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
   tfo: false
   type: ss
-- client-fingerprint: chrome
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
   name: 🇯🇵 日本3_openrunner
-  password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 2176
-  server: 36.151.192.60
-  skip-cert-verify: true
-  sni: www.baidu.com
-  type: trojan
+  password: 781bb54c-f089-48df-8102-01288a81eb10
+  port: 44721
+  server: jsyd.piaomiaoxu.net
+  tfo: false
+  type: ss
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
+  name: 🇯🇵 日本2_openrunner
+  password: 887bfcf43b52
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: jp6v1.lingjfjkm002.com
+    mode: websocket
+    mux: true
+    path: /svynueogf
+    skip-cert-verify: false
+    tls: true
+  port: 636
+  server: 137.220.142.143
+  tfo: false
+  type: ss
 - client-fingerprint: chrome
   name: 🇯🇵 日本4_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
@@ -124,30 +140,6 @@ proxies:
   server: 36.151.192.61
   skip-cert-verify: true
   sni: www.baidu.com
-  type: trojan
-- cipher: aes-256-gcm
-  client-fingerprint: chrome
-  name: 🇯🇵 日本2_openrunner
-  password: 823e135ed103
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: jp7v1.lingjfjkm002.com
-    mode: websocket
-    mux: true
-    path: /dchlbvrbbotc
-    skip-cert-verify: false
-    tls: true
-  port: 636
-  server: 137.220.191.38
-  tfo: false
-  type: ss
-- client-fingerprint: chrome
-  name: 🇯🇵 日本5_openrunner
-  password: 607d365e-7ea1-11ee-95e9-f23c913c8d2b
-  port: 27233
-  server: 096755a1-sytz40-syu28m-1mmbp.cm5.cnkuaishou.com
-  skip-cert-verify: false
-  sni: 096755a1-sytz40-syu28m-1mmbp.cm5.cnkuaishou.com
   type: trojan
 - client-fingerprint: chrome
   name: 🇰🇷 韩国_openrunner
@@ -158,12 +150,20 @@ proxies:
   sni: www.yrtok.com
   type: trojan
 - client-fingerprint: chrome
+  name: 🇯🇵 日本5_openrunner
+  password: 607d365e-7ea1-11ee-95e9-f23c913c8d2b
+  port: 27233
+  server: 096755a1-sytz40-syu28m-1mmbp.cm5.cnkuaishou.com
+  skip-cert-verify: false
+  sni: 096755a1-sytz40-syu28m-1mmbp.cm5.cnkuaishou.com
+  type: trojan
+- client-fingerprint: chrome
   name: 🇰🇷 韩国2_openrunner
-  password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 4448
-  server: 36.151.192.61
+  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  port: 6668
+  server: 13.125.64.14
   skip-cert-verify: true
-  sni: www.baidu.com
+  sni: baidu.com
   type: trojan
 - alterId: 2
   cipher: auto
@@ -183,11 +183,11 @@ proxies:
     path: /oooo
 - client-fingerprint: chrome
   name: 🇰🇷 韩国4_openrunner
-  password: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  port: 6668
-  server: 3.36.117.121
-  skip-cert-verify: false
-  sni: baidu.com
+  password: d0d08cddacc3190ea81b1b792e1b5fde
+  port: 13967
+  server: 36.151.192.60
+  skip-cert-verify: true
+  sni: www.baidu.com
   type: trojan
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡_openrunner
@@ -205,16 +205,12 @@ proxies:
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
-- cipher: rc4-md5
+- cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
-  name: 🇺🇸 美国2_openrunner
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    host: 202507020089439-ZZW4Z8jpet.download.microsoft.com
-    mode: http
-  port: 8774
-  server: cn01.efan8867801.xyz
+  name: 🇸🇬 新加坡3_openrunner
+  password: c376082c-95c3-452e-88e4-6bb6a5daab41
+  port: 49900
+  server: free-relay.t01.themars.top
   tfo: false
   type: ss
 - alterId: 2
@@ -233,6 +229,18 @@ proxies:
     headers:
       Host: ocbc.com
     path: /oooo
+- cipher: rc4-md5
+  client-fingerprint: chrome
+  name: 🇺🇸 美国2_openrunner
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    host: 202506101686237-pCdX1ZAl7Y.download.microsoft.com
+    mode: http
+  port: 8774
+  server: cn01.efan8867801.xyz
+  tfo: false
+  type: ss
 - client-fingerprint: chrome
   name: 🇺🇸 美国3_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
@@ -271,17 +279,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -298,17 +307,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -329,17 +339,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -357,17 +368,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -385,17 +397,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -413,17 +426,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -442,17 +456,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
@@ -487,17 +502,18 @@ proxy-groups:
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本3_openrunner
-  - 🇯🇵 日本4_openrunner
   - 🇯🇵 日本2_openrunner
-  - 🇯🇵 日本5_openrunner
+  - 🇯🇵 日本4_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国2_openrunner
   - 🇰🇷 韩国3_openrunner
   - 🇰🇷 韩国4_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇺🇸 美国2_openrunner
+  - 🇸🇬 新加坡3_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
   - 🇻🇳 越南_openrunner
