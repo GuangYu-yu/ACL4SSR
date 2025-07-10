@@ -32,65 +32,16 @@ log-level: info
 mixed-port: 7890
 mode: rule
 proxies:
-- ip-version: dual
-  name: 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  password: 6gZh2JbfhQ
-  port: 1935
-  server: 104.248.18.1
-  sni: x1-germany-digitalocean-v2.devefun.org
-  type: trojan
-  udp: true
 - cipher: chacha20-ietf-poly1305
   ip-version: dual
-  name: 🇷🇺_RU_俄罗斯_wenode
-  password: Y1hjiUmSgucgzYYJ0WtqwW
-  port: 60117
-  server: 77.246.102.112
+  name: 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
+  password: Bog0ELmMM9DSxDdQ
+  port: 443
+  server: 85.210.120.237
   type: ss
   udp: true
-- alterId: 2
-  cipher: auto
-  ip-version: dual
-  name: 🇨🇳_CN_中国_1_wenode
-  network: ws
-  port: 30829
-  server: 111.26.109.79
-  skip-cert-verify: true
-  sni: ''
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    path: /oooo
 - ip-version: dual
   name: 🇺🇸_US_美国_1_wenode
-  network: ws
-  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
-  port: 443
-  server: 104.21.77.79
-  sni: SsXCDfR5.986986.shoP
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      host: ssxcdfr5.986986.shop
-    path: /raChT39pjLFYRA5HdHEIupMZeK
-- alterId: 2
-  cipher: auto
-  ip-version: dual
-  name: 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  network: ws
-  port: 30829
-  server: v29.heduian.link
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  ws-opts:
-    headers:
-      host: ocbc.com
-    path: /oooo
-- ip-version: dual
-  name: 🇺🇸_US_美国_2_wenode
   network: ws
   password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
   port: 443
@@ -99,120 +50,108 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      host: eeefgty6.999836.xyz
     path: /XmTzATQPJv9RO3xr1D40NK
 - ip-version: dual
-  name: 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
-  network: ws
-  password: fa050497-fc2a-45ee-89c0-96670c4ecb65
-  port: 443
-  server: 104.21.63.135
-  sni: Rrr4.8906004.xYZ
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  password: d0d08cddacc3190ea81b1b792e1b5fde
+  port: 4447
+  server: 36.151.192.27
+  skip-cert-verify: true
+  sni: www.baidu.com
   type: trojan
   udp: true
-  ws-opts:
-    headers:
-      host: rrr4.8906004.xyz
-    path: /DZxb5QZyWgQPuXTwt
-- ip-version: dual
-  name: 🇺🇸_US_美国_3_wenode
-  network: ws
-  password: a4291a2a-d62c-4eb9-ac7a-ac7355d1eda2
-  port: 443
-  server: 172.67.172.71
-  sni: 666666Y.999165.XYZ
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      host: 666666Y.999165.XYZ
-    path: /mFvK3LJyIAe8ydvnmRKWDa8
-- ip-version: dual
-  name: 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  password: e668cd78-6892-11eb-a8bf-f23c91cfbbc9
-  port: 31263
-  server: 183.240.179.89
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- cipher: aes-256-cfb
-  ip-version: dual
-  name: 🇮🇸_IS_冰岛_wenode
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 37.235.49.152
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  ip-version: dual
-  name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  network: ws
-  port: 23117
-  server: 185.143.221.140
-  type: vmess
-  udp: true
-  uuid: c850f3fc-d494-441c-bd38-83359240bda7
-  ws-opts:
-    path: /
 - alterId: 2
   cipher: auto
   ip-version: dual
-  name: 🇨🇳_CN_中国_2_wenode
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
   network: ws
-  port: 30835
-  server: 111.26.109.79
+  port: 30825
+  server: v25.heduian.link
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      host: v25.heduian.link
+    path: /oooo
+- ip-version: dual
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
+  password: d0d08cddacc3190ea81b1b792e1b5fde
+  port: 8657
+  server: 36.156.102.123
   skip-cert-verify: true
-  sni: ''
+  sni: www.baidu.com
+  type: trojan
+  udp: true
+- ip-version: dual
+  name: 🇺🇸_US_美国_3_wenode
+  network: ws
+  password: 6757b7d6-fa32-4708-b5d1-30e3cf928b51
+  port: 443
+  server: 104.21.6.179
+  sni: ZZzzzZZ.890601.XYZ
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /l96MZ8se5Kl2p8BiMhP42l
+- cipher: aes-256-cfb
+  ip-version: dual
+  name: 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 156.146.40.194
+  type: ss
+  udp: true
+- ip-version: dual
+  name: 🇺🇸_US_美国_5_wenode
+  network: ws
+  password: 288124da-0d68-42f4-9f48-70dc4dcc55a6
+  port: 443
+  server: 104.21.77.79
+  sni: SsXCDfR5.986986.shoP
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /raChT39pjLFYRA5HdHEIupMZeK
+- alterId: 2
+  cipher: auto
+  ip-version: dual
+  name: 🇨🇳_CN_中国_wenode
+  network: ws
+  port: 30829
+  server: 111.26.109.79
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   ws-opts:
     path: /oooo
-- cipher: rc4-md5
-  ip-version: dual
-  name: 🇩🇪_DE_德国_wenode
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 193.108.119.230
-  type: ss
-  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   tolerance: 5000
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -221,73 +160,57 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   type: select
 - name: 📲 电报信息
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   type: select
 - name: 🍎 苹果服务
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -310,19 +233,15 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 🇩🇪_DE_德国->🇺🇸_US_美国_wenode
-  - 🇷🇺_RU_俄罗斯_wenode
-  - 🇨🇳_CN_中国_1_wenode
+  - 🇬🇧_GB_英国->🇺🇸_US_美国_wenode
   - 🇺🇸_US_美国_1_wenode
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_wenode
-  - 🇺🇸_US_美国_2_wenode
-  - 🇺🇸_US_美国->🇫🇷_FR_法国_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2_wenode
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3_wenode
   - 🇺🇸_US_美国_3_wenode
-  - 🇨🇳_CN_中国->🇫🇷_FR_法国_wenode
-  - 🇮🇸_IS_冰岛_wenode
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_wenode
-  - 🇨🇳_CN_中国_2_wenode
-  - 🇩🇪_DE_德国_wenode
+  - 🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知_wenode
+  - 🇺🇸_US_美国_5_wenode
+  - 🇨🇳_CN_中国_wenode
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
