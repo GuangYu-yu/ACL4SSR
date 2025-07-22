@@ -1,4 +1,87 @@
 import asyncio
+import aiohttp
+import ipaddress
+from typing import List, Dict, Set
+import time
+from collections import defaultdict
+import math
+
+# 下载域名列表和Cloudflare IP CIDR列表的URL
+DOMAIN_LIST_URL = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'
+CIDR_URL = 'https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/Clash/Cloudflare.txt'
+MATCHING_DOMAINS_FILE = 'matching_domains.list'
+
+# DNS查询请求所需的头信息
+HEADERS = {
+    'dns.sb': {
+        'accept': 'application/dns-json',
+        'user-agent': 'Mozilla/5.0'
+    },
+    'dns.google': {
+        'accept': 'application/dns-json',
+        'user-agent': 'Mozilla/5.0'
+    }
+}
+
+# 简单的速率限制器，每秒不超过 rate_limit 次调用
+class RateLimiter:
+    def __init__(self, rate_limit):
+        self.rate_limit = rate_limit
+        self.tokens = rate_limit
+        self.last_update = time.monotonic()
+        self.lock = asyncio.Lock()
+
+    async def acquire(self):
+        async with self.lock:
+            now = time.monotonic()
+            time_passed = now - self.last_update
+            self.tokens = min(self.rate_limit, self.tokens + time_passed * self.rate_limit)
+            self.last_update = now
+
+            if self.tokens < 1:
+                wait_time = (1 - self.tokens) / self.rate_limit
+                await asyncio.sleep(wait_time)
+                self.tokens = 0
+            else:
+                self.tokens -= 1
+
+# 获取黑名单域名列表并解析为字典：{domain: rule_prefix}
+async def fetch_domain_list() -> Dict[str, str]:
+    async with aiohttp.ClientSession() as session:
+        async with session.get(DOMAIN_LIST_URL) as response:
+            text = await response.text()
+            domains = {}
+            for line in text.splitlines():
+                if not line or line.startswith('#'):
+                    continue
+                if any(line.startswith(prefix) for prefix in ['DOMAIN-SUFFIX,', 'DOMAIN,']):
+                    try:
+                        prefix, domain = [x.strip() for x in line.split(',', 1)]
+                        domains[domain] = prefix
+                    except ValueError:
+                        continue
+            return domains
+
+# 加载Cloudflare IP网段列表
+async def load_cidr_list() -> List[str]:
+    async with aiohttp.ClientSession() as session:
+        async with session.get(CIDR_URL) as response:
+            return (await response.text()).splitlines()
+
+# 对指定域名使用 DoH JSON 查询，返回IP集合，最多重试 max_retries 次
+async def query_dns_json(session: aiohttp.ClientSession, *urls: str, headers: dict, max_retries: int = 3) -> Set[str]:
+    ips = set()
+    for attempt in range(max_retries):
+        try:
+            for url in urls:
+                async with session.get(url, headers=headers) as response:
+                    if response.status == 200:
+                        data = await response.json()
+                        if 'Answer' in data:
+                            for answer in data['Answer']:
+                                if answer.get('data'):
+                                    try:
+                                        ipaddress.ip_address(answer['data'])
                                         ips.add(answer['data'])
                                     except ValueError:
                                         continue
