@@ -19,7 +19,7 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: amazonskr05
   port: 443
-  server: 15.165.12.14
+  server: 35.86.81.76
   tfo: false
   type: ss
 - alterId: 2
@@ -58,18 +58,18 @@ proxies:
   cipher: auto
   client-fingerprint: chrome
   name: 🇭🇰 香港3_openrunner
-  port: 12425
-  server: 38.147.188.87
+  port: 42203
+  server: 103.224.80.29
   skip-cert-verify: false
   tfo: false
   tls: false
   type: vmess
-  uuid: 2f927b33-021b-4d45-9d4e-9a3592aef502
+  uuid: 89e3bb59-bf63-4346-9864-cbc79cee58a5
 - client-fingerprint: chrome
   name: 🇭🇰 香港4_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 2078
-  server: 36.151.192.238
+  port: 3221
+  server: 36.151.192.243
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
@@ -77,33 +77,28 @@ proxies:
   name: 🇭🇰 香港5_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
   port: 446
-  server: 36.151.192.238
+  server: 36.151.192.243
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
-- alterId: 2
+- alterId: 0
   cipher: auto
   client-fingerprint: chrome
   name: 🇭🇰 香港6_openrunner
-  network: ws
-  port: 80
-  server: 14269f63-t049s0-t1kmeg-mv7m.hk3.p5pv.com
+  port: 49597
+  server: 103.181.165.26
   skip-cert-verify: false
   tfo: false
   tls: false
   type: vmess
-  uuid: 94d40708-8273-11ea-8fc9-f23c913c8d2b
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - cipher: rc4-md5
   client-fingerprint: chrome
   name: 🇯🇵 日本_openrunner
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202507121073737-8Na8oPBuci.download.microsoft.com
+    host: 202507022251291-d01YttPsbj.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
@@ -128,8 +123,8 @@ proxies:
 - client-fingerprint: chrome
   name: 🇯🇵 日本3_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 40937
-  server: 36.151.251.7
+  port: 443
+  server: 172.238.14.135
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
@@ -137,23 +132,37 @@ proxies:
   name: 🇯🇵 日本4_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
   port: 41225
-  server: 36.151.251.7
+  server: 172.234.90.253
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
-- cipher: aes-256-cfb
+- alterId: 0
+  cipher: auto
   client-fingerprint: chrome
-  name: 🇰🇷 韩国_openrunner
-  password: qwerREWQ@@
-  port: 4652
-  server: p141.panda001.net
+  name: 🇯🇵 日本5_openrunner
+  network: ws
+  port: 8080
+  server: 47.79.94.25
+  skip-cert-verify: false
   tfo: false
-  type: ss
+  tls: false
+  type: vmess
+  uuid: b36d992c-786b-4136-96d6-c37641207d47
+  ws-opts:
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷 韩国_openrunner
+  password: d0d08cddacc3190ea81b1b792e1b5fde
+  port: 16003
+  server: 36.151.195.111
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
   port: 25618
-  server: 36.151.251.7
+  server: 36.151.195.111
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
@@ -161,7 +170,7 @@ proxies:
   name: 🇸🇬 新加坡2_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
   port: 9161
-  server: 36.151.251.7
+  server: 36.151.195.111
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
@@ -173,26 +182,21 @@ proxies:
   skip-cert-verify: false
   sni: sg.mjt000.com
   type: trojan
-- client-fingerprint: chrome
+- cipher: aes-256-gcm
+  client-fingerprint: chrome
   name: 🇺🇸 美国_openrunner
-  network: ws
-  password: trojan
-  port: 443
-  server: 91.193.58.0
-  skip-cert-verify: false
-  sni: wahaha.yingyangkuaixian.dpdns.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: wahaha.yingyangkuaixian.dpdns.org
-    path: /
+  password: vGCBLG1SUe7YdXI1fPhdsA==
+  port: 36529
+  server: jpiplc.deuen.com
+  tfo: false
+  type: ss
 - cipher: rc4-md5
   client-fingerprint: chrome
   name: 🇺🇸 美国2_openrunner
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202507121073737-8Na8oPBuci.download.microsoft.com
+    host: 202507022251291-d01YttPsbj.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
@@ -201,27 +205,19 @@ proxies:
 - client-fingerprint: chrome
   name: 🇺🇸 美国3_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 3596
-  server: 36.151.251.7
+  port: 1582
+  server: 36.151.195.111
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
 - client-fingerprint: chrome
   name: 🇺🇸 美国4_openrunner
   password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 32962
-  server: 36.151.251.7
+  port: 34719
+  server: 36.151.192.243
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
-- cipher: aes-256-cfb
-  client-fingerprint: chrome
-  name: 🇻🇳 越南_openrunner
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.26
-  tfo: false
-  type: ss
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
@@ -238,6 +234,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -246,7 +243,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -262,6 +258,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -270,7 +267,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -290,6 +286,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -298,7 +295,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 - name: 📲 电报信息
   proxies:
@@ -315,6 +311,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -323,7 +320,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
@@ -340,6 +336,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -348,7 +345,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -365,6 +361,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -373,7 +370,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -391,6 +387,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -399,7 +396,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -433,6 +429,7 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
@@ -441,7 +438,6 @@ proxy-groups:
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
