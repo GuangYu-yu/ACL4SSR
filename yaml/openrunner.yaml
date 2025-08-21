@@ -19,7 +19,7 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: amazonskr05
   port: 443
-  server: 52.215.235.115
+  server: 51.44.212.37
   tfo: false
   type: ss
 - alterId: 2
@@ -106,7 +106,7 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202508150964186-3bI5FffInl.download.microsoft.com
+    host: 202508150964186-dmRA1xMJaG.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
@@ -144,14 +144,6 @@ proxies:
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
-- client-fingerprint: chrome
-  name: 🇸🇬 新加坡_openrunner
-  password: 253bc477d4e43c209f2d427272968280
-  port: 1256
-  server: 36.156.102.125
-  skip-cert-verify: true
-  sni: www.baidu.com
-  type: trojan
 - cipher: aes-128-gcm
   client-fingerprint: chrome
   name: 🇰🇷 韩国_openrunner
@@ -160,6 +152,22 @@ proxies:
   server: hanguo01.tmdns-sing.top
   tfo: false
   type: ss
+- cipher: aes-256-cfb
+  client-fingerprint: chrome
+  name: 🇰🇷 韩国2_openrunner
+  password: qwerREWQ@@
+  port: 4652
+  server: p141.panda001.net
+  tfo: false
+  type: ss
+- client-fingerprint: chrome
+  name: 🇸🇬 新加坡_openrunner
+  password: 253bc477d4e43c209f2d427272968280
+  port: 1256
+  server: 36.156.102.125
+  skip-cert-verify: true
+  sni: www.baidu.com
+  type: trojan
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡2_openrunner
   password: 253bc477d4e43c209f2d427272968280
@@ -170,10 +178,10 @@ proxies:
   type: trojan
 - cipher: aes-128-gcm
   client-fingerprint: chrome
-  name: 🇸🇬 新加坡3_openrunner
+  name: 🇺🇸 美国_openrunner
   password: 6b1e5475-7661-4921-aa26-d11758b2f3f1
-  port: 13886
-  server: xinjiapo.tmdns-sing.top
+  port: 13892
+  server: usa022.tmdns-sing.top
   tfo: false
   type: ss
 - cipher: rc4-md5
@@ -182,18 +190,10 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202508150964186-3bI5FffInl.download.microsoft.com
+    host: 202508150964186-dmRA1xMJaG.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
-  tfo: false
-  type: ss
-- cipher: aes-128-gcm
-  client-fingerprint: chrome
-  name: 🇺🇸 美国_openrunner
-  password: 6b1e5475-7661-4921-aa26-d11758b2f3f1
-  port: 13892
-  server: usa022.tmdns-sing.top
   tfo: false
   type: ss
 - client-fingerprint: chrome
@@ -212,12 +212,12 @@ proxies:
   skip-cert-verify: true
   sni: www.baidu.com
   type: trojan
-- cipher: aes-256-cfb
+- cipher: aes-128-gcm
   client-fingerprint: chrome
-  name: 🇻🇳 越南_openrunner
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.31
+  name: 🇮🇩 印尼_openrunner
+  password: 6b1e5475-7661-4921-aa26-d11758b2f3f1
+  port: 13879
+  server: yinni01.tmdns-sing.top
   tfo: false
   type: ss
 proxy-groups:
@@ -237,15 +237,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -262,15 +262,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -291,15 +291,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 - name: 📲 电报信息
   proxies:
@@ -317,15 +317,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
@@ -343,15 +343,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -369,15 +369,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -396,15 +396,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -439,15 +439,15 @@ proxy-groups:
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
-  - 🇸🇬 新加坡_openrunner
   - 🇰🇷 韩国_openrunner
+  - 🇰🇷 韩国2_openrunner
+  - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
-  - 🇸🇬 新加坡3_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国_openrunner
+  - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
-  - 🇻🇳 越南_openrunner
+  - 🇮🇩 印尼_openrunner
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
