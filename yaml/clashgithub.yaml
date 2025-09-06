@@ -265,6 +265,16 @@ proxies:
   skip-cert-verify: false
   sni: yue-ru.yuetoto.net
   type: hysteria2
+- auth: daily_configs
+  name: '[Hysteria2] @Daily_Configs IPv4_clashgithub'
+  obfs: salamander
+  obfs-password: 5zcstyddEr2HrwDFUGsF87IdN4eokPcN
+  password: daily_configs
+  port: 443
+  server: 176.124.204.248
+  skip-cert-verify: false
+  sni: ubuntu com
+  type: hysteria2
 - auth: dailyconfigs
   name: '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   obfs: salamander
@@ -374,58 +384,43 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
-  port: 51697
-  server: 38.147.188.160
+  port: 15778
+  server: 38.147.188.234
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 22babdc6-5437-4de0-b3a9-67c005a19e11
+  uuid: e4c54f8f-78bd-439d-8365-28f261078962
 - name: '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
-  port: 443
-  server: 42.2.17.49
+  port: 441
+  server: 18.162.156.99
   skip-cert-verify: false
   sni: 23.45.86.28
   type: trojan
 - name: '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
   port: 443
-  server: 42.2.197.54
+  server: 18.162.147.157
   skip-cert-verify: false
   sni: 23.45.86.28
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  password: 61405455-91a2-49d5-b72e-814d304f877d
-  port: 10146
-  server: 36.232.83.103
+  name: '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
+  password: ed212b13-12b8-4ea2-9643-6658b18d5583
+  port: 10055
+  server: 114.46.70.116
   type: ss
-- alterId: 64
-  cipher: auto
-  name: '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
-  port: 50002
-  server: 47.116.166.178
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- cipher: chacha20-ietf-poly1305
+  name: '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
+  password: b9d3c170-e6a5-45a3-bc37-f56892b9e819
+  port: 10031
+  server: 118.170.200.223
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  password: fb941bcb-a777-47c9-958d-f01178bef303
-  port: 10132
-  server: 36.232.127.240
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  password: ec9f74bf-0d19-4a1a-99d3-a6fd1fe68b4e
-  port: 10009
-  server: 118.170.203.159
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
-  password: 308344fb-a0fe-42fc-bcf7-de7863647248
-  port: 10042
-  server: 36.234.94.41
+  password: 5695443d-9206-49b5-99be-e1276218c54e
+  port: 10121
+  server: 125.229.88.58
   type: ss
 - cipher: rc4-md5
   name: '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
@@ -441,7 +436,7 @@ proxies:
   type: ss
 - name: '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
-  port: 4613
+  port: 13345
   server: xingxing.jiasu123.org
   skip-cert-verify: false
   sni: 23.45.86.28
@@ -510,50 +505,35 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  port: 51697
-  server: 38.147.188.160
+  port: 15778
+  server: 38.147.188.234
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 22babdc6-5437-4de0-b3a9-67c005a19e11
+  uuid: e4c54f8f-78bd-439d-8365-28f261078962
+- cipher: ss
+  name: '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplZDIxMmIxMy0xMmI4LTRlYTItOTY0My02NjU4YjE4ZDU1ODM
+  port: 10055
+  server: 114.46.70.116
+  type: ss
 - cipher: ss
   name: '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2MTQwNTQ1NS05MWEyLTQ5ZDUtYjcyZS04MTRkMzA0Zjg3N2Q
-  port: 10146
-  server: 36.232.83.103
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiOWQzYzE3MC1lNmE1LTQ1YTMtYmMzNy1mNTY4OTJiOWU4MTk
+  port: 10031
+  server: 118.170.200.223
   type: ss
-- alterId: 64
-  cipher: auto
-  name: '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
-  port: 50002
-  server: 47.116.166.178
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - cipher: ss
   name: '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmYjk0MWJjYi1hNzc3LTQ3YzktOTU4ZC1mMDExNzhiZWYzMDM
-  port: 10132
-  server: 36.232.127.240
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1Njk1NDQzZC05MjA2LTQ5YjUtOTliZS1lMTI3NjIxOGM1NGU
+  port: 10121
+  server: 125.229.88.58
   type: ss
-- cipher: ss
-  name: '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplYzlmNzRiZi0wZDE5LTRhMWEtOTlkMy1hNmZkMWZlNjhiNGU
-  port: 10009
-  server: 118.170.203.159
-  type: ss
-- cipher: ss
-  name: '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozMDgzNDRmYi1hMGZlLTQyZmMtYmNmNy1kZTc4NjM2NDcyNDg
-  port: 10042
-  server: 36.234.94.41
-  type: ss
-- name: '[Trojan] CH_speednode_0001_clashgithub'
+- name: '[Trojan] AT_speednode_0001_clashgithub'
   network: ws
   password: slch2024
   port: 2096
-  server: 185.18.250.195
+  server: 212.183.88.195
   skip-cert-verify: false
   sni: ocost-dy.wmlefl.cc
   type: trojan
@@ -561,11 +541,11 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /Telegram🇨🇳
-- name: '[Trojan] ES_speednode_0003_clashgithub'
+- name: '[Trojan] CY_speednode_0002_clashgithub'
   network: ws
   password: slch2024
   port: 2096
-  server: 185.238.228.195
+  server: 195.26.229.195
   skip-cert-verify: false
   sni: ocost-dy.wmlefl.cc
   type: trojan
@@ -573,7 +553,139 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /Telegram🇨🇳
-- name: '[Trojan] KZ_speednode_0011_clashgithub'
+- name: '[Trojan] CZ_speednode_0003_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 193.124.224.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] DE_speednode_0004_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 188.244.122.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] ES_speednode_0005_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.251.83.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /TelegramU0001F1E8U0001F1F3
+- name: '[Trojan] ES_speednode_0006_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.251.80.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] ES_speednode_0007_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.251.83.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] ES_speednode_0008_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.251.82.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] ES_speednode_0009_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.251.81.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] FR_speednode_0010_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.16.110.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] FR_speednode_0011_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.7.240.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] GB_speednode_0012_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.156.19.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] KZ_speednode_0017_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 194.76.18.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] KZ_speednode_0018_clashgithub'
   network: ws
   password: slch2024
   port: 2096
@@ -585,20 +697,55 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /Telegram🇨🇳
-- name: '[Vless] NL_speednode_0014_clashgithub'
+- name: '[Trojan] LU_speednode_0019_clashgithub'
   network: ws
-  port: 80
-  server: 185.18.184.66
-  servername: hello.96xckkzx.workers.dev
+  password: slch2024
+  port: 2096
+  server: 188.42.88.195
   skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
   ws-opts:
     headers:
-      Host: hello.96xckkzx.workers.dev
-    path: /🔒
-- name: '[Trojan] RU_speednode_0015_clashgithub'
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] LU_speednode_0020_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 188.42.89.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] NL_speednode_0021_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 188.164.248.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] RU_speednode_0022_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.176.24.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] RU_speednode_0023_clashgithub'
   network: ws
   password: slch2024
   port: 2096
@@ -610,11 +757,11 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /TelegramU0001F1E8U0001F1F3
-- name: '[Trojan] RU_speednode_0016_clashgithub'
+- name: '[Trojan] RU_speednode_0024_clashgithub'
   network: ws
   password: slch2024
   port: 2096
-  server: 185.174.138.195
+  server: 193.9.49.195
   skip-cert-verify: false
   sni: ocost-dy.wmlefl.cc
   type: trojan
@@ -622,11 +769,11 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /Telegram🇨🇳
-- name: '[Trojan] RU_speednode_0017_clashgithub'
+- name: '[Trojan] RU_speednode_0025_clashgithub'
   network: ws
   password: slch2024
   port: 2096
-  server: 185.221.160.195
+  server: 185.59.218.195
   skip-cert-verify: false
   sni: ocost-dy.wmlefl.cc
   type: trojan
@@ -634,108 +781,41 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /Telegram🇨🇳
-- name: '[Vless] US_speednode_0021_clashgithub'
+- name: '[Trojan] RU_speednode_0026_clashgithub'
   network: ws
-  port: 2082
-  server: 159.112.235.174
-  servername: workerr.schodog1.workers.dev
+  password: slch2024
+  port: 2096
+  server: 185.148.107.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] RU_speednode_0027_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 188.42.145.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Vless] US_speednode_0033_clashgithub'
+  network: ws
+  port: 12346
+  server: 23.94.214.179
   skip-cert-verify: false
   tls: false
   type: vless
-  uuid: 47e9a0db-50c6-4522-8819-502c55b06dde
+  uuid: 42162e0c-bd58-415d-fa7f-874bd9a67001
   ws-opts:
-    headers:
-      Host: workerr.schodog1.workers.dev
-    path: /?ed=2048
-- name: '[Vless] US_speednode_0022_clashgithub'
-  network: ws
-  port: 80
-  server: 104.21.81.174
-  servername: DaWn-lAKE-d5E3.WocoYA4320.wOrkERs.DeV
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 23b3cbba-e6ac-485a-9481-342a0415eab9
-  ws-opts:
-    headers:
-      Host: DaWn-lAKE-d5E3.WocoYA4320.wOrkERs.DeV
-    path: /wP3dwCyRAVyMJFfW?ed=2560
-- name: '[Vless] US_speednode_0023_clashgithub'
-  network: ws
-  port: 2052
-  server: 104.21.7.50
-  servername: sWEeT-DIsK-b69d.TUdTudtrUHtRU.wOrkERS.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 0d710c53-876d-401f-97f0-6bd1a8db941a
-  ws-opts:
-    headers:
-      Host: sWEeT-DIsK-b69d.TUdTudtrUHtRU.wOrkERS.dev
     path: /
-- name: '[Trojan] US_speednode_0024_clashgithub'
-  network: ws
-  password: trojan
-  port: 443
-  server: 104.24.57.5
-  skip-cert-verify: false
-  sni: azadnet2-dl4.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: azadnet2-dl4.pages.dev
-    path: /?ed=2560
-- name: '[Trojan] US_speednode_0025_clashgithub'
-  network: ws
-  password: slch2024
-  port: 2096
-  server: 209.94.90.195
-  skip-cert-verify: false
-  sni: ocost-dy.wmlefl.cc
-  type: trojan
-  ws-opts:
-    headers:
-      Host: ocost-dy.wmlefl.cc
-    path: /Telegram🇨🇳
-- name: '[Vless] US_speednode_0026_clashgithub'
-  network: ws
-  port: 80
-  server: 63.141.128.34
-  servername: b.jOin.zEdMoDeOn.oNl.
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 2f2327bd-ff1b-4ce5-bf86-fe0565334138
-  ws-opts:
-    headers:
-      Host: b.jOin.zEdMoDeOn.oNl.
-    path: /Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON
-- name: '[Vless] US_speednode_0027_clashgithub'
-  network: ws
-  port: 443
-  server: 198.62.62.2
-  servername: smn2.gerlemondns.info
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 598b4251-fd03-48fe-b12d-630ac3adf2e5
-  ws-opts:
-    headers:
-      Host: smn2.gerlemondns.info
-    path: /hjgfdwssecurity=tls
-- name: '[Trojan] US_speednode_0028_clashgithub'
-  network: ws
-  password: slch2024
-  port: 2096
-  server: 185.148.105.195
-  skip-cert-verify: false
-  sni: ocost-dy.wmlefl.cc
-  type: trojan
-  ws-opts:
-    headers:
-      Host: ocost-dy.wmlefl.cc
-    path: /Telegram🇨🇳
-- name: '[Trojan] US_speednode_0029_clashgithub'
+- name: '[Trojan] US_speednode_0034_clashgithub'
   network: ws
   password: slch2024
   port: 2096
@@ -747,11 +827,142 @@ proxies:
     headers:
       Host: ocost-dy.wmlefl.cc
     path: /Telegram🇨🇳
-- name: '[Trojan] US_speednode_0032_clashgithub'
+- name: '[Vless] US_speednode_0035_clashgithub'
+  network: ws
+  port: 443
+  server: xray.szyd.fun
+  servername: xray.szyd.fun
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 04d73b15-4db4-4160-dd7b-56349572dd31
+  ws-opts:
+    headers:
+      Host: xray.szyd.fun
+    path: /
+- name: '[Trojan] US_speednode_0036_clashgithub'
   network: ws
   password: slch2024
   port: 2096
-  server: 216.24.57.195
+  server: 199.34.230.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Vless] US_speednode_0037_clashgithub'
+  network: ws
+  port: 17053
+  server: 216.167.78.36
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 32095cfb-7a9d-4450-aa14-33016d432062
+  ws-opts:
+    path: /
+- name: '[Trojan] US_speednode_0038_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 192.0.63.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0039_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 209.94.90.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0040_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 195.13.54.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0041_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 195.13.44.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0042_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 195.13.55.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0043_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 199.34.229.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0044_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 192.0.54.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0045_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 185.148.106.195
+  skip-cert-verify: false
+  sni: ocost-dy.wmlefl.cc
+  type: trojan
+  ws-opts:
+    headers:
+      Host: ocost-dy.wmlefl.cc
+    path: /Telegram🇨🇳
+- name: '[Trojan] US_speednode_0046_clashgithub'
+  network: ws
+  password: slch2024
+  port: 2096
+  server: 192.200.160.195
   skip-cert-verify: false
   sni: ocost-dy.wmlefl.cc
   type: trojan
@@ -764,24 +975,10 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202509031722041-UfAvWCjqQ0.download.microsoft.com
+    host: 202509031722041-l8SKVM0gmL.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
-  type: ss
-- cipher: aes-256-gcm
-  name: '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  password: 8a6ca14c0936
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: jpxw9v1.dashengjs.net
-    mode: websocket
-    mux: false
-    path: /wrdfiatyd
-    skip-cert-verify: false
-    tls: true
-  port: 443
-  server: 137.220.142.150
   type: ss
 - cipher: aes-256-gcm
   name: '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
@@ -802,10 +999,24 @@ proxies:
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202509031722041-UfAvWCjqQ0.download.microsoft.com
+    host: 202509031722041-l8SKVM0gmL.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
+  type: ss
+- cipher: aes-256-gcm
+  name: '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
+  password: 8a6ca14c0936
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: jpxw9v1.dashengjs.net
+    mode: websocket
+    mux: false
+    path: /wrdfiatyd
+    skip-cert-verify: false
+    tls: true
+  port: 443
+  server: 137.220.142.150
   type: ss
 proxy-groups:
 - name: 🔰 节点选择
@@ -841,6 +1052,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -856,11 +1068,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -873,32 +1083,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -932,6 +1160,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -947,11 +1176,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -964,32 +1191,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
@@ -1026,6 +1271,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -1041,11 +1287,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -1058,32 +1302,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: ⛔️ 广告拦截
   proxies:
@@ -1131,6 +1393,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -1146,11 +1409,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -1163,32 +1424,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -1198,17 +1477,13 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - 🔰 节点选择
   type: select
@@ -1245,6 +1520,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -1260,11 +1536,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -1277,32 +1551,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 📲 电报信息
   proxies:
@@ -1337,6 +1629,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -1352,11 +1645,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -1369,32 +1660,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -1430,6 +1739,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -1445,11 +1755,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -1462,32 +1770,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -1532,6 +1858,7 @@ proxy-groups:
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1_clashgithub'
   - '[Hysteria2] 𝗝𝗼𝗶𝗻 ➠ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @V2Gatee #1_clashgithub'
   - '[Hysteria2] @vpnserverrr👈🏻_clashgithub'
+  - '[Hysteria2] @Daily_Configs IPv4_clashgithub'
   - '[Hysteria2] @Daily_Configs <-- کانال تلگرا..._clashgithub'
   - '[Hysteria2] @FreakConfig 5_clashgithub'
   - '[Hysteria2] @FreakConfig #1_clashgithub'
@@ -1547,11 +1874,9 @@ proxy-groups:
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
@@ -1564,32 +1889,50 @@ proxy-groups:
   - '[Trojan] 🇺🇸 美国4|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇨🇳 台湾2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇨🇳 台湾3|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾4|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇨🇳 台湾5|@ripaojiedian 2_clashgithub'
-  - '[Trojan] CH_speednode_0001_clashgithub'
-  - '[Trojan] ES_speednode_0003_clashgithub'
-  - '[Trojan] KZ_speednode_0011_clashgithub'
-  - '[Vless] NL_speednode_0014_clashgithub'
-  - '[Trojan] RU_speednode_0015_clashgithub'
-  - '[Trojan] RU_speednode_0016_clashgithub'
-  - '[Trojan] RU_speednode_0017_clashgithub'
-  - '[Vless] US_speednode_0021_clashgithub'
-  - '[Vless] US_speednode_0022_clashgithub'
-  - '[Vless] US_speednode_0023_clashgithub'
-  - '[Trojan] US_speednode_0024_clashgithub'
-  - '[Trojan] US_speednode_0025_clashgithub'
-  - '[Vless] US_speednode_0026_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Trojan] US_speednode_0028_clashgithub'
-  - '[Trojan] US_speednode_0029_clashgithub'
-  - '[Trojan] US_speednode_0032_clashgithub'
+  - '[Trojan] AT_speednode_0001_clashgithub'
+  - '[Trojan] CY_speednode_0002_clashgithub'
+  - '[Trojan] CZ_speednode_0003_clashgithub'
+  - '[Trojan] DE_speednode_0004_clashgithub'
+  - '[Trojan] ES_speednode_0005_clashgithub'
+  - '[Trojan] ES_speednode_0006_clashgithub'
+  - '[Trojan] ES_speednode_0007_clashgithub'
+  - '[Trojan] ES_speednode_0008_clashgithub'
+  - '[Trojan] ES_speednode_0009_clashgithub'
+  - '[Trojan] FR_speednode_0010_clashgithub'
+  - '[Trojan] FR_speednode_0011_clashgithub'
+  - '[Trojan] GB_speednode_0012_clashgithub'
+  - '[Trojan] KZ_speednode_0017_clashgithub'
+  - '[Trojan] KZ_speednode_0018_clashgithub'
+  - '[Trojan] LU_speednode_0019_clashgithub'
+  - '[Trojan] LU_speednode_0020_clashgithub'
+  - '[Trojan] NL_speednode_0021_clashgithub'
+  - '[Trojan] RU_speednode_0022_clashgithub'
+  - '[Trojan] RU_speednode_0023_clashgithub'
+  - '[Trojan] RU_speednode_0024_clashgithub'
+  - '[Trojan] RU_speednode_0025_clashgithub'
+  - '[Trojan] RU_speednode_0026_clashgithub'
+  - '[Trojan] RU_speednode_0027_clashgithub'
+  - '[Vless] US_speednode_0033_clashgithub'
+  - '[Trojan] US_speednode_0034_clashgithub'
+  - '[Vless] US_speednode_0035_clashgithub'
+  - '[Trojan] US_speednode_0036_clashgithub'
+  - '[Vless] US_speednode_0037_clashgithub'
+  - '[Trojan] US_speednode_0038_clashgithub'
+  - '[Trojan] US_speednode_0039_clashgithub'
+  - '[Trojan] US_speednode_0040_clashgithub'
+  - '[Trojan] US_speednode_0041_clashgithub'
+  - '[Trojan] US_speednode_0042_clashgithub'
+  - '[Trojan] US_speednode_0043_clashgithub'
+  - '[Trojan] US_speednode_0044_clashgithub'
+  - '[Trojan] US_speednode_0045_clashgithub'
+  - '[Trojan] US_speednode_0046_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
