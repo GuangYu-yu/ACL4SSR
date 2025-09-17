@@ -84,113 +84,139 @@ proxies:
   - {name: "[Trojan] 🇳🇱 NL荷兰(mibei77.com 米贝节点分享) 2_miebei", server: 45.131.210.216, port: 2096, type: trojan, password: ttfang, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei", server: 172.67.181.173, port: 443, type: trojan, password: f282b878-8711-45a1-8c69-5564172123c1, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇦 乌克兰(mibei77.com 米贝节点分享)_miebei", server: 45.80.110.216, port: 2096, type: trojan, password: ttfang, skip-cert-verify: true, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_1_oneclash", server: wwwopensignalcom-goodspeed-8xx.pages.dev., port: 443, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, skip-cert-verify: true, servername: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET, network: ws, ws-opts: {path: //, headers: {Host: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_2_oneclash", server: 102.177.189.251, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇦🇺 澳洲_oneclash", server: 103.133.1.227, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_3_oneclash", server: 89.116.180.248, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_4_oneclash", server: 167.68.42.168, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_5_oneclash", server: 185.59.218.168, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇬🇧 英国_oneclash", server: 45.8.211.71, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_6_oneclash", server: qqqqqqqqqqqqaaaa.www890604.dpdns.org, port: 443, type: vmess, uuid: 4174b95d-115e-4d39-add6-1f8db95bb860, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: qqqqqqqqqqqqaaaa.www890604.dpdns.org, network: ws, ws-opts: {path: /6We3U9Df1WGxgFnoFPw1, headers: {Host: qqqqqqqqqqqqaaaa.www890604.dpdns.org}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_7_oneclash", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: handsome-device.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇩🇪 德国_oneclash", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_8_oneclash", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_9_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_10_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: light-presence.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_11_oneclash", server: crazy-identity.oneeat.co, port: 80, type: vless, uuid: 64d6d0d4-3706-4837-b154-cda2816adcc5, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: crazy-identity.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_12_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_13_oneclash", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: handsome-device.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_14_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/??ed/---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net/", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_15_oneclash", server: klo.986986.shop, port: 443, type: vmess, uuid: b75c9731-408d-4aa6-8ae9-3857205113a1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: klo.986986.shop, network: ws, ws-opts: {path: /nvjx6j7kbDQIQMZvbeVA9, headers: {Host: klo.986986.shop}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_16_oneclash", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_17_oneclash", server: zula.ir, port: 2096, type: vless, uuid: 97909ffd-6da0-4893-9d63-00e72ad55256, tls: true, skip-cert-verify: true, servername: frAgteSt.JaHANGiRKh.eU.orG, network: ws, ws-opts: {path: /, headers: {Host: frAgteSt.JaHANGiRKh.eU.orG}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_18_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?JOKERRVPNTELEGRAM----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_19_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?serverrrVPN由零开始---_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_20_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?Join---MARAMBASHI---Join---MARAMBASHI?ed=2560", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_21_oneclash", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn", headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_22_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?serverrrVPNTELEGRAM---_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_23_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@v2ray_configs_pools----@v2ray_configs_pools----@v2ray_configs_pools", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_24_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_25_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_26_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_27_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@v2ray_configs_pools", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_28_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_29_oneclash", server: sweet-combination.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_30_oneclash", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?v2ray_configs_pools", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_31_oneclash", server: 45.130.214.192, port: 20992, type: vless, uuid: e0042666-497b-4fde-bf4a-c5281df24d15, tls: false, skip-cert-verify: true, network: tcp, udp: true}
-  - {name: "[SS] 🇺🇸 美国_32_oneclash", server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, udp: true}
-  - {name: "[SS] 🇯🇵 日本_oneclash", server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_34_oneclash", server: 89.44.242.222, port: 29495, type: vless, uuid: 4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b, tls: false, skip-cert-verify: true, network: tcp, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_35_oneclash", server: 89.44.242.222, port: 29500, type: vless, uuid: 888a20e2-fc3f-4f52-973c-36a6386225b8, tls: false, skip-cert-verify: true, network: tcp, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_36_oneclash", server: 183.240.245.242, port: 33331, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_37_oneclash", server: 2606:4700:3030::6815:4001, port: 80, type: vmess, uuid: 681eda16-e94d-439c-9067-b55db0c0543f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: 4496a55e-a4bc-c238-2c1e-5e66f7b0829c.8900604.xyz, network: ws, ws-opts: {path: /2uRsM4Z4Y8O5OsbJkA, headers: {Host: 4496a55e-a4bc-c238-2c1e-5e66f7b0829c.8900604.xyz}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_38_oneclash", server: 205.233.181.3, port: 443, type: vmess, uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: farid.1.berozha.ir, network: ws, ws-opts: {path: /us.kkp.me.eu.org/aa, headers: {Host: farid.1.berozha.ir}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_39_oneclash", server: codepen.io, port: 443, type: vmess, uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: farid.1.berozha.ir, network: ws, ws-opts: {path: /us.kkp.me.eu.org/aa, headers: {Host: farid.1.berozha.ir}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_40_oneclash", server: v8.heduian.link, port: 30808, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, servername: v8.heduian.link, network: ws, ws-opts: {path: /oooo, headers: {Host: v8.heduian.link}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国_1_oneclash", server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_2_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, servername: informed-location.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_1_oneclash", server: hk3.kaipi.link, port: 443, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, skip-cert-verify: true, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_2_oneclash", server: hk3.kaipi.link, port: 443, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, skip-cert-verify: true, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_3_oneclash", server: 43.159.99.26, port: 443, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, skip-cert-verify: true, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_3_oneclash", server: 89.44.242.222, port: 29495, type: vless, uuid: 4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_4_oneclash", server: 89.44.242.222, port: 46822, type: vless, uuid: 44aded6c-a012-452b-8e13-04d5f15a659f, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_5_oneclash", server: 89.44.242.222, port: 29500, type: vless, uuid: 888a20e2-fc3f-4f52-973c-36a6386225b8, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[SS] 🇺🇸 美国_6_oneclash", server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm, udp: true}
+  - {name: "[SS] 🇺🇸 美国_7_oneclash", server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_8_oneclash", server: backus1.dh03.shop, port: 443, type: vless, uuid: 71504eaf-29ac-4190-89d1-dd9ce2c9ee14, tls: true, skip-cert-verify: true, servername: backus1.dh03.shop, network: ws, ws-opts: {path: /higate, headers: {Host: backus1.dh03.shop}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_4_oneclash", server: 45.130.214.192, port: 20992, type: vless, uuid: e0042666-497b-4fde-bf4a-c5281df24d15, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_9_oneclash", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn", headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[SS] 🇬🇧 英国_oneclash", server: 45.144.235.103, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: aE5rFdxzG8GQf5TAQhZhRA, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_10_oneclash", server: famous-danger.oneeat.co, port: 80, type: vless, uuid: ddc27bd6-6efa-47cf-8bfc-acaf973ba6b3, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: famous-danger.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_11_oneclash", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: handsome-device.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_12_oneclash", server: famous-danger.oneeat.co, port: 80, type: vless, uuid: ddc27bd6-6efa-47cf-8bfc-acaf973ba6b3, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: famous-danger.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_13_oneclash", server: crazy-identity.oneeat.co, port: 80, type: vless, uuid: 64d6d0d4-3706-4837-b154-cda2816adcc5, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: crazy-identity.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_14_oneclash", server: crazy-identity.oneeat.co, port: 80, type: vless, uuid: 64d6d0d4-3706-4837-b154-cda2816adcc5, tls: false, skip-cert-verify: true, servername: crazy-identity.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: crazy-identity.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_15_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_16_oneclash", server: sweet-combination.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_17_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_18_oneclash", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: handsome-device.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_19_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_20_oneclash", server: sweet-combination.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, skip-cert-verify: true, servername: sweet-combination.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_21_oneclash", server: narrow-passenger.oneeat.co, port: 80, type: vless, uuid: 5a12794b-2125-46d7-a748-927a989faa04, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: narrow-passenger.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_22_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?Join---MARAMBASHI---Join---MARAMBASHI?ed=2560", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_23_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/??ed/---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net/", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_24_oneclash", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_1_oneclash", server: hdfynpv2d1.farvaharforever.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.farvaharforever.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.farvaharforever.com}}, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_2_oneclash", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_3_oneclash", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_25_oneclash", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, servername: fierce-data.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_26_oneclash", server: fearless-change.oneeat.co, port: 80, type: vless, uuid: b055036a-2d81-4d46-ab18-4e1898b58cec, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: fearless-change.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_27_oneclash", server: 38.244.163.100, port: 35048, type: vless, uuid: 5690f021-86a7-4712-b143-7944c7380436, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_4_oneclash", server: hdfynpv2d1.farvaharforever.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.farvaharforever.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.farvaharforever.com}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_28_oneclash", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_29_oneclash", server: DdDDdddddDFrrrrrrRRy.IRan2035.dPDns.ORG, port: 443, type: vmess, uuid: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ddddddddddfrrrrrrrry.iran2035.dpdns.org, network: ws, ws-opts: {path: /CjJ9A46ZRHvgWvVcmjyiKVby2Lp, headers: {Host: ddddddddddfrrrrrrrry.iran2035.dpdns.org}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_30_oneclash", server: 185.59.218.168, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_31_oneclash", server: 94.247.142.103, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_32_oneclash", server: 154.83.2.167, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_33_oneclash", server: 94.140.0.141, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_34_oneclash", server: all.tellmethetrue.shop, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v7.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[VMess] 🇫🇷 法国_oneclash", server: kampong.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: kampong.org, network: ws, ws-opts: {path: linkvws, headers: {Host: kampong.org}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_35_oneclash", server: all.tellmethetrue.shop, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], skip-cert-verify: true, servername: pqh30v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_36_oneclash", server: all.tellmethetrue.shop, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh29v7.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_37_oneclash", server: 184.174.80.250, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_38_oneclash", server: 31.43.179.38, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_39_oneclash", server: 92.53.188.36, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_40_oneclash", server: 45.159.218.165, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_41_oneclash", server: 3h-unitedstates3.09vpn.com, port: 8443, type: vless, uuid: 48572af1-d091-457b-a86e-4a457e99927f, tls: true, skip-cert-verify: true, servername: 3h-unitedstates3.09vpn.com, network: ws, ws-opts: {path: /vless/, headers: {Host: 3h-unitedstates3.09vpn.com}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国_42_oneclash", server: pupas-shirting-unsung.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_43_oneclash", server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_44_oneclash", server: 183.240.180.3, port: 34141, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_45_oneclash", server: tunnel.gzcloud.shop, port: 47093, type: vmess, uuid: 89a62b16-a3c3-4ad7-be18-6f0266f7a2c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_46_oneclash", server: 183.240.245.251, port: 39595, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: "[SS] tg频道:@freenodedaily_openrunner", server: 51.21.249.115, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: "[VMess] 🇭🇰 香港_openrunner", server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
   - {name: "[SS] 🇭🇰 香港2_openrunner", server: 156.251.179.135, port: 443, type: ss, cipher: aes-256-gcm, password: 2b5fad3874e5, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hk6v1.dsjsapp.com, path: /aqwshiog, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: "[VMess] 🇭🇰 香港3_openrunner", server: 43.247.134.211, port: 46981, type: vmess, uuid: 0f6e3f70-d64d-4825-aa04-1ead22e96b8b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇭🇰 香港4_openrunner", server: 36.156.102.77, port: 391, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: www.baidu.com, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港5_openrunner", server: 16.162.87.199, port: 16888, type: ss, cipher: aes-256-gcm, password: amazongreatvpn, udp: true}
-  - {name: "[Trojan] 🇭🇰 香港6_openrunner", server: 36.150.215.200, port: 391, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: www.baidu.com, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇭🇰 香港7_openrunner", server: shenzhen99.fkfkd.cn, port: 4772, type: ss, cipher: chacha20-ietf-poly1305, password: 2cf69d5f-0293-4ddb-bbfc-145de8dfc570, udp: true}
-  - {name: "[SS] 🇨🇳 台湾_openrunner", server: 36.234.112.65, port: 10043, type: ss, cipher: chacha20-ietf-poly1305, password: 981b2115-f9d3-4fea-a072-f9f3d3f980e6, udp: true}
-  - {name: "[SS] 🇨🇳 台湾2_openrunner", server: 118.170.235.179, port: 10004, type: ss, cipher: chacha20-ietf-poly1305, password: b2d5215f-22f4-456c-a724-789431f2b930, udp: true}
-  - {name: "[SS] 🇯🇵 日本_openrunner", server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202509121565513-hgGUWL4a7n.download.microsoft.com}, udp: true}
-  - {name: "[SS] 🇯🇵 日本2_openrunner", server: 137.220.142.150, port: 443, type: ss, cipher: aes-256-gcm, password: 8a6ca14c0936, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jpxw9v1.dashengjs.net, path: /wrdfiatyd, tls: true, mux: false, skip-cert-verify: true}, udp: true}
-  - {name: "[Trojan] 🇯🇵 日本3_openrunner", server: 36.156.102.77, port: 327, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇯🇵 日本4_openrunner", server: 36.156.102.77, port: 1924, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
-  - {name: "[SS] 🇯🇵 日本5_openrunner", server: 57.181.174.7, port: 16888, type: ss, cipher: aes-256-gcm, password: amazongreatvpn, udp: true}
-  - {name: "[Trojan] 🇸🇬 新加坡_openrunner", server: 36.156.102.77, port: 1501, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇸🇬 新加坡2_openrunner", server: 36.156.102.77, port: 9160, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇭🇰 香港3_openrunner", server: 149.104.15.178, port: 21201, type: vmess, uuid: e43b6c20-2f61-4e8c-a692-c737fa5cfa0d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇭🇰 香港4_openrunner", server: 36.156.102.121, port: 392, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: www.baidu.com, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇭🇰 香港5_openrunner", server: 43.199.87.121, port: 16888, type: ss, cipher: aes-256-gcm, password: amazongreatvpn, udp: true}
+  - {name: "[Trojan] 🇭🇰 香港6_openrunner", server: 203.218.158.70, port: 443, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: fe2.update.microsoft.com, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇨🇳 台湾_openrunner", server: 118.170.223.243, port: 10017, type: ss, cipher: chacha20-ietf-poly1305, password: 4d296e8d-366b-4353-9e8b-513d83f36765, udp: true}
+  - {name: "[SS] 🇨🇳 台湾2_openrunner", server: 36.234.94.86, port: 10078, type: ss, cipher: chacha20-ietf-poly1305, password: d51c1aa9-1c96-44a4-b54c-46d0dec0578f, udp: true}
+  - {name: "[SS] 🇯🇵 日本_openrunner", server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202509121565513-hDcp24etDx.download.microsoft.com}, udp: true}
+  - {name: "[SS] 🇯🇵 日本2_openrunner", server: 137.220.142.139, port: 443, type: ss, cipher: aes-256-gcm, password: 8808e9f11454, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jp5v1.lingjfjkm002.com, path: /nvcnjrmkggoy, tls: true, mux: false, skip-cert-verify: true}, udp: true}
+  - {name: "[Trojan] 🇯🇵 日本3_openrunner", server: xingxing.jiasu123.org, port: 133, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇯🇵 日本4_openrunner", server: 36.150.215.200, port: 1806, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇯🇵 日本5_openrunner", server: 57.183.17.7, port: 16888, type: ss, cipher: aes-256-gcm, password: amazongreatvpn, udp: true}
+  - {name: "[Trojan] 🇸🇬 新加坡_openrunner", server: xingxing.jiasu123.org, port: 3043, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇸🇬 新加坡2_openrunner", server: xingxing.jiasu123.org, port: 4397, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
   - {name: "[VMess] 🇸🇬 新加坡3_openrunner", server: v39.heduian.link, port: 30839, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
-  - {name: "[SS] 🇺🇸 美国2_openrunner", server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202509121565513-hgGUWL4a7n.download.microsoft.com}, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国3_openrunner", server: 36.156.102.77, port: 4729, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇺🇸 美国4_openrunner", server: 36.156.102.77, port: 13855, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_1_wenode", server: wwwopensignalcom-goodspeed-8xx.pages.dev., port: 443, type: vless, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, tls: true, skip-cert-verify: true, servername: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET, network: ws, ws-opts: {path: //, headers: {Host: WwW.OPENSIgnaL.cOm.NaynaY09.dynv6.nET}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_2_wenode", server: 102.177.189.251, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇦🇺 澳洲_wenode", server: 103.133.1.227, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_3_wenode", server: 89.116.180.248, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_4_wenode", server: 167.68.42.168, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_5_wenode", server: 185.59.218.168, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[Vless] 🇬🇧 英国_wenode", server: 45.8.211.71, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_6_wenode", server: qqqqqqqqqqqqaaaa.www890604.dpdns.org, port: 443, type: vmess, uuid: 4174b95d-115e-4d39-add6-1f8db95bb860, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: qqqqqqqqqqqqaaaa.www890604.dpdns.org, network: ws, ws-opts: {path: /6We3U9Df1WGxgFnoFPw1, headers: {Host: qqqqqqqqqqqqaaaa.www890604.dpdns.org}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_7_wenode", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: handsome-device.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇩🇪 德国_wenode", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_8_wenode", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_9_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_10_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: light-presence.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_11_wenode", server: crazy-identity.oneeat.co, port: 80, type: vless, uuid: 64d6d0d4-3706-4837-b154-cda2816adcc5, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: crazy-identity.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_12_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_13_wenode", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: handsome-device.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_14_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/??ed/---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net/", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_15_wenode", server: klo.986986.shop, port: 443, type: vmess, uuid: b75c9731-408d-4aa6-8ae9-3857205113a1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: klo.986986.shop, network: ws, ws-opts: {path: /nvjx6j7kbDQIQMZvbeVA9, headers: {Host: klo.986986.shop}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_16_wenode", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_17_wenode", server: zula.ir, port: 2096, type: vless, uuid: 97909ffd-6da0-4893-9d63-00e72ad55256, tls: true, skip-cert-verify: true, servername: frAgteSt.JaHANGiRKh.eU.orG, network: ws, ws-opts: {path: /, headers: {Host: frAgteSt.JaHANGiRKh.eU.orG}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_18_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?JOKERRVPNTELEGRAM----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN----@JOKERRVPN", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_19_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?serverrrVPN由零开始---_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_20_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?Join---MARAMBASHI---Join---MARAMBASHI?ed=2560", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_21_wenode", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn", headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_22_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?serverrrVPNTELEGRAM---_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr_@vpnserverrr", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_23_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@v2ray_configs_pools----@v2ray_configs_pools----@v2ray_configs_pools", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_24_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_25_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn----@Evay_vpn", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_26_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_27_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@v2ray_configs_pools", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_28_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_29_wenode", server: sweet-combination.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_30_wenode", server: jealous-competition.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 7094df26-af60-41c4-afac-857060d1bab0, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?v2ray_configs_pools", headers: {Host: jealous-competition.seotoolsforyou.co.uk}}, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_31_wenode", server: 45.130.214.192, port: 20992, type: vless, uuid: e0042666-497b-4fde-bf4a-c5281df24d15, tls: false, skip-cert-verify: true, network: tcp, udp: true}
-  - {name: "[SS] 🇺🇸 美国_32_wenode", server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, udp: true}
-  - {name: "[SS] 🇯🇵 日本_wenode", server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_34_wenode", server: 89.44.242.222, port: 29495, type: vless, uuid: 4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b, tls: false, skip-cert-verify: true, network: tcp, udp: true}
-  - {name: "[Vless] 🇺🇸 美国_35_wenode", server: 89.44.242.222, port: 29500, type: vless, uuid: 888a20e2-fc3f-4f52-973c-36a6386225b8, tls: false, skip-cert-verify: true, network: tcp, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_36_wenode", server: 183.240.245.242, port: 33331, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_37_wenode", server: 2606:4700:3030::6815:4001, port: 80, type: vmess, uuid: 681eda16-e94d-439c-9067-b55db0c0543f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: 4496a55e-a4bc-c238-2c1e-5e66f7b0829c.8900604.xyz, network: ws, ws-opts: {path: /2uRsM4Z4Y8O5OsbJkA, headers: {Host: 4496a55e-a4bc-c238-2c1e-5e66f7b0829c.8900604.xyz}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_38_wenode", server: 205.233.181.3, port: 443, type: vmess, uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: farid.1.berozha.ir, network: ws, ws-opts: {path: /us.kkp.me.eu.org/aa, headers: {Host: farid.1.berozha.ir}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_39_wenode", server: codepen.io, port: 443, type: vmess, uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: farid.1.berozha.ir, network: ws, ws-opts: {path: /us.kkp.me.eu.org/aa, headers: {Host: farid.1.berozha.ir}}, udp: true}
-  - {name: "[VMess] 🇺🇸 美国_40_wenode", server: v8.heduian.link, port: 30808, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, servername: v8.heduian.link, network: ws, ws-opts: {path: /oooo, headers: {Host: v8.heduian.link}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_openrunner", server: 193.124.24.247, port: 6506, type: vmess, uuid: c53d41d1-7d56-43ce-9994-408780c6476a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 美国2_openrunner", server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202509121565513-hDcp24etDx.download.microsoft.com}, udp: true}
+  - {name: "[Trojan] 🇺🇸 美国3_openrunner", server: 36.150.215.200, port: 13855, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇺🇸 美国4_openrunner", server: xingxing.jiasu123.org, port: 4317, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: 23.45.86.28, skip-cert-verify: true, udp: true}
+  - {name: "[SS] 🇺🇸 美国_1_wenode", server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_2_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, servername: informed-location.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_1_wenode", server: hk3.kaipi.link, port: 443, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, skip-cert-verify: true, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_2_wenode", server: hk3.kaipi.link, port: 443, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, skip-cert-verify: true, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_3_wenode", server: 43.159.99.26, port: 443, type: vless, uuid: d8665d45-8103-46e9-9cb7-8902bb7559b4, tls: true, skip-cert-verify: true, servername: hk3.kaipi.link, network: ws, ws-opts: {path: /texaws, headers: {Host: hk3.kaipi.link}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_3_wenode", server: 89.44.242.222, port: 29495, type: vless, uuid: 4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_4_wenode", server: 89.44.242.222, port: 46822, type: vless, uuid: 44aded6c-a012-452b-8e13-04d5f15a659f, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_5_wenode", server: 89.44.242.222, port: 29500, type: vless, uuid: 888a20e2-fc3f-4f52-973c-36a6386225b8, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[SS] 🇺🇸 美国_6_wenode", server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RFK38Cg7APneSB5cWDcpbm, udp: true}
+  - {name: "[SS] 🇺🇸 美国_7_wenode", server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 9tqhMdIrTkgQ46PvhyAtMH, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_8_wenode", server: backus1.dh03.shop, port: 443, type: vless, uuid: 71504eaf-29ac-4190-89d1-dd9ce2c9ee14, tls: true, skip-cert-verify: true, servername: backus1.dh03.shop, network: ws, ws-opts: {path: /higate, headers: {Host: backus1.dh03.shop}}, udp: true}
+  - {name: "[Vless] 🇦🇺 澳洲_4_wenode", server: 45.130.214.192, port: 20992, type: vless, uuid: e0042666-497b-4fde-bf4a-c5281df24d15, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_9_wenode", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn----@Nethers_vpn", headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[SS] 🇬🇧 英国_wenode", server: 45.144.235.103, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: aE5rFdxzG8GQf5TAQhZhRA, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_10_wenode", server: famous-danger.oneeat.co, port: 80, type: vless, uuid: ddc27bd6-6efa-47cf-8bfc-acaf973ba6b3, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: famous-danger.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_11_wenode", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: handsome-device.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_12_wenode", server: famous-danger.oneeat.co, port: 80, type: vless, uuid: ddc27bd6-6efa-47cf-8bfc-acaf973ba6b3, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: famous-danger.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_13_wenode", server: crazy-identity.oneeat.co, port: 80, type: vless, uuid: 64d6d0d4-3706-4837-b154-cda2816adcc5, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: crazy-identity.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_14_wenode", server: crazy-identity.oneeat.co, port: 80, type: vless, uuid: 64d6d0d4-3706-4837-b154-cda2816adcc5, tls: false, skip-cert-verify: true, servername: crazy-identity.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: crazy-identity.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_15_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_16_wenode", server: sweet-combination.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_17_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_18_wenode", server: handsome-device.oneeat.co, port: 80, type: vless, uuid: 2ad87f95-7a0b-4018-8497-5ecaac2f0ddf, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: handsome-device.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_19_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, servername: light-presence.oneeat.co, network: ws, ws-opts: {path: /, headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_20_wenode", server: sweet-combination.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 05020a61-3c0c-4ead-b256-7851ff905a75, tls: false, skip-cert-verify: true, servername: sweet-combination.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: sweet-combination.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_21_wenode", server: narrow-passenger.oneeat.co, port: 80, type: vless, uuid: 5a12794b-2125-46d7-a748-927a989faa04, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: narrow-passenger.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_22_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?Join---MARAMBASHI---Join---MARAMBASHI?ed=2560", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_23_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/??ed/---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net/", headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_24_wenode", server: light-presence.oneeat.co, port: 80, type: vless, uuid: 7e74ff43-3a90-48b3-8372-7d92a045c2d4, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG---Join-TELEGRAM-FREEV2RNG", headers: {Host: light-presence.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_1_wenode", server: hdfynpv2d1.farvaharforever.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.farvaharforever.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.farvaharforever.com}}, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_2_wenode", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_3_wenode", server: hdfynpv2d1.makingirangreatagain.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.makingirangreatagain.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.makingirangreatagain.com}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_25_wenode", server: fierce-data.seotoolsforyou.co.uk, port: 80, type: vless, uuid: c313c27c-97ff-45ed-ab5c-64641af5debc, tls: false, skip-cert-verify: true, servername: fierce-data.seotoolsforyou.co.uk, network: ws, ws-opts: {path: /, headers: {Host: fierce-data.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_26_wenode", server: fearless-change.oneeat.co, port: 80, type: vless, uuid: b055036a-2d81-4d46-ab18-4e1898b58cec, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: fearless-change.oneeat.co}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_27_wenode", server: 38.244.163.100, port: 35048, type: vless, uuid: 5690f021-86a7-4712-b143-7944c7380436, tls: false, skip-cert-verify: true, network: tcp, udp: true}
+  - {name: "[Vless] 🇩🇪 德国_4_wenode", server: hdfynpv2d1.farvaharforever.com, port: 443, type: vless, uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c, tls: true, skip-cert-verify: true, servername: hdfynpv2d1.farvaharforever.com, network: ws, ws-opts: {path: /Iyq035lnud9R8ruNNrqGxZZ2, headers: {Host: hdfynpv2d1.farvaharforever.com}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_28_wenode", server: informed-location.seotoolsforyou.co.uk, port: 80, type: vless, uuid: 5c929ec5-5b1e-447a-950c-354c5d1ba1de, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: informed-location.seotoolsforyou.co.uk}}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_29_wenode", server: DdDDdddddDFrrrrrrRRy.IRan2035.dPDns.ORG, port: 443, type: vmess, uuid: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ddddddddddfrrrrrrrry.iran2035.dpdns.org, network: ws, ws-opts: {path: /CjJ9A46ZRHvgWvVcmjyiKVby2Lp, headers: {Host: ddddddddddfrrrrrrrry.iran2035.dpdns.org}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_30_wenode", server: 185.59.218.168, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_31_wenode", server: 94.247.142.103, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_32_wenode", server: 154.83.2.167, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_33_wenode", server: 94.140.0.141, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_34_wenode", server: all.tellmethetrue.shop, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v7.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[VMess] 🇫🇷 法国_wenode", server: kampong.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: kampong.org, network: ws, ws-opts: {path: linkvws, headers: {Host: kampong.org}}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_35_wenode", server: all.tellmethetrue.shop, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], skip-cert-verify: true, servername: pqh30v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_36_wenode", server: all.tellmethetrue.shop, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh29v7.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_37_wenode", server: 184.174.80.250, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_38_wenode", server: 31.43.179.38, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, alpn: [h2], skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_39_wenode", server: 92.53.188.36, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh23v4.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_40_wenode", server: 45.159.218.165, port: 443, type: vless, uuid: 401374e6-df77-41fb-f638-dad8184f175b, tls: true, skip-cert-verify: true, servername: pqh24v3.hiddendom.shop, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, udp: true}
+  - {name: "[Vless] 🇺🇸 美国_41_wenode", server: 3h-unitedstates3.09vpn.com, port: 8443, type: vless, uuid: 48572af1-d091-457b-a86e-4a457e99927f, tls: true, skip-cert-verify: true, servername: 3h-unitedstates3.09vpn.com, network: ws, ws-opts: {path: /vless/, headers: {Host: 3h-unitedstates3.09vpn.com}}, udp: true}
+  - {name: "[SS] 🇺🇸 美国_42_wenode", server: pupas-shirting-unsung.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: p78naCf2EfOlRSLTX0wFVx, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_43_wenode", server: 2001:bc8:32d7:302::10, port: 44579, type: vmess, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_44_wenode", server: 183.240.180.3, port: 34141, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_45_wenode", server: tunnel.gzcloud.shop, port: 47093, type: vmess, uuid: 89a62b16-a3c3-4ad7-be18-6f0266f7a2c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] 🇺🇸 美国_46_wenode", server: 183.240.245.251, port: 39595, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -287,24 +313,26 @@ proxy-groups:
       - "[Trojan] 🇳🇱 NL荷兰(mibei77.com 米贝节点分享) 2_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
       - "[Trojan] 🇺🇦 乌克兰(mibei77.com 米贝节点分享)_miebei"
-      - "[Vless] 🇺🇸 美国_1_oneclash"
+      - "[SS] 🇺🇸 美国_1_oneclash"
       - "[Vless] 🇺🇸 美国_2_oneclash"
-      - "[Vless] 🇦🇺 澳洲_oneclash"
+      - "[Vless] 🇦🇺 澳洲_1_oneclash"
+      - "[Vless] 🇦🇺 澳洲_2_oneclash"
+      - "[Vless] 🇦🇺 澳洲_3_oneclash"
       - "[Vless] 🇺🇸 美国_3_oneclash"
       - "[Vless] 🇺🇸 美国_4_oneclash"
       - "[Vless] 🇺🇸 美国_5_oneclash"
-      - "[Vless] 🇬🇧 英国_oneclash"
-      - "[VMess] 🇺🇸 美国_6_oneclash"
-      - "[Vless] 🇺🇸 美国_7_oneclash"
-      - "[Vless] 🇩🇪 德国_oneclash"
+      - "[SS] 🇺🇸 美国_6_oneclash"
+      - "[SS] 🇺🇸 美国_7_oneclash"
       - "[Vless] 🇺🇸 美国_8_oneclash"
+      - "[Vless] 🇦🇺 澳洲_4_oneclash"
       - "[Vless] 🇺🇸 美国_9_oneclash"
+      - "[SS] 🇬🇧 英国_oneclash"
       - "[Vless] 🇺🇸 美国_10_oneclash"
       - "[Vless] 🇺🇸 美国_11_oneclash"
       - "[Vless] 🇺🇸 美国_12_oneclash"
       - "[Vless] 🇺🇸 美国_13_oneclash"
       - "[Vless] 🇺🇸 美国_14_oneclash"
-      - "[VMess] 🇺🇸 美国_15_oneclash"
+      - "[Vless] 🇺🇸 美国_15_oneclash"
       - "[Vless] 🇺🇸 美国_16_oneclash"
       - "[Vless] 🇺🇸 美国_17_oneclash"
       - "[Vless] 🇺🇸 美国_18_oneclash"
@@ -314,22 +342,33 @@ proxy-groups:
       - "[Vless] 🇺🇸 美国_22_oneclash"
       - "[Vless] 🇺🇸 美国_23_oneclash"
       - "[Vless] 🇺🇸 美国_24_oneclash"
+      - "[Vless] 🇩🇪 德国_1_oneclash"
+      - "[Vless] 🇩🇪 德国_2_oneclash"
+      - "[Vless] 🇩🇪 德国_3_oneclash"
       - "[Vless] 🇺🇸 美国_25_oneclash"
       - "[Vless] 🇺🇸 美国_26_oneclash"
       - "[Vless] 🇺🇸 美国_27_oneclash"
+      - "[Vless] 🇩🇪 德国_4_oneclash"
       - "[Vless] 🇺🇸 美国_28_oneclash"
-      - "[Vless] 🇺🇸 美国_29_oneclash"
+      - "[VMess] 🇺🇸 美国_29_oneclash"
       - "[Vless] 🇺🇸 美国_30_oneclash"
       - "[Vless] 🇺🇸 美国_31_oneclash"
-      - "[SS] 🇺🇸 美国_32_oneclash"
-      - "[SS] 🇯🇵 日本_oneclash"
+      - "[Vless] 🇺🇸 美国_32_oneclash"
+      - "[Vless] 🇺🇸 美国_33_oneclash"
       - "[Vless] 🇺🇸 美国_34_oneclash"
+      - "[VMess] 🇫🇷 法国_oneclash"
       - "[Vless] 🇺🇸 美国_35_oneclash"
-      - "[VMess] 🇺🇸 美国_36_oneclash"
-      - "[VMess] 🇺🇸 美国_37_oneclash"
-      - "[VMess] 🇺🇸 美国_38_oneclash"
-      - "[VMess] 🇺🇸 美国_39_oneclash"
-      - "[VMess] 🇺🇸 美国_40_oneclash"
+      - "[Vless] 🇺🇸 美国_36_oneclash"
+      - "[Vless] 🇺🇸 美国_37_oneclash"
+      - "[Vless] 🇺🇸 美国_38_oneclash"
+      - "[Vless] 🇺🇸 美国_39_oneclash"
+      - "[Vless] 🇺🇸 美国_40_oneclash"
+      - "[Vless] 🇺🇸 美国_41_oneclash"
+      - "[SS] 🇺🇸 美国_42_oneclash"
+      - "[VMess] 🇺🇸 美国_43_oneclash"
+      - "[VMess] 🇺🇸 美国_44_oneclash"
+      - "[VMess] 🇺🇸 美国_45_oneclash"
+      - "[VMess] 🇺🇸 美国_46_oneclash"
       - "[SS] tg频道:@freenodedaily_openrunner"
       - "[VMess] 🇭🇰 香港_openrunner"
       - "[SS] 🇭🇰 香港2_openrunner"
@@ -337,7 +376,6 @@ proxy-groups:
       - "[Trojan] 🇭🇰 香港4_openrunner"
       - "[SS] 🇭🇰 香港5_openrunner"
       - "[Trojan] 🇭🇰 香港6_openrunner"
-      - "[SS] 🇭🇰 香港7_openrunner"
       - "[SS] 🇨🇳 台湾_openrunner"
       - "[SS] 🇨🇳 台湾2_openrunner"
       - "[SS] 🇯🇵 日本_openrunner"
@@ -348,27 +386,30 @@ proxy-groups:
       - "[Trojan] 🇸🇬 新加坡_openrunner"
       - "[Trojan] 🇸🇬 新加坡2_openrunner"
       - "[VMess] 🇸🇬 新加坡3_openrunner"
+      - "[VMess] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
       - "[Trojan] 🇺🇸 美国3_openrunner"
       - "[Trojan] 🇺🇸 美国4_openrunner"
-      - "[Vless] 🇺🇸 美国_1_wenode"
+      - "[SS] 🇺🇸 美国_1_wenode"
       - "[Vless] 🇺🇸 美国_2_wenode"
-      - "[Vless] 🇦🇺 澳洲_wenode"
+      - "[Vless] 🇦🇺 澳洲_1_wenode"
+      - "[Vless] 🇦🇺 澳洲_2_wenode"
+      - "[Vless] 🇦🇺 澳洲_3_wenode"
       - "[Vless] 🇺🇸 美国_3_wenode"
       - "[Vless] 🇺🇸 美国_4_wenode"
       - "[Vless] 🇺🇸 美国_5_wenode"
-      - "[Vless] 🇬🇧 英国_wenode"
-      - "[VMess] 🇺🇸 美国_6_wenode"
-      - "[Vless] 🇺🇸 美国_7_wenode"
-      - "[Vless] 🇩🇪 德国_wenode"
+      - "[SS] 🇺🇸 美国_6_wenode"
+      - "[SS] 🇺🇸 美国_7_wenode"
       - "[Vless] 🇺🇸 美国_8_wenode"
+      - "[Vless] 🇦🇺 澳洲_4_wenode"
       - "[Vless] 🇺🇸 美国_9_wenode"
+      - "[SS] 🇬🇧 英国_wenode"
       - "[Vless] 🇺🇸 美国_10_wenode"
       - "[Vless] 🇺🇸 美国_11_wenode"
       - "[Vless] 🇺🇸 美国_12_wenode"
       - "[Vless] 🇺🇸 美国_13_wenode"
       - "[Vless] 🇺🇸 美国_14_wenode"
-      - "[VMess] 🇺🇸 美国_15_wenode"
+      - "[Vless] 🇺🇸 美国_15_wenode"
       - "[Vless] 🇺🇸 美国_16_wenode"
       - "[Vless] 🇺🇸 美国_17_wenode"
       - "[Vless] 🇺🇸 美国_18_wenode"
@@ -378,22 +419,33 @@ proxy-groups:
       - "[Vless] 🇺🇸 美国_22_wenode"
       - "[Vless] 🇺🇸 美国_23_wenode"
       - "[Vless] 🇺🇸 美国_24_wenode"
+      - "[Vless] 🇩🇪 德国_1_wenode"
+      - "[Vless] 🇩🇪 德国_2_wenode"
+      - "[Vless] 🇩🇪 德国_3_wenode"
       - "[Vless] 🇺🇸 美国_25_wenode"
       - "[Vless] 🇺🇸 美国_26_wenode"
       - "[Vless] 🇺🇸 美国_27_wenode"
+      - "[Vless] 🇩🇪 德国_4_wenode"
       - "[Vless] 🇺🇸 美国_28_wenode"
-      - "[Vless] 🇺🇸 美国_29_wenode"
+      - "[VMess] 🇺🇸 美国_29_wenode"
       - "[Vless] 🇺🇸 美国_30_wenode"
       - "[Vless] 🇺🇸 美国_31_wenode"
-      - "[SS] 🇺🇸 美国_32_wenode"
-      - "[SS] 🇯🇵 日本_wenode"
+      - "[Vless] 🇺🇸 美国_32_wenode"
+      - "[Vless] 🇺🇸 美国_33_wenode"
       - "[Vless] 🇺🇸 美国_34_wenode"
+      - "[VMess] 🇫🇷 法国_wenode"
       - "[Vless] 🇺🇸 美国_35_wenode"
-      - "[VMess] 🇺🇸 美国_36_wenode"
-      - "[VMess] 🇺🇸 美国_37_wenode"
-      - "[VMess] 🇺🇸 美国_38_wenode"
-      - "[VMess] 🇺🇸 美国_39_wenode"
-      - "[VMess] 🇺🇸 美国_40_wenode"
+      - "[Vless] 🇺🇸 美国_36_wenode"
+      - "[Vless] 🇺🇸 美国_37_wenode"
+      - "[Vless] 🇺🇸 美国_38_wenode"
+      - "[Vless] 🇺🇸 美国_39_wenode"
+      - "[Vless] 🇺🇸 美国_40_wenode"
+      - "[Vless] 🇺🇸 美国_41_wenode"
+      - "[SS] 🇺🇸 美国_42_wenode"
+      - "[VMess] 🇺🇸 美国_43_wenode"
+      - "[VMess] 🇺🇸 美国_44_wenode"
+      - "[VMess] 🇺🇸 美国_45_wenode"
+      - "[VMess] 🇺🇸 美国_46_wenode"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -649,7 +701,6 @@ proxy-groups:
       - "[Trojan] 🇭🇰 香港4_openrunner"
       - "[SS] 🇭🇰 香港5_openrunner"
       - "[Trojan] 🇭🇰 香港6_openrunner"
-      - "[SS] 🇭🇰 香港7_openrunner"
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -665,13 +716,11 @@ proxy-groups:
       - "[SS] 🇯🇵 [SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub"
       - "[SS] 🇯🇵 [SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub"
       - "[SS] 🇯🇵 JP日本(mibei77.com 米贝节点分享)_miebei"
-      - "[SS] 🇯🇵 日本_oneclash"
       - "[SS] 🇯🇵 日本_openrunner"
       - "[SS] 🇯🇵 日本2_openrunner"
       - "[Trojan] 🇯🇵 日本3_openrunner"
       - "[Trojan] 🇯🇵 日本4_openrunner"
       - "[SS] 🇯🇵 日本5_openrunner"
-      - "[SS] 🇯🇵 日本_wenode"
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -691,13 +740,13 @@ proxy-groups:
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 7_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 8_miebei"
       - "[Trojan] 🇺🇸 US美国(mibei77.com 米贝节点分享) 9_miebei"
-      - "[Vless] 🇺🇸 美国_1_oneclash"
+      - "[SS] 🇺🇸 美国_1_oneclash"
       - "[Vless] 🇺🇸 美国_2_oneclash"
       - "[Vless] 🇺🇸 美国_3_oneclash"
       - "[Vless] 🇺🇸 美国_4_oneclash"
       - "[Vless] 🇺🇸 美国_5_oneclash"
-      - "[VMess] 🇺🇸 美国_6_oneclash"
-      - "[Vless] 🇺🇸 美国_7_oneclash"
+      - "[SS] 🇺🇸 美国_6_oneclash"
+      - "[SS] 🇺🇸 美国_7_oneclash"
       - "[Vless] 🇺🇸 美国_8_oneclash"
       - "[Vless] 🇺🇸 美国_9_oneclash"
       - "[Vless] 🇺🇸 美国_10_oneclash"
@@ -705,7 +754,7 @@ proxy-groups:
       - "[Vless] 🇺🇸 美国_12_oneclash"
       - "[Vless] 🇺🇸 美国_13_oneclash"
       - "[Vless] 🇺🇸 美国_14_oneclash"
-      - "[VMess] 🇺🇸 美国_15_oneclash"
+      - "[Vless] 🇺🇸 美国_15_oneclash"
       - "[Vless] 🇺🇸 美国_16_oneclash"
       - "[Vless] 🇺🇸 美国_17_oneclash"
       - "[Vless] 🇺🇸 美国_18_oneclash"
@@ -719,27 +768,35 @@ proxy-groups:
       - "[Vless] 🇺🇸 美国_26_oneclash"
       - "[Vless] 🇺🇸 美国_27_oneclash"
       - "[Vless] 🇺🇸 美国_28_oneclash"
-      - "[Vless] 🇺🇸 美国_29_oneclash"
+      - "[VMess] 🇺🇸 美国_29_oneclash"
       - "[Vless] 🇺🇸 美国_30_oneclash"
       - "[Vless] 🇺🇸 美国_31_oneclash"
-      - "[SS] 🇺🇸 美国_32_oneclash"
+      - "[Vless] 🇺🇸 美国_32_oneclash"
+      - "[Vless] 🇺🇸 美国_33_oneclash"
       - "[Vless] 🇺🇸 美国_34_oneclash"
       - "[Vless] 🇺🇸 美国_35_oneclash"
-      - "[VMess] 🇺🇸 美国_36_oneclash"
-      - "[VMess] 🇺🇸 美国_37_oneclash"
-      - "[VMess] 🇺🇸 美国_38_oneclash"
-      - "[VMess] 🇺🇸 美国_39_oneclash"
-      - "[VMess] 🇺🇸 美国_40_oneclash"
+      - "[Vless] 🇺🇸 美国_36_oneclash"
+      - "[Vless] 🇺🇸 美国_37_oneclash"
+      - "[Vless] 🇺🇸 美国_38_oneclash"
+      - "[Vless] 🇺🇸 美国_39_oneclash"
+      - "[Vless] 🇺🇸 美国_40_oneclash"
+      - "[Vless] 🇺🇸 美国_41_oneclash"
+      - "[SS] 🇺🇸 美国_42_oneclash"
+      - "[VMess] 🇺🇸 美国_43_oneclash"
+      - "[VMess] 🇺🇸 美国_44_oneclash"
+      - "[VMess] 🇺🇸 美国_45_oneclash"
+      - "[VMess] 🇺🇸 美国_46_oneclash"
+      - "[VMess] 🇺🇸 美国_openrunner"
       - "[SS] 🇺🇸 美国2_openrunner"
       - "[Trojan] 🇺🇸 美国3_openrunner"
       - "[Trojan] 🇺🇸 美国4_openrunner"
-      - "[Vless] 🇺🇸 美国_1_wenode"
+      - "[SS] 🇺🇸 美国_1_wenode"
       - "[Vless] 🇺🇸 美国_2_wenode"
       - "[Vless] 🇺🇸 美国_3_wenode"
       - "[Vless] 🇺🇸 美国_4_wenode"
       - "[Vless] 🇺🇸 美国_5_wenode"
-      - "[VMess] 🇺🇸 美国_6_wenode"
-      - "[Vless] 🇺🇸 美国_7_wenode"
+      - "[SS] 🇺🇸 美国_6_wenode"
+      - "[SS] 🇺🇸 美国_7_wenode"
       - "[Vless] 🇺🇸 美国_8_wenode"
       - "[Vless] 🇺🇸 美国_9_wenode"
       - "[Vless] 🇺🇸 美国_10_wenode"
@@ -747,7 +804,7 @@ proxy-groups:
       - "[Vless] 🇺🇸 美国_12_wenode"
       - "[Vless] 🇺🇸 美国_13_wenode"
       - "[Vless] 🇺🇸 美国_14_wenode"
-      - "[VMess] 🇺🇸 美国_15_wenode"
+      - "[Vless] 🇺🇸 美国_15_wenode"
       - "[Vless] 🇺🇸 美国_16_wenode"
       - "[Vless] 🇺🇸 美国_17_wenode"
       - "[Vless] 🇺🇸 美国_18_wenode"
@@ -761,17 +818,24 @@ proxy-groups:
       - "[Vless] 🇺🇸 美国_26_wenode"
       - "[Vless] 🇺🇸 美国_27_wenode"
       - "[Vless] 🇺🇸 美国_28_wenode"
-      - "[Vless] 🇺🇸 美国_29_wenode"
+      - "[VMess] 🇺🇸 美国_29_wenode"
       - "[Vless] 🇺🇸 美国_30_wenode"
       - "[Vless] 🇺🇸 美国_31_wenode"
-      - "[SS] 🇺🇸 美国_32_wenode"
+      - "[Vless] 🇺🇸 美国_32_wenode"
+      - "[Vless] 🇺🇸 美国_33_wenode"
       - "[Vless] 🇺🇸 美国_34_wenode"
       - "[Vless] 🇺🇸 美国_35_wenode"
-      - "[VMess] 🇺🇸 美国_36_wenode"
-      - "[VMess] 🇺🇸 美国_37_wenode"
-      - "[VMess] 🇺🇸 美国_38_wenode"
-      - "[VMess] 🇺🇸 美国_39_wenode"
-      - "[VMess] 🇺🇸 美国_40_wenode"
+      - "[Vless] 🇺🇸 美国_36_wenode"
+      - "[Vless] 🇺🇸 美国_37_wenode"
+      - "[Vless] 🇺🇸 美国_38_wenode"
+      - "[Vless] 🇺🇸 美国_39_wenode"
+      - "[Vless] 🇺🇸 美国_40_wenode"
+      - "[Vless] 🇺🇸 美国_41_wenode"
+      - "[SS] 🇺🇸 美国_42_wenode"
+      - "[VMess] 🇺🇸 美国_43_wenode"
+      - "[VMess] 🇺🇸 美国_44_wenode"
+      - "[VMess] 🇺🇸 美国_45_wenode"
+      - "[VMess] 🇺🇸 美国_46_wenode"
   - name: 🇹🇼 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -14224,6 +14288,9 @@ rules:
   - DOMAIN,e22mxohu5v.adobestats.io,🍃 应用净化
   - DOMAIN,urf2lfygxj.adobestats.io,🍃 应用净化
   - DOMAIN,wyxapi29.lqn0m.adobestats.io,🍃 应用净化
+  - DOMAIN,eqw3y6qkfql.4cbdo.adobestats.io,🍃 应用净化
+  - DOMAIN,plworabsle.h2uqz.adobestats.io,🍃 应用净化
+  - DOMAIN,awif0i1v1gss.lqn0m.adobestats.io,🍃 应用净化
   - DOMAIN-SUFFIX,tonec.com,🍃 应用净化
   - DOMAIN-SUFFIX,registeridm.com,🍃 应用净化
   - DOMAIN-SUFFIX,internetdownloadmanager.com,🍃 应用净化
