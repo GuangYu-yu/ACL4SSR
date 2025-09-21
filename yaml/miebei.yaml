@@ -4,6 +4,13 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
+- cipher: chacha20-ietf-poly1305
+  name: 乌克兰(mibei77.com 米贝节点分享)_miebei
+  password: RFK38Cg7APneSB5cWDcpbm
+  port: 443
+  server: switcher-nick-croquet.freesocks.work
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
   name: FR法国(mibei77.com 米贝节点分享)_miebei
@@ -18,31 +25,7 @@ proxies:
   ws-headers:
     Host: 2001:bc8:32d7:302::10
   ws-path: /
-- alterId: 0
-  cipher: auto
-  name: US美国(mibei77.com 米贝节点分享)_miebei
-  network: ws
-  port: 443
-  server: FFFFfFFvvBgnh.iRAn2035.DpDnS.OrG
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: a94fafdb-10d6-46c2-be8a-5c2e8358fbb0
-  ws-headers:
-    Host: fffffffvvbgnh.iran2035.dpdns.org
-  ws-path: /CjJ9A46ZRHvgWvVcmjyiKVby2Lp
-- alterId: 0
-  cipher: auto
-  name: KR韩国(mibei77.com 米贝节点分享)_miebei
-  port: 45579
-  server: 211.54.247.9
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a43d4fc7-a22d-4398-c818-2c89c6c7ba27
-- name: US美国(mibei77.com 米贝节点分享) 2_miebei
+- name: US美国(mibei77.com 米贝节点分享)_miebei
   password: f282b878-8711-45a1-8c69-5564172123c1
   port: 443
   server: aio.zipzap.biz.id
@@ -50,32 +33,21 @@ proxies:
   sni: aio.zipzap.biz.id
   type: trojan
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 乌克兰(mibei77.com 米贝节点分享)_miebei
-  password: RFK38Cg7APneSB5cWDcpbm
-  port: 443
-  server: switcher-nick-croquet.freesocks.work
-  type: ss
-  udp: true
 proxy-groups:
 - name: 🔰 节点选择
   proxies:
   - ♻️ 自动选择
   - 🎯 全球直连
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 - interval: 300
   name: ♻️ 自动选择
   proxies:
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
@@ -83,11 +55,9 @@ proxy-groups:
   - 🔰 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 - name: ⛔️ 广告拦截
   proxies:
@@ -106,11 +76,9 @@ proxy-groups:
   - 🔰 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -121,32 +89,26 @@ proxy-groups:
   proxies:
   - 🎯 全球直连
   - 🔰 节点选择
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 - name: 📲 电报信息
   proxies:
   - 🔰 节点选择
   - 🎯 全球直连
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 - name: 🍎 苹果服务
   proxies:
   - 🔰 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -162,11 +124,9 @@ proxy-groups:
   - 🔰 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
+  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   - FR法国(mibei77.com 米贝节点分享)_miebei
   - US美国(mibei77.com 米贝节点分享)_miebei
-  - KR韩国(mibei77.com 米贝节点分享)_miebei
-  - US美国(mibei77.com 米贝节点分享) 2_miebei
-  - 乌克兰(mibei77.com 米贝节点分享)_miebei
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
