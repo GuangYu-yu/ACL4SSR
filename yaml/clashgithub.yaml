@@ -38,6 +38,27 @@ proxies:
   skip-cert-verify: false
   sni: hl.dport.top
   type: hysteria2
+- auth: 6803bc9b-1157-431b-8f73-970a6deb741f
+  name: '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  password: 6803bc9b-1157-431b-8f73-970a6deb741f
+  port: 29854
+  server: fra-nb-02.linlujs.pw
+  skip-cert-verify: false
+  type: hysteria2
+- auth: 70197404-7b40-45e4-bb9c-8bc8995012ae
+  name: '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  password: 70197404-7b40-45e4-bb9c-8bc8995012ae
+  port: 24568
+  server: fra-nb-01.linlujs.pw
+  skip-cert-verify: false
+  type: hysteria2
+- auth: 70197404-7b40-45e4-bb9c-8bc8995012ae
+  name: '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
+  password: 70197404-7b40-45e4-bb9c-8bc8995012ae
+  port: 25684
+  server: us-nb-01.linlujs.pw
+  skip-cert-verify: false
+  type: hysteria2
 - auth: 79c4fe11-9787-406b-bf94-c1c1dbf59e28
   name: '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   password: 79c4fe11-9787-406b-bf94-c1c1dbf59e28
@@ -146,7 +167,7 @@ proxies:
   name: '[SS] tg频道:@ripaojiedian_clashgithub'
   password: amazonskr05
   port: 443
-  server: 13.61.188.86
+  server: 18.159.61.225
   type: ss
 - alterId: 2
   cipher: auto
@@ -171,33 +192,25 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
-  port: 21201
-  server: 149.104.15.178
+  port: 44601
+  server: 43.247.135.86
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e43b6c20-2f61-4e8c-a692-c737fa5cfa0d
+  uuid: 3bff49e6-b2e2-44ce-801f-06eab407e8bd
 - name: '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
-  port: 443
-  server: 1.64.115.53
+  port: 447
+  server: 160.16.63.16
   skip-cert-verify: false
-  sni: www.baidu.com
+  sni: www.nintendogames.net
   type: trojan
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
-  network: http
-  port: 47030
-  server: 103.224.80.67
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b088a19a-70dd-4eb6-a9f1-e9cbba0a64c2
+- cipher: chacha20-ietf-poly1305
+  name: '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  password: 9177de1a-aeff-43f1-93a6-7dd08a2fdc41
+  port: 40000
+  server: hk.fastsoonlink.com
+  type: ss
 - name: '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
   port: 447
@@ -213,73 +226,31 @@ proxies:
     - /
   name: '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
   network: http
-  port: 25119
-  server: 38.147.188.25
+  port: 13193
+  server: 103.224.80.96
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 361f1769-cac1-4dd1-adca-92592929b3de
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  network: http
-  port: 28210
-  server: 38.147.188.53
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b738a6b6-7b7d-41a9-87a5-f246256c5c95
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  network: http
-  port: 35436
-  server: 103.30.78.138
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 084928cf-ed55-42e8-b686-b8e271dfb0ce
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
-  network: http
-  port: 32026
-  server: 103.224.80.45
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 1193769d-bea4-4f0e-bab7-70640e1a0b2e
+  uuid: 080d4d5d-6dbd-4d75-9927-aa3902c150a5
 - cipher: rc4-md5
   name: '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
   password: efanccyun
   port: 8766
   server: cn01.efan8867801.xyz
   type: ss
-- name: '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
-  password: 253bc477d4e43c209f2d427272968280
-  port: 327
-  server: 153.121.45.139
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
 - cipher: aes-256-gcm
   name: '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
   password: 8808e9f11454
   port: 443
   server: 137.220.142.139
   type: ss
+- name: '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
+  password: 253bc477d4e43c209f2d427272968280
+  port: 1924
+  server: 153.121.73.102
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
 - name: '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
   port: 1924
@@ -287,11 +258,20 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- cipher: aes-256-gcm
-  name: '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
-  password: amazongreatvpn
-  port: 16888
-  server: 3.115.88.171
+- alterId: 0
+  cipher: auto
+  name: '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  port: 37925
+  server: nnertn.vxzjv.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ffaf7559-d3a9-37fd-8e5b-a3abeb53d924
+- cipher: aes-256-cfb
+  name: '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
+  password: qwerREWQ@@
+  port: 4652
+  server: p141.panda001.net
   type: ss
 - name: '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   password: 253bc477d4e43c209f2d427272968280
@@ -351,67 +331,37 @@ proxies:
   name: '[SS] tg频道:@ripaojiedian 2_clashgithub'
   password: //YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU
   port: 443
-  server: 13.61.188.86
+  server: 18.159.61.225
   type: ss
 - alterId: 0
   cipher: auto
   name: '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  port: 21201
-  server: 149.104.15.178
+  port: 44601
+  server: 43.247.135.86
   skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: e43b6c20-2f61-4e8c-a692-c737fa5cfa0d
-- alterId: 0
-  cipher: auto
-  name: '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  port: 47030
-  server: 103.224.80.67
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b088a19a-70dd-4eb6-a9f1-e9cbba0a64c2
-- alterId: 0
-  cipher: auto
-  name: '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  port: 25119
-  server: 38.147.188.25
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 361f1769-cac1-4dd1-adca-92592929b3de
-- alterId: 0
-  cipher: auto
-  name: '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  port: 28210
-  server: 38.147.188.53
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: b738a6b6-7b7d-41a9-87a5-f246256c5c95
-- alterId: 0
-  cipher: auto
-  name: '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  port: 35436
-  server: 103.30.78.138
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 084928cf-ed55-42e8-b686-b8e271dfb0ce
-- alterId: 0
-  cipher: auto
-  name: '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  port: 32026
-  server: 103.224.80.45
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 1193769d-bea4-4f0e-bab7-70640e1a0b2e
+  uuid: 3bff49e6-b2e2-44ce-801f-06eab407e8bd
 - cipher: ss
-  name: '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
-  password: //YWVzLTI1Ni1nY206YW1hem9uZ3JlYXR2cG4
-  port: 16888
-  server: 3.115.88.171
+  name: '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  password: //Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5MTc3ZGUxYS1hZWZmLTQzZjEtOTNhNi03ZGQwOGEyZmRjNDE
+  port: 40000
+  server: hk.fastsoonlink.com
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  port: 37925
+  server: nnertn.vxzjv.xyz
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: ffaf7559-d3a9-37fd-8e5b-a3abeb53d924
+- cipher: ss
+  name: '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
+  password: //YWVzLTI1Ni1jZmI6cXdlclJFV1FAQA
+  port: 4652
+  server: p141.panda001.net
   type: ss
 - cipher: ss
   name: '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
@@ -419,73 +369,111 @@ proxies:
   port: 38388
   server: 103.186.155.28
   type: ss
-- name: '[Vless] US_speednode_0027_clashgithub'
+- name: '[Vless] BR_speednode_0001_clashgithub'
   network: ws
-  port: 80
-  server: 104.18.109.147
-  servername: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: c29d39bd-92a4-45db-bb61-56013998617c
-  ws-opts:
-    headers:
-      Host: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com
-    path: /Telegram-XV2ry2?ed=2048
-- name: '[Vless] US_speednode_0035_clashgithub'
-  network: ws
-  port: 2082
-  server: 159.112.235.174
-  servername: workerr.schodog1.workers.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 47e9a0db-50c6-4522-8819-502c55b06dde
-  ws-opts:
-    headers:
-      Host: workerr.schodog1.workers.dev
-    path: /?ed=2048
-- name: '[Vless] US_speednode_0044_clashgithub'
-  network: ws
-  port: 8080
-  server: cafearz.com
-  servername: shad.ir.de.test.digicyber.click.
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 5218f249-128d-40bf-d9b9-64004622b502
-  ws-opts:
-    headers:
-      Host: shad.ir.de.test.digicyber.click.
-    path: /olem/ws?ed=1024
-- alpn:
-  - http/1.1
-  name: '[Vless] US_speednode_0045_clashgithub'
-  network: ws
-  port: 2053
-  server: www.speedtest.net
-  servername: 2020.dnss-mobile.ir
+  port: 443
+  server: 185.133.35.106
+  servername: d-de1.djwstlsweb.top
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 20d98fd8-b472-4574-eeae-b1ecc9082eb9
+  uuid: e22d2366-ac58-47e0-8362-89df9aa6349f
   ws-opts:
     headers:
-      Host: 2020.dnss-mobile.ir
-    path: /fp=chrome
-- cipher: aes-256-gcm
-  name: '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  password: 8808e9f11454
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: jp5v1.lingjfjkm002.com
-    mode: websocket
-    mux: false
-    path: /nvcnjrmkggoy
-    skip-cert-verify: false
-    tls: true
+      Host: d-de1.djwstlsweb.top
+    path: /djjc/de1fp=ios
+- name: '[Trojan] NL_speednode_0010_clashgithub'
+  network: ws
+  password: 02XtoczO7V
+  port: 17590
+  server: 5.255.102.41
+  skip-cert-verify: false
+  sni: mooshali.arshiacomplus.dpdns.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: mooshali.arshiacomplus.dpdns.org
+    path: /hishhhh123
+- name: '[Trojan] SE_speednode_0012_clashgithub'
+  password: 2ee85121-31de-4581-a492-eb00f606e392
   port: 443
-  server: 137.220.142.139
+  server: 45.91.171.116
+  skip-cert-verify: false
+  sni: sto.freeguard.org
+  type: trojan
+- name: '[Trojan] US_speednode_0013_clashgithub'
+  password: 3ZFDxASRw0XIcKYFlp4RSCeSwA8ap7lEAzZB7uNnO38yDYOzDe3p23CxF0OlTx6YSK3j3
+  port: 443
+  server: toaster.isquirrel.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0014_clashgithub'
+  password: 0C3YaEDx46ODTFTcaF8lXlZ3zeqSlF33wZagexzRjIyODa8RDwp8XSCO93ygCSYcSYABA
+  port: 18332
+  server: blength.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0015_clashgithub'
+  password: B3AO9XlcTxaIATp08S29pS6luwZ8C4qDFzaCFYEDDSA5YDeKZAy3e2ZXRe73zIpxwByN7
+  port: 18333
+  server: kasheet.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0016_clashgithub'
+  password: RzFSy3laClaxnYCcO3jBEpYgDyZx2CO78IC3X46ATFD73RSSZZTx8yCOKYDOqeD8pSeRa
+  port: 28334
+  server: sirens.isquirrel.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0017_clashgithub'
+  password: nzSaSa3SFaCNFDCjOCg8A39e53p8l2xaTFCOu7qZx2Z8px4CK3DXeZYAwRRS3zY66laOE
+  port: 28331
+  server: seginus.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0018_clashgithub'
+  password: D0AASSpCKFjOBSwlwqylnOep8BDlgN3e3RY9S3Op2RaZZ58gID8yY3ej56CSuYacZz3EA
+  port: 443
+  server: delight.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0019_clashgithub'
+  password: eYaw9xlNDu4695IF3CyY2leZOTnY8ZSOD3Xa3DClz0xqZy7Z3eaBFaTKOSwCSAOyEap4D
+  port: 28333
+  server: connect.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0020_clashgithub'
+  password: 4xS33pu88RaTF37ZxRjzAZc9zxe8OaYBX9CSO3p5SSxquFOFEySnDlCleCFA2DN3gaeDl
+  port: 443
+  server: mintaka.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- name: '[Trojan] US_speednode_0021_clashgithub'
+  password: Z3aK0aZqwyNcz7S3l3ncNCODYxNFnA8SCOOSOZ3y3AX8xA4a0RZ3gxn39aqYAaBOyzR43acKOCzSX3S
+  port: 28331
+  server: hanger.appagent.net
+  skip-cert-verify: false
+  type: trojan
+- cipher: rc4-md5
+  name: '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    host: 202509121565513-ZEnxwmeIFT.download.microsoft.com
+    mode: http
+  port: 8774
+  server: cn01.efan8867801.xyz
+  type: ss
+- cipher: rc4-md5
+  name: '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    host: 202509121565513-ZEnxwmeIFT.download.microsoft.com
+    mode: http
+  port: 8766
+  server: cn01.efan8867801.xyz
   type: ss
 - cipher: aes-256-gcm
   name: '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
@@ -501,25 +489,19 @@ proxies:
   port: 443
   server: 156.251.179.135
   type: ss
-- cipher: rc4-md5
-  name: '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
-  password: efanccyun
-  plugin: obfs
+- cipher: aes-256-gcm
+  name: '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
+  password: 8808e9f11454
+  plugin: v2ray-plugin
   plugin-opts:
-    host: 202509121565513-QOZnRQnbPm.download.microsoft.com
-    mode: http
-  port: 8774
-  server: cn01.efan8867801.xyz
-  type: ss
-- cipher: rc4-md5
-  name: '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    host: 202509121565513-QOZnRQnbPm.download.microsoft.com
-    mode: http
-  port: 8766
-  server: cn01.efan8867801.xyz
+    host: jp5v1.lingjfjkm002.com
+    mode: websocket
+    mux: false
+    path: /nvcnjrmkggoy
+    skip-cert-verify: false
+    tls: true
+  port: 443
+  server: 137.220.142.139
   type: ss
 proxy-groups:
 - name: 🔰 节点选择
@@ -530,6 +512,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -546,17 +531,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -566,21 +549,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -589,6 +577,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -605,17 +596,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -625,21 +614,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: 🎥 NETFLIX
@@ -651,6 +645,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -667,17 +664,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -687,21 +682,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: ⛔️ 广告拦截
   proxies:
@@ -724,6 +724,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -740,17 +743,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -760,21 +761,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 🌏 国内媒体
   proxies:
@@ -783,18 +789,11 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
   - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
   - 🔰 节点选择
   type: select
@@ -806,6 +805,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -822,17 +824,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -842,21 +842,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 📲 电报信息
   proxies:
@@ -866,6 +871,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -882,17 +890,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -902,21 +908,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -927,6 +938,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -943,17 +957,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -963,21 +975,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -997,6 +1014,9 @@ proxy-groups:
   - '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات..._clashgithub'
   - '[Hysteria2] All--@IRAN_V2RAY1_clashgithub'
   - '[Hysteria2] WI-FI--@IRAN_V2RAY1_clashgithub'
+  - '[Hysteria2] telegram-@ISVvpn_clashgithub'
+  - '[Hysteria2] 🇩🇪 DE-telegram-@ISVvpn  🌐 لوکیشن:..._clashgithub'
+  - '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn_clashgithub'
   - '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا..._clashgithub'
   - '[Hysteria2] @IRAN_V2RAY1 #1_clashgithub'
   - '[Hysteria2] All-@IRAN_V2RAY1_clashgithub'
@@ -1013,17 +1033,15 @@ proxy-groups:
   - '[SS] 🇭🇰 香港2|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港4|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian_clashgithub'
   - '[Trojan] 🇭🇰 香港6|@ripaojiedian_clashgithub'
   - '[VMess] 🇭🇰 香港7|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian_clashgithub'
-  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[SS] 🇯🇵 日本2|@ripaojiedian_clashgithub'
+  - '[Trojan] 🇯🇵 日本3|@ripaojiedian_clashgithub'
   - '[Trojan] 🇯🇵 日本4|@ripaojiedian_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡|@ripaojiedian_clashgithub'
   - '[Trojan] 🇸🇬 新加坡2|@ripaojiedian_clashgithub'
   - '[VMess] 🇸🇬 新加坡3|@ripaojiedian_clashgithub'
@@ -1033,21 +1051,26 @@ proxy-groups:
   - '[SS] 🇻🇳 越南|@ripaojiedian_clashgithub'
   - '[SS] tg频道:@ripaojiedian 2_clashgithub'
   - '[VMess] 🇭🇰 香港3|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港7|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港8|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港9|@ripaojiedian 2_clashgithub'
-  - '[VMess] 🇭🇰 香港10|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港5|@ripaojiedian 2_clashgithub'
+  - '[VMess] 🇯🇵 日本5|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇰🇷 韩国|@ripaojiedian 2_clashgithub'
   - '[SS] 🇻🇳 越南|@ripaojiedian 2_clashgithub'
-  - '[Vless] US_speednode_0027_clashgithub'
-  - '[Vless] US_speednode_0035_clashgithub'
-  - '[Vless] US_speednode_0044_clashgithub'
-  - '[Vless] US_speednode_0045_clashgithub'
-  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
-  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[Vless] BR_speednode_0001_clashgithub'
+  - '[Trojan] NL_speednode_0010_clashgithub'
+  - '[Trojan] SE_speednode_0012_clashgithub'
+  - '[Trojan] US_speednode_0013_clashgithub'
+  - '[Trojan] US_speednode_0014_clashgithub'
+  - '[Trojan] US_speednode_0015_clashgithub'
+  - '[Trojan] US_speednode_0016_clashgithub'
+  - '[Trojan] US_speednode_0017_clashgithub'
+  - '[Trojan] US_speednode_0018_clashgithub'
+  - '[Trojan] US_speednode_0019_clashgithub'
+  - '[Trojan] US_speednode_0020_clashgithub'
+  - '[Trojan] US_speednode_0021_clashgithub'
   - '[SS] 🇺🇸 美国2|@ripaojiedian 2_clashgithub'
   - '[SS] 🇯🇵 日本|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇭🇰 香港2|@ripaojiedian 2_clashgithub'
+  - '[SS] 🇯🇵 日本2|@ripaojiedian 2_clashgithub'
   type: select
 rules:
 - DOMAIN-SUFFIX,local,🎯 全球直连
