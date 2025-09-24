@@ -58,13 +58,13 @@ proxies:
   cipher: auto
   client-fingerprint: chrome
   name: 🇭🇰 香港3_openrunner
-  port: 44601
-  server: 43.247.135.86
+  port: 57405
+  server: 103.224.80.73
   skip-cert-verify: false
   tfo: false
   tls: false
   type: vmess
-  uuid: 3bff49e6-b2e2-44ce-801f-06eab407e8bd
+  uuid: 282bc2b9-8aaf-400a-86eb-1cf981a8a1da
 - client-fingerprint: chrome
   name: 🇭🇰 香港4_openrunner
   password: 253bc477d4e43c209f2d427272968280
@@ -73,14 +73,6 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  client-fingerprint: chrome
-  name: 🇭🇰 香港5_openrunner
-  password: 9177de1a-aeff-43f1-93a6-7dd08a2fdc41
-  port: 40000
-  server: hk.fastsoonlink.com
-  tfo: false
-  type: ss
 - client-fingerprint: chrome
   name: 🇭🇰 香港6_openrunner
   password: 253bc477d4e43c209f2d427272968280
@@ -89,32 +81,13 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  client-fingerprint: chrome
-  name: 🇭🇰 香港7_openrunner
-  password: e4469310-00fc-4527-8afa-71788b3bcef7
-  port: 35602
-  server: gw.liangyuandianwan.com
-  tfo: false
-  type: ss
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇹🇼 台湾_openrunner
-  port: 49795
-  server: 103.236.227.7
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: a9024f1d-77a1-4c56-87c7-eeee5398667e
 - cipher: rc4-md5
   client-fingerprint: chrome
   name: 🇯🇵 日本_openrunner
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202509121565513-Aja8hFXVWh.download.microsoft.com
+    host: 202509121565513-d3qOpZwqIw.download.microsoft.com
     mode: http
   port: 8766
   server: cn01.efan8867801.xyz
@@ -139,19 +112,35 @@ proxies:
 - client-fingerprint: chrome
   name: 🇯🇵 日本3_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 1802
-  server: 160.16.196.59
+  port: 1331
+  server: 160.16.231.103
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇯🇵 日本4_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 1924
-  server: 160.16.72.33
+  port: 3160
+  server: 160.16.68.250
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇯🇵 日本5_openrunner
+  network: ws
+  port: 41315
+  server: a.lyazzz.online
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: c76b20d5-7f82-4990-9687-4bde24397493
+  ws-opts:
+    headers:
+      Host: img14.360buyimg.com
+    path: /obj
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡_openrunner
   password: 253bc477d4e43c209f2d427272968280
@@ -184,13 +173,29 @@ proxies:
     headers:
       Host: baidu.com
     path: /oooo
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇺🇸 美国_openrunner
+  network: ws
+  port: 41317
+  server: a.lyazzz.online
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: c76b20d5-7f82-4990-9687-4bde24397493
+  ws-opts:
+    headers:
+      Host: img14.360buyimg.com
+    path: /obj
 - cipher: rc4-md5
   client-fingerprint: chrome
   name: 🇺🇸 美国2_openrunner
   password: efanccyun
   plugin: obfs
   plugin-opts:
-    host: 202509121565513-Aja8hFXVWh.download.microsoft.com
+    host: 202509121565513-d3qOpZwqIw.download.microsoft.com
     mode: http
   port: 8774
   server: cn01.efan8867801.xyz
@@ -207,8 +212,8 @@ proxies:
 - client-fingerprint: chrome
   name: 🇺🇸 美国4_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 3294
-  server: 160.16.72.33
+  port: 3296
+  server: 160.16.117.182
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
@@ -230,17 +235,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -254,17 +258,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -282,17 +285,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -307,17 +309,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -332,17 +333,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -357,17 +357,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -383,17 +382,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
@@ -425,17 +423,16 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
-  - 🇭🇰 香港5_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇹🇼 台湾_openrunner
   - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇯🇵 日本4_openrunner
+  - 🇯🇵 日本5_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
+  - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇺🇸 美国3_openrunner
   - 🇺🇸 美国4_openrunner
