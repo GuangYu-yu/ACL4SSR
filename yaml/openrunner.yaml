@@ -66,21 +66,10 @@ proxies:
   name: 🇭🇰 香港6_openrunner
   password: 253bc477d4e43c209f2d427272968280
   port: 443
-  server: 221.128.195.239
+  server: 203.198.123.174
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇯🇵 日本_openrunner
-  port: 25980
-  server: 45.159.51.189
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: 8e2c0dcf-b621-4513-8781-4c686f5d5b6d
 - client-fingerprint: chrome
   name: 🇯🇵 日本2_openrunner
   password: 253bc477d4e43c209f2d427272968280
@@ -92,8 +81,8 @@ proxies:
 - client-fingerprint: chrome
   name: 🇯🇵 日本3_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 3160
-  server: 160.16.89.176
+  port: 1802
+  server: 153.121.51.29
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
@@ -105,19 +94,30 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇰🇷 韩国_openrunner
+  port: 10755
+  server: 45.94.68.13
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: a844b289-6fd7-407b-8312-d600ec2efcd4
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡2_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 449
-  server: 160.16.57.238
+  port: 3957
+  server: 160.16.87.174
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇺🇸 美国_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 1700
-  server: 160.16.87.174
+  port: 4317
+  server: 160.16.117.182
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
@@ -134,9 +134,20 @@ proxies:
   name: 🇻🇳 越南_openrunner
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   port: 38388
-  server: 103.186.155.28
+  server: 103.186.154.42
   tfo: false
   type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇮🇩 印度尼西亚_openrunner
+  port: 26144
+  server: ppy-boardv2.02ijp4uos1.download
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
@@ -147,14 +158,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -164,14 +176,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -185,14 +198,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 - name: 📲 电报信息
   proxies:
@@ -203,14 +217,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
@@ -221,14 +236,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -239,14 +255,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -258,14 +275,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -293,14 +311,15 @@ proxy-groups:
   - 🇭🇰 香港2_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
+  - 🇰🇷 韩国_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇮🇩 印度尼西亚_openrunner
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
