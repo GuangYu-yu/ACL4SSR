@@ -19,7 +19,7 @@ proxies:
   name: tg频道:@freenodedaily_openrunner
   password: amazonskr05
   port: 443
-  server: 3.107.151.161
+  server: 34.245.185.129
   tfo: false
   type: ss
 - alterId: 2
@@ -54,6 +54,17 @@ proxies:
   server: 103.103.245.158
   tfo: false
   type: ss
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇭🇰 香港3_openrunner
+  port: 12114
+  server: 103.224.80.49
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vmess
+  uuid: aa92855a-9932-4e87-b5c2-4aed159c7c78
 - client-fingerprint: chrome
   name: 🇭🇰 香港4_openrunner
   password: 253bc477d4e43c209f2d427272968280
@@ -105,14 +116,6 @@ proxies:
 - client-fingerprint: chrome
   name: 🇺🇸 美国_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 6752
-  server: 160.16.124.55
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- client-fingerprint: chrome
-  name: 🇺🇸 美国2_openrunner
-  password: 253bc477d4e43c209f2d427272968280
   port: 3296
   server: 36.156.102.88
   skip-cert-verify: false
@@ -126,6 +129,14 @@ proxies:
   server: 103.186.154.198
   tfo: false
   type: ss
+- client-fingerprint: chrome
+  name: 🇺🇸 美国2_openrunner
+  password: 253bc477d4e43c209f2d427272968280
+  port: 3296
+  server: 36.156.102.88
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
@@ -134,6 +145,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -141,8 +153,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -150,6 +162,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -157,8 +170,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -170,6 +183,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -177,8 +191,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 - name: 📲 电报信息
   proxies:
@@ -187,6 +201,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -194,8 +209,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
@@ -204,6 +219,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -211,8 +227,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -221,6 +237,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -228,8 +245,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -239,6 +256,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -246,8 +264,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -273,6 +291,7 @@ proxy-groups:
   - tg频道:@freenodedaily_openrunner
   - 🇭🇰 香港_openrunner
   - 🇭🇰 香港2_openrunner
+  - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
   - 🇯🇵 日本2_openrunner
@@ -280,8 +299,8 @@ proxy-groups:
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇺🇸 美国_openrunner
-  - 🇺🇸 美国2_openrunner
   - 🇻🇳 越南_openrunner
+  - 🇺🇸 美国2_openrunner
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
