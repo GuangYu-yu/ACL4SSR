@@ -69,87 +69,47 @@ proxies:
   name: 🇭🇰 香港4_openrunner
   password: 253bc477d4e43c209f2d427272968280
   port: 443
-  server: 221.128.195.217
+  server: 58.152.25.23
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇭🇰 香港6_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 443
-  server: 160.16.63.16
+  port: 4431
+  server: 221.128.195.218
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- alterId: 2
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇭🇰 香港5_openrunner
-  network: ws
-  port: 80
-  server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 🇭🇰 香港7_openrunner
-  network: ws
-  port: 8080
-  server: www.speedtest.net
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vmess
-  uuid: 3675ed61-e3fb-4306-8e06-8474b461cd29
-  ws-opts:
-    headers:
-      Host: stakeholders-weekend-cable-module.trycloudflare.com
-    path: 3675ed61-e3fb-4306-8e06-8474b461cd29-vm
-- cipher: aes-128-gcm
-  client-fingerprint: chrome
-  name: 🇯🇵 日本_openrunner
-  password: be0a39a72e
-  port: 28303
-  server: 670ead.gkzltp.xyz
-  tfo: false
-  type: ss
 - client-fingerprint: chrome
   name: 🇯🇵 日本2_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 1331
-  server: 160.16.124.55
+  port: 3271
+  server: 36.156.102.88
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇯🇵 日本3_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 1924
-  server: 36.156.102.88
+  port: 1331
+  server: 160.16.144.208
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 2283
-  server: 160.16.138.24
+  port: 26295
+  server: 36.156.102.86
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡2_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 22000
-  server: 36.156.102.86
+  port: 2200
+  server: 182.237.0.26
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
@@ -164,30 +124,30 @@ proxies:
   tls: false
   type: vmess
   uuid: 55a374b6-3108-4b65-a987-a0926ddbfba6
-- cipher: aes-256-cfb
-  client-fingerprint: chrome
-  name: 🇻🇳 越南_openrunner
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.154.15
-  tfo: false
-  type: ss
 - client-fingerprint: chrome
   name: 🇺🇸 美国_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 1572
-  server: 160.16.124.55
+  port: 4234
+  server: 153.121.39.240
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
 - client-fingerprint: chrome
   name: 🇺🇸 美国2_openrunner
   password: 253bc477d4e43c209f2d427272968280
-  port: 472
-  server: 36.156.102.88
+  port: 1177
+  server: 182.237.0.26
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
+- cipher: aes-256-cfb
+  client-fingerprint: chrome
+  name: 🇻🇳 越南_openrunner
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.51
+  tfo: false
+  type: ss
 proxy-groups:
 - name: 🚀 节点选择
   proxies:
@@ -199,17 +159,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 - interval: 300
   name: ♻️ 自动选择
@@ -220,17 +177,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   tolerance: 50
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -245,17 +199,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 - name: 📲 电报信息
   proxies:
@@ -267,17 +218,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 - name: Ⓜ️ 微软服务
   proxies:
@@ -289,17 +237,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 - name: 🍎 苹果服务
   proxies:
@@ -311,17 +256,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 - name: 📢 谷歌FCM
   proxies:
@@ -334,17 +276,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 - name: 🎯 全球直连
   proxies:
@@ -373,17 +312,14 @@ proxy-groups:
   - 🇭🇰 香港3_openrunner
   - 🇭🇰 香港4_openrunner
   - 🇭🇰 香港6_openrunner
-  - 🇭🇰 香港5_openrunner
-  - 🇭🇰 香港7_openrunner
-  - 🇯🇵 日本_openrunner
   - 🇯🇵 日本2_openrunner
   - 🇯🇵 日本3_openrunner
   - 🇸🇬 新加坡_openrunner
   - 🇸🇬 新加坡2_openrunner
   - 🇸🇬 新加坡3_openrunner
-  - 🇻🇳 越南_openrunner
   - 🇺🇸 美国_openrunner
   - 🇺🇸 美国2_openrunner
+  - 🇻🇳 越南_openrunner
   type: select
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
