@@ -1,5 +1,4 @@
 import dns.resolver
-import asyncio
 import ipaddress
 from typing import List, Dict, Set
 from collections import defaultdict
@@ -17,43 +16,43 @@ class RateLimiter:
         self.rate_limit = rate_limit
         self.tokens = rate_limit
         self.last_update = time.monotonic()
-        self.lock = asyncio.Lock()
+        self.lock = False
 
-    async def acquire(self):
-        async with self.lock:
-            now = time.monotonic()
-            self.tokens = min(self.rate_limit, self.tokens + (now - self.last_update) * self.rate_limit)
-            self.last_update = now
-            if self.tokens < 1:
-                await asyncio.sleep((1 - self.tokens) / self.rate_limit)
-                self.tokens = 0
-            else:
-                self.tokens -= 1
+    def acquire(self):
+        now = time.monotonic()
+        self.tokens = min(self.rate_limit, self.tokens + (now - self.last_update) * self.rate_limit)
+        self.last_update = now
+        if self.tokens < 1:
+            wait_time = (1 - self.tokens) / self.rate_limit
+            time.sleep(wait_time)
+            self.tokens = 0
+        else:
+            self.tokens -= 1
 
 # 获取域名列表
-async def fetch_domain_list() -> Dict[str, str]:
-    import aiohttp
-    async with aiohttp.ClientSession() as session:
-        async with session.get(DOMAIN_LIST_URL) as response:
-            text = await response.text()
-            domains = {}
-            for line in text.splitlines():
-                if not line or line.startswith('#'):
-                    continue
-                if any(line.startswith(prefix) for prefix in ['DOMAIN-SUFFIX,', 'DOMAIN,']):
-                    try:
-                        prefix, domain = [x.strip() for x in line.split(',', 1)]
-                        domains[domain] = prefix
-                    except ValueError:
-                        continue
-            return domains
+def fetch_domain_list() -> Dict[str, str]:
+    import requests
+    response = requests.get(DOMAIN_LIST_URL)
+    response.raise_for_status()
+    text = response.text
+    domains = {}
+    for line in text.splitlines():
+        if not line or line.startswith('#'):
+            continue
+        if any(line.startswith(prefix) for prefix in ['DOMAIN-SUFFIX,', 'DOMAIN,']):
+            try:
+                prefix, domain = [x.strip() for x in line.split(',', 1)]
+                domains[domain] = prefix
+            except ValueError:
+                continue
+    return domains
 
 # 加载CIDR列表
-async def load_cidr_list() -> List[str]:
-    import aiohttp
-    async with aiohttp.ClientSession() as session:
-        async with session.get(CIDR_URL) as response:
-            return [line.strip() for line in (await response.text()).splitlines() if line.strip()]
+def load_cidr_list() -> List[str]:
+    import requests
+    response = requests.get(CIDR_URL)
+    response.raise_for_status()
+    return [line.strip() for line in response.text.splitlines() if line.strip()]
 
 # 判断IP是否在CIDR列表
 def is_ip_in_cidr(ip: str, cidr_list: List[str]) -> bool:
@@ -67,44 +66,39 @@ def is_ip_in_cidr(ip: str, cidr_list: List[str]) -> bool:
         return False
     return False
 
-# 传统DNS查询A和AAAA记录
-def query_dns(domain: str) -> Set[str]:
+# 使用1.1.1.1查询IPv4
+def query_dns_ipv4(domain: str) -> Set[str]:
     resolver = dns.resolver.Resolver()
+    resolver.nameservers = ['1.1.1.1']  # 使用 Cloudflare 公共 DNS
     ips = set()
     try:
-        for rtype in ['A', 'AAAA']:
-            try:
-                answers = resolver.resolve(domain, rtype, lifetime=3)
-                for r in answers:
-                    ips.add(str(r))
-            except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.Timeout):
-                continue
+        answers = resolver.resolve(domain, 'A', lifetime=3)
+        for r in answers:
+            ips.add(str(r))
+    except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.Timeout):
+        pass
     except Exception as e:
         print(f"查询 {domain} 出错: {e}")
     return ips
 
-# 异步包装传统DNS查询
-async def query_dns_async(domain: str) -> Set[str]:
-    return await asyncio.to_thread(query_dns, domain)
-
 # 对域名列表进行处理
-async def process_domains(domains: List[tuple], rate_limiter: RateLimiter) -> Dict[str, Set[str]]:
+def process_domains(domains: List[tuple], rate_limiter: RateLimiter) -> Dict[str, Set[str]]:
     results = defaultdict(set)
     for domain, prefix in domains:
-        await rate_limiter.acquire()
-        ips = await query_dns_async(domain)
+        rate_limiter.acquire()
+        ips = query_dns_ipv4(domain)
         results[domain] = ips
     return results
 
 # 主逻辑
-async def main():
+def main():
     try:
         print("开始获取域名列表...")
-        domains = await fetch_domain_list()
+        domains = fetch_domain_list()
         print(f"获取到 {len(domains)} 个域名")
 
         print("加载CIDR列表...")
-        cidr_list = await load_cidr_list()
+        cidr_list = load_cidr_list()
         print(f"加载了 {len(cidr_list)} 条 CIDR 记录")
 
         domain_items = list(domains.items())
@@ -118,11 +112,9 @@ async def main():
 
         cf_domains = []
 
-        # 并行处理两批域名
-        task1 = asyncio.create_task(process_domains(first_half, limiter))
-        task2 = asyncio.create_task(process_domains(second_half, limiter))
-
-        results1, results2 = await asyncio.gather(task1, task2)
+        # 分批处理
+        results1 = process_domains(first_half, limiter)
+        results2 = process_domains(second_half, limiter)
         all_results = {**results1, **results2}
 
         for domain, ips in all_results.items():
@@ -139,4 +131,4 @@ async def main():
         print(f"发生错误: {e}")
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    main()
