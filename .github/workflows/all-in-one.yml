@@ -78,7 +78,7 @@ jobs:
           python-version: '3.x'
 
       - name: 安装依赖
-        run: pip install netaddr requests beautifulsoup4 aiohttp dnspython
+        run: pip install netaddr requests beautifulsoup4 aiohttp
 
       - name: 提取列表中Cloudflare域名
         run: python 提取列表中Cloudflare域名.py
