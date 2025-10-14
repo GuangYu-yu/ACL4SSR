@@ -8,40 +8,29 @@ gfw_list_url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/
 # 输出文件名
 output_file = "cloudflare_gfw.list"
 
-# 获取列表
 def fetch_list(url):
+    """获取列表并去掉空行和注释"""
     response = requests.get(url)
     response.raise_for_status()
-    return response.text.splitlines()
-
-# 过滤列表
-def filter_lists(global_list, cloudflare_domains_list, gfw_list):
-    cloudflare_set = set(line for line in cloudflare_domains_list if not line.startswith("#"))
-    gfw_set = set(line for line in gfw_list if not line.startswith("#"))
-    
-    filtered_list = []
-    for line in global_list:
-        if line.startswith("#"):
-            continue
-        # 如果域名在 cloudflare_domains_list 中，且不在 gfw_list 中，则排除
-        if line in cloudflare_set and line not in gfw_set:
-            continue
-        filtered_list.append(line)
-    return filtered_list
+    return [line.strip() for line in response.text.splitlines() if line.strip() and not line.startswith("#")]
 
 def main():
     print("正在获取列表...")
     global_list = fetch_list(global_list_url)
-    cloudflare_domains_list = fetch_list(cloudflare_domains_url)
+    cloudflare_list = fetch_list(cloudflare_domains_url)
     gfw_list = fetch_list(gfw_list_url)
 
-    print("正在过滤列表...")
-    filtered_list = filter_lists(global_list, cloudflare_domains_list, gfw_list)
+    # 计算需要剔除的域名：Cloudflare 的域名减去 GFW 的域名
+    remove_set = set(cloudflare_list) - set(gfw_list)
+
+    print(f"将从 Global.list 中剔除 {len(remove_set)} 条域名...")
+
+    # 过滤 Global.list
+    filtered_list = [line for line in global_list if line not in remove_set]
 
     # 保存结果
     with open(output_file, "w") as f:
-        for line in filtered_list:
-            f.write(line + "\n")
+        f.write("\n".join(filtered_list))
 
     print(f"过滤完成，总计 {len(filtered_list)} 条记录保存到 {output_file}")
 
