@@ -23,17 +23,17 @@ jobs:
       - name: 运行 job2 脚本
         run: python CloudflareCIDR-IPv4-and-IPv6.py
 
-      - name: 下载并处理 chnroute_v6.txt
-        run: |
-          curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
-          sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr.list
-          git add CN-IPv6-cidr.list
+#      - name: 下载并处理 chnroute_v6.txt
+#        run: |
+#          curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt | \
+#          sed 's/^/IP-CIDR6,/' | sed 's/$/,no-resolve/' > CN-IPv6-cidr.list
+#          git add CN-IPv6-cidr.list
 
-      - name: 下载并处理 chnroute.txt
-        run: |
-          curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
-          sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr.list
-          git add CN-IPv4-cidr.list
+#      - name: 下载并处理 chnroute.txt
+#        run: |
+#          curl -s https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute.txt | \
+#          sed 's/^/IP-CIDR,/' | sed 's/$/,no-resolve/' > CN-IPv4-cidr.list
+#          git add CN-IPv4-cidr.list
 
       - name: 下载并处理 CloudflareCIDR-v6.txt
         run: |
