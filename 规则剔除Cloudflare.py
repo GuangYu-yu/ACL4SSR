@@ -6,7 +6,7 @@ cloudflare_domains_url = "https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/r
 gfw_list_url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/gfw.list"
 
 # 输出文件名
-output_file = "cloudflare_gfw.list"
+output_file = "global_cf_filtered.list"
 
 def fetch_list(url):
     """获取列表并去掉空行和注释"""
