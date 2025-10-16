@@ -5,6 +5,7 @@ global_list_url = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_scrip
 cloudflare_domains_url = "https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/cloudflare_domains.list"
 gfw_list_urls = [
     "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/gfw.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.list",
     "https://raw.githubusercontent.com/GuangYu-yu/ACL4SSR/refs/heads/main/gfw.list"  # 自定义列表
 ]
 
