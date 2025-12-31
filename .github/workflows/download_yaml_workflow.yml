@@ -1,0 +1,81 @@
+name: 下载并处理YAML文件
+
+on:
+  workflow_dispatch:  # 手动触发
+#  schedule:
+#    - cron: "0 6 * * *"  # 每天6点运行一次
+
+jobs:
+  download-individual-yamls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查出代码库
+        uses: actions/checkout@v3
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pyyaml beautifulsoup4
+
+      - name: 运行下载脚本
+        run: python download_yaml.py
+
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  download-all-yaml:
+    needs: download-individual-yamls
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查出代码库
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取所有历史记录，以便进行合并
+
+      - name: 下载 all.yaml
+        run: |
+          ALL_YAML_URL="https://subapi.fxxk.dedyn.io/sub?&url=https%3A%2F%2Fraw.githubusercontent.com%2FGuangYu-yu%2FACL4SSR%2Frefs%2Fheads%2Fmain%2Fyaml%2Fclashgithub.yaml%7Chttps%3A%2F%2Fraw.githubusercontent.com%2FGuangYu-yu%2FACL4SSR%2Frefs%2Fheads%2Fmain%2Fyaml%2Fmiebei.yaml%7Chttps%3A%2F%2Fraw.githubusercontent.com%2FGuangYu-yu%2FACL4SSR%2Frefs%2Fheads%2Fmain%2Fyaml%2Foneclash.yaml%7Chttps%3A%2F%2Fraw.githubusercontent.com%2FGuangYu-yu%2FACL4SSR%2Frefs%2Fheads%2Fmain%2Fyaml%2Fopenrunner.yaml%7Chttps%3A%2F%2Fraw.githubusercontent.com%2FGuangYu-yu%2FACL4SSR%2Frefs%2Fheads%2Fmain%2Fyaml%2Fwenode.yaml&target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online_Full_CF.ini&emoji=true&append_type=true&append_info=true&scv=true&udp=true&list=false&sort=false&fdn=false&insert=false"
+          mkdir -p yaml
+          curl -o yaml/all.yaml "$ALL_YAML_URL"
+
+      - name: 检查是否有更改
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
