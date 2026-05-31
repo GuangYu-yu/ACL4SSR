@@ -1,0 +1,77 @@
+name: 手动运行列表过滤脚本
+
+on:
+  workflow_dispatch: # 手动触发
+    inputs:
+      run_cloudflare_extractor:
+        description: '运行提取Cloudflare域名脚本'
+        required: true
+        default: true
+        type: boolean
+      run_cloudflare_remover:
+        description: '运行剔除Cloudflare脚本'
+        required: true
+        default: true
+        type: boolean
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检查出代码库
+        uses: actions/checkout@v3
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖
+        run: pip install netaddr requests beautifulsoup4 aiohttp
+
+      - name: 提取列表中Cloudflare域名
+        if: ${{ github.event.inputs.run_cloudflare_extractor == 'true' }}
+        run: python 提取列表中Cloudflare域名.py
+
+      - name: 检查是否有更改
+        if: ${{ github.event.inputs.run_cloudflare_extractor == 'true' }}
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: ${{ github.event.inputs.run_cloudflare_extractor == 'true' }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
+
+      - name: 规则剔除Cloudflare
+        if: ${{ github.event.inputs.run_cloudflare_remover == 'true' }}
+        run: python 规则剔除Cloudflare.py
+
+      - name: 检查是否有更改
+        if: ${{ github.event.inputs.run_cloudflare_remover == 'true' }}
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "没有需要提交的更改"
+            exit 0
+          fi
+
+      - name: 提交并推送更改
+        if: ${{ github.event.inputs.run_cloudflare_remover == 'true' }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Downloaded and processed files on $(date '+%Y/%m/%d %H:%M:%S')" || echo "没有需要提交的更改，跳过提交。"
+          git pull --rebase
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push || echo "没有需要推送的更改，跳过推送。"
